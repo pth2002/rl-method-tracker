@@ -1,5 +1,7 @@
 # RL post-training method inclusion tracker
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23495743.svg)](https://doi.org/10.5281/zenodo.23495743)
+
 Hundreds of RL objectives for language models were published in 2025 and 2026. This repository
 tracks which of them the main open-source training frameworks include, from the day each one
 landed on a main branch to how it is offered today.
@@ -7,7 +9,10 @@ landed on a main branch to how it is offered today.
 The technical report *From RL Papers to Framework Code: Inclusion and Review in Seven Open-Source
 Training Frameworks* (version 1, 20 October 2026) is at [paper/main.pdf](paper/main.pdf). Code is under
 the MIT License and data under CC BY 4.0 ([LICENSE](LICENSE), [LICENSE-DATA](LICENSE-DATA)); cite with
-[CITATION.cff](CITATION.cff).
+[CITATION.cff](CITATION.cff). The archived release has the DOI
+[10.5281/zenodo.23495743](https://doi.org/10.5281/zenodo.23495743), which always resolves to the latest
+version; version 1.0, the release behind the report, is
+[10.5281/zenodo.23495744](https://doi.org/10.5281/zenodo.23495744).
 
 A method counts as **included** when its implementation reaches the main branch of a tracked
 framework. Inclusion is a property of the code frameworks ship. It is not a record of how often

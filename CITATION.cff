@@ -10,6 +10,14 @@ repository-code: "https://github.com/pth2002/rl-method-tracker"
 license: MIT
 version: "1.0"
 date-released: "2026-10-20"
+doi: 10.5281/zenodo.23495743
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23495743
+    description: All versions of the tracker; resolves to the latest release.
+  - type: doi
+    value: 10.5281/zenodo.23495744
+    description: Version 1.0, the release behind report version 1.
 preferred-citation:
   type: report
   title: "From RL Papers to Framework Code: Inclusion and Review in Seven Open-Source Training Frameworks"
