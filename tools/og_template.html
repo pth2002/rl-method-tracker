@@ -1,0 +1,61 @@
+<!doctype html>
+<!--
+  Social preview image for the project page and the repository (1280 x 640).
+  Render from the repository root after tools/site_data.py, for example with Chrome:
+    chrome --headless=new --hide-scrollbars --window-size=1280,640 --virtual-time-budget=4000
+           --screenshot=docs/og.png http://localhost:8000/tools/og_template.html
+  while `python -m http.server 8000` runs in the repository root.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RL Method Tracker preview</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  html, body { margin: 0; width: 1280px; height: 640px; overflow: hidden; background: #F5F6F8; color: #16181D; }
+  .card { position: relative; width: 1280px; height: 640px; padding: 56px 64px 0; box-sizing: border-box; }
+  .top { display: flex; justify-content: space-between; font: 500 18px/1 "JetBrains Mono", monospace; color: #5B6270; }
+  .top b { color: #16181D; font-weight: 500; }
+  h1 { margin: 30px 0 0; font: 800 76px/.94 "Big Shoulders Display", "Arial Narrow", sans-serif; letter-spacing: -.01em; }
+  h1 span { display: block; }
+  h1 .out { color: #5B6270; }
+  h1 .lit { color: #128A43; display: inline; }
+  svg { position: absolute; left: 64px; bottom: 44px; }
+  .dot { fill: #CDD2D9; }
+  .on { fill: #128A43; }
+  .gone { fill: #C4322B; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top"><b>rl-method-tracker</b><span>seven open-source RL frameworks &middot; Jan 2025 to Jun 2026</span></div>
+  <h1><span class="out" id="l1"></span><span id="l2"></span></h1>
+  <svg id="field" width="1152" height="300"></svg>
+</div>
+<script src="../docs/data.js"></script>
+<script>
+  var D = window.TRACKER, NS = "http://www.w3.org/2000/svg";
+  document.getElementById("l1").textContent = D.counts.general.toLocaleString("en-US") + " RL training methods on arXiv.";
+  document.getElementById("l2").innerHTML = '<span class="lit">' + D.counts.included + "</span> reached framework code.";
+  var months = Array.from(new Set(D.papers.map(function (p) { return p[1]; }))).sort();
+  var cols = months.map(function (m) {
+    return D.papers.filter(function (p) { return p[1] === m; }).sort(function (a, b) { return (b[3] - a[3]) || (a[0] < b[0] ? -1 : 1); });
+  });
+  var W = 1152, Hmax = 300, k = 7, gap = 1.6;
+  var pitch = Math.min(W / (months.length * k + (months.length - 1) * gap),
+                       Hmax / Math.ceil(Math.max.apply(null, cols.map(function (c) { return c.length; })) / k));
+  var colW = (k + gap) * pitch, x0 = (W - (months.length * colW - gap * pitch)) / 2, svg = document.getElementById("field");
+  cols.forEach(function (col, c) {
+    col.forEach(function (p, j) {
+      var e = document.createElementNS(NS, "circle");
+      e.setAttribute("cx", x0 + c * colW + (j % k + 0.5) * pitch);
+      e.setAttribute("cy", Hmax - (Math.floor(j / k) + 0.5) * pitch);
+      e.setAttribute("r", pitch * 0.36);
+      e.setAttribute("class", p[3] ? (p[4].length ? "on" : "gone") : "dot");
+      svg.appendChild(e);
+    });
+  });
+</script>
+</body>
+</html>

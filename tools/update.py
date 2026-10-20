@@ -1,5 +1,5 @@
 """One command for the whole refresh: fetch frameworks, re-trace history, verify sources,
-rebuild the tables and the index, then validate.
+rebuild the tables, the index and the project page data (docs/data.js), then validate.
 
   python tools/update.py            # use cached clones
   python tools/update.py --fetch    # pull the latest commits first (what CI runs)
@@ -39,6 +39,8 @@ def main() -> int:
         run("tools/process_analysis.py", "--build-facts")
         list_uncoded()
     run("tools/frameworks_doc.py")
+    run("tools/framework_profiles.py")
+    run("tools/site_data.py")
     return subprocess.run([sys.executable, "tools/validate.py"], cwd=ROOT).returncode
 
 

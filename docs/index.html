@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RL Method Tracker</title>
+<meta name="description" content="Which RL post-training methods for language models reached seven open-source training frameworks, when they landed, and how each framework offers them today.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RL Method Tracker">
+<meta property="og:description" content="Of 1,598 papers that proposed a general RL training method between January 2025 and June 2026, 37 reached at least one of seven open-source training frameworks.">
+<meta property="og:url" content="https://pth2002.github.io/rl-method-tracker/">
+<meta property="og:image" content="https://pth2002.github.io/rl-method-tracker/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5F6F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101216" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg fill='%23CDD2D9'%3E%3Ccircle cx='3' cy='3' r='2'/%3E%3Ccircle cx='8' cy='3' r='2'/%3E%3Ccircle cx='13' cy='3' r='2'/%3E%3Ccircle cx='3' cy='8' r='2'/%3E%3Ccircle cx='8' cy='8' r='2'/%3E%3Ccircle cx='13' cy='8' r='2'/%3E%3Ccircle cx='8' cy='13' r='2'/%3E%3Ccircle cx='13' cy='13' r='2'/%3E%3C/g%3E%3Ccircle cx='3' cy='13' r='2' fill='%23128A43'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="RL Method Tracker, back to top">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><g class="m-dot"><circle cx="3" cy="3" r="2"/><circle cx="8" cy="3" r="2"/><circle cx="13" cy="3" r="2"/><circle cx="3" cy="8" r="2"/><circle cx="8" cy="8" r="2"/><circle cx="13" cy="8" r="2"/><circle cx="8" cy="13" r="2"/><circle cx="13" cy="13" r="2"/></g><circle class="m-lit" cx="3" cy="13" r="2"/></svg>
+      rl-method-tracker
+    </a>
+    <nav aria-label="Sections">
+      <a href="#failures">Failures</a>
+      <a href="#landings">Landings</a>
+      <a href="#frameworks">Frameworks</a>
+      <a href="#report">Report</a>
+      <a class="gh" href="https://github.com/pth2002/rl-method-tracker">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">RL post-training for language models &middot; January 2025 to June 2026</p>
+    <h1>
+      <span class="line out"><span data-count="general">1,598</span> RL training methods on arXiv.</span>
+      <span class="line"><span class="lit" data-count="included">37</span> reached framework code.</span>
+    </h1>
+    <p class="lede">Each dot is one paper that proposed a general RL training method, stacked by the month of its first arXiv version. A dot is green when the method reached the main branch of at least one of seven open-source frameworks. Every date comes from the frameworks' own commit histories.</p>
+    <p class="fws" id="fws"></p>
+
+    <figure class="field-fig">
+      <div class="field" id="field">
+        <svg id="dots" role="group" aria-label="One dot per paper, stacked by month. Green dots are the papers whose method reached a framework."></svg>
+        <div class="tip" id="tip" hidden></div>
+      </div>
+      <figcaption class="field-foot">
+        <span class="status" id="status" aria-live="polite"></span>
+        <span class="legend"><span><i class="key on" aria-hidden="true"></i>Reached a framework</span><span id="legend-gone" hidden><i class="key gone" aria-hidden="true"></i>Reached, then removed</span><span><i class="key" aria-hidden="true"></i>Not included</span></span>
+      </figcaption>
+    </figure>
+    <p class="cohort" id="cohort"></p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/pth2002/rl-method-tracker/blob/main/paper/main.pdf">Read the report</a>
+      <button class="btn" type="button" id="show-included" aria-expanded="false" aria-controls="included">List the included papers</button>
+    </div>
+    <div class="included" id="included" hidden></div>
+  </div>
+</section>
+
+<section class="sec" id="failures" aria-labelledby="h-failures">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-failures">Methods by training failure</h2>
+      <p>Pick the failure you see in training. Each cell links to the line of code that offers the method in that framework, at the snapshot commit. The tracker lists implementations and does not test whether a method helps.</p>
+    </div>
+    <div class="explorer">
+      <label class="fail-select"><span>Training failure</span><select id="fail-select"></select></label>
+      <div class="fail-list" id="fail-list" role="tablist" aria-orientation="vertical" aria-label="Training failures"></div>
+      <div class="fail-panel" id="fail-panel" role="tabpanel" tabindex="-1"></div>
+    </div>
+    <dl class="tiers" id="tiers"></dl>
+  </div>
+</section>
+
+<section class="sec" id="landings" aria-labelledby="h-landings">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-landings">Latest landings</h2>
+      <p>A landing is the first commit that put a method on a framework's main branch. Days run from the method's source to that commit. The list grows with the weekly update.</p>
+    </div>
+    <ol class="log" id="log"></ol>
+  </div>
+</section>
+
+<section class="sec" id="frameworks" aria-labelledby="h-frameworks">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-frameworks">Seven frameworks</h2>
+      <p>How many methods each framework took in, how fast, and what happened to public proposals for the methods no framework included. The guide to each framework lists its contribution rules and the concerns its reviewers raised.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="ledger" id="ledger"></table>
+    </div>
+    <p class="note">Methods counts landings of catalog methods with a source from 2025 or later, and first anywhere counts the methods with their first landing there. Median days run from the source to the landing and leave out upper bounds. A landing pull request counts as opened by a prior merger when its author had merged a pull request in the framework before. Declined proposals include those redirected elsewhere, and lapsed proposals were closed as inactive. ROLL publishes code in bulk releases without pull requests.</p>
+  </div>
+</section>
+
+<section class="sec" id="report" aria-labelledby="h-report">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-report">Report and data</h2>
+      <p>Every number in the report is generated from the files in the repository. Code is under the MIT License and data under CC BY 4.0.</p>
+    </div>
+    <div class="cols">
+      <article class="card">
+        <h3>Technical report</h3>
+        <p class="paper-title">From RL Papers to Framework Code: Inclusion and Review in Seven Open-Source Training Frameworks</p>
+        <p class="meta">Taiheng Pan &middot; version 1, 20 October 2026</p>
+        <p class="links"><a href="https://github.com/pth2002/rl-method-tracker/blob/main/paper/main.pdf">PDF on GitHub</a>
+        <a href="https://doi.org/10.5281/zenodo.23495744">Release v1.0 on Zenodo</a></p>
+      </article>
+      <article class="card">
+        <h3>Reproduce</h3>
+        <pre><code>git clone https://github.com/pth2002/rl-method-tracker
+cd rl-method-tracker
+git checkout v1.0
+pip install -r requirements.txt
+python tools/reproduce_report.py --pdf</code></pre>
+        <p>The last command checks the frozen inputs and rebuilds every number, table and figure without network access. The PDF step needs pdflatex.</p>
+      </article>
+      <article class="card">
+        <h3>Cite</h3>
+        <pre><code id="bibtex">@techreport{pan2026rlframeworks,
+  title       = {From {RL} Papers to Framework Code:
+                 Inclusion and Review in Seven
+                 Open-Source Training Frameworks},
+  author      = {Pan, Taiheng},
+  institution = {The University of Melbourne},
+  year        = {2026},
+  note        = {Technical report, version 1},
+  doi         = {10.5281/zenodo.23495743},
+  url         = {https://github.com/pth2002/rl-method-tracker}
+}</code></pre>
+        <button class="btn small" type="button" id="copy-bib">Copy BibTeX</button>
+        <span class="copied" id="copied" role="status"></span>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="snap">
+      <p class="snap-head">Framework snapshot</p>
+      <ul id="snapshots"></ul>
+    </div>
+    <p class="foot-note">A GitHub Action refreshes the framework histories every Monday and opens a pull request. Nothing changes here until a person reviews and merges it. The arXiv pool and its labels are fixed for each report version.</p>
+    <p class="foot-links"><a href="https://github.com/pth2002/rl-method-tracker">Repository</a> <a href="https://github.com/pth2002/rl-method-tracker/blob/main/INDEX.md">INDEX.md</a> <a href="https://github.com/pth2002/rl-method-tracker/blob/main/FRAMEWORKS.md">FRAMEWORKS.md</a> <a href="https://github.com/pth2002/rl-method-tracker/issues/new/choose">Report a wrong record</a> <a href="https://doi.org/10.5281/zenodo.23495743">doi:10.5281/zenodo.23495743</a></p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

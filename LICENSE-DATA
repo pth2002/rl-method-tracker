@@ -1,8 +1,10 @@
 Data license
 
-The data files under data/ and the generated pages INDEX.md and FRAMEWORKS.md are
-released under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
-You may share and adapt them for any purpose, including commercially, as long as you
+The data files under data/, the page data docs/data.js and the generated pages INDEX.md
+and FRAMEWORKS.md are released under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0). The code in collectors/, tools/, config/ and docs/ is released under
+the MIT License in LICENSE.
+You may share and adapt the data for any purpose, including commercially, as long as you
 give appropriate credit, link to the license and indicate whether changes were made.
 
 Full license text: https://creativecommons.org/licenses/by/4.0/legalcode

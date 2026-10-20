@@ -2,9 +2,13 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23495743.svg)](https://doi.org/10.5281/zenodo.23495743)
 
+[![1,598 RL training methods on arXiv. 37 reached framework code.](docs/og.png)](https://pth2002.github.io/rl-method-tracker/)
+
 Hundreds of RL objectives for language models were published in 2025 and 2026. This repository
 tracks which of them the main open-source training frameworks include, from the day each one
-landed on a main branch to how it is offered today.
+landed on a main branch to how it is offered today. The
+[project page](https://pth2002.github.io/rl-method-tracker/) shows every paper in the pool, the
+methods for each training failure, the latest landings and each framework's record.
 
 The technical report *From RL Papers to Framework Code: Inclusion and Review in Seven Open-Source
 Training Frameworks* (version 1, 20 October 2026) is at [paper/main.pdf](paper/main.pdf). Code is under
@@ -153,8 +157,8 @@ Refresh the tracker (moves the framework snapshot forward):
 python tools/update.py --fetch
 ```
 
-This pulls every framework, re-traces history, verifies sources against arXiv, rebuilds `INDEX.md`
-and the tables, and runs `tools/validate.py`. Any option the parser detects without a mapping appears
+This pulls every framework, re-traces history, verifies sources against arXiv, rebuilds `INDEX.md`,
+the tables and the project page data, and runs `tools/validate.py`. Any option the parser detects without a mapping appears
 in `data/generated/unmapped.json` with the arXiv ids cited in the commit that introduced it, and
 validation fails until someone maps it. Options a framework exposes outside the parsed places are not
 caught by this rule, so the parse is also checked against each framework's algorithm documentation.
@@ -184,4 +188,5 @@ data/release/            sampling keys for the report (published with the report
 collectors/              git history, arXiv metadata, arXiv candidate pool, GitHub threads, code citations
 tools/                   tables, index, figures, report numbers, validation, update, reproduction
 paper/                   the technical report
+docs/                    the project page (GitHub Pages); tools/site_data.py writes docs/data.js
 ```
