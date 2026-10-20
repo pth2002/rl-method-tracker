@@ -4,7 +4,8 @@
   Render from the repository root after tools/site_data.py, for example with Chrome:
     chrome --headless=new --hide-scrollbars --window-size=1280,640 --virtual-time-budget=4000
            --screenshot=docs/og.png http://localhost:8000/tools/og_template.html
-  while `python -m http.server 8000` runs in the repository root.
+  while `python -m http.server 8000` runs in the repository root. Add ?dark to the URL and
+  write docs/og-dark.png for the README in GitHub's dark theme.
 -->
 <html lang="en">
 <head>
@@ -13,18 +14,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-  html, body { margin: 0; width: 1280px; height: 640px; overflow: hidden; background: #F5F6F8; color: #16181D; }
+  :root { --bg: #F5F6F8; --ink: #16181D; --muted: #5B6270; --dot: #CDD2D9; --lit: #128A43; --red: #C4322B; }
+  :root.dark { --bg: #0D1117; --ink: #E7E9ED; --muted: #9AA1AD; --dot: #30363F; --lit: #3CC074; --red: #F0675D; }
+  html, body { margin: 0; width: 1280px; height: 640px; overflow: hidden; background: var(--bg); color: var(--ink); }
   .card { position: relative; width: 1280px; height: 640px; padding: 56px 64px 0; box-sizing: border-box; }
-  .top { display: flex; justify-content: space-between; font: 500 18px/1 "JetBrains Mono", monospace; color: #5B6270; }
-  .top b { color: #16181D; font-weight: 500; }
+  .top { display: flex; justify-content: space-between; font: 500 18px/1 "JetBrains Mono", monospace; color: var(--muted); }
+  .top b { color: var(--ink); font-weight: 500; }
   h1 { margin: 30px 0 0; font: 800 76px/.94 "Big Shoulders Display", "Arial Narrow", sans-serif; letter-spacing: -.01em; }
   h1 span { display: block; }
-  h1 .out { color: #5B6270; }
-  h1 .lit { color: #128A43; display: inline; }
+  h1 .out { color: var(--muted); }
+  h1 .lit { color: var(--lit); display: inline; }
   svg { position: absolute; left: 64px; bottom: 44px; }
-  .dot { fill: #CDD2D9; }
-  .on { fill: #128A43; }
-  .gone { fill: #C4322B; }
+  .dot { fill: var(--dot); }
+  .on { fill: var(--lit); }
+  .gone { fill: var(--red); }
 </style>
 </head>
 <body>
@@ -35,6 +38,7 @@
 </div>
 <script src="../docs/data.js"></script>
 <script>
+  if (location.search.indexOf("dark") >= 0) document.documentElement.className = "dark";
   var D = window.TRACKER, NS = "http://www.w3.org/2000/svg";
   document.getElementById("l1").textContent = D.counts.general.toLocaleString("en-US") + " RL training methods on arXiv.";
   document.getElementById("l2").innerHTML = '<span class="lit">' + D.counts.included + "</span> reached framework code.";

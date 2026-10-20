@@ -26,6 +26,29 @@ def jl(p: Path) -> list[dict]:
     return [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 
+PAGE = "https://pth2002.github.io/rl-method-tracker/"
+README_START, README_END = "<!-- failures:start -->", "<!-- failures:end -->"
+
+
+def write_readme_table(groups: list[dict], methods: dict) -> None:
+    """Rewrite the README table of training failures between its two markers."""
+    rows = ["| Training failure | Methods | Most widely included |", "|---|--:|---|"]
+    for g in groups:
+        # the row already names the failure, so a name that repeats it drops that part
+        top = [methods[m]["name"].split(" (")[0].removesuffix(" for rollout-training mismatch")
+               for m in g["methods"][:3]]
+        rows.append(f"| [{g['name']}]({PAGE}#failure-{g['id']}) | {len(g['methods'])} | {', '.join(top)} |")
+    readme = ROOT / "README.md"
+    text = readme.read_text(encoding="utf-8")
+    if README_START not in text or README_END not in text:
+        return
+    head, rest = text.split(README_START, 1)
+    tail = rest.split(README_END, 1)[1]
+    new = head + README_START + "\n" + "\n".join(rows) + "\n" + README_END + tail
+    if new != text:
+        readme.write_text(new, encoding="utf-8", newline="\n")
+
+
 def main() -> None:
     pool = jl(GEN / "pool_adoption.jsonl")
     titles = {r["arxiv"]: " ".join(r["title"].split()) for r in jl(GEN / "arxiv_frame.jsonl")}
@@ -133,6 +156,7 @@ def main() -> None:
         "ledger": ledger,
         "quarterly": quarterly,
     }
+    write_readme_table(groups, methods)
     out = ROOT / "docs" / "data.js"
     out.parent.mkdir(exist_ok=True)
     out.write_text("window.TRACKER = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n",

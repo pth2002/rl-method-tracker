@@ -1,75 +1,135 @@
-# RL post-training method inclusion tracker
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/og-dark.png">
+  <img src="docs/og.png" alt="1,598 RL training methods on arXiv. 37 reached framework code." width="100%">
+</picture>
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23495743.svg)](https://doi.org/10.5281/zenodo.23495743)
+<h1 align="center">RL Method Tracker</h1>
 
-[![1,598 RL training methods on arXiv. 37 reached framework code.](docs/og.png)](https://pth2002.github.io/rl-method-tracker/)
+<p align="center">
+  Which RL post-training methods for language models reach open-source training frameworks,<br>
+  when they land, and how each framework offers them today.
+</p>
 
-Hundreds of RL objectives for language models were published in 2025 and 2026. This repository
-tracks which of them the main open-source training frameworks include, from the day each one
-landed on a main branch to how it is offered today. The
-[project page](https://pth2002.github.io/rl-method-tracker/) shows every paper in the pool, the
-methods for each training failure, the latest landings and each framework's record.
+<p align="center">
+  <a href="https://pth2002.github.io/rl-method-tracker/"><b>Project page</b></a>
+  &nbsp;&middot;&nbsp;
+  <a href="paper/main.pdf"><b>Technical report</b></a>
+  &nbsp;&middot;&nbsp;
+  <a href="INDEX.md"><b>Methods by failure</b></a>
+  &nbsp;&middot;&nbsp;
+  <a href="FRAMEWORKS.md"><b>Bring a method to a framework</b></a>
+  &nbsp;&middot;&nbsp;
+  <a href="#cite"><b>Cite</b></a>
+</p>
 
-The technical report *From RL Papers to Framework Code: Inclusion and Review in Seven Open-Source
-Training Frameworks* (version 1, 20 October 2026) is at [paper/main.pdf](paper/main.pdf). Code is under
-the MIT License and data under CC BY 4.0 ([LICENSE](LICENSE), [LICENSE-DATA](LICENSE-DATA)); cite with
-[CITATION.cff](CITATION.cff). The archived release has the DOI
-[10.5281/zenodo.23495743](https://doi.org/10.5281/zenodo.23495743), which always resolves to the latest
-version; version 1.0, the release behind the report, is
-[10.5281/zenodo.23495744](https://doi.org/10.5281/zenodo.23495744).
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.23495743"><img alt="DOI 10.5281/zenodo.23495743" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23495743-128A43?labelColor=16181D"></a>
+  <a href="LICENSE"><img alt="Code under MIT" src="https://img.shields.io/badge/code-MIT-128A43?labelColor=16181D"></a>
+  <a href="LICENSE-DATA"><img alt="Data under CC BY 4.0" src="https://img.shields.io/badge/data-CC%20BY%204.0-128A43?labelColor=16181D"></a>
+  <a href=".github/workflows/update.yml"><img alt="Frameworks updated weekly" src="https://img.shields.io/badge/frameworks-updated%20weekly-128A43?labelColor=16181D"></a>
+</p>
+
+Hundreds of RL objectives for language models appeared on arXiv in 2025 and 2026. Practitioners use
+them through training frameworks, so a method that a framework includes is one configuration change
+away for its users. This repository traces seven frameworks through their commit histories and
+records when each method landed on a main branch and how each framework offers it today.
+
+| **6,939** | **1,598** | **37** | **7** |
+|:-:|:-:|:-:|:-:|
+| arXiv papers screened | propose a general RL training method | reached a framework | frameworks traced |
+
+The counts come from the technical report *From RL Papers to Framework Code: Inclusion and Review in
+Seven Open-Source Training Frameworks*, version 1, for papers from January 2025 to June 2026. The
+frameworks are [verl](https://github.com/volcengine/verl) with
+[verl-recipe](https://github.com/verl-project/verl-recipe), [TRL](https://github.com/huggingface/trl),
+[OpenRLHF](https://github.com/OpenRLHF/OpenRLHF), [NeMo-RL](https://github.com/NVIDIA-NeMo/RL),
+[ROLL](https://github.com/alibaba/ROLL), [slime](https://github.com/THUDM/slime) and
+[AReaL](https://github.com/inclusionAI/AReaL).
 
 A method counts as **included** when its implementation reaches the main branch of a tracked
 framework. Inclusion is a property of the code frameworks ship. It is not a record of how often
 users enable a method or what it achieves.
 
-- **[INDEX.md](INDEX.md)** is the practitioner view: training failures (entropy collapse, length bias,
-  rollout-training mismatch, MoE instability, ...) and the methods that address each one, with the
-  frameworks that include them and how they are offered.
-- **`data/generated/adoption.csv`** is the analysis view: one row per method with source date, first
-  landing per framework, lag in days, tier today and how the introducing commit's author relates to
-  the paper's author list.
+## Find methods for a training failure
 
-Frameworks covered: verl (with verl-recipe), TRL, OpenRLHF, NeMo-RL, ROLL, slime, AReaL.
+Each row opens the project page at that failure. The page lists every method for it and the setting
+that selects the method in each framework, linked to the line of code at the snapshot commit.
+[INDEX.md](INDEX.md) has the same view as a document. The tracker lists implementations and does not
+test whether a method helps.
 
-## What you can do with it
+<!-- failures:start -->
+| Training failure | Methods | Most widely included |
+|---|--:|---|
+| [Value model cost](https://pth2002.github.io/rl-method-tracker/#failure-critic_cost) | 6 | GRPO, RLOO, REINFORCE++ |
+| [High-variance policy gradient](https://pth2002.github.io/rl-method-tracker/#failure-high_variance) | 6 | RLOO, REINFORCE++, GVPO |
+| [Entropy collapse](https://pth2002.github.io/rl-method-tracker/#failure-entropy_collapse) | 6 | Clip-higher, CISPO, Adaptive entropy control |
+| [Response-length bias](https://pth2002.github.io/rl-method-tracker/#failure-length_bias) | 6 | Dr. GRPO, Token-level loss aggregation, VAPO |
+| [Groups with no learning signal](https://pth2002.github.io/rl-method-tracker/#failure-zero_gradient_groups) | 2 | Dynamic sampling, SPO |
+| [Truncation noise](https://pth2002.github.io/rl-method-tracker/#failure-truncation_noise) | 1 | Overlong filtering and soft overlong penalty |
+| [Training-inference probability mismatch](https://pth2002.github.io/rl-method-tracker/#failure-train_infer_mismatch) | 8 | Truncated importance sampling, Masked / rejection importance sampling, Rollout routing replay |
+| [MoE routing instability](https://pth2002.github.io/rl-method-tracker/#failure-moe_instability) | 3 | GSPO, Rollout routing replay, Routing replay across updates |
+| [Extreme importance ratios](https://pth2002.github.io/rl-method-tracker/#failure-ratio_outliers) | 7 | GSPO, Dual-clip PPO, SAPO |
+| [Stale or off-policy data](https://pth2002.github.io/rl-method-tracker/#failure-stale_policy) | 7 | Off-policy sequence masking, TOPR, Decoupled PPO objective |
+| [Multi-reward signal collapse](https://pth2002.github.io/rl-method-tracker/#failure-multi_reward_collapse) | 1 | GDPO |
+| [Loss of solution diversity](https://pth2002.github.io/rl-method-tracker/#failure-diversity_loss) | 3 | Pass@k advantage, FlowRL, Representation-based exploration |
+| [Sparse outcome reward](https://pth2002.github.io/rl-method-tracker/#failure-sparse_reward) | 3 | PRIME, VAPO, GiGPO |
+| [Baselines and general components](https://pth2002.github.io/rl-method-tracker/#failure-baselines) | 15 | PPO, k3, Direct Reward Optimisation |
+<!-- failures:end -->
 
-- **You see a training failure.** `INDEX.md` groups methods by the failure their source paper says
-  they address. Each entry links to the file and line where the framework implements it, at the
-  commit the report analysed. The index lists implementations and does not test whether a method helps.
-- **You want a framework to include your method.** `FRAMEWORKS.md` links each framework's contribution
-  rules, shows where its RL algorithms live, lists the pull requests that brought recent methods in
-  and what review raised in them, and lists earlier public proposals with their outcomes.
-- **You study inclusion.** `python tools/reproduce_report.py --pdf` rebuilds every number, table and
-  figure of the report from the frozen inputs in `data/` without network access. The table below
-  leads from each part of the report to its rows.
-- **Something is wrong.** Open an issue with the correction template and link the evidence.
+## What else is here
 
-## From the report to the data
+- **Bring your method into a framework.** [FRAMEWORKS.md](FRAMEWORKS.md) links each framework's
+  contribution rules, shows where its RL algorithms live, lists the pull requests that brought recent
+  methods in and what review raised in them, and lists earlier public proposals with their outcomes.
+- **Study inclusion.** [`data/generated/adoption.csv`](data/generated/adoption.csv) has one row per
+  method with source date, first landing per framework, lag in days, tier today and how the
+  introducing commit's author relates to the paper's author list. The
+  [technical report](paper/main.pdf) analyses it together with the public record of proposals.
+- **Correct a record.** Open an issue with the
+  [correction template](https://github.com/pth2002/rl-method-tracker/issues/new/choose) and link the
+  evidence.
 
-Every number in the text is a macro in `paper/numbers.tex`, written by `tools/paper_numbers.py`. Paths are
-under `data/generated/` unless they start with `data/` or `config/`.
+## Reproduce the report
 
-| Report | One row per | Files |
-|---|---|---|
-| Pool and labels (Section 4, Appendix A) | screened paper (6,939) | `arxiv_frame.jsonl` (metadata), `triage/labels.jsonl` (label with its evidence), `pool_adoption.jsonl` (label, scope and inclusion), rules in `config/triage_rules.md` |
-| Manual review (Appendix B) | sampled paper | `triage/review_sample.csv`, `triage/validation.md`, `data/release/triage_manifest.json` |
-| Model reports read in full (Section 4) | report | `casecontrol/report_filled.jsonl`, `casecontrol/report_scope.jsonl` |
-| Inclusion and lags (Sections 3 and 5) | option event, method | `framework_events.jsonl`, `adoption.json`, `adoption.csv`, mappings in `config/token_map.yaml` |
-| Citation audit (Section 3) | paper, framework and file | `process/citation_audit.jsonl`, `github/code_citations.jsonl` |
-| Included and not included papers (Section 6, Appendix C) | paper | sample in `data/release/casecontrol_key.json`, codes in `casecontrol/cc_v1_filled.jsonl` and `casecontrol/cc_v1_audit_added.jsonl`, blind recodes in `casecontrol/cc_v1_blind_recode*.jsonl` with keys in `data/release/blind_recode*_key.json` |
-| Landings and their pull requests (Section 7) | landing, pull request | `process/landings.jsonl`, `github/pr_facts.jsonl`, `github/merged_prs.jsonl` |
-| Proposals and review (Section 7, Appendix E) | thread | `process/attempts_coded.jsonl`, `process/attempt_replies.jsonl`, `process/landing_prs_coded.jsonl`, `process/attempts_round6_coded.jsonl`, agreement in `process/agreement.md` |
-| Public record of all papers (Figure 1c) | thread, mention | `github/threads.jsonl`, `github/mentions.jsonl` |
-| Supply and inclusion by quarter (Figure 1b) | quarter | `quarterly.json` |
-| Methods stated in large model reports (Section 9) | report | `casecontrol/model_reports.jsonl` (methods, framework stated, one quote each) |
-| Failures that users report (Section 8) | thread | `process/issue_failures.jsonl` (screened threads with codes), `process/issue_recall_sample.jsonl` |
+```bash
+git clone https://github.com/pth2002/rl-method-tracker
+cd rl-method-tracker
+git checkout v1.0
+pip install -r requirements.txt
+python tools/reproduce_report.py --pdf
+```
 
-## How inclusion is measured
+The last command checks the frozen inputs against `data/release/inputs.sha256`, stops if they
+differ, and then rebuilds every number, table and figure of the report without network access.
+Every number in the text is a macro in `paper/numbers.tex`, written by `tools/paper_numbers.py`.
+The weekly refresh moves the inputs forward, so each report version is reproduced from its own tag.
+The release [v1.0](https://github.com/pth2002/rl-method-tracker/releases/tag/v1.0) and its
+[Zenodo archive](https://doi.org/10.5281/zenodo.23495744) hold the same files.
+
+<details>
+<summary><b>Requirements</b></summary>
+
+The scripts need Python 3.12 and the four packages in `requirements.txt`. Reproducing the numbers,
+tables and figures needs nothing else. Compiling the PDF also needs `pdflatex` and `bibtex` from a
+TeX distribution such as TeX Live, MiKTeX or TinyTeX, and the style file ships in `paper/`.
+Refreshing the tracker also needs `git`, and the record of proposals needs a GitHub token, taken
+from `GH_TOKEN` or from the GitHub CLI after `gh auth login`.
+
+</details>
+
+## How the tracker works
+
+Every Monday a GitHub Action pulls each framework, re-traces its history and opens a pull request
+with the changes, including the data behind the project page and the table above. Nothing reaches
+`main` without a person merging it. The arXiv pool and its labels are fixed for each report version.
+
+<details>
+<summary><b>How inclusion is measured</b></summary>
 
 Every date comes from the framework's own git history on its main branch (`--first-parent`), as an
 approximation of the day a change became available there. Each framework exposes its algorithms in a
-few places (an advantage-estimator registry, a loss-type list, configuration switches, example
-configurations, recipe folders). `config/frameworks.yaml` lists those places and
+few places: an advantage-estimator registry, a loss-type list, configuration switches, example
+configurations and recipe folders. `config/frameworks.yaml` lists those places and
 `config/token_map.yaml` maps each framework's name for an option to one method in `data/methods.yaml`.
 A few implementations change existing code without adding an option, such as a corrected gradient.
 They are listed by commit under a `manual` surface, and the parser checks that each commit is on the
@@ -97,7 +157,10 @@ Two fields keep the numbers honest:
   that cannot be resolved) or `no_paper` (a source without an author list). A commit author is not
   necessarily the person who merged the change.
 
-## The public record of proposals
+</details>
+
+<details>
+<summary><b>The public record of proposals</b></summary>
 
 Inclusion is only the last step. The tracker also follows what happened before it, in the public
 issues, pull requests and discussions of every framework.
@@ -107,11 +170,10 @@ issues, pull requests and discussions of every framework.
   is an audit candidate, either a missed mapping or a citation in a project list, a report or a
   background note (`data/generated/process/citation_audit.jsonl`).
 - `collectors/github_threads.py` downloads issues, pull requests, comments, review comments and
-  discussions through the GitHub API (it uses the token of the GitHub CLI, `gh auth login`).
-  `collectors/github_index.py` matches threads to papers by arXiv link, arXiv id or full title.
-  `collectors/github_mergers.py` records who merged every pull request, and
-  `collectors/github_prs.py` fetches reviewers and changed files for landing pull requests and for
-  pull requests that cite a pool paper.
+  discussions through the GitHub API. `collectors/github_index.py` matches threads to papers by
+  arXiv link, arXiv id or full title. `collectors/github_mergers.py` records who merged every pull
+  request, and `collectors/github_prs.py` fetches reviewers and changed files for landing pull
+  requests and for pull requests that cite a pool paper.
 - `tools/process_analysis.py` turns this into a funnel (no record, cited, requested, proposed,
   included), the roles behind each landing pull request, and the size of each change.
   A maintainer is someone who merged a pull request in the framework before the event in question.
@@ -124,58 +186,55 @@ issues, pull requests and discussions of every framework.
   evidence for its code, and compact pull request facts (`data/generated/github/pr_facts.jsonl`)
   without bodies, comments or review texts.
 
-## Install
+</details>
 
-The scripts need Python 3.12 and four packages:
+<details>
+<summary><b>From the report to the data</b></summary>
 
-```bash
-pip install -r requirements.txt
-```
+Paths are under `data/generated/` unless they start with `data/` or `config/`.
 
-Reproducing the report's numbers, tables and figures needs nothing else. Compiling the PDF also needs
-`pdflatex` and `bibtex` from a TeX distribution such as TeX Live, MiKTeX or TinyTeX, and the style
-file ships in `paper/`. Refreshing the tracker also needs `git`, and the record of proposals needs a
-GitHub token, taken from `GH_TOKEN` or from the GitHub CLI after `gh auth login`.
+| Report | One row per | Files |
+|---|---|---|
+| Pool and labels (Section 4, Appendix A) | screened paper (6,939) | `arxiv_frame.jsonl` (metadata), `triage/labels.jsonl` (label with its evidence), `pool_adoption.jsonl` (label, scope and inclusion), rules in `config/triage_rules.md` |
+| Manual review (Appendix B) | sampled paper | `triage/review_sample.csv`, `triage/validation.md`, `data/release/triage_manifest.json` |
+| Model reports read in full (Section 4) | report | `casecontrol/report_filled.jsonl`, `casecontrol/report_scope.jsonl` |
+| Inclusion and lags (Sections 3 and 5) | option event, method | `framework_events.jsonl`, `adoption.json`, `adoption.csv`, mappings in `config/token_map.yaml` |
+| Citation audit (Section 3) | paper, framework and file | `process/citation_audit.jsonl`, `github/code_citations.jsonl` |
+| Included and not included papers (Section 6, Appendix C) | paper | sample in `data/release/casecontrol_key.json`, codes in `casecontrol/cc_v1_filled.jsonl` and `casecontrol/cc_v1_audit_added.jsonl`, blind recodes in `casecontrol/cc_v1_blind_recode*.jsonl` with keys in `data/release/blind_recode*_key.json` |
+| Landings and their pull requests (Section 7) | landing, pull request | `process/landings.jsonl`, `github/pr_facts.jsonl`, `github/merged_prs.jsonl` |
+| Proposals and review (Section 7, Appendix E) | thread | `process/attempts_coded.jsonl`, `process/attempt_replies.jsonl`, `process/landing_prs_coded.jsonl`, `process/attempts_round6_coded.jsonl`, agreement in `process/agreement.md` |
+| Public record of all papers (Figure 1c) | thread, mention | `github/threads.jsonl`, `github/mentions.jsonl` |
+| Supply and inclusion by quarter (Figure 1b) | quarter | `quarterly.json` |
+| Methods stated in large model reports (Section 9) | report | `casecontrol/model_reports.jsonl` (methods, framework stated, one quote each) |
+| Failures that users report (Section 8) | thread | `process/issue_failures.jsonl` (screened threads with codes), `process/issue_recall_sample.jsonl` |
 
-## Two commands
+</details>
 
-Reproduce the technical report from its frozen inputs (fetches nothing):
-
-```bash
-python tools/reproduce_report.py --pdf
-```
-
-The command first checks the inputs against `data/release/inputs.sha256` and stops if they differ.
-The weekly refresh changes those inputs, so on a later commit the report is reproduced from the tag
-of its version. For version 1, run `git checkout v1.0` after installing the packages; the release
-[v1.0](https://github.com/pth2002/rl-method-tracker/releases/tag/v1.0) and its
-[Zenodo archive](https://doi.org/10.5281/zenodo.23495744) hold the same files.
-
-Refresh the tracker (moves the framework snapshot forward):
+<details>
+<summary><b>Refreshing the tracker yourself</b></summary>
 
 ```bash
 python tools/update.py --fetch
 ```
 
 This pulls every framework, re-traces history, verifies sources against arXiv, rebuilds `INDEX.md`,
-the tables and the project page data, and runs `tools/validate.py`. Any option the parser detects without a mapping appears
-in `data/generated/unmapped.json` with the arXiv ids cited in the commit that introduced it, and
-validation fails until someone maps it. Options a framework exposes outside the parsed places are not
-caught by this rule, so the parse is also checked against each framework's algorithm documentation.
-Adding `--record` also refreshes the public record of proposals through the GitHub API, which takes a
-few hours, and lists new proposal threads in `data/generated/process/uncoded_threads.jsonl`.
+the tables and the project page data, and runs `tools/validate.py`. Any option the parser detects
+without a mapping appears in `data/generated/unmapped.json` with the arXiv ids cited in the commit
+that introduced it, and validation fails until someone maps it. Options a framework exposes outside
+the parsed places are not caught by this rule, so the parse is also checked against each framework's
+algorithm documentation. Adding `--record` also refreshes the public record of proposals through the
+GitHub API, which takes a few hours, and lists new proposal threads in
+`data/generated/process/uncoded_threads.jsonl`.
 
-## How the tracker is kept up to date
+Before merging the weekly pull request, the reviewer maps any new option in `unmapped.json` to a
+method in `config/token_map.yaml`, adding the method to `data/methods.yaml` when it is new, codes any
+new proposal in `uncoded_threads.jsonl`, and checks that validation passed. A new report version
+extends the arXiv pool and its labels, and each version gets its own tag, release and Zenodo DOI.
 
-Every Monday a GitHub Action runs `python tools/update.py --fetch --record` and opens a pull request
-with the changes. Nothing reaches `main` without a person merging it. Before merging, the reviewer maps
-any new option in `unmapped.json` to a method in `config/token_map.yaml`, adding the method to
-`data/methods.yaml` when it is new, codes any new proposal in `uncoded_threads.jsonl`, and checks that
-validation passed. The arXiv pool and its labels cover January 2025 to June 2026 and are not
-refreshed weekly. A new report version extends them, and each version gets its own tag, release and
-Zenodo DOI.
+</details>
 
-## Layout
+<details>
+<summary><b>Repository layout</b></summary>
 
 ```
 config/frameworks.yaml   where each framework exposes algorithm choices
@@ -188,5 +247,33 @@ data/release/            sampling keys for the report (published with the report
 collectors/              git history, arXiv metadata, arXiv candidate pool, GitHub threads, code citations
 tools/                   tables, index, figures, report numbers, validation, update, reproduction
 paper/                   the technical report
-docs/                    the project page (GitHub Pages); tools/site_data.py writes docs/data.js
+docs/                    the project page (GitHub Pages), with data written by tools/site_data.py
 ```
+
+</details>
+
+## Cite
+
+```bibtex
+@techreport{pan2026rlframeworks,
+  title       = {From {RL} Papers to Framework Code: Inclusion and Review in Seven
+                 Open-Source Training Frameworks},
+  author      = {Pan, Taiheng},
+  institution = {The University of Melbourne},
+  year        = {2026},
+  note        = {Technical report, version 1},
+  doi         = {10.5281/zenodo.23495743},
+  url         = {https://github.com/pth2002/rl-method-tracker}
+}
+```
+
+[CITATION.cff](CITATION.cff) also fills GitHub's "Cite this repository" button. The archived release
+has the DOI [10.5281/zenodo.23495743](https://doi.org/10.5281/zenodo.23495743), which always resolves
+to the latest version. Version 1.0, the release behind the report, is
+[10.5281/zenodo.23495744](https://doi.org/10.5281/zenodo.23495744).
+
+## License
+
+Code is under the MIT License in [LICENSE](LICENSE). The data under `data/`, the page data
+`docs/data.js` and the generated pages `INDEX.md` and `FRAMEWORKS.md` are under CC BY 4.0, as
+[LICENSE-DATA](LICENSE-DATA) states.
