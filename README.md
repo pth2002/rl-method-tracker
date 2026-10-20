@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/og-dark.png">
-  <img src="docs/og.png" alt="1,598 RL training methods on arXiv. 37 reached framework code." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/hero-dark.svg">
+  <img src="docs/hero.svg" alt="1,598 RL training methods on arXiv. 37 reached framework code." width="100%">
 </picture>
 
 <h1 align="center">RL Method Tracker</h1>
@@ -76,6 +76,23 @@ test whether a method helps.
 | [Baselines and general components](https://pth2002.github.io/rl-method-tracker/#failure-baselines) | 15 | PPO, k3, Direct Reward Optimisation |
 <!-- failures:end -->
 
+## Latest landings
+
+A landing is the first commit that put a method on a framework's main branch. The weekly update
+rewrites this list.
+
+<!-- landings:start -->
+| Date | Method | Framework | Change |
+|---|---|---|---|
+| 2026-10-15 | Rollout routing replay | AReaL | [PR #1496](https://github.com/inclusionAI/AReaL/pull/1496) |
+| 2026-09-14 | Masked / rejection importance sampling for rollout-training mismatch | OpenRLHF | [PR #1339](https://github.com/OpenRLHF/OpenRLHF/pull/1339) |
+| 2026-09-14 | FlashREINFORCE | OpenRLHF | [PR #1339](https://github.com/OpenRLHF/OpenRLHF/pull/1339) |
+| 2026-09-11 | ECHO | verl recipes | [PR #142](https://github.com/verl-project/verl-recipe/pull/142) |
+| 2026-08-04 | Direct Reward Optimisation | verl | [PR #7245](https://github.com/volcengine/verl/pull/7245) |
+
+Framework histories as of 2026-10-17. The [project page](https://pth2002.github.io/rl-method-tracker/#landings) lists the latest ten.
+<!-- landings:end -->
+
 ## What else is here
 
 - **Bring your method into a framework.** [FRAMEWORKS.md](FRAMEWORKS.md) links each framework's
@@ -109,7 +126,7 @@ The release [v1.0](https://github.com/pth2002/rl-method-tracker/releases/tag/v1.
 <details>
 <summary><b>Requirements</b></summary>
 
-The scripts need Python 3.12 and the four packages in `requirements.txt`. Reproducing the numbers,
+The scripts need Python 3.12 and the packages in `requirements.txt`. Reproducing the numbers,
 tables and figures needs nothing else. Compiling the PDF also needs `pdflatex` and `bibtex` from a
 TeX distribution such as TeX Live, MiKTeX or TinyTeX, and the style file ships in `paper/`.
 Refreshing the tracker also needs `git`, and the record of proposals needs a GitHub token, taken
@@ -120,8 +137,9 @@ from `GH_TOKEN` or from the GitHub CLI after `gh auth login`.
 ## How the tracker works
 
 Every Monday a GitHub Action pulls each framework, re-traces its history and opens a pull request
-with the changes, including the data behind the project page and the table above. Nothing reaches
-`main` without a person merging it. The arXiv pool and its labels are fixed for each report version.
+with the changes. The pull request also redraws the header image and rewrites the project page data
+and the two tables above. Nothing reaches `main` without a person merging it. The arXiv pool and its
+labels are fixed for each report version.
 
 <details>
 <summary><b>How inclusion is measured</b></summary>
@@ -246,8 +264,9 @@ data/generated/          everything the scripts write, including labels and full
 data/release/            sampling keys for the report (published with the report)
 collectors/              git history, arXiv metadata, arXiv candidate pool, GitHub threads, code citations
 tools/                   tables, index, figures, report numbers, validation, update, reproduction
+tools/fonts/             font subsets for the README header, under the SIL Open Font License
 paper/                   the technical report
-docs/                    the project page (GitHub Pages), with data written by tools/site_data.py
+docs/                    the project page (GitHub Pages), its data and the README header images
 ```
 
 </details>
@@ -276,4 +295,5 @@ to the latest version. Version 1.0, the release behind the report, is
 
 Code is under the MIT License in [LICENSE](LICENSE). The data under `data/`, the page data
 `docs/data.js` and the generated pages `INDEX.md` and `FRAMEWORKS.md` are under CC BY 4.0, as
-[LICENSE-DATA](LICENSE-DATA) states.
+[LICENSE-DATA](LICENSE-DATA) states. The font subsets in `tools/fonts/` keep the SIL Open Font
+License of Big Shoulders Display and JetBrains Mono, with each license text beside them.

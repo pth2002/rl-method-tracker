@@ -27,24 +27,38 @@ def jl(p: Path) -> list[dict]:
 
 
 PAGE = "https://pth2002.github.io/rl-method-tracker/"
-README_START, README_END = "<!-- failures:start -->", "<!-- failures:end -->"
 
 
-def write_readme_table(groups: list[dict], methods: dict) -> None:
-    """Rewrite the README table of training failures between its two markers."""
+def failures_table(groups: list[dict], methods: dict) -> list[str]:
     rows = ["| Training failure | Methods | Most widely included |", "|---|--:|---|"]
     for g in groups:
         # the row already names the failure, so a name that repeats it drops that part
         top = [methods[m]["name"].split(" (")[0].removesuffix(" for rollout-training mismatch")
                for m in g["methods"][:3]]
         rows.append(f"| [{g['name']}]({PAGE}#failure-{g['id']}) | {len(g['methods'])} | {', '.join(top)} |")
+    return rows
+
+
+def landings_table(landings: list[dict], snapshot: str) -> list[str]:
+    rows = ["| Date | Method | Framework | Change |", "|---|---|---|---|"]
+    for x in landings[:5]:
+        pr = x["url"].rsplit("/pull/", 1)
+        ref = f"PR #{pr[1]}" if len(pr) == 2 else "commit " + x["url"].rsplit("/", 1)[1][:7]
+        rows.append(f"| {x['date']} | {x['method']} | {x['fw']} | [{ref}]({x['url']}) |")
+    rows += ["", f"Framework histories as of {snapshot}. The [project page]({PAGE}#landings) lists the latest ten."]
+    return rows
+
+
+def write_readme_blocks(blocks: dict[str, list[str]]) -> None:
+    """Rewrite each README block between its <!-- name:start --> and <!-- name:end --> markers."""
     readme = ROOT / "README.md"
-    text = readme.read_text(encoding="utf-8")
-    if README_START not in text or README_END not in text:
-        return
-    head, rest = text.split(README_START, 1)
-    tail = rest.split(README_END, 1)[1]
-    new = head + README_START + "\n" + "\n".join(rows) + "\n" + README_END + tail
+    text = new = readme.read_text(encoding="utf-8")
+    for name, rows in blocks.items():
+        start, end = f"<!-- {name}:start -->", f"<!-- {name}:end -->"
+        if start not in new or end not in new:
+            continue
+        head, rest = new.split(start, 1)
+        new = head + start + "\n" + "\n".join(rows) + "\n" + end + rest.split(end, 1)[1]
     if new != text:
         readme.write_text(new, encoding="utf-8", newline="\n")
 
@@ -156,7 +170,8 @@ def main() -> None:
         "ledger": ledger,
         "quarterly": quarterly,
     }
-    write_readme_table(groups, methods)
+    write_readme_blocks({"failures": failures_table(groups, methods),
+                         "landings": landings_table(landings, data["snapshot"])})
     out = ROOT / "docs" / "data.js"
     out.parent.mkdir(exist_ok=True)
     out.write_text("window.TRACKER = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n",

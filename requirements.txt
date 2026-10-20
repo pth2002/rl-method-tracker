@@ -2,5 +2,7 @@
 PyYAML==6.0.3
 requests==2.33.1
 matplotlib==3.9.2
+# Draws the README header text as outlines (tools/site_hero.py).
+fonttools==4.63.0
 # Only for tools/style_check.py, which checks the wording of the compiled report.
 PyMuPDF==1.27.2
