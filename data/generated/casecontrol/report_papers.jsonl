@@ -1,0 +1,70 @@
+{"arxiv": "2506.02911", "title": "Cell-o1: Training LLMs to Solve Single-Cell Reasoning Puzzles with Reinforcement Learning", "url": "https://arxiv.org/abs/2506.02911"}
+{"arxiv": "2604.07506", "title": "ReflectRM: Boosting Generative Reward Models via Self-Reflection within a Unified Judgment Framework", "url": "https://arxiv.org/abs/2604.07506"}
+{"arxiv": "2505.13031", "title": "MindOmni: Unleashing Reasoning Generation in Vision Language Models with RGPO", "url": "https://arxiv.org/abs/2505.13031"}
+{"arxiv": "2602.19000", "title": "MagicAgent: Towards Generalized Agent Planning", "url": "https://arxiv.org/abs/2602.19000"}
+{"arxiv": "2509.22387", "title": "SpinGPT: A Large-Language-Model Approach to Playing Poker Correctly", "url": "https://arxiv.org/abs/2509.22387"}
+{"arxiv": "2510.19817", "title": "olmOCR 2: Unit Test Rewards for Document OCR", "url": "https://arxiv.org/abs/2510.19817"}
+{"arxiv": "2602.09856", "title": "Code2World: A GUI World Model via Renderable Code Generation", "url": "https://arxiv.org/abs/2602.09856"}
+{"arxiv": "2505.11875", "title": "J1: Exploring Simple Test-Time Scaling for LLM-as-a-Judge", "url": "https://arxiv.org/abs/2505.11875"}
+{"arxiv": "2507.01006", "title": "GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning", "url": "https://arxiv.org/abs/2507.01006"}
+{"arxiv": "2606.07712", "title": "MatMind: A Structure-Activity Knowledge-Driven Generative Foundation Model for Materials Science", "url": "https://arxiv.org/abs/2606.07712"}
+{"arxiv": "2506.18330", "title": "Confucius3-Math: A Lightweight High-Performance Reasoning LLM for Chinese K-12 Mathematics Learning", "url": "https://arxiv.org/abs/2506.18330"}
+{"arxiv": "2503.12937", "title": "R1-VL: Learning to Reason with Multimodal Large Language Models via Step-wise Group Relative Policy Optimization", "url": "https://arxiv.org/abs/2503.12937"}
+{"arxiv": "2506.19469", "title": "Surgery-R1: Advancing Surgical-VQLA with Reasoning Multimodal Large Language Model via Reinforcement Learning", "url": "https://arxiv.org/abs/2506.19469"}
+{"arxiv": "2605.01882", "title": "Chart-FR1: Visual Focus-Driven Fine-Grained Reasoning on Dense Charts", "url": "https://arxiv.org/abs/2605.01882"}
+{"arxiv": "2603.03072", "title": "TikZilla: Scaling Text-to-TikZ with High-Quality Data and Reinforcement Learning", "url": "https://arxiv.org/abs/2603.03072"}
+{"arxiv": "2606.18988", "title": "ThinkDeception: A Progressive Reinforcement Learning Framework for Interpretable Multimodal Deception Detection", "url": "https://arxiv.org/abs/2606.18988"}
+{"arxiv": "2504.10160", "title": "MT-R1-Zero: Advancing LLM-based Machine Translation via R1-Zero-like Reinforcement Learning", "url": "https://arxiv.org/abs/2504.10160"}
+{"arxiv": "2603.18118", "title": "Insight-V++: Towards Advanced Long-Chain Visual Reasoning with Multimodal Large Language Models", "url": "https://arxiv.org/abs/2603.18118"}
+{"arxiv": "2601.09215", "title": "UserLM-R1: Modeling Human Reasoning in User Language Models with Multi-Reward Reinforcement Learning", "url": "https://arxiv.org/abs/2601.09215"}
+{"arxiv": "2508.16129", "title": "Bridging the Gap in Ophthalmic AI: MM-Retinal-Reason Dataset and OphthaReason Model toward Dynamic Multimodal Reasoning", "url": "https://arxiv.org/abs/2508.16129"}
+{"arxiv": "2501.12368", "title": "InternLM-XComposer2.5-Reward: A Simple Yet Effective Multi-Modal Reward Model", "url": "https://arxiv.org/abs/2501.12368"}
+{"arxiv": "2510.21850", "title": "SCoPE VLM: Selective Context Processing for Efficient Document Navigation in Vision-Language Models", "url": "https://arxiv.org/abs/2510.21850"}
+{"arxiv": "2510.20342", "title": "Teaching Language Models to Reason with Tools", "url": "https://arxiv.org/abs/2510.20342"}
+{"arxiv": "2605.11723", "title": "CaC: Advancing Video Reward Models via Hierarchical Spatiotemporal Concentrating", "url": "https://arxiv.org/abs/2605.11723"}
+{"arxiv": "2511.00062", "title": "World Simulation with Video Foundation Models for Physical AI", "url": "https://arxiv.org/abs/2511.00062"}
+{"arxiv": "2511.22891", "title": "ORION: Teaching Language Models to Reason Efficiently in the Language of Thought", "url": "https://arxiv.org/abs/2511.22891"}
+{"arxiv": "2508.05731", "title": "InfiGUI-G1: Advancing GUI Grounding with Adaptive Exploration Policy Optimization", "url": "https://arxiv.org/abs/2508.05731"}
+{"arxiv": "2603.15981", "title": "Aligning Paralinguistic Understanding and Generation in Speech LLMs via Multi-Task Reinforcement Learning", "url": "https://arxiv.org/abs/2603.15981"}
+{"arxiv": "2505.00024", "title": "Nemotron-Research-Tool-N1: Exploring Tool-Using Language Models with Reinforced Reasoning", "url": "https://arxiv.org/abs/2505.00024"}
+{"arxiv": "2509.14851", "title": "Empathy-R1: A Chain-of-Empathy and Reinforcement Learning Framework for Long-Form Mental Health Support", "url": "https://arxiv.org/abs/2509.14851"}
+{"arxiv": "2507.12507", "title": "Scaling Up RL: Unlocking Diverse Reasoning in LLMs via Prolonged Training", "url": "https://arxiv.org/abs/2507.12507"}
+{"arxiv": "2507.22607", "title": "VL-Cogito: Progressive Curriculum Reinforcement Learning for Advanced Multimodal Reasoning", "url": "https://arxiv.org/abs/2507.22607"}
+{"arxiv": "2606.22873", "title": "SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning", "url": "https://arxiv.org/abs/2606.22873"}
+{"arxiv": "2605.20506", "title": "Reinforcing Human Behavior Simulation via Verbal Feedback", "url": "https://arxiv.org/abs/2605.20506"}
+{"arxiv": "2511.11896", "title": "VULPO: Context-Aware Vulnerability Detection via On-Policy LLM Optimization", "url": "https://arxiv.org/abs/2511.11896"}
+{"arxiv": "2505.23723", "title": "ML-Agent: Reinforcing LLM Agents for Autonomous Machine Learning Engineering", "url": "https://arxiv.org/abs/2505.23723"}
+{"arxiv": "2510.01236", "title": "GRPO++: Enhancing Dermatological Reasoning under Low Resource Settings", "url": "https://arxiv.org/abs/2510.01236"}
+{"arxiv": "2507.13618", "title": "Seed-X: Building Strong Multilingual Translation LLM with 7B Parameters", "url": "https://arxiv.org/abs/2507.13618"}
+{"arxiv": "2602.08503", "title": "Learning Self-Correction in Vision-Language Models via Rollout Augmentation", "url": "https://arxiv.org/abs/2602.08503"}
+{"arxiv": "2601.01718", "title": "Yuan3.0 Flash: An Open Multimodal Large Language Model for Enterprise Applications", "url": "https://arxiv.org/abs/2601.01718"}
+{"arxiv": "2511.22570", "title": "DeepSeekMath-V2: Towards Self-Verifiable Mathematical Reasoning", "url": "https://arxiv.org/abs/2511.22570"}
+{"arxiv": "2504.21801", "title": "DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition", "url": "https://arxiv.org/abs/2504.21801"}
+{"arxiv": "2604.17543", "title": "PoliLegalLM: A Technical Report on a Large Language Model for Political and Legal Affairs", "url": "https://arxiv.org/abs/2604.17543"}
+{"arxiv": "2605.04036", "title": "OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories", "url": "https://arxiv.org/abs/2605.04036"}
+{"arxiv": "2604.02593", "title": "Moondream Segmentation: From Words to Masks", "url": "https://arxiv.org/abs/2604.02593"}
+{"arxiv": "2603.17829", "title": "CodeScout: An Effective Recipe for Reinforcement Learning of Code Search Agents", "url": "https://arxiv.org/abs/2603.17829"}
+{"arxiv": "2601.18129", "title": "Typhoon-S: Minimal Open Post-Training for Sovereign Large Language Models", "url": "https://arxiv.org/abs/2601.18129"}
+{"arxiv": "2503.05379", "title": "R1-Omni: Explainable Omni-Multimodal Emotion Recognition with Reinforcement Learning", "url": "https://arxiv.org/abs/2503.05379"}
+{"arxiv": "2510.18779", "title": "KAT-Coder Technical Report", "url": "https://arxiv.org/abs/2510.18779"}
+{"arxiv": "2509.15279", "title": "Fleming-R1: Toward Expert-Level Medical Reasoning via Reinforcement Learning", "url": "https://arxiv.org/abs/2509.15279"}
+{"arxiv": "2602.00846", "title": "Omni-RRM: Advancing Omni Reward Modeling via Automatic Rubric-Grounded Preference Synthesis", "url": "https://arxiv.org/abs/2602.00846"}
+{"arxiv": "2510.08163", "title": "ARM2: Adaptive Reasoning Model with Vision Understanding and Executable Code", "url": "https://arxiv.org/abs/2510.08163"}
+{"arxiv": "2507.13575", "title": "Apple Intelligence Foundation Language Models: Tech Report 2025", "url": "https://arxiv.org/abs/2507.13575"}
+{"arxiv": "2602.12205", "title": "DeepGen 1.0: A Lightweight Unified Multimodal Model for Advancing Image Generation and Editing", "url": "https://arxiv.org/abs/2602.12205"}
+{"arxiv": "2605.03195", "title": "Terminus-4B: Can a Smaller Model Replace Frontier LLMs at Agentic Execution Tasks?", "url": "https://arxiv.org/abs/2605.03195"}
+{"arxiv": "2504.05599", "title": "Skywork R1V: Pioneering Multimodal Reasoning with Chain-of-Thought", "url": "https://arxiv.org/abs/2504.05599"}
+{"arxiv": "2601.09718", "title": "StatLLaMA: Multi-Stage training for domain-optimized statistical large language models", "url": "https://arxiv.org/abs/2601.09718"}
+{"arxiv": "2505.24025", "title": "DINO-R1: Incentivizing Reasoning Capability in Vision Foundation Models", "url": "https://arxiv.org/abs/2505.24025"}
+{"arxiv": "2503.08007", "title": "MoRE: Unlocking Scalability in Reinforcement Learning for Quadruped Vision-Language-Action Models", "url": "https://arxiv.org/abs/2503.08007"}
+{"arxiv": "2602.03279", "title": "Agentic Proposing: Enhancing Large Language Model Reasoning via Compositional Skill Synthesis", "url": "https://arxiv.org/abs/2602.03279"}
+{"arxiv": "2505.16368", "title": "SATURN: SAT-based Reinforcement Learning to Unleash LLMs Reasoning", "url": "https://arxiv.org/abs/2505.16368"}
+{"arxiv": "2506.00577", "title": "Reasoning Like an Economist: Post-Training on Economic Problems Induces Strategic Generalization in LLMs", "url": "https://arxiv.org/abs/2506.00577"}
+{"arxiv": "2602.09901", "title": "QP-OneModel: A Unified Generative LLM for Multi-Task Query Understanding in Xiaohongshu Search", "url": "https://arxiv.org/abs/2602.09901"}
+{"arxiv": "2509.17336", "title": "Mano Technical Report", "url": "https://arxiv.org/abs/2509.17336"}
+{"arxiv": "2506.08551", "title": "DeepForm: Reasoning Large Language Model for Communication System Formulation", "url": "https://arxiv.org/abs/2506.08551"}
+{"arxiv": "2510.10976", "title": "Video-STR: Reinforcing MLLMs in Video Spatio-Temporal Reasoning with Relation Graph", "url": "https://arxiv.org/abs/2510.10976"}
+{"arxiv": "2510.22009", "title": "OpenPhone: Mobile Agentic Foundation Models", "url": "https://arxiv.org/abs/2510.22009"}
+{"arxiv": "2509.25848", "title": "More Thought, Less Accuracy? On the Dual Nature of Reasoning in Vision-Language Models", "url": "https://arxiv.org/abs/2509.25848"}
+{"arxiv": "2606.05924", "title": "Better Literary Translation: A Multi-Aspect Data Generation and LLM Training Approach", "url": "https://arxiv.org/abs/2606.05924"}
+{"arxiv": "2503.05132", "title": "R1-Zero's \"Aha Moment\" in Visual Reasoning on a 2B Non-SFT Model", "url": "https://arxiv.org/abs/2503.05132"}

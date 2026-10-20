@@ -1,0 +1,389 @@
+{
+  "verl": {
+    "url": "https://github.com/volcengine/verl",
+    "head_sha": "18cfb74852a053a27dcf301d3318a093be81b628",
+    "head_date": "2026-10-16",
+    "surfaces": {
+      "adv_estimator": [
+        "gae",
+        "gdpo",
+        "gpg",
+        "grpo",
+        "grpo_passk",
+        "grpo_vectorized",
+        "opo",
+        "optimal_token_baseline",
+        "reinforce_plus_plus",
+        "reinforce_plus_plus_baseline",
+        "remax",
+        "rloo",
+        "rloo_vectorized",
+        "tir_optimal_token_baseline"
+      ],
+      "policy_loss": [
+        "bypass_mode",
+        "cispo",
+        "clip_cov",
+        "dppo_kl",
+        "dppo_tv",
+        "dro",
+        "geo_mean",
+        "gpg",
+        "gspo",
+        "kl_cov",
+        "sapo",
+        "vanilla"
+      ],
+      "loss_agg_mode": [
+        "seq-mean-token-mean",
+        "seq-mean-token-sum-norm",
+        "token-mean",
+        "token-sum"
+      ],
+      "options": [
+        "clip_ratio_c",
+        "clip_ratio_high",
+        "enable_rollout_routing_replay",
+        "entropy_coeff",
+        "filter_groups",
+        "low_var_kl",
+        "norm_adv_by_std_in_grpo",
+        "overlong_buffer",
+        "rollout_is",
+        "rollout_rs",
+        "seq_max_k",
+        "use_kl_loss"
+      ],
+      "recipe": [
+        "recipe"
+      ],
+      "defaults": [
+        "adv_estimator=gae",
+        "clip_ratio_high=0.2",
+        "loss_agg_mode=token-mean",
+        "norm_adv_by_std_in_grpo=True",
+        "policy_loss_mode=vanilla"
+      ]
+    }
+  },
+  "verl_recipe": {
+    "url": "https://github.com/verl-project/verl-recipe",
+    "head_sha": "81d782765e6ddcd3d0371d64acee3a1d5645ef73",
+    "head_date": "2026-10-13",
+    "surfaces": {
+      "recipe": [
+        "async_flow",
+        "atropos",
+        "char_count",
+        "collabllm",
+        "dance_grpo",
+        "dapo",
+        "deepeyes",
+        "dynamo",
+        "echo",
+        "entropy",
+        "fapo",
+        "flowrl",
+        "fully_async_policy",
+        "genrm_remote",
+        "gkd",
+        "gvpo",
+        "infigui-g1",
+        "langgraph_agent",
+        "low_precision",
+        "minicpmo",
+        "nemo_gym",
+        "open_math_reasoning",
+        "partial_rollout",
+        "prime",
+        "qat",
+        "r1",
+        "rep_exp",
+        "retool",
+        "reward_queue",
+        "specRL",
+        "spin",
+        "spo",
+        "sppo",
+        "tmax",
+        "verl_tinker"
+      ]
+    }
+  },
+  "trl": {
+    "url": "https://github.com/huggingface/trl",
+    "head_sha": "6d6901c5e3963108076131ac4979d344566b13a2",
+    "head_date": "2026-10-16",
+    "surfaces": {
+      "trainer": [
+        "base",
+        "distillation",
+        "dpo",
+        "grpo",
+        "kto",
+        "reward",
+        "rloo",
+        "sft"
+      ],
+      "grpo_loss_type": [
+        "bnpo",
+        "cispo",
+        "dapo",
+        "dr_grpo",
+        "grpo",
+        "luspo",
+        "sapo",
+        "vespo"
+      ],
+      "grpo_options": [
+        "delta",
+        "epsilon_high",
+        "importance_sampling_level",
+        "mask_truncated_completions",
+        "multi_objective_aggregation",
+        "num_iterations",
+        "off_policy_mask_threshold",
+        "scale_rewards",
+        "top_entropy_quantile",
+        "use_adaptive_entropy",
+        "use_bias_correction_kl",
+        "vllm_importance_sampling_correction",
+        "vllm_importance_sampling_mode"
+      ],
+      "experimental": [
+        "a2po",
+        "async_distillation",
+        "async_grpo",
+        "bema_for_ref_model",
+        "cpo",
+        "distillation",
+        "gkd",
+        "gmpo",
+        "gold",
+        "harbor",
+        "iw_opd",
+        "kto",
+        "online_dpo",
+        "openreward",
+        "orpo",
+        "sdft",
+        "sdpo",
+        "server_distillation",
+        "tpo"
+      ],
+      "defaults": [
+        "beta=0.0",
+        "epsilon_high=None",
+        "importance_sampling_level=token",
+        "loss_type=dapo",
+        "mask_truncated_completions=False",
+        "scale_rewards=group",
+        "use_bias_correction_kl=True",
+        "vllm_importance_sampling_correction=True"
+      ]
+    }
+  },
+  "openrlhf": {
+    "url": "https://github.com/OpenRLHF/OpenRLHF",
+    "head_sha": "dc2a7ad326f619fc5a47737ea47d1920ce2c0b53",
+    "head_date": "2026-09-17",
+    "surfaces": {
+      "adv_estimator": [
+        "dr_grpo",
+        "flash_reinforce",
+        "gae",
+        "group_norm",
+        "reinforce",
+        "reinforce_baseline",
+        "rloo"
+      ],
+      "policy_loss_type": [
+        "gspo",
+        "ppo"
+      ],
+      "options": [
+        "dual_clip",
+        "dynamic_filtering",
+        "eps_clip_low_high",
+        "is_correction",
+        "is_correction_mask",
+        "loss_agg_mode",
+        "no_std_norm",
+        "overlong_buffer"
+      ],
+      "defaults": [
+        "adv_estimator=gae"
+      ]
+    }
+  },
+  "nemo-rl": {
+    "url": "https://github.com/NVIDIA-NeMo/RL",
+    "head_sha": "83385307ab71b044c7a77d5802c9f2ff0909e002",
+    "head_date": "2026-10-17",
+    "surfaces": {
+      "adv_estimator": [
+        "gdpo",
+        "generalized",
+        "grpo",
+        "opd",
+        "raw_reward",
+        "reinforce_plus_plus"
+      ],
+      "options": [
+        "force_on_policy_ratio",
+        "gae_lambda_value",
+        "grpo_train",
+        "length_adaptive_alpha",
+        "normalize_rewards",
+        "on_policy_distillation",
+        "overlong_filtering",
+        "positive_example_nll_weight",
+        "ratio_clip_c",
+        "ratio_clip_max",
+        "router_replay",
+        "seq_logprob_error_threshold",
+        "seq_mask_tis",
+        "sequence_level_importance_ratios",
+        "stop_properly_penalty_coef",
+        "token_level_loss",
+        "truncated_importance_sampling_ratio",
+        "use_cispo",
+        "use_dynamic_sampling",
+        "use_importance_sampling_correction",
+        "use_leave_one_out_baseline"
+      ],
+      "fixes": [
+        "kl_score_function_fix"
+      ]
+    }
+  },
+  "roll": {
+    "url": "https://github.com/alibaba/ROLL",
+    "head_sha": "d96d0cce56ec42c78c7b61e111b596a3a3a008a8",
+    "head_date": "2026-10-13",
+    "surfaces": {
+      "adv_estimator": [
+        "agentic_reinforce",
+        "diffnft",
+        "flowgrpo",
+        "gae",
+        "gigpo",
+        "grpo",
+        "reinforce",
+        "skip_obs_gae",
+        "step_reinforce"
+      ],
+      "pg_variant": [
+        "cispo",
+        "ppo",
+        "sao",
+        "tis",
+        "topr",
+        "vanilla"
+      ],
+      "loss_agg_mode": [
+        "seq-mean-token-mean",
+        "seq-mean-token-sum",
+        "seq-mean-token-sum-norm",
+        "token-mean"
+      ],
+      "options": [
+        "add_token_level_kl",
+        "difficulty_mask",
+        "dual_clip_loss",
+        "enable_rollout_routing_replay",
+        "importance_sampling_seq",
+        "norm_std_type",
+        "pg_clip_high",
+        "train_infer_correction",
+        "train_infer_filter",
+        "use_kl_loss"
+      ],
+      "pipelines": [
+        "agentic_starpo"
+      ],
+      "defaults": [
+        "adv_estimator=gae"
+      ]
+    }
+  },
+  "slime": {
+    "url": "https://github.com/THUDM/slime",
+    "head_sha": "859938dcb2b0791dbae9084a4d9ae91a4f38f3b7",
+    "head_date": "2026-10-17",
+    "surfaces": {
+      "adv_estimator": [
+        "cispo",
+        "grpo",
+        "gspo",
+        "ppo",
+        "reinforce_plus_plus",
+        "reinforce_plus_plus_baseline"
+      ],
+      "options": [
+        "calculate_per_token_loss",
+        "disable_grpo_std_normalization",
+        "dynamic_sampling_filter",
+        "eps_clip_c",
+        "eps_clip_high",
+        "use_kl_loss",
+        "use_opsm",
+        "use_rollout_routing_replay",
+        "use_routing_replay",
+        "use_tis"
+      ],
+      "defaults": [
+        "adv_estimator=grpo"
+      ]
+    }
+  },
+  "areal": {
+    "url": "https://github.com/inclusionAI/AReaL",
+    "head_sha": "bb13e3bdb9a865608eafa017a70a790124c3d3bb",
+    "head_date": "2026-10-16",
+    "surfaces": {
+      "options": [
+        "binary_kl",
+        "c_clip",
+        "dynamic_bs",
+        "enable_router_replay",
+        "eps_clip_higher",
+        "importance_sampling_level",
+        "m2_threshold",
+        "mask_no_eos_with_zero",
+        "overlong_reward_penalty",
+        "rejection_sampling",
+        "use_cispo_loss",
+        "use_decoupled_loss",
+        "use_sapo_loss"
+      ],
+      "recipe": [],
+      "algo_configs": [
+        "dapo_dynamic_bs",
+        "drgrpo",
+        "grpo",
+        "grpo_awex_colocate",
+        "grpo_cpu",
+        "grpo_lora",
+        "grpo_megatron",
+        "grpo_megatron_fp8",
+        "grpo_megatron_lora",
+        "grpo_megatron_lora_moe",
+        "grpo_npu",
+        "gspo",
+        "icepop",
+        "kpop",
+        "liteppo",
+        "m2po",
+        "ppo",
+        "ppo_megatron",
+        "reinforce",
+        "reinforce_baseline",
+        "rloo",
+        "sapo",
+        "sft",
+        "sft_archon_fp8"
+      ]
+    }
+  }
+}

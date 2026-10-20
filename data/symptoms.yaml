@@ -1,0 +1,55 @@
+# Failure modes an engineer can observe during RL post-training.
+# Each method in methods.yaml lists the symptoms its source says it addresses.
+# `observe` is what you would see in logs; keep it to signals a practitioner can check.
+
+- id: critic_cost
+  name: Value model cost
+  observe: A separate critic doubles memory and compute, or the critic does not learn on long sparse-reward outputs.
+
+- id: high_variance
+  name: High-variance policy gradient
+  observe: Noisy loss and reward curves; results change a lot across seeds at the same settings.
+
+- id: entropy_collapse
+  name: Entropy collapse
+  observe: Policy entropy falls fast early in training and reward plateaus; samples in a group become near-identical.
+
+- id: length_bias
+  name: Response-length bias
+  observe: Response length drifts for reasons unrelated to quality, often with wrong answers growing longest.
+
+- id: zero_gradient_groups
+  name: Groups with no learning signal
+  observe: Many prompts get all-correct or all-wrong groups, so their advantages are zero and the effective batch shrinks.
+
+- id: truncation_noise
+  name: Truncation noise
+  observe: Responses cut at max length receive penalties that do not reflect their reasoning quality.
+
+- id: train_infer_mismatch
+  name: Training-inference probability mismatch
+  observe: Log-probs from the rollout engine (vLLM, SGLang) differ from the trainer's; KL between them grows before a collapse.
+
+- id: moe_instability
+  name: MoE routing instability
+  observe: Mixture-of-experts models activate different experts across rollout and training or across updates, and training collapses.
+
+- id: ratio_outliers
+  name: Extreme importance ratios
+  observe: Token-level ratios far from 1 dominate the update; gradient norm spikes.
+
+- id: stale_policy
+  name: Stale or off-policy data
+  observe: Asynchronous or reused rollouts come from older policies and training destabilises as staleness grows.
+
+- id: multi_reward_collapse
+  name: Multi-reward signal collapse
+  observe: Several rewards are summed and then normalised, so distinct reward combinations map to the same advantage.
+
+- id: diversity_loss
+  name: Loss of solution diversity
+  observe: pass@1 rises while pass@k at large k falls; the model concentrates on few solution paths.
+
+- id: sparse_reward
+  name: Sparse outcome reward
+  observe: Only the final answer is rewarded, so long multi-step trajectories give little credit to individual steps.

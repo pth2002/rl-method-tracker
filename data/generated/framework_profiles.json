@@ -1,0 +1,897 @@
+{
+ "core_definition": "smallest set of commit authors covering half of the main-branch commits made before the landing",
+ "core_sizes": {
+  "verl": {
+   "core_authors": 40,
+   "all_authors": 751
+  },
+  "trl": {
+   "core_authors": 2,
+   "all_authors": 545
+  },
+  "openrlhf": {
+   "core_authors": 2,
+   "all_authors": 95
+  },
+  "nemo-rl": {
+   "core_authors": 11,
+   "all_authors": 178
+  },
+  "roll": {
+   "core_authors": 5,
+   "all_authors": 88
+  },
+  "slime": {
+   "core_authors": 2,
+   "all_authors": 178
+  },
+  "areal": {
+   "core_authors": 4,
+   "all_authors": 121
+  },
+  "verl_recipe": {
+   "core_authors": 13,
+   "all_authors": 48
+  }
+ },
+ "frameworks": {
+  "verl": {
+   "methods_ever": 30,
+   "methods_now": 30,
+   "first_anywhere": 21,
+   "median_lag": 25,
+   "n_lags": 29,
+   "who": {
+    "unresolved": 6,
+    "paper_author": 17,
+    "other_named": 6,
+    "core_contributor": 1
+   },
+   "tiers_now": {
+    "core": 12,
+    "recipe": 10,
+    "option": 8
+   },
+   "removed": []
+  },
+  "trl": {
+   "methods_ever": 24,
+   "methods_now": 21,
+   "first_anywhere": 16,
+   "median_lag": 35,
+   "n_lags": 23,
+   "who": {
+    "other_named": 10,
+    "core_contributor": 7,
+    "unresolved": 6,
+    "paper_author": 1
+   },
+   "tiers_now": {
+    "option": 9,
+    "default": 2,
+    "core": 5,
+    "experimental": 3,
+    "conditional_default": 2
+   },
+   "removed": [
+    {
+     "method": "gfpo",
+     "date": "2026-07-07",
+     "subject": "Removes GFPOTrainer (#6309)",
+     "commit": "60f8fd75a1"
+    },
+    {
+     "method": "dppo",
+     "date": "2026-07-20",
+     "subject": "Remove the experimental DPPO trainer (#6402)",
+     "commit": "ef1b500088"
+    },
+    {
+     "method": "papo",
+     "date": "2026-07-06",
+     "subject": "Remove the PAPO trainer (#6235)",
+     "commit": "a4d43d09ed"
+    }
+   ]
+  },
+  "openrlhf": {
+   "methods_ever": 9,
+   "methods_now": 9,
+   "first_anywhere": 3,
+   "median_lag": 34.0,
+   "n_lags": 8,
+   "who": {
+    "unresolved": 3,
+    "core_contributor": 6
+   },
+   "tiers_now": {
+    "core": 4,
+    "option": 5
+   },
+   "removed": []
+  },
+  "nemo-rl": {
+   "methods_ever": 14,
+   "methods_now": 14,
+   "first_anywhere": 3,
+   "median_lag": 167,
+   "n_lags": 13,
+   "who": {
+    "unresolved": 6,
+    "other_named": 6,
+    "core_contributor": 1,
+    "paper_author": 1
+   },
+   "tiers_now": {
+    "core": 2,
+    "option": 11,
+    "conditional_default": 1
+   },
+   "removed": []
+  },
+  "roll": {
+   "methods_ever": 12,
+   "methods_now": 12,
+   "first_anywhere": 4,
+   "median_lag": 99.0,
+   "n_lags": 2,
+   "who": {
+    "other_named": 4,
+    "core_contributor": 8
+   },
+   "tiers_now": {
+    "option": 7,
+    "core": 5
+   },
+   "removed": []
+  },
+  "slime": {
+   "methods_ever": 11,
+   "methods_now": 11,
+   "first_anywhere": 3,
+   "median_lag": 64,
+   "n_lags": 7,
+   "who": {
+    "core_contributor": 6,
+    "other_named": 5
+   },
+   "tiers_now": {
+    "core": 3,
+    "option": 8
+   },
+   "removed": []
+  },
+  "areal": {
+   "methods_ever": 14,
+   "methods_now": 13,
+   "first_anywhere": 4,
+   "median_lag": 170.0,
+   "n_lags": 14,
+   "who": {
+    "other_named": 5,
+    "core_contributor": 2,
+    "paper_author": 2,
+    "unresolved": 5
+   },
+   "tiers_now": {
+    "option": 13
+   },
+   "removed": [
+    {
+     "method": "aent",
+     "date": "2026-02-04",
+     "subject": "refactor: streamline CLI usage and remove unused files (#880)",
+     "commit": "5c33cba64c"
+    }
+   ]
+  }
+ },
+ "breadth_by_first_route": {
+  "unresolved": {
+   "methods": 8,
+   "in_3plus_now": 1,
+   "median_frameworks_now": 1.0
+  },
+  "paper_author": {
+   "methods": 19,
+   "in_3plus_now": 4,
+   "median_frameworks_now": 1
+  },
+  "other_named": {
+   "methods": 13,
+   "in_3plus_now": 3,
+   "median_frameworks_now": 1
+  },
+  "core_contributor": {
+   "methods": 14,
+   "in_3plus_now": 5,
+   "median_frameworks_now": 1.0
+  }
+ },
+ "landings": [
+  {
+   "method": "reinforce_pp",
+   "framework": "openrlhf",
+   "who": "unresolved",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "reinforce_pp",
+   "framework": "verl",
+   "who": "unresolved",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "reinforce_pp",
+   "framework": "slime",
+   "who": "core_contributor",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "reinforce_pp",
+   "framework": "areal",
+   "who": "other_named",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "reinforce_pp",
+   "framework": "nemo-rl",
+   "who": "unresolved",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "prime",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "dapo_clip_higher",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "dapo_clip_higher",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "dapo_clip_higher",
+   "framework": "nemo-rl",
+   "who": "other_named",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "dapo_clip_higher",
+   "framework": "openrlhf",
+   "who": "core_contributor",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "dapo_clip_higher",
+   "framework": "slime",
+   "who": "other_named",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "dapo_clip_higher",
+   "framework": "areal",
+   "who": "other_named",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "dapo_clip_higher",
+   "framework": "roll",
+   "who": "other_named",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "dapo_dynamic_sampling",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dapo_dynamic_sampling",
+   "framework": "openrlhf",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dapo_dynamic_sampling",
+   "framework": "roll",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dapo_dynamic_sampling",
+   "framework": "slime",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dapo_dynamic_sampling",
+   "framework": "areal",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dapo_dynamic_sampling",
+   "framework": "nemo-rl",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dapo_token_loss",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_token_loss",
+   "framework": "nemo-rl",
+   "who": "core_contributor",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_token_loss",
+   "framework": "trl",
+   "who": "core_contributor",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_token_loss",
+   "framework": "slime",
+   "who": "core_contributor",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_token_loss",
+   "framework": "roll",
+   "who": "core_contributor",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_overlong",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_overlong",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_overlong",
+   "framework": "openrlhf",
+   "who": "unresolved",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_overlong",
+   "framework": "nemo-rl",
+   "who": "other_named",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_overlong",
+   "framework": "areal",
+   "who": "other_named",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "dapo_no_kl",
+   "framework": "trl",
+   "who": "core_contributor",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "dr_grpo",
+   "framework": "trl",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dr_grpo",
+   "framework": "openrlhf",
+   "who": "unresolved",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dr_grpo",
+   "framework": "verl",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dr_grpo",
+   "framework": "slime",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dr_grpo",
+   "framework": "roll",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "dr_grpo",
+   "framework": "areal",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "topr",
+   "framework": "roll",
+   "who": "core_contributor",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "gpg",
+   "framework": "verl",
+   "who": "unresolved",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "intellect2_two_sided_clip",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "gigpo",
+   "framework": "roll",
+   "who": "core_contributor",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "skywork_adaptive_entropy",
+   "framework": "trl",
+   "who": "core_contributor",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "entropy_cov",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "opo",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "areal_decoupled",
+   "framework": "areal",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "high_entropy_tokens",
+   "framework": "trl",
+   "who": "core_contributor",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "cispo",
+   "framework": "roll",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "cispo",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "cispo",
+   "framework": "verl",
+   "who": "unresolved",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "cispo",
+   "framework": "nemo-rl",
+   "who": "unresolved",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "cispo",
+   "framework": "slime",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "cispo",
+   "framework": "areal",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "gspo",
+   "framework": "trl",
+   "who": "core_contributor",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "gspo",
+   "framework": "openrlhf",
+   "who": "core_contributor",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "gspo",
+   "framework": "verl",
+   "who": "core_contributor",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "gspo",
+   "framework": "roll",
+   "who": "other_named",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "gspo",
+   "framework": "slime",
+   "who": "core_contributor",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "gspo",
+   "framework": "nemo-rl",
+   "who": "unresolved",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "gspo",
+   "framework": "areal",
+   "who": "unresolved",
+   "n_frameworks_now": 7
+  },
+  {
+   "method": "routing_replay",
+   "framework": "slime",
+   "who": "core_contributor",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "gmpo",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 2
+  },
+  {
+   "method": "gmpo",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 2
+  },
+  {
+   "method": "tis",
+   "framework": "openrlhf",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "tis",
+   "framework": "verl",
+   "who": "unresolved",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "tis",
+   "framework": "slime",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "tis",
+   "framework": "trl",
+   "who": "unresolved",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "tis",
+   "framework": "nemo-rl",
+   "who": "unresolved",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "tis",
+   "framework": "roll",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "gfpo",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 0
+  },
+  {
+   "method": "flowrl",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "spo",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "m2po",
+   "framework": "areal",
+   "who": "unresolved",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "r3_rollout_routing_replay",
+   "framework": "slime",
+   "who": "core_contributor",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "r3_rollout_routing_replay",
+   "framework": "verl",
+   "who": "unresolved",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "r3_rollout_routing_replay",
+   "framework": "nemo-rl",
+   "who": "other_named",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "r3_rollout_routing_replay",
+   "framework": "roll",
+   "who": "core_contributor",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "r3_rollout_routing_replay",
+   "framework": "areal",
+   "who": "unresolved",
+   "n_frameworks_now": 5
+  },
+  {
+   "method": "rep_exp",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "mis",
+   "framework": "verl",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "mis",
+   "framework": "trl",
+   "who": "unresolved",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "mis",
+   "framework": "roll",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "mis",
+   "framework": "nemo-rl",
+   "who": "other_named",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "mis",
+   "framework": "areal",
+   "who": "unresolved",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "mis",
+   "framework": "openrlhf",
+   "who": "core_contributor",
+   "n_frameworks_now": 6
+  },
+  {
+   "method": "sapo",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 3
+  },
+  {
+   "method": "sapo",
+   "framework": "areal",
+   "who": "unresolved",
+   "n_frameworks_now": 3
+  },
+  {
+   "method": "sapo",
+   "framework": "verl",
+   "who": "other_named",
+   "n_frameworks_now": 3
+  },
+  {
+   "method": "opsm",
+   "framework": "slime",
+   "who": "other_named",
+   "n_frameworks_now": 2
+  },
+  {
+   "method": "opsm",
+   "framework": "trl",
+   "who": "unresolved",
+   "n_frameworks_now": 2
+  },
+  {
+   "method": "unbiased_kl",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "gdpo",
+   "framework": "trl",
+   "who": "paper_author",
+   "n_frameworks_now": 3
+  },
+  {
+   "method": "gdpo",
+   "framework": "nemo-rl",
+   "who": "paper_author",
+   "n_frameworks_now": 3
+  },
+  {
+   "method": "gdpo",
+   "framework": "verl",
+   "who": "other_named",
+   "n_frameworks_now": 3
+  },
+  {
+   "method": "dppo",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "dppo",
+   "framework": "trl",
+   "who": "unresolved",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "luspo",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "vespo",
+   "framework": "trl",
+   "who": "unresolved",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "bema_ref",
+   "framework": "trl",
+   "who": "core_contributor",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "passk_advantage",
+   "framework": "verl",
+   "who": "other_named",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "optimal_token_baseline",
+   "framework": "verl",
+   "who": "unresolved",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "gvpo",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "fapo",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "a2po",
+   "framework": "trl",
+   "who": "other_named",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "liteppo",
+   "framework": "areal",
+   "who": "core_contributor",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "trm",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "vapo",
+   "framework": "nemo-rl",
+   "who": "unresolved",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "papo",
+   "framework": "trl",
+   "who": "unresolved",
+   "n_frameworks_now": 0
+  },
+  {
+   "method": "aent",
+   "framework": "areal",
+   "who": "paper_author",
+   "n_frameworks_now": 0
+  },
+  {
+   "method": "collabllm",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "echo",
+   "framework": "verl",
+   "who": "other_named",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "dler",
+   "framework": "nemo-rl",
+   "who": "unresolved",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "aepo",
+   "framework": "verl",
+   "who": "paper_author",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "kl_grad_correction",
+   "framework": "nemo-rl",
+   "who": "other_named",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "starpo",
+   "framework": "roll",
+   "who": "other_named",
+   "n_frameworks_now": 1
+  },
+  {
+   "method": "flash_reinforce",
+   "framework": "openrlhf",
+   "who": "core_contributor",
+   "n_frameworks_now": 1
+  }
+ ]
+}

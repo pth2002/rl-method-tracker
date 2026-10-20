@@ -1,0 +1,49 @@
+{"thread_id": "verl#7894", "outcome": "open_engaged", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "nemo-rl#3550", "outcome": "open_no_reply", "reasons": [], "proposer_says": "paper_author", "quote": null}
+{"thread_id": "trl#5591", "outcome": "closed_no_comment", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "slime#1020", "outcome": "redirected", "reasons": ["placement", "design"], "proposer_says": null, "quote": "It suits to be an isolated repo, e.g. [Alibaba-NLP/qqr](https://github.com/Alibaba-NLP/qqr)."}
+{"thread_id": "verl#3637", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "openrlhf#1184", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#6222", "outcome": "withdrawn", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "areal#1114", "outcome": "stale_cleanup", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#4872", "outcome": "closed_inactive", "reasons": ["surface", "placement", "evidence", "completeness"], "proposer_says": null, "quote": "The method adds a good amount of complexity, including a buffer"}
+{"thread_id": "verl#3157", "outcome": "stale_cleanup", "reasons": [], "proposer_says": "paper_author", "quote": null}
+{"thread_id": "nemo-rl#524", "outcome": "withdrawn", "reasons": ["completeness", "evidence"], "proposer_says": null, "quote": "no, will close. the experiments didn't show any gains with this"}
+{"thread_id": "verl#1654", "outcome": "stale_cleanup", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl#3223", "outcome": "stale_cleanup", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#7242", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl#479", "outcome": "open_engaged", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#3291", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl#2755", "outcome": "stale_cleanup", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl_recipe#143", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#6368", "outcome": "redirected", "reasons": ["surface", "placement", "evidence", "covered"], "proposer_says": null, "quote": "If you'd like to keep iterating, `trl/experimental/` is the right home for a speculative loss variant"}
+{"thread_id": "trl#5411", "outcome": "declined", "reasons": ["surface", "demand"], "proposer_says": null, "quote": "a big surface to keep in sync as GRPO evolves."}
+{"thread_id": "trl#5027", "outcome": "declined", "reasons": ["completeness"], "proposer_says": null, "quote": "and there's no test."}
+{"thread_id": "trl#6167", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl#3434", "outcome": "stale_cleanup", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#4759", "outcome": "declined", "reasons": ["demand", "surface", "covered"], "proposer_says": null, "quote": "the bar for adding new trainer surface or dataset format is high"}
+{"thread_id": "trl#3507", "outcome": "withdrawn", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#3871", "outcome": "declined", "reasons": ["demand", "surface", "covered"], "proposer_says": null, "quote": "this thread hasn't drawn any +1s or follow-ups in the year it's been open"}
+{"thread_id": "nemo-rl#4258", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl#1021", "outcome": "open_engaged", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#4997", "outcome": "declined", "reasons": ["demand", "surface", "design"], "proposer_says": null, "quote": "a new ~3.8k-line trainer is a large maintenance surface to adopt speculatively."}
+{"thread_id": "slime#1565", "outcome": "redirected", "reasons": ["surface", "placement", "evidence", "design"], "proposer_says": null, "quote": "New algorithm/strategy features that are hard to verify/maintain long-term are currently outside that scope."}
+{"thread_id": "verl#7497", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#5226", "outcome": "redirected", "reasons": ["demand", "surface", "placement", "design", "covered"], "proposer_says": "paper_author", "quote": "Your offer to implement is still genuinely welcome — just as `trl.experimental.gtpo` rather than in the stable trainer."}
+{"thread_id": "verl#3357", "outcome": "open_engaged", "reasons": [], "proposer_says": "paper_author", "quote": null}
+{"thread_id": "trl#3928", "outcome": "declined", "reasons": ["demand", "placement", "surface"], "proposer_says": null, "quote": "It's been almost a year now and the signal is still thin so I'm going to close this issue."}
+{"thread_id": "verl#5334", "outcome": "open_no_reply", "reasons": [], "proposer_says": "paper_author", "quote": null}
+{"thread_id": "openrlhf#1093", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl#3728", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#3777", "outcome": "declined", "reasons": ["demand", "surface"], "proposer_says": null, "quote": "A full new trainer is a meaningful maintenance surface, so we're careful when adding a new one."}
+{"thread_id": "verl#1783", "outcome": "stale_cleanup", "reasons": [], "proposer_says": "paper_author", "quote": null}
+{"thread_id": "verl#6731", "outcome": "open_engaged", "reasons": [], "proposer_says": "paper_author", "quote": null}
+{"thread_id": "verl_recipe#157", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#4548", "outcome": "declined", "reasons": ["demand", "surface", "completeness"], "proposer_says": null, "quote": "adding a trust region option to the main GRPOTrainer is a surface we only grow with clear demand"}
+{"thread_id": "slime#1801", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl#3393", "outcome": "stale_cleanup", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl#5252", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "verl#5256", "outcome": "withdrawn", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "openrlhf#1214", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "trl#3496", "outcome": "closed_inactive", "reasons": [], "proposer_says": null, "quote": null}
+{"thread_id": "slime#1843", "outcome": "open_no_reply", "reasons": [], "proposer_says": null, "quote": null}

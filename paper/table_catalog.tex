@@ -1,0 +1,78 @@
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.5cm} >{\raggedright\arraybackslash}p{2.3cm} l l >{\raggedright\arraybackslash}p{2.9cm}@{}}
+\caption{\textbf{Method catalog.} Unit: catalog method. First landing is the earliest main-branch commit in any framework, with $\le$ for upper bounds. Frameworks list where the method is offered at the snapshot.}\label{tab:catalog} \\
+\toprule
+Method & Source & First public & First landing & Frameworks now \\
+\midrule
+\endfirsthead
+\toprule
+Method & Source & First public & First landing & Frameworks now \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+PPO (clipped surrogate, GAE) & \citet{arxiv170706347} & 2017-07-20 & 2022-12-30 & verl, OpenRLHF, NeMo-RL, ROLL, slime, AReaL \\
+Dual-clip PPO & \citet{arxiv191209729} & 2019-12-20 & 2025-04-02 & verl, OpenRLHF, NeMo-RL, ROLL, slime, AReaL \\
+k3 (low-variance) KL estimator & \citet{schulman2020kl} & 2020-03-07 & 2025-01-23 & verl \\
+ReMax & \citet{arxiv231010505} & 2023-10-16 & 2025-02-10 & verl \\
+GRPO & \citet{arxiv240203300} & 2024-02-05 & 2025-01-20 & verl, TRL, OpenRLHF, NeMo-RL, ROLL, slime, AReaL \\
+RLOO & \citet{arxiv240214740} & 2024-02-22 & 2024-05-22 & verl, TRL, OpenRLHF, NeMo-RL, AReaL \\
+Direct Reward Optimisation (quadratic log-ratio penalty) & \citet{arxiv240519107} & 2024-05-29 & 2026-08-04 & verl \\
+REINFORCE++ & \citet{arxiv250103262} & 2025-01-04 & 2024-11-10 & verl, OpenRLHF, NeMo-RL, slime, AReaL \\
+CollabLLM (multiturn-aware rewards) & \citet{arxiv250200640} & 2025-02-02 & 2025-09-25 & verl \\
+PRIME (implicit process rewards) & \citet{arxiv250201456} & 2025-02-03 & 2025-03-10 & verl \\
+Clip-higher (decoupled clip range) & \citet{arxiv250314476} & 2025-03-18 & 2025-03-19 & verl, TRL, OpenRLHF, NeMo-RL, ROLL, slime, AReaL \\
+Dynamic sampling (filter zero-variance groups) & \citet{arxiv250314476} & 2025-03-18 & 2025-04-04 & verl, OpenRLHF, NeMo-RL, ROLL, slime, AReaL \\
+Remove the KL penalty for reasoning RL & \citet{arxiv250314476} & 2025-03-18 & 2025-05-30 & TRL \\
+Overlong filtering and penalty & \citet{arxiv250314476} & 2025-03-18 & 2025-04-04 & verl, TRL, OpenRLHF, NeMo-RL, AReaL \\
+Token-level loss aggregation & \citet{arxiv250314476} & 2025-03-18 & 2025-04-04 & verl, TRL, NeMo-RL, ROLL, slime \\
+TOPR (tapered off-policy REINFORCE) & \citet{arxiv250314286} & 2025-03-18 & $\le$2025-10-29 & ROLL \\
+Pass@k advantage & \citet{arxiv250319595} & 2025-03-25 & 2025-05-23 & verl \\
+Dr. GRPO (no length or std normalisation) & \citet{arxiv250320783} & 2025-03-26 & 2025-03-22 & verl, TRL, OpenRLHF, ROLL, slime, AReaL \\
+GPG & \citet{arxiv250402546} & 2025-04-03 & 2025-07-03 & verl \\
+VAPO (decoupled and length-adaptive GAE, positive-example NLL) & \citet{arxiv250405118} & 2025-04-07 & 2026-06-10 & NeMo-RL \\
+StarPO (trajectory-level optimisation for multi-turn agents, RAGEN) & \citet{arxiv250420073} & 2025-04-24 & $\le$2025-05-30 & ROLL \\
+GVPO (group variance policy optimisation) & \citet{arxiv250419599} & 2025-04-28 & 2026-01-07 & verl \\
+Two-sided ratio clipping (INTELLECT-2) & \citet{arxiv250507291} & 2025-05-12 & 2025-05-13 & TRL \\
+GiGPO (group-in-group credit for agents) & \citet{arxiv250510978} & 2025-05-16 & $\le$2025-10-29 & ROLL \\
+A2PO (optimal advantage regression) & \citet{arxiv250520686} & 2025-05-27 & 2026-06-05 & TRL \\
+Clip-Cov and KL-Cov & \citet{arxiv250522617} & 2025-05-28 & 2025-06-19 & verl \\
+Adaptive entropy control (Skywork-OR1) & \citet{arxiv250522312} & 2025-05-28 & 2026-07-04 & TRL \\
+OPO (optimal reward baseline) & \citet{arxiv250523585} & 2025-05-29 & 2025-06-02 & verl \\
+Decoupled PPO objective (AReaL) & \citet{arxiv250524298} & 2025-05-30 & 2025-05-26 & AReaL \\
+Train on high-entropy tokens only & \citet{arxiv250601939} & 2025-06-02 & 2025-07-19 & TRL \\
+KL gradient with the score-function term (Tang and Munos) & \citet{arxiv250609477} & 2025-06-11 & 2026-06-24 & NeMo-RL \\
+CISPO & \citet{arxiv250613585} & 2025-06-16 & $\le$2025-10-29 & verl, TRL, NeMo-RL, ROLL, slime, AReaL \\
+PAPO (implicit perception loss) & \citet{arxiv250706448} & 2025-07-08 & 2025-10-30 & removed \\
+GSPO (sequence-level ratio) & \citet{arxiv250718071} & 2025-07-24 & 2025-07-27 & verl, TRL, OpenRLHF, NeMo-RL, ROLL, slime, AReaL \\
+Routing replay across updates & \citet{arxiv250718071} & 2025-07-24 & 2025-09-26 & slime \\
+GMPO (geometric-mean objective) & \citet{arxiv250720673} & 2025-07-28 & 2025-07-29 & verl, TRL \\
+Bias-corrected EMA reference model & \citet{arxiv250800180} & 2025-07-31 & 2025-09-12 & TRL \\
+Truncated importance sampling (TIS) & \citet{yao2025tis} & 2025-08 & 2025-08-06 & verl, TRL, OpenRLHF, NeMo-RL, ROLL, slime \\
+AEPO (adaptive exploration policy optimisation) & \citet{arxiv250805731} & 2025-08-07 & 2025-08-27 & verl \\
+LitePPO (group-mean, batch-std normalisation with token-level loss) & \citet{arxiv250808221} & 2025-08-11 & 2025-12-03 & AReaL \\
+GFPO (group filtered policy optimisation) & \citet{arxiv250809726} & 2025-08-13 & 2025-09-17 & removed \\
+AEnt (clamped entropy bonus with adaptive coefficient) & \citet{arxiv250903493} & 2025-09-03 & 2025-10-16 & removed \\
+SPO (single-stream policy optimisation) & \citet{arxiv250913232} & 2025-09-16 & 2025-11-25 & verl \\
+FlowRL (reward distribution matching) & \citet{arxiv250915207} & 2025-09-18 & 2025-11-06 & verl \\
+M2PO (second-moment trust region for stale data) & \citet{arxiv251001161} & 2025-10-01 & 2025-10-31 & AReaL \\
+Rollout routing replay (R3) & \citet{arxiv251011370} & 2025-10-13 & 2025-11-13 & verl, NeMo-RL, ROLL, slime, AReaL \\
+Representation-based exploration & \citet{arxiv251011686} & 2025-10-13 & 2026-01-07 & verl \\
+DLER truncation penalty & \citet{arxiv251015110} & 2025-10-16 & 2026-02-07 & NeMo-RL \\
+Masked importance sampling (MIS) & \citet{arxiv251018855} & 2025-10-21 & 2025-11-07 & verl, TRL, OpenRLHF, NeMo-RL, ROLL, AReaL \\
+FAPO & \citet{arxiv251022543} & 2025-10-26 & 2025-10-21 & verl \\
+SAPO (soft adaptive gating) & \citet{arxiv251120347} & 2025-11-25 & 2025-12-03 & verl, TRL, AReaL \\
+Off-policy sequence masking (DeepSeek-V3.2) & \citet{arxiv251202556} & 2025-12-02 & 2025-12-02 & TRL, slime \\
+Importance-weighted unbiased KL gradient (DeepSeek-V3.2) & \citet{arxiv251202556} & 2025-12-02 & 2025-12-08 & TRL \\
+Trust region masking (sequence max divergence) & \citet{arxiv251223075} & 2025-12-28 & 2026-01-14 & verl \\
+GDPO (decoupled per-reward normalisation) & \citet{arxiv260105242} & 2026-01-08 & 2026-01-15 & verl, TRL, NeMo-RL \\
+DPPO (divergence-based trust region) & \citet{arxiv260204879} & 2026-02-04 & 2026-02-26 & verl \\
+LUSPO (length-unbiased sequence policy optimisation) & \citet{arxiv260205261} & 2026-02-05 & 2026-02-09 & TRL \\
+Optimal token baseline with variance proxy & \citet{arxiv260207078} & 2026-02-06 & 2026-01-08 & verl \\
+VESPO & \citet{arxiv260210693} & 2026-02-11 & 2026-03-13 & TRL \\
+ECHO (auxiliary world-model loss on observation tokens) & \citet{arxiv260524517} & 2026-05-23 & 2026-09-11 & verl \\
+FlashREINFORCE (single-rollout async RL) & framework & 2026-09-14 & 2026-09-14 & OpenRLHF \\
+GRPO with replay buffer & framework & -- & 2025-09-24 & removed \\
+KPop (binary-KL token masking for rollout-training mismatch) & framework & -- & 2026-06-15 & AReaL \\
+Untruncated importance weights between rollout and trainer log-probs & framework & -- & 2025-04-22 & NeMo-RL \\
+SAO (direct double-sided importance sampling, ROLL) & framework & -- & $\le$2026-09-29 & ROLL \\
+\end{longtable}

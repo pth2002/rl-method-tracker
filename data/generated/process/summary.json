@@ -1,0 +1,755 @@
+{
+ "n_strict": 1598,
+ "funnel": {
+  "cited_only": 21,
+  "implementation_pr": 25,
+  "included": 37,
+  "no_record": 1500,
+  "request_only": 15
+ },
+ "name_audit": {
+  "no_record": 1500,
+  "searchable": 726,
+  "candidates": 23,
+  "refers": 13,
+  "proposal_pr": 6,
+  "request": 2,
+  "cited": 5,
+  "no_record_after": 1487,
+  "no_record_extrapolated": 1473
+ },
+ "n_threads": 26960,
+ "attempt_threads": 48,
+ "attempt_papers": 40,
+ "attempt_prs": 28,
+ "attempt_requests": 20,
+ "pr_outcomes": {
+  "closed_inactive": 2,
+  "closed_no_comment": 1,
+  "declined": 4,
+  "open_engaged": 4,
+  "open_no_reply": 13,
+  "redirected": 2,
+  "withdrawn": 2
+ },
+ "request_outcomes": {
+  "declined": 4,
+  "open_engaged": 1,
+  "open_no_reply": 4,
+  "redirected": 2,
+  "stale_cleanup": 8,
+  "withdrawn": 1
+ },
+ "closed_with_reason": 13,
+ "reasons_closed": {
+  "completeness": 3,
+  "covered": 4,
+  "demand": 8,
+  "design": 2,
+  "evidence": 3,
+  "placement": 6,
+  "surface": 11
+ },
+ "reasons_all": {
+  "completeness": 3,
+  "covered": 4,
+  "demand": 8,
+  "design": 2,
+  "evidence": 3,
+  "placement": 6,
+  "surface": 11
+ },
+ "no_merger_reply": 17,
+ "no_merger_reply_any_human": 1,
+ "attempts_any_human_reply": 29,
+ "landings_exact": 101,
+ "landing_events_with_pr": 94,
+ "landing_prior_request": 22,
+ "landing_author_paper": 21,
+ "landing_prs": 88,
+ "pr_author_prior_merger": 29,
+ "pr_self_merged": 22,
+ "pr_no_human_review": 11,
+ "pr_median_days_open": 6.5,
+ "pr_tests": 50,
+ "pr_core_n": 78,
+ "pr_median_core_lines": 117.5,
+ "core_lines_by_form": {
+  "coefficient": {
+   "n": 18,
+   "median": 88.0
+  },
+  "pipeline": {
+   "n": 22,
+   "median": 141.0
+  },
+  "term": {
+   "n": 23,
+   "median": 80
+  }
+ },
+ "attempt_prs_with_detail": 28,
+ "attempt_core_n": 27,
+ "attempt_median_core_lines": 162,
+ "open_attempt_prs": 17,
+ "open_attempt_median_age": 196,
+ "open_attempt_over_180": 9,
+ "by_framework": {
+  "verl": {
+   "landing_prs": 27,
+   "author_prior_merger": 1,
+   "self_merged": 1,
+   "median_days_open": 10,
+   "attempts": 20,
+   "attempts_open": 12,
+   "attempts_declined": 0,
+   "attempts_redirected": 0,
+   "attempts_stale": 7,
+   "attempts_withdrawn": 1
+  },
+  "trl": {
+   "landing_prs": 23,
+   "author_prior_merger": 13,
+   "self_merged": 13,
+   "median_days_open": 5,
+   "attempts": 18,
+   "attempts_open": 3,
+   "attempts_declined": 8,
+   "attempts_redirected": 2,
+   "attempts_stale": 2,
+   "attempts_withdrawn": 3
+  },
+  "openrlhf": {
+   "landing_prs": 5,
+   "author_prior_merger": 4,
+   "self_merged": 2,
+   "median_days_open": 0,
+   "attempts": 3,
+   "attempts_open": 3,
+   "attempts_declined": 0,
+   "attempts_redirected": 0,
+   "attempts_stale": 0,
+   "attempts_withdrawn": 0
+  },
+  "nemo-rl": {
+   "landing_prs": 13,
+   "author_prior_merger": 2,
+   "self_merged": 0,
+   "median_days_open": 17,
+   "attempts": 2,
+   "attempts_open": 2,
+   "attempts_declined": 0,
+   "attempts_redirected": 0,
+   "attempts_stale": 0,
+   "attempts_withdrawn": 0
+  },
+  "roll": {
+   "landing_prs": 0,
+   "author_prior_merger": 0,
+   "self_merged": 0,
+   "median_days_open": null,
+   "attempts": 0,
+   "attempts_open": 0,
+   "attempts_declined": 0,
+   "attempts_redirected": 0,
+   "attempts_stale": 0,
+   "attempts_withdrawn": 0
+  },
+  "slime": {
+   "landing_prs": 7,
+   "author_prior_merger": 6,
+   "self_merged": 5,
+   "median_days_open": 0,
+   "attempts": 4,
+   "attempts_open": 2,
+   "attempts_declined": 0,
+   "attempts_redirected": 2,
+   "attempts_stale": 0,
+   "attempts_withdrawn": 0
+  },
+  "areal": {
+   "landing_prs": 13,
+   "author_prior_merger": 3,
+   "self_merged": 1,
+   "median_days_open": 6,
+   "attempts": 1,
+   "attempts_open": 0,
+   "attempts_declined": 0,
+   "attempts_redirected": 0,
+   "attempts_stale": 1,
+   "attempts_withdrawn": 0
+  }
+ },
+ "review": {
+  "merged": {
+   "n": 88,
+   "human_discussion": 71,
+   "any_concern": 60,
+   "open_concern": 41,
+   "demand_or_surface": 6,
+   "design_or_completeness": 59,
+   "results_shown": 26,
+   "results_requested": 17,
+   "demand_signal": 14,
+   "placement_change": 4,
+   "driver": {
+    "both": 10,
+    "maintainer": 1,
+    "no_changes": 38,
+    "proposer": 39
+   },
+   "raised": {
+    "design": 50,
+    "completeness": 39,
+    "evidence": 18,
+    "placement": 8,
+    "surface": 6,
+    "demand": 0,
+    "covered": 5,
+    "priority": 0
+   },
+   "open": {
+    "design": 29,
+    "completeness": 18,
+    "evidence": 8,
+    "placement": 5,
+    "surface": 2,
+    "demand": 0,
+    "covered": 1,
+    "priority": 0
+   },
+   "concern_by_prior_merger": 57
+  },
+  "unmerged_pr": {
+   "n": 28,
+   "human_discussion": 14,
+   "any_concern": 11,
+   "open_concern": 9,
+   "demand_or_surface": 5,
+   "design_or_completeness": 8,
+   "results_shown": 9,
+   "results_requested": 3,
+   "demand_signal": 3,
+   "placement_change": 1,
+   "driver": {
+    "both": 1,
+    "no_changes": 23,
+    "proposer": 4
+   },
+   "raised": {
+    "design": 7,
+    "completeness": 4,
+    "evidence": 3,
+    "placement": 4,
+    "surface": 5,
+    "demand": 3,
+    "covered": 2,
+    "priority": 0
+   },
+   "open": {
+    "design": 5,
+    "completeness": 3,
+    "evidence": 2,
+    "placement": 3,
+    "surface": 5,
+    "demand": 3,
+    "covered": 2,
+    "priority": 0
+   },
+   "concern_by_prior_merger": 10
+  },
+  "request": {
+   "n": 20,
+   "human_discussion": 10,
+   "any_concern": 7,
+   "open_concern": 7,
+   "demand_or_surface": 6,
+   "design_or_completeness": 1,
+   "results_shown": 2,
+   "results_requested": 1,
+   "demand_signal": 9,
+   "placement_change": 0,
+   "driver": {
+    "no_changes": 20
+   },
+   "raised": {
+    "design": 1,
+    "completeness": 0,
+    "evidence": 1,
+    "placement": 4,
+    "surface": 6,
+    "demand": 5,
+    "covered": 3,
+    "priority": 1
+   },
+   "open": {
+    "design": 1,
+    "completeness": 0,
+    "evidence": 1,
+    "placement": 4,
+    "surface": 6,
+    "demand": 5,
+    "covered": 3,
+    "priority": 1
+   },
+   "concern_by_prior_merger": 7
+  },
+  "by_framework": {
+   "trl": {
+    "merged": {
+     "n": 23,
+     "human_discussion": 22,
+     "any_concern": 16,
+     "open_concern": 12,
+     "demand_or_surface": 2,
+     "design_or_completeness": 16,
+     "results_shown": 3,
+     "results_requested": 1,
+     "demand_signal": 2,
+     "placement_change": 2,
+     "driver": {
+      "both": 3,
+      "maintainer": 1,
+      "no_changes": 9,
+      "proposer": 10
+     },
+     "raised": {
+      "design": 14,
+      "completeness": 12,
+      "evidence": 2,
+      "placement": 2,
+      "surface": 2,
+      "demand": 0,
+      "covered": 1,
+      "priority": 0
+     },
+     "open": {
+      "design": 10,
+      "completeness": 5,
+      "evidence": 1,
+      "placement": 0,
+      "surface": 1,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 16
+    },
+    "unmerged_pr": {
+     "n": 12,
+     "human_discussion": 8,
+     "any_concern": 6,
+     "open_concern": 6,
+     "demand_or_surface": 5,
+     "design_or_completeness": 4,
+     "results_shown": 3,
+     "results_requested": 2,
+     "demand_signal": 3,
+     "placement_change": 0,
+     "driver": {
+      "no_changes": 11,
+      "proposer": 1
+     },
+     "raised": {
+      "design": 3,
+      "completeness": 4,
+      "evidence": 2,
+      "placement": 2,
+      "surface": 5,
+      "demand": 3,
+      "covered": 2,
+      "priority": 0
+     },
+     "open": {
+      "design": 3,
+      "completeness": 3,
+      "evidence": 2,
+      "placement": 2,
+      "surface": 5,
+      "demand": 3,
+      "covered": 2,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 6
+    }
+   },
+   "verl": {
+    "merged": {
+     "n": 27,
+     "human_discussion": 22,
+     "any_concern": 20,
+     "open_concern": 13,
+     "demand_or_surface": 2,
+     "design_or_completeness": 20,
+     "results_shown": 10,
+     "results_requested": 5,
+     "demand_signal": 2,
+     "placement_change": 0,
+     "driver": {
+      "both": 2,
+      "no_changes": 12,
+      "proposer": 13
+     },
+     "raised": {
+      "design": 14,
+      "completeness": 12,
+      "evidence": 5,
+      "placement": 4,
+      "surface": 2,
+      "demand": 0,
+      "covered": 2,
+      "priority": 0
+     },
+     "open": {
+      "design": 7,
+      "completeness": 4,
+      "evidence": 1,
+      "placement": 4,
+      "surface": 0,
+      "demand": 0,
+      "covered": 1,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 20
+    },
+    "unmerged_pr": {
+     "n": 10,
+     "human_discussion": 4,
+     "any_concern": 3,
+     "open_concern": 1,
+     "demand_or_surface": 0,
+     "design_or_completeness": 3,
+     "results_shown": 3,
+     "results_requested": 0,
+     "demand_signal": 0,
+     "placement_change": 0,
+     "driver": {
+      "no_changes": 7,
+      "proposer": 3
+     },
+     "raised": {
+      "design": 3,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "open": {
+      "design": 1,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 3
+    }
+   },
+   "nemo-rl": {
+    "merged": {
+     "n": 13,
+     "human_discussion": 12,
+     "any_concern": 12,
+     "open_concern": 9,
+     "demand_or_surface": 2,
+     "design_or_completeness": 11,
+     "results_shown": 6,
+     "results_requested": 8,
+     "demand_signal": 8,
+     "placement_change": 1,
+     "driver": {
+      "both": 3,
+      "no_changes": 2,
+      "proposer": 8
+     },
+     "raised": {
+      "design": 10,
+      "completeness": 10,
+      "evidence": 8,
+      "placement": 1,
+      "surface": 2,
+      "demand": 0,
+      "covered": 1,
+      "priority": 0
+     },
+     "open": {
+      "design": 5,
+      "completeness": 5,
+      "evidence": 4,
+      "placement": 1,
+      "surface": 1,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 11
+    },
+    "unmerged_pr": {
+     "n": 2,
+     "human_discussion": 1,
+     "any_concern": 1,
+     "open_concern": 1,
+     "demand_or_surface": 0,
+     "design_or_completeness": 1,
+     "results_shown": 2,
+     "results_requested": 1,
+     "demand_signal": 0,
+     "placement_change": 1,
+     "driver": {
+      "both": 1,
+      "no_changes": 1
+     },
+     "raised": {
+      "design": 1,
+      "completeness": 0,
+      "evidence": 1,
+      "placement": 1,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "open": {
+      "design": 1,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 0
+    }
+   },
+   "areal": {
+    "merged": {
+     "n": 13,
+     "human_discussion": 11,
+     "any_concern": 10,
+     "open_concern": 5,
+     "demand_or_surface": 0,
+     "design_or_completeness": 10,
+     "results_shown": 4,
+     "results_requested": 3,
+     "demand_signal": 1,
+     "placement_change": 1,
+     "driver": {
+      "both": 2,
+      "no_changes": 4,
+      "proposer": 7
+     },
+     "raised": {
+      "design": 10,
+      "completeness": 4,
+      "evidence": 3,
+      "placement": 1,
+      "surface": 0,
+      "demand": 0,
+      "covered": 1,
+      "priority": 0
+     },
+     "open": {
+      "design": 5,
+      "completeness": 3,
+      "evidence": 2,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 8
+    },
+    "unmerged_pr": {
+     "n": 0,
+     "human_discussion": 0,
+     "any_concern": 0,
+     "open_concern": 0,
+     "demand_or_surface": 0,
+     "design_or_completeness": 0,
+     "results_shown": 0,
+     "results_requested": 0,
+     "demand_signal": 0,
+     "placement_change": 0,
+     "driver": {},
+     "raised": {
+      "design": 0,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "open": {
+      "design": 0,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 0
+    }
+   },
+   "slime": {
+    "merged": {
+     "n": 7,
+     "human_discussion": 1,
+     "any_concern": 1,
+     "open_concern": 1,
+     "demand_or_surface": 0,
+     "design_or_completeness": 1,
+     "results_shown": 1,
+     "results_requested": 0,
+     "demand_signal": 0,
+     "placement_change": 0,
+     "driver": {
+      "no_changes": 7
+     },
+     "raised": {
+      "design": 1,
+      "completeness": 1,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "open": {
+      "design": 1,
+      "completeness": 1,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 1
+    },
+    "unmerged_pr": {
+     "n": 2,
+     "human_discussion": 1,
+     "any_concern": 1,
+     "open_concern": 1,
+     "demand_or_surface": 0,
+     "design_or_completeness": 0,
+     "results_shown": 1,
+     "results_requested": 0,
+     "demand_signal": 0,
+     "placement_change": 0,
+     "driver": {
+      "no_changes": 2
+     },
+     "raised": {
+      "design": 0,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 1,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "open": {
+      "design": 0,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 1,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 1
+    }
+   },
+   "openrlhf": {
+    "merged": {
+     "n": 5,
+     "human_discussion": 3,
+     "any_concern": 1,
+     "open_concern": 1,
+     "demand_or_surface": 0,
+     "design_or_completeness": 1,
+     "results_shown": 2,
+     "results_requested": 0,
+     "demand_signal": 1,
+     "placement_change": 0,
+     "driver": {
+      "no_changes": 4,
+      "proposer": 1
+     },
+     "raised": {
+      "design": 1,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "open": {
+      "design": 1,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 1
+    },
+    "unmerged_pr": {
+     "n": 2,
+     "human_discussion": 0,
+     "any_concern": 0,
+     "open_concern": 0,
+     "demand_or_surface": 0,
+     "design_or_completeness": 0,
+     "results_shown": 0,
+     "results_requested": 0,
+     "demand_signal": 0,
+     "placement_change": 0,
+     "driver": {
+      "no_changes": 2
+     },
+     "raised": {
+      "design": 0,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "open": {
+      "design": 0,
+      "completeness": 0,
+      "evidence": 0,
+      "placement": 0,
+      "surface": 0,
+      "demand": 0,
+      "covered": 0,
+      "priority": 0
+     },
+     "concern_by_prior_merger": 0
+    }
+   }
+  }
+ }
+}

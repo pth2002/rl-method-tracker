@@ -1,0 +1,250 @@
+{"framework": "areal", "kind": "issue", "number": 1260, "title": "[Feature] Migrate the primary megatron integration lib from `mbridge` to `megatron-bridge`", "created": "2026-04-25", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 7071, "title": "SFTTrainer treats an empty config._name_or_path as a Hub repo id", "created": "2026-09-05", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 141, "title": "traing process: ppo_actor/final_reward/avg & no_eos_ratios/avg  do not increase", "created": "2025-06-28", "code": "no_progress", "note": "reward does not increase with default settings; no failure named"}
+{"framework": "nemo-rl", "kind": "discussion", "number": 132, "title": "Use hydra or keep status quo of configs + hydra for override grammar", "created": "2025-04-03", "code": "none", "note": null}
+{"framework": "verl", "kind": "discussion", "number": 3504, "title": "[Proposal] Browser GUI Tool for Verl (Playwright / Selenium)", "created": "2025-09-17", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4467, "title": "Training Failure on 128 GPUs for Qwen3-VL-235B-A22B Model", "created": "2025-12-09", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 660, "title": "_broadcast_to_vllm DOES NOT seem to update the vllm weights", "created": "2025-01-09", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1335, "title": "OutOfMemoryError", "created": "2025-04-30", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 4688, "title": "Clarify the role of NeMo RL’s built-in evaluator alongside NeMo Gym", "created": "2026-10-13", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 834, "title": "first-step online sampling is different from offline-sampling with the exact sampling-params", "created": "2025-03-06", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1710, "title": "KeyError: 'visual.patch_embed.proj.weight'", "created": "2025-05-26", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3067, "title": "async vllm `max_num_seqs` param has deterministic impact on training results", "created": "2025-08-15", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 693, "title": "How to profile the system level and kernel level analysis?", "created": "2025-03-21", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2602, "title": "[Question] Log eval metrics performed during training to files", "created": "2025-01-22", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 998, "title": "remote forward extreamly slow when ray transmits large data batch", "created": "2025-04-26", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4227, "title": "Missing of the last 4 files of DeepSeek V3.1 HF weights during CKPT saving", "created": "2025-11-21", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1393, "title": "Quesiton: Is the training time display accurate?", "created": "2025-05-04", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 5524, "title": "Fixing Gemma3 Multimodal GRPO with LoRA", "created": "2026-03-09", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4929, "title": "SDPO: Reinforcement Learning via Self-Distillation", "created": "2026-01-29", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1928, "title": "Question about saving distributed_optimizer casuing OOM", "created": "2025-06-09", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 789, "title": "v0.4 improvements to MoE perf (DeepseekV3 & Qwen3)", "created": "2025-07-29", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4761, "title": "[Bug] no merged model under the folder `huggingface`", "created": "2026-01-01", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 2846, "title": "Distillation missing validation sample JSONL logging", "created": "2026-06-16", "code": "none", "note": null}
+{"framework": "roll", "kind": "issue", "number": 309, "title": "code_dapo agentic task fails", "created": "2025-12-30", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 51, "title": "Add nsys markers", "created": "2025-03-24", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4498, "title": "[Bug] Megatron merger do not support VL model, such as Qwen2.5-VL-7B", "created": "2025-12-12", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3169, "title": "High VRAM consumption of PRIME.", "created": "2025-08-21", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1094, "title": "Is there a specific method for training GRPO using Qwen2.5-VL-3B-Instruct with LoRA?", "created": "2025-04-15", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 835, "title": "目前框架支持gemma3吗？", "created": "2025-03-31", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3263, "title": "How to Check Time Consumed in 1. Rollout and 2. Trainer for Async", "created": "2025-08-29", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2415, "title": "ray.exceptions.RayTaskError(CompilationError):", "created": "2025-07-08", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 106, "title": "Hope more clear code structure", "created": "2025-06-11", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 291, "title": "Question about switching from Qwen2.5-VL to Gemma3 in AReaL multimodal workflow", "created": "2025-09-03", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 6365, "title": "[bug][fsdp2] NCCL deadlock in fsdp2_load_full_state_dict with heterogeneous buffer sizes (Gemma4)", "created": "2026-05-15", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 7478, "title": "GRPO and RLOO crash at the first step when the model is split across devices with device_map", "created": "2026-10-01", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4323, "title": "CI fails with dev dependencies: HFValidationError: Repo id must use alphanumeric chars", "created": "2025-10-22", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 6549, "title": "Illegal memory access when trying to train qwen3.5 9b/27b (vllm + fsdp2)", "created": "2026-06-01", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 1378, "title": "[Feature] [V1] FSDP BF16 Training + SGLang FP8 Rollout", "created": "2026-05-30", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4306, "title": "Can GRM and rollout share the same GPU resources?", "created": "2025-11-26", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 1442, "title": "[BUG] attn_impl=sdpa silently produces wrong logp with packed sequences on FSDP+HF backend", "created": "2026-06-26", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 205, "title": "CPU RAM leakage as training progresses", "created": "2025-08-20", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 6102, "title": "Tests (experimental): test_gkd_trainer_with_liger intermittently OOMs the T4 runner, failing unrelated PRs", "created": "2026-06-18", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 1487, "title": "Training hangs indefinitely after rollout phase completes on 8 B200 GPUs with CP=4, TP=2", "created": "2026-01-23", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 1851, "title": "[Question] RAM requirement for Qwen3-30B-A3B with 8xH100 with --optimizer-cpu-offload", "created": "2026-04-22", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1934, "title": "[fsdp_sft_trainer.py] can't make sft datasets (openai/gsm8k)", "created": "2025-06-10", "code": "none", "note": null}
+{"framework": "verl_recipe", "kind": "issue", "number": 145, "title": "[RFC] Add Environment-Regularized Policy Optimization (ERPO) Support to verl", "created": "2026-08-31", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4240, "title": "Support for Qwen3 80b Next (hybrid attn)", "created": "2025-11-22", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1988, "title": "loss_masks?", "created": "2025-06-12", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 1493, "title": "More details about the examples of on-policy distillation", "created": "2026-01-26", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1228, "title": "GRPO crash on latest main", "created": "2025-09-29", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1294, "title": "Mcore dependencies fetch global pip packages", "created": "2025-10-07", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1065, "title": "verl vllm=0.7.3支持VLLM_ATTENTION_BACKEND=FLASH_ATTN吗？", "created": "2025-04-14", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 966, "title": "eval_n_samples_per_prompt并不能生效", "created": "2025-04-14", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4318, "title": "[RFC] Reward Loop", "created": "2025-11-27", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 7006, "title": "create_model_from_path crashes when config lacks architecture metadata", "created": "2026-09-02", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4553, "title": "[model merger] bug: `verl/model_merger` is not merging LoRA weights", "created": "2025-12-17", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2570, "title": "ORPO on SFT dataset", "created": "2025-01-15", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3486, "title": "verl0.5什么时候会有适配vllm的dockerfile", "created": "2025-09-16", "code": "none", "note": null}
+{"framework": "verl", "kind": "discussion", "number": 2202, "title": "ray-less / rpc-less version for simpler debugging of smaller models", "created": "2025-06-25", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1004, "title": "Qwen3-30B-A3B is slightly slower after mbridge change during refit", "created": "2025-08-27", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1922, "title": "NeMo-RL DPO OOM issues with Nemotron-3-Nano-30B", "created": "2026-02-10", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2897, "title": "[Bug] Anomaly in Evaluation Metrics during Multi-node Training of Multi-modal Models", "created": "2025-08-04", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1984, "title": "[ray_trainer] function **apply_kl_penalty** bug", "created": "2025-06-12", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 997, "title": "how to fix the result ，even though I've set seed for everything", "created": "2025-04-10", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3284, "title": "Support for realistic multi-step rollouts via async vLLM API", "created": "2025-04-12", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2027, "title": "Is there a way to turn off Qwen3 32B thinking mode and add a thinking budget?", "created": "2025-06-15", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3953, "title": "does it support multi reward function?", "created": "2025-10-29", "code": "none", "note": null}
+{"framework": "roll", "kind": "issue", "number": 468, "title": "RFC: Optional Mooncake DataProto Transfer Backend for ROLL", "created": "2026-06-29", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1966, "title": "An error occurred halfway through the experiment：Exception ignored in: Exception ignored in sys.unraisablehookException ignored in:", "created": "2025-06-11", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3985, "title": "Feature Request: Save/Load Precomputed Ref Log-Probabilities in DPOTrainer", "created": "2025-09-01", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 502, "title": "Slime support train for Qwen3-Next-80B-A3Bw?", "created": "2025-10-15", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3933, "title": "Chunking Issue with Data Loader", "created": "2025-10-28", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 242, "title": "Running the GRPO program on multiple nodes causes it to hang.", "created": "2025-02-10", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 625, "title": "Code coverage of non-actor code >80%", "created": "2025-07-08", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 1693, "title": "[Question] why remove true-on-policy", "created": "2026-03-09", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4167, "title": "DDPO?", "created": "2025-09-29", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 258, "title": "Odd error on program exit (nit)", "created": "2025-04-24", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 3304, "title": "Add nightly test coverage for TRT-LLM generation expert parallelism (EP)", "created": "2026-07-21", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 943, "title": "最新分支删除了cli.train_ppo.py，请问是不支持了吗", "created": "2025-04-05", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4149, "title": "CUDA error: uncorrectable ECC error encountered", "created": "2025-09-26", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 2112, "title": "[Ray Bug] IOError: Failed to read data from the socket", "created": "2026-03-15", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2735, "title": "one_step_off_ppo_trainer Could not load 'ppo_trainer", "created": "2025-07-24", "code": "none", "note": null}
+{"framework": "roll", "kind": "issue", "number": 331, "title": "请问let it flow论文里的shrink & expand操作具体体现在代码的哪一部分呢", "created": "2026-01-28", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3248, "title": "[BUG] Param dp_model_parallel_size and rollout_world_size raise `unexpected keyword`", "created": "2025-08-28", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4072, "title": "deepspeed+trl load model twice", "created": "2025-09-12", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3881, "title": "GRPOTrainer training causes model to completely deteriorate when training with accelerate", "created": "2025-08-12", "code": "borderline", "note": "model deteriorates after enabling vLLM and accelerate; cause not identified"}
+{"framework": "verl", "kind": "issue", "number": 4369, "title": "[New Model] Support Olmo3 models.", "created": "2025-12-01", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 296, "title": "[BUG] sglang_remote prepare_batch执行到中途，concat_padded_tensors报错", "created": "2025-09-04", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "discussion", "number": 830, "title": "motivation for HF datasets?", "created": "2025-04-03", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3731, "title": "[Agentic RL] Deepeyes Bugs", "created": "2025-10-11", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 6752, "title": "请问可以给出较低的训练配置需求吗，如何优化低配置的机器的训练时间", "created": "2026-06-16", "code": "none", "note": null}
+{"framework": "trl", "kind": "discussion", "number": 4716, "title": "How can I control the on-policy and off-policy degree of GRPO?", "created": "2025-12-18", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3113, "title": "vLLM max_model_len should be set as the sum of max_prompt_len and max_completion_length", "created": "2025-03-19", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 6831, "title": "RFC: Support A2PO with DeepSpeed ZeRO-3 via an explicit reference model", "created": "2026-08-20", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4746, "title": "examples/notebooks/grpo_qwen3_vl.ipynb fails with TypeError: string indices must be integers, not 'str'", "created": "2025-12-24", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 7063, "title": "[Tracking] Move off liger-kernel and make the memory-efficient loss the default", "created": "2026-09-04", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 5265, "title": "Including video in the GRPO training data will cause hangs.", "created": "2026-02-10", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4563, "title": "[feature request][ci] exclude FSDP source files like `fsdp_utils.py` from Megatron CI", "created": "2025-12-17", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 401, "title": "How many H20 (96GB) GPUs are needed to train Qwen7B with the GRPO algorithm?", "created": "2025-02-27", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 439, "title": "(raylet) A worker died or was killed while executing a task by an unexpected system error.", "created": "2025-03-02", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 1187, "title": "DeepSpeed Off-loading Weights (not just Optimizer States)", "created": "2026-02-12", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4033, "title": "GSPO+lora训练比GSPO+full慢4倍", "created": "2025-11-06", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1365, "title": "Multi-Turn Rollout on a single GPU", "created": "2025-05-02", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 1724, "title": "[Bug] Geo3k multi turn reward abnormal", "created": "2026-03-13", "code": "no_progress", "note": "multi-turn reward does not increase in reproduction"}
+{"framework": "areal", "kind": "issue", "number": 1334, "title": "[BUG] Unexpected error in configure: 'dict' object has no attribute 'seed'", "created": "2026-05-13", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 3596, "title": "Anchor TimeoutChecker at SLURM_JOB_START_TIME so checkpoint_must_save_by budgets from allocation start", "created": "2026-08-12", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 178, "title": "ActorHandle object has no attribute init_process_group", "created": "2025-08-13", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 448, "title": "Create a separate `eval` function to replace `train` + `eval_mode=True`", "created": "2025-05-27", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 563, "title": "Evaluation results differ when `num_prompts_per_step` is different", "created": "2025-06-26", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3015, "title": "[bug] When training the Qwen3-Coder-30b MOE model, an error will be reported when saving checkpoint, how should I solve it", "created": "2025-08-12", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2983, "title": "GRPO Trainer, set num_iteration bigger than default 1, got RuntimeError: Inference tensors cannot be saved for backward. To work around you can make a clone to get a normal tensor and use it in autograd.", "created": "2025-02-28", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3561, "title": "Follow up with transformers in NPU", "created": "2025-09-22", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1070, "title": "PRIME reward manager implementation out of sync", "created": "2025-04-14", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2449, "title": "Difference of KL-Related Configurations || 不同KL参数的区别？", "created": "2025-07-10", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 3233, "title": "RFC: image/video diffusion (flow-matching) RL — flow-GRPO training", "created": "2026-07-16", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 3010, "title": "Qwen 3.5 with Megatron-inference", "created": "2026-06-30", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3620, "title": "qwen2.5-7b-it Run into OOM when updating actor using Megatron", "created": "2025-09-25", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 7372, "title": "CI fails with dev dependencies for Llava assistant masks: XPASS(strict)", "created": "2026-09-24", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 1223, "title": "`max_token` param error in `agent.py`", "created": "2026-04-19", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 1342, "title": "[BUG] trajectory dump writes to wrong version directory after checkpoint recovery", "created": "2026-05-15", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 820, "title": "Does anyone encounter this problem when running train_kto_llama.sh?", "created": "2025-03-03", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1037, "title": "Reducing the Ray overhead in GRPO", "created": "2025-09-02", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3340, "title": "If there is no global load awareness across agentloop workers", "created": "2025-09-04", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 6967, "title": "[fully_async] First NCCL checkpoint-engine group init hangs (timing race) — reproduces single-turn without tools", "created": "2026-07-07", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 315, "title": "Does PPO support training with multiple machines and multiple GPUs?", "created": "2025-02-19", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 962, "title": "[FSDP] Support scheduled learning rate", "created": "2025-11-28", "code": "none", "note": null}
+{"framework": "roll", "kind": "issue", "number": 470, "title": "Dependency clash for numpy when installing from scratch using pip", "created": "2026-06-30", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3254, "title": "How to get completion_length?", "created": "2025-04-07", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 6548, "title": "The memory usage gradually increases with each run.", "created": "2026-05-31", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 5840, "title": "megatron 长上下文训练报错 OOM", "created": "2026-04-01", "code": "none", "note": null}
+{"framework": "roll", "kind": "issue", "number": 253, "title": "最新版的roll，vllm，agentic任务，采用async_generation_ratio的话，出现问题，vllm sleep没有了？", "created": "2025-11-18", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 6028, "title": "AsyncGRPOTrainer: vision-language (*ForConditionalGeneration) checkpoints can't be trained (weight-sync key mismatch)", "created": "2026-06-12", "code": "none", "note": null}
+{"framework": "roll", "kind": "issue", "number": 449, "title": "支持Qwen 3.6 MOE模型GRPO吗？", "created": "2026-05-22", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 6661, "title": "Reasoning reward uses delimiter-list order instead of text order", "created": "2026-08-04", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 264, "title": "Training a model with tied weights with FSDP1 on multiple GPUs doesn't raise an error", "created": "2025-04-24", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 515, "title": "Potential Redundancy of seq_length Parameter in forward_backward_func Call", "created": "2025-10-16", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4794, "title": "AttributeError: 'FullyAsyncTrainer' object has no attribute 'train_dataloader'", "created": "2026-01-05", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3561, "title": "`get_world_size`is not found(404) on grpo server training", "created": "2025-06-10", "code": "none", "note": null}
+{"framework": "trl", "kind": "discussion", "number": 3542, "title": "How can I train on a dynamically generated dataset (based on the model’s own outputs) using GRPO Trainer?", "created": "2025-06-05", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2756, "title": "Tracking Liger-Kernel progress for GRPO Loss", "created": "2025-02-03", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4662, "title": "Kindly refer OpenTinker to Awesome work using verl", "created": "2025-12-24", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 5604, "title": "Support Speculative decoding in vllm-serve", "created": "2026-04-20", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 2810, "title": "Performance test failing with extreme golden values/metrics regression", "created": "2026-06-15", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1938, "title": "how can i deal wandb_proxy", "created": "2025-06-10", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 6223, "title": "Qwen3.5/6-35B-A3B tool call format unstable in vLLM token-in-token-out rollout with `enable_thinking=False`, while Qwen3.5-9B works", "created": "2026-04-30", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 546, "title": "[BUG] GRPO question", "created": "2025-11-06", "code": "none", "note": null}
+{"framework": "trl", "kind": "discussion", "number": 3123, "title": "When I set beta=0.0, why does the loss of GRPO always remain 0?", "created": "2025-03-20", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 726, "title": "NCCL error for duplicated GPU when actor model rank 0 colocates with one of the vLLM worker", "created": "2025-02-08", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2356, "title": "Missing saved files", "created": "2025-07-04", "code": "none", "note": null}
+{"framework": "roll", "kind": "issue", "number": 327, "title": "怎么跑GIGPO的训练", "created": "2026-01-22", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1752, "title": "worker_process_setup_hook leads to Duplicate GPU detected : rank 0 and rank 1 both on CUDA device 69000", "created": "2025-05-29", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3557, "title": "GRPOTrainer: Parallelism for updating named params", "created": "2025-06-10", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 867, "title": "Enable Deepscaler Aimee check in nightly tests", "created": "2025-08-07", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3621, "title": "Repeated calculation of ref_per_token_logps in grpo_trainer", "created": "2025-06-19", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1375, "title": "No module named 'ray' in docker container build in 4090", "created": "2025-10-16", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3757, "title": "Question regarding GRPOTrainer's advantage clipping", "created": "2025-07-23", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 538, "title": "Reproduce the issue of R1 zero in the 32B model, where the reward does not increase after a certain step", "created": "2025-03-11", "code": "borderline", "note": "R1-Zero reproduction: reward plateaus after 150 steps while responses grow longer"}
+{"framework": "verl", "kind": "issue", "number": 4846, "title": "发布的0.7.0版本release notes中描述有支持rhymerl的recipe，但是实际没有看到这个recipe？", "created": "2026-01-09", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 6536, "title": "CI (transformers dev): `TypeError: causal_conv1d_fn() got multiple values for argument 'seq_idx'` on NemotronH", "created": "2026-07-24", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2914, "title": "The multi-node training task has been pending", "created": "2025-08-05", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 2273, "title": "Remove penguin from comment", "created": "2026-04-16", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 149, "title": "Test data padding does not match world_size?", "created": "2025-01-28", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 5271, "title": "ms-swift GRPO Qwen3.5-9B use cuda， but，No module named 'vllm_ascend'", "created": "2026-03-11", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 7909, "title": "Multi-LoRA training: resident adapters and mixed-adapter steps on one base model", "created": "2026-09-17", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 865, "title": "Pack vLLM engines lead to hang before starting generating trajectories when world size is large", "created": "2025-03-13", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 4768, "title": "PPO and xtoken off-policy distillation ignore checkpointing.pretrained_checkpoint", "created": "2026-10-17", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 763, "title": "OOM when using Reinforce++ with rule-based reward on1x8 80G H800 GPU", "created": "2025-02-20", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3808, "title": "Failed to broadcast barrier_id Bug in `_move_model_to_vllm()` of grpo_trainer when training lora model", "created": "2025-07-30", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 981, "title": "Are there any plans to integrate performance profiling tools in VeRL?", "created": "2025-04-08", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4413, "title": "What is the default value of num_processes?", "created": "2025-10-31", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2769, "title": "[GRPO] per_token_logps.detach() should come from the old_policy – ratio is always 1. Is this intended?", "created": "2025-02-05", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1150, "title": "Any ways to save checkpoint when training error?", "created": "2025-04-18", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 615, "title": "[BUG] RemotevLLMEngine clients are not properly created when using vLLM as rollout engines", "created": "2025-11-24", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 1123, "title": "使用Remote RM 会卡住", "created": "2025-08-28", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 6771, "title": "verl拉起过程中出现异常", "created": "2026-06-16", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4593, "title": "CI fails with dev dependencies: RuntimeError: output with shape [3, 4, 1, 1] doesn't match the broadcast shape [3, 4, 1, 280]", "created": "2025-11-27", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 992, "title": "grpo训练的ray启动问题", "created": "2025-04-24", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1507, "title": "uv installation error", "created": "2025-11-11", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 7782, "title": "AsyncGRPO/AsyncDistillation merged-weight sync resumes vLLM before publishing the new rollout version", "created": "2026-10-17", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1955, "title": "[super-pr] fix min&max metric", "created": "2026-02-14", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2769, "title": "attention_backend is hard-coded to \"fa3\", making sglang.attention_backend config option ineffective", "created": "2025-07-26", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1363, "title": "PPO parameters", "created": "2025-05-02", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3992, "title": "mindspeed train error:  group_type currently only support -1 and 0, current value is 2", "created": "2025-11-03", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 2941, "title": "Nightly test failing metrics check llm_grpo_llama3_2_1b_instruct_1n8g_megatron", "created": "2026-06-25", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1268, "title": "Using the Qwen2.5-Math-1.5B model with the Math500 dataset and the latest version of Verl code, the validation result is 0.608. Shouldn't it be around 0.3?", "created": "2025-04-26", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3965, "title": "Is there a docker environment for RTX 6000 pro blackwell GPU?", "created": "2025-10-30", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4607, "title": "Unregistered model type: qwen3_vl", "created": "2025-12-19", "code": "none", "note": null}
+{"framework": "verl_recipe", "kind": "issue", "number": 19, "title": "dataframe = dataframe.map(self.map_fn2, num_proc=16) 加载失败", "created": "2026-01-19", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3119, "title": "[GRPO Trainer] NCCL communication timeout when training on multiple machines with deepspeed zero2 config", "created": "2025-03-20", "code": "none", "note": null}
+{"framework": "areal", "kind": "issue", "number": 747, "title": "[Feature] Improve usability on Ascend NPUs", "created": "2025-12-19", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 413, "title": "Support MoE models in FSDP2", "created": "2025-05-19", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4219, "title": "use of interaction_config_file", "created": "2025-11-21", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1122, "title": "example sft config for qwen models", "created": "2025-04-16", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 929, "title": "How to use customized reward for PPO with golden answers", "created": "2025-04-01", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 1309, "title": "NCCL Rendezvous Timeout", "created": "2026-01-03", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 3675, "title": "Qwen3.8 27B RL validation and recipe", "created": "2026-08-17", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2948, "title": "GPRO: Expand log_completions logic or update docs", "created": "2025-02-24", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 1482, "title": "About GLM-4.7-Flash", "created": "2026-01-23", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 5090, "title": "RFC: Defining the TRL Public API (towards v1.0)", "created": "2026-02-12", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2216, "title": "BUG：When using kl_cov, a TypeError is raised: unsupported operand type(s) for |: 'dict' and 'DictConfig'", "created": "2025-06-26", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3293, "title": "GPU memory usage continuously increased", "created": "2025-09-01", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 309, "title": "init_ray's runtime_env (with full os.environ) causes Ray runtime_env_agent to fail", "created": "2025-05-02", "code": "none", "note": null}
+{"framework": "verl", "kind": "discussion", "number": 1492, "title": "Saving log to file without tee", "created": "2025-05-12", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2032, "title": "It seems that verl only save a part of parameters of qwen3moe when saving ckpt during RL training", "created": "2025-06-16", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3087, "title": "请问grpo的lora训练完成后，保存在actor路径下的.pt文件是已经合并lora之后的模型参数吗？", "created": "2025-08-16", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 7401, "title": "[Bug][SFT] Resuming from an epoch-boundary checkpoint silently skips the next epoch", "created": "2026-08-14", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 5807, "title": "`SFTTrainer` does not pass `token_type_ids` for Gemma 3 text-only training", "created": "2026-05-21", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3256, "title": "Qwen3 MOE Megatron run script fails when mbridge loads hf weights", "created": "2025-08-28", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2865, "title": "GRPOTrainer incorrect?", "created": "2025-02-14", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 4317, "title": "Token capture: terminal fallback can select a discarded attempt when response attribution fails", "created": "2026-09-28", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 7511, "title": "BEMACallback fails at train start with ordinary PEFT LoRA", "created": "2026-10-03", "code": "none", "note": null}
+{"framework": "roll", "kind": "issue", "number": 370, "title": "megatron compatibility issues with linear_attn", "created": "2026-03-09", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2959, "title": "`compute_metrics` in `GRPOTrainer`", "created": "2025-02-26", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 791, "title": "[Question] About clip_ratio_high in DAPO", "created": "2025-03-27", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4558, "title": "'vllm' is not a package error running grpo training with sglang 0.56", "created": "2025-12-17", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 2470, "title": "[Question] Add Tensorlake as an optional sandbox provider for coding_agent_rl?", "created": "2026-10-13", "code": "none", "note": null}
+{"framework": "roll", "kind": "issue", "number": 213, "title": "Inquires about custom reward and tool use", "created": "2025-11-03", "code": "none", "note": null}
+{"framework": "trl", "kind": "discussion", "number": 2704, "title": "Training Agents with GRPO", "created": "2025-01-30", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4747, "title": "Addition of Supervised Reinforcement Learning", "created": "2025-12-24", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 2230, "title": "[Bug] Normalize reward advantages by explicit sample groups", "created": "2026-07-24", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4220, "title": "online_dpo：RuntimeError: no running event loop", "created": "2025-11-21", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1919, "title": "cannot even start the example", "created": "2025-06-09", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 7480, "title": "BEMACallback breaks when any parameter is frozen", "created": "2026-10-01", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 6528, "title": "请问qwen3.5在昇腾上megatron+mindspeed路线训练grpo例子有吗？", "created": "2026-05-29", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3901, "title": "sft_gemma3 example fail", "created": "2025-08-14", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2931, "title": "loss is always 0 when use LoraConfig in GRPOtrainer", "created": "2025-02-22", "code": "none", "note": null}
+{"framework": "slime", "kind": "issue", "number": 2229, "title": "[Performance] Vectorize REINFORCE++ discounted-return computation", "created": "2026-07-24", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 7182, "title": "[RFC] Criteria for removing code from `trl.experimental`", "created": "2026-09-11", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 768, "title": "No available agent to submit job, pease try again later..", "created": "2025-03-26", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 5021, "title": "CI PyTorch JIT deprecation warnings", "created": "2026-02-09", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 2825, "title": "[GRPO Trainer] Uneven GPU Utilization When Enabling vLLM with Multi-GPU Training", "created": "2025-02-11", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 903, "title": "请教gpu数量变化，其他设置需要变吗？我不同gpu下训练曲线不一致", "created": "2025-03-23", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3517, "title": "断点续训bug，keyerror：\"master_param\"", "created": "2025-09-18", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 4737, "title": "NCCL error: /pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:268, NCCL version 2.22.3 ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error.  Last error: socketStartConnect: Connect to IP<51423> failed", "created": "2025-12-23", "code": "none", "note": null}
+{"framework": "trl", "kind": "issue", "number": 3492, "title": "In colocate mode -> Prompts and completions are misaligned in logs", "created": "2025-05-24", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 3286, "title": "mbridge issue when run GRPO Qwen3MOE-30b", "created": "2025-09-01", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2968, "title": "ImportError: cannot import name 'flash_attn_supports_top_left_mask' from 'transformers.modeling_flash_attention_utils", "created": "2025-08-07", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2254, "title": "[Feature Request] Log batchsize when using dynamic batch_size", "created": "2025-06-28", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1344, "title": "[Bug] workflow `e2e_prime` is sometimes stuck", "created": "2025-04-30", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 1121, "title": "如何理解critic scheduler initialization depends on max_step, so we have to init critic after actor", "created": "2025-08-26", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1685, "title": "gpt-oss sft megatron does not support sequence packing", "created": "2025-12-22", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 1346, "title": "support for freeze vision tower", "created": "2025-05-01", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 388, "title": "Using Megatron backend, OOM occurs when running the PPO of qwen25-32b model on 4-node H800", "created": "2025-02-26", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 519, "title": "Saving model checkpoint hangs", "created": "2025-03-10", "code": "none", "note": null}
+{"framework": "openrlhf", "kind": "issue", "number": 1087, "title": "Release artifacts (models, dataset) on Hugging Face", "created": "2025-07-16", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 4903, "title": "[RFC] Cross-node placement group with IP-Based worker sorting", "created": "2026-01-13", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 2760, "title": "Error while training SGLang multi-turn search", "created": "2025-07-26", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1431, "title": "Support Qwen-3 next in MCore path", "created": "2025-10-27", "code": "none", "note": null}
+{"framework": "nemo-rl", "kind": "issue", "number": 1178, "title": "SP + Sequence Packing fails with Qwen2.5 in the DTensor path", "created": "2025-09-22", "code": "none", "note": null}
+{"framework": "verl", "kind": "issue", "number": 6985, "title": "[roadmap] verl 26Q3 roadmap", "created": "2026-07-09", "code": "none", "note": null}

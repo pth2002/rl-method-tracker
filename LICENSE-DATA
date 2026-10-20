@@ -1,0 +1,17 @@
+Data license
+
+The data files under data/ and the generated pages INDEX.md and FRAMEWORKS.md are
+released under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+You may share and adapt them for any purpose, including commercially, as long as you
+give appropriate credit, link to the license and indicate whether changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Suggested attribution: Taiheng Pan, "RL post-training method inclusion tracker",
+https://github.com/pth2002/rl-method-tracker, CC BY 4.0.
+
+The records derived from third-party sources keep their own terms. arXiv metadata is
+used under arXiv's terms of use. Issue, pull request and discussion titles, numbers and
+links come from the public GitHub repositories of the tracked frameworks, each under its
+own license; thread bodies are not redistributed, and each coded thread keeps at most one
+short quotation as evidence for its code.

@@ -1,0 +1,19 @@
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X}
+\toprule
+Method & Option names at the snapshot \\
+\midrule
+Clip-higher & verl: \texttt{clip\_ratio\_high}, \texttt{recipe/dapo}; TRL: \texttt{epsilon\_high}; OpenRLHF: \texttt{eps\_clip\_low\_high}; NeMo-RL: \texttt{ratio\_clip\_max}; ROLL: \texttt{pg\_clip\_high}; slime: \texttt{eps\_clip\_high}; AReaL: \texttt{dapo\_dynamic\_bs}, \texttt{eps\_clip\_higher} \\ \addlinespace[3pt]
+GSPO & verl: \texttt{gspo}; TRL: \texttt{importance\_sampling\_level}; OpenRLHF: \texttt{gspo}; NeMo-RL: \texttt{sequence\_level\_importance\_ratios}; ROLL: \texttt{importance\_sampling\_seq}; slime: \texttt{gspo}; AReaL: \texttt{gspo}, \texttt{importance\_sampling\_level} \\ \addlinespace[3pt]
+Dynamic sampling & verl: \texttt{filter\_groups}, \texttt{recipe/dapo}; OpenRLHF: \texttt{dynamic\_filtering}; NeMo-RL: \texttt{use\_dynamic\_sampling}; ROLL: \texttt{difficulty\_mask}; slime: \texttt{dynamic\_sampling\_filter}; AReaL: \texttt{dapo\_dynamic\_bs}, \texttt{dynamic\_bs} \\ \addlinespace[3pt]
+Dr. GRPO & verl: \texttt{norm\_adv\_by\_std\_in\_grpo}, \texttt{seq-mean-token-sum-norm}; TRL: \texttt{dr\_grpo}, \texttt{scale\_rewards}; OpenRLHF: \texttt{dr\_grpo}, \texttt{no\_std\_norm}; ROLL: \texttt{seq-mean-token-sum-norm}; slime: \texttt{disable\_grpo\_std\_normalization}; AReaL: \texttt{drgrpo} \\ \addlinespace[3pt]
+CISPO & verl: \texttt{cispo}; TRL: \texttt{cispo}; NeMo-RL: \texttt{use\_cispo}; ROLL: \texttt{cispo}; slime: \texttt{cispo}; AReaL: \texttt{use\_cispo\_loss} \\ \addlinespace[3pt]
+Truncated importance sampling (TIS) & verl: \texttt{rollout\_is}; TRL: \texttt{vllm\_importance\_sampling\_correction}; OpenRLHF: \texttt{is\_correction}; NeMo-RL: \texttt{truncated\_importance\_sampling\_ratio}; ROLL: \texttt{tis}, \texttt{train\_infer\_correction}; slime: \texttt{use\_tis} \\ \addlinespace[3pt]
+Masked importance sampling (MIS) & verl: \texttt{rollout\_rs}; TRL: \texttt{vllm\_importance\_sampling\_mode}; OpenRLHF: \texttt{is\_correction\_mask}; NeMo-RL: \texttt{seq\_logprob\_error\_threshold}, \texttt{seq\_mask\_tis}; ROLL: \texttt{train\_infer\_filter}; AReaL: \texttt{icepop}, \texttt{rejection\_sampling} \\ \addlinespace[3pt]
+REINFORCE++ & verl: \texttt{reinforce\_plus\_plus}, \texttt{reinforce\_plus\_plus\_baseline}; OpenRLHF: \texttt{reinforce}, \texttt{reinforce\_baseline}; NeMo-RL: \texttt{reinforce\_plus\_plus}; slime: \texttt{reinforce\_plus\_plus}, \texttt{reinforce\_plus\_plus\_baseline}; AReaL: \texttt{reinforce\_baseline} \\ \addlinespace[3pt]
+Token-level loss aggregation & verl: \texttt{recipe/dapo}; TRL: \texttt{dapo}; NeMo-RL: \texttt{token\_level\_loss}; ROLL: \texttt{token-mean}; slime: \texttt{calculate\_per\_token\_loss} \\ \addlinespace[3pt]
+Overlong filtering and penalty & verl: \texttt{overlong\_buffer}, \texttt{recipe/dapo}; TRL: \texttt{mask\_truncated\_completions}; OpenRLHF: \texttt{overlong\_buffer}; NeMo-RL: \texttt{overlong\_filtering}; AReaL: \texttt{overlong\_reward\_penalty} \\ \addlinespace[3pt]
+Rollout routing replay & verl: \texttt{enable\_rollout\_routing\_replay}; NeMo-RL: \texttt{router\_replay}; ROLL: \texttt{enable\_rollout\_routing\_replay}; slime: \texttt{use\_rollout\_routing\_replay}; AReaL: \texttt{enable\_router\_replay} \\ \addlinespace[3pt]
+SAPO & verl: \texttt{sapo}; TRL: \texttt{sapo}; AReaL: \texttt{sapo}, \texttt{use\_sapo\_loss} \\ \addlinespace[3pt]
+GDPO & verl: \texttt{gdpo}; TRL: \texttt{multi\_objective\_aggregation}; NeMo-RL: \texttt{gdpo} \\ \addlinespace[3pt]
+\bottomrule
+\end{tabularx}

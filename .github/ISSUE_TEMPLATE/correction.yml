@@ -1,0 +1,36 @@
+name: Correction
+description: Report a wrong mapping, a missed implementation, a wrong date or a wrong proposal record.
+title: "[correction] "
+labels: ["correction"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong
+      options:
+        - An option is mapped to the wrong method
+        - A framework implements a method the index does not list
+        - A date or tier is wrong
+        - A proposal record (FRAMEWORKS.md) is wrong
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: method
+    attributes:
+      label: Method or paper
+      description: Method name from INDEX.md, or the arXiv id of the paper.
+    validations:
+      required: true
+  - type: input
+    id: framework
+    attributes:
+      label: Framework
+      description: verl, TRL, OpenRLHF, NeMo-RL, ROLL, slime or AReaL.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links to the commit, file, pull request or issue that shows the correct record.
+    validations:
+      required: true

@@ -1,0 +1,344 @@
+{
+ "min_stars": 2000,
+ "candidates": [
+  {
+   "repo": "volcengine/verl",
+   "current_name": "verl-project/verl",
+   "stars": 23926,
+   "archived": false,
+   "tracked": true,
+   "meets_criteria": true,
+   "reason_outside": null
+  },
+  {
+   "repo": "huggingface/trl",
+   "current_name": "huggingface/trl",
+   "stars": 19551,
+   "archived": false,
+   "tracked": true,
+   "meets_criteria": true,
+   "reason_outside": null
+  },
+  {
+   "repo": "OpenRLHF/OpenRLHF",
+   "current_name": "OpenRLHF/OpenRLHF",
+   "stars": 10097,
+   "archived": false,
+   "tracked": true,
+   "meets_criteria": true,
+   "reason_outside": null
+  },
+  {
+   "repo": "NVIDIA-NeMo/RL",
+   "current_name": "NVIDIA-NeMo/RL",
+   "stars": 2074,
+   "archived": false,
+   "tracked": true,
+   "meets_criteria": true,
+   "reason_outside": null
+  },
+  {
+   "repo": "alibaba/ROLL",
+   "current_name": "alibaba/ROLL",
+   "stars": 3430,
+   "archived": false,
+   "tracked": true,
+   "meets_criteria": true,
+   "reason_outside": null
+  },
+  {
+   "repo": "THUDM/slime",
+   "current_name": "THUDM/slime",
+   "stars": 8686,
+   "archived": false,
+   "tracked": true,
+   "meets_criteria": true,
+   "reason_outside": null
+  },
+  {
+   "repo": "inclusionAI/AReaL",
+   "current_name": "areal-project/AReaL",
+   "stars": 5843,
+   "archived": false,
+   "tracked": true,
+   "meets_criteria": true,
+   "reason_outside": null
+  },
+  {
+   "repo": "allenai/open-instruct",
+   "current_name": "allenai/open-instruct",
+   "stars": 3901,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": true,
+   "reason_outside": null,
+   "commit": "ff32794a34dd0e8c7b436c6fe351763b5f511d56",
+   "date": "2026-10-17",
+   "cited": [
+    "2501.12948",
+    "2503.14476",
+    "2503.19470",
+    "2510.18855",
+    "2512.13961",
+    "2603.01365",
+    "2603.07079",
+    "2605.08639",
+    "2606.11867",
+    "2608.12146"
+   ],
+   "general_cited": [
+    "2503.14476",
+    "2603.01365"
+   ],
+   "general_cited_included": [
+    "2503.14476"
+   ],
+   "general_new_implemented": [
+    "2603.01365"
+   ]
+  },
+  {
+   "repo": "NovaSky-AI/SkyRL",
+   "current_name": "NovaSky-AI/SkyRL",
+   "stars": 2434,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": true,
+   "reason_outside": null,
+   "commit": "2c54cefc7c6b67fef2b51401bcb7eb0e87d8b98d",
+   "date": "2026-10-16",
+   "cited": [
+    "2501.03262",
+    "2502.01600",
+    "2502.14382",
+    "2503.09516",
+    "2503.14476",
+    "2503.20783",
+    "2504.11536",
+    "2505.09388",
+    "2505.22617",
+    "2505.24298",
+    "2506.13585",
+    "2507.02592",
+    "2507.18071",
+    "2509.19128",
+    "2510.11370",
+    "2510.13786",
+    "2510.26692",
+    "2511.16108",
+    "2511.20347",
+    "2512.01374",
+    "2512.02556",
+    "2512.24880",
+    "2601.16443",
+    "2601.16973",
+    "2602.04879",
+    "2602.15763",
+    "2603.17829",
+    "2605.24517"
+   ],
+   "general_cited": [
+    "2501.03262",
+    "2503.14476",
+    "2503.20783",
+    "2505.22617",
+    "2507.18071",
+    "2510.11370",
+    "2511.20347",
+    "2602.04879",
+    "2605.24517"
+   ],
+   "general_cited_included": [
+    "2501.03262",
+    "2503.14476",
+    "2503.20783",
+    "2505.22617",
+    "2507.18071",
+    "2510.11370",
+    "2511.20347",
+    "2602.04879",
+    "2605.24517"
+   ],
+   "general_new_implemented": []
+  },
+  {
+   "repo": "PrimeIntellect-ai/prime-rl",
+   "current_name": "PrimeIntellect-ai/prime-rl",
+   "stars": 2175,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": true,
+   "reason_outside": null,
+   "commit": "8dede158a9ac55e9bd86e9c36cbd6331ae87fd61",
+   "date": "2026-10-19",
+   "cited": [
+    "2505.05713",
+    "2506.24119",
+    "2510.18855",
+    "2510.26788",
+    "2512.02556",
+    "2601.19897",
+    "2602.02710"
+   ],
+   "general_cited": [
+    "2506.24119"
+   ],
+   "general_cited_included": [],
+   "general_new_implemented": [
+    "2506.24119"
+   ]
+  },
+  {
+   "repo": "RLinf/RLinf",
+   "current_name": "RLinf/RLinf",
+   "stars": 5439,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": true,
+   "reason_outside": null,
+   "commit": "a78b6d7f64eb13ffa10784b2760b0b3d4b73675b",
+   "date": "2026-10-17",
+   "cited": [
+    "2501.03262",
+    "2501.12948",
+    "2503.09516",
+    "2503.14476",
+    "2505.05470",
+    "2505.19789",
+    "2505.22094",
+    "2506.15799",
+    "2508.20722",
+    "2509.15965",
+    "2509.25756",
+    "2510.06710",
+    "2510.25889",
+    "2511.09515",
+    "2512.22036",
+    "2602.04634",
+    "2602.07837",
+    "2602.12628",
+    "2602.13977",
+    "2602.19313",
+    "2606.02800",
+    "2606.29834"
+   ],
+   "general_cited": [
+    "2501.03262",
+    "2503.14476"
+   ],
+   "general_cited_included": [
+    "2501.03262",
+    "2503.14476"
+   ],
+   "general_new_implemented": []
+  },
+  {
+   "repo": "modelscope/ms-swift",
+   "current_name": "modelscope/ms-swift",
+   "stars": 15886,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "general fine-tuning; its RL trainers build on TRL"
+  },
+  {
+   "repo": "hiyouga/LLaMA-Factory",
+   "current_name": "hiyouga/LlamaFactory",
+   "stars": 75583,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "general fine-tuning"
+  },
+  {
+   "repo": "unslothai/unsloth",
+   "current_name": "unslothai/unsloth",
+   "stars": 78250,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "general fine-tuning; its RL trainers build on TRL"
+  },
+  {
+   "repo": "huggingface/open-r1",
+   "current_name": "huggingface/open-r1",
+   "stars": 26475,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "a recipe that trains with TRL"
+  },
+  {
+   "repo": "OpenPipe/ART",
+   "current_name": "OpenPipe/ART",
+   "stars": 10813,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "trains through Unsloth and TRL"
+  },
+  {
+   "repo": "rllm-org/rllm",
+   "current_name": "rllm-org/rllm",
+   "stars": 5887,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "trains through verl"
+  },
+  {
+   "repo": "radixark/miles",
+   "current_name": "radixark/miles",
+   "stars": 3165,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "a fork of slime"
+  },
+  {
+   "repo": "PrimeIntellect-ai/verifiers",
+   "current_name": "PrimeIntellect-ai/verifiers",
+   "stars": 4717,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "an environment library"
+  },
+  {
+   "repo": "meta-pytorch/torchtune",
+   "current_name": "meta-pytorch/torchtune",
+   "stars": 5818,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "general fine-tuning"
+  },
+  {
+   "repo": "sail-sg/oat",
+   "current_name": "sail-sg/oat",
+   "stars": 673,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "fewer than 2,000 stars"
+  },
+  {
+   "repo": "ChenmienTan/RL2",
+   "current_name": "ChenmienTan/RL2",
+   "stars": 1318,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "fewer than 2,000 stars"
+  },
+  {
+   "repo": "meta-pytorch/torchforge",
+   "current_name": "meta-pytorch/torchforge",
+   "stars": 706,
+   "archived": false,
+   "tracked": false,
+   "meets_criteria": false,
+   "reason_outside": "fewer than 2,000 stars"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+[
+ {
+  "quarter": "2025Q1",
+  "general": 72,
+  "included_180": 5,
+  "landed": 3
+ },
+ {
+  "quarter": "2025Q2",
+  "general": 216,
+  "included_180": 6,
+  "landed": 4
+ },
+ {
+  "quarter": "2025Q3",
+  "general": 213,
+  "included_180": 7,
+  "landed": 6
+ },
+ {
+  "quarter": "2025Q4",
+  "general": 268,
+  "included_180": 7,
+  "landed": 10
+ },
+ {
+  "quarter": "2026Q1",
+  "general": 386,
+  "included_180": 5,
+  "landed": 9
+ }
+]

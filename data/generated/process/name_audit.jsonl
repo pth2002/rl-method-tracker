@@ -1,0 +1,23 @@
+{"arxiv": "2504.04524", "method_name": "TRPA", "refers": true, "role": "pr", "threads": ["verl#1023", "verl#1025", "verl#1034"], "note": "issue and pull request adding TRPA, both closed unmerged, and a README pull request"}
+{"arxiv": "2504.14945", "method_name": "LUFFY", "refers": true, "role": "cited", "threads": ["verl#1816"], "note": "README list of work built on verl"}
+{"arxiv": "2504.16084", "method_name": "TTRL", "refers": true, "role": "cited", "threads": ["openrlhf#1042"], "note": "listed among the algorithms of another project in its announcement"}
+{"arxiv": "2506.02864", "method_name": "BNPO", "refers": false, "role": null, "threads": ["trl#3231", "trl#3256"], "note": "a batch-level normalisation discussed before the paper appeared"}
+{"arxiv": "2506.05183", "method_name": "TreeRPO", "refers": false, "role": null, "threads": ["trl#4177"], "note": "a different TreeRPO from a blog post by other authors"}
+{"arxiv": "2506.14907", "method_name": "PeRL", "refers": false, "role": null, "threads": ["verl#5308", "slime#1440", "areal#1015"], "note": "a different repository named PeRL in file paths"}
+{"arxiv": "2506.19767", "method_name": "SRFT", "refers": true, "role": "request", "threads": ["verl#3879"], "note": "request to support SRFT, closed as not planned"}
+{"arxiv": "2507.04632", "method_name": "MoPPS", "refers": true, "role": "pr", "threads": ["verl#4099"], "note": "recipe pull request, closed unmerged"}
+{"arxiv": "2507.07451", "method_name": "RLEP", "refers": true, "role": "request", "threads": ["slime#1019"], "note": "question about adopting its experience replay, open"}
+{"arxiv": "2508.00222", "method_name": "RL-PLUS", "refers": true, "role": "cited", "threads": ["verl#3197"], "note": "README list of work built on verl"}
+{"arxiv": "2509.02479", "method_name": "SimpleTIR", "refers": true, "role": "pr", "threads": ["slime#701"], "note": "work-in-progress recipe pull request, open"}
+{"arxiv": "2509.02522", "method_name": "PACS", "refers": true, "role": "cited", "threads": ["verl#3327"], "note": "README list of work built on verl"}
+{"arxiv": "2509.21826", "method_name": "ResT", "refers": false, "role": null, "threads": ["trl#704"], "note": "ReST, a 2023 method with a similar name"}
+{"arxiv": "2510.01180", "method_name": "BroRL", "refers": true, "role": "cited", "threads": ["slime#537"], "note": "a user trains the released BroRL checkpoint"}
+{"arxiv": "2510.08233", "method_name": "DMPO", "refers": false, "role": null, "threads": ["verl_recipe#105"], "note": "a different DMPO from a 2026 paper"}
+{"arxiv": "2511.21667", "method_name": "RARO", "refers": true, "role": "pr", "threads": ["verl#4972"], "note": "pull request reproducing RARO, closed the same day"}
+{"arxiv": "2601.08403", "method_name": "OSPO", "refers": false, "role": null, "threads": ["areal#1395"], "note": "an open-source program office"}
+{"arxiv": "2602.05547", "method_name": "MT-GRPO", "refers": false, "role": null, "threads": ["verl#7244"], "note": "multi-turn GRPO, a different method"}
+{"arxiv": "2602.08335", "method_name": "SHARP", "refers": false, "role": null, "threads": ["verl#3028", "verl#3518", "nemo-rl#3736", "nemo-rl#1339"], "note": "the NCCL SHARP plugin"}
+{"arxiv": "2602.19362", "method_name": "OAPL", "refers": true, "role": "pr", "threads": ["nemo-rl#3825"], "note": "work-in-progress pull request implementing the same loss, open"}
+{"arxiv": "2604.08865", "method_name": "SPPO", "refers": false, "role": null, "threads": ["verl#1222", "trl#2958", "trl#3011"], "note": "self-play preference optimisation from 2024"}
+{"arxiv": "2604.18639", "method_name": "EasyRL", "refers": false, "role": null, "threads": ["verl#466"], "note": "an environment name in a log before the paper appeared"}
+{"arxiv": "2606.20008", "method_name": "VIMPO", "refers": true, "role": "pr", "threads": ["trl#6217"], "note": "experimental trainer pull request, open"}

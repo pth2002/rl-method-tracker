@@ -1,0 +1,12 @@
+{
+ "source": "arXiv OAI-PMH ListRecords, set=cs, from=2025-01-01",
+ "kept_categories": [
+  "cs.LG",
+  "cs.CL",
+  "cs.AI"
+ ],
+ "id_window": "2501-2606",
+ "pages": 295,
+ "records_kept": 139135,
+ "complete": true
+}

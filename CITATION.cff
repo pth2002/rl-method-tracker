@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use the tracker or its data, please cite the technical report."
+title: "RL post-training method inclusion tracker"
+type: software
+authors:
+  - family-names: Pan
+    given-names: Taiheng
+    affiliation: The University of Melbourne
+repository-code: "https://github.com/pth2002/rl-method-tracker"
+license: MIT
+version: "1.0"
+date-released: "2026-10-20"
+preferred-citation:
+  type: report
+  title: "From RL Papers to Framework Code: Inclusion and Review in Seven Open-Source Training Frameworks"
+  authors:
+    - family-names: Pan
+      given-names: Taiheng
+      affiliation: The University of Melbourne
+  year: 2026
+  month: 10
+  institution:
+    name: The University of Melbourne
+  url: "https://github.com/pth2002/rl-method-tracker"
+  notes: "Technical report, version 1, 20 October 2026."

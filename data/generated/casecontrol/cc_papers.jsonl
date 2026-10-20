@@ -1,0 +1,180 @@
+{"arxiv": "2508.05613", "title": "Cooper: Co-Optimizing Policy and Reward Models in Reinforcement Learning for Large Language Models", "url": "https://arxiv.org/abs/2508.05613"}
+{"arxiv": "2510.11686", "title": "Representation-Based Exploration for Language Models: From Test-Time to Post-Training", "url": "https://arxiv.org/abs/2510.11686"}
+{"arxiv": "2510.27419", "title": "DeepCompress: A Dual Reward Strategy for Dynamically Exploring and Compressing Reasoning Chains", "url": "https://arxiv.org/abs/2510.27419"}
+{"arxiv": "2512.13070", "title": "M-GRPO: Stabilizing Self-Supervised Reinforcement Learning for Large Language Models with Momentum-Anchored Policy Optimization", "url": "https://arxiv.org/abs/2512.13070"}
+{"arxiv": "2505.22312", "title": "Skywork Open Reasoner 1 Technical Report", "url": "https://arxiv.org/abs/2505.22312"}
+{"arxiv": "2505.12457", "title": "UFO-RL: Uncertainty-Focused Optimization for Efficient Reinforcement Learning Data Selection", "url": "https://arxiv.org/abs/2505.12457"}
+{"arxiv": "2510.08892", "title": "Exploring Multi-Temperature Strategies for Token- and Rollout-Level Control in RLVR", "url": "https://arxiv.org/abs/2510.08892"}
+{"arxiv": "2505.23927", "title": "Thompson Sampling in Online RLHF with General Function Approximation", "url": "https://arxiv.org/abs/2505.23927"}
+{"arxiv": "2509.22637", "title": "Variational Reasoning for Language Models", "url": "https://arxiv.org/abs/2509.22637"}
+{"arxiv": "2505.11821", "title": "Reinforcing Multi-Turn Reasoning in LLM Agents via Fine-Grained Reward Structure and Credit Assignment", "url": "https://arxiv.org/abs/2505.11821"}
+{"arxiv": "2508.10751", "title": "Pass@k Training for Adaptively Balancing Exploration and Exploitation of Large Reasoning Models", "url": "https://arxiv.org/abs/2508.10751"}
+{"arxiv": "2506.11425", "title": "Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards", "url": "https://arxiv.org/abs/2506.11425"}
+{"arxiv": "2509.25849", "title": "Knapsack RL: Unlocking Exploration of LLMs via Optimizing Budget Allocation", "url": "https://arxiv.org/abs/2509.25849"}
+{"arxiv": "2503.07453", "title": "Is a Good Foundation Necessary for Efficient Reinforcement Learning? The Computational Role of the Base Model in Exploration", "url": "https://arxiv.org/abs/2503.07453"}
+{"arxiv": "2505.22617", "title": "The Entropy Mechanism of Reinforcement Learning for Reasoning Language Models", "url": "https://arxiv.org/abs/2505.22617"}
+{"arxiv": "2509.22576", "title": "EPO: Entropy-regularized Policy Optimization for LLM Agents Reinforcement Learning", "url": "https://arxiv.org/abs/2509.22576"}
+{"arxiv": "2503.14286", "title": "Tapered Off-Policy REINFORCE: Stable and efficient reinforcement learning for LLMs", "url": "https://arxiv.org/abs/2503.14286"}
+{"arxiv": "2505.20737", "title": "RRO: LLM Agent Optimization Through Rising Reward Trajectories", "url": "https://arxiv.org/abs/2505.20737"}
+{"arxiv": "2510.14943", "title": "LaSeR: Reinforcement Learning with Last-Token Self-Rewarding", "url": "https://arxiv.org/abs/2510.14943"}
+{"arxiv": "2508.09726", "title": "Sample More to Think Less: Group Filtered Policy Optimization for Concise Reasoning", "url": "https://arxiv.org/abs/2508.09726"}
+{"arxiv": "2510.09369", "title": "Token-Level Policy Optimization: Linking Group-Level Rewards to Token-Level Aggregation via Markov Likelihood", "url": "https://arxiv.org/abs/2510.09369"}
+{"arxiv": "2503.22342", "title": "CPPO: Accelerating the Training of Group Relative Policy Optimization-Based Reasoning Models", "url": "https://arxiv.org/abs/2503.22342"}
+{"arxiv": "2502.00691", "title": "To Code or not to Code? Adaptive Tool Integration for Math Language Models via Expectation-Maximization", "url": "https://arxiv.org/abs/2502.00691"}
+{"arxiv": "2510.13554", "title": "Attention Illuminates LLM Reasoning: The Preplan-and-Anchor Rhythm Enables Fine-Grained Policy Optimization", "url": "https://arxiv.org/abs/2510.13554"}
+{"arxiv": "2501.16664", "title": "Improving Vision-Language-Action Model with Online Reinforcement Learning", "url": "https://arxiv.org/abs/2501.16664"}
+{"arxiv": "2504.16129", "title": "MARFT: Multi-Agent Reinforcement Fine-Tuning", "url": "https://arxiv.org/abs/2504.16129"}
+{"arxiv": "2510.10959", "title": "Revisiting Entropy Regularization: Adaptive Coefficient Unlocks Its Potential for LLM Reinforcement Learning", "url": "https://arxiv.org/abs/2510.10959"}
+{"arxiv": "2504.00829", "title": "How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study", "url": "https://arxiv.org/abs/2504.00829"}
+{"arxiv": "2501.02790", "title": "Segmenting Text and Learning Their Rewards for Improved RLHF in Language Model", "url": "https://arxiv.org/abs/2501.02790"}
+{"arxiv": "2505.17508", "title": "On the Design of KL-Regularized Policy Gradient Algorithms for LLM Reasoning", "url": "https://arxiv.org/abs/2505.17508"}
+{"arxiv": "2508.12338", "title": "Wisdom of the Crowd: Reinforcement Learning from Coevolutionary Collective Feedback", "url": "https://arxiv.org/abs/2508.12338"}
+{"arxiv": "2502.20548", "title": "Q\\sharp: Provably Optimal Distributional RL for LLM Post-Training", "url": "https://arxiv.org/abs/2502.20548"}
+{"arxiv": "2505.18531", "title": "Generative RLHF-V: Learning Principles from Multi-modal Human Preference", "url": "https://arxiv.org/abs/2505.18531"}
+{"arxiv": "2510.04678", "title": "Multi-Agent Tool-Integrated Policy Optimization", "url": "https://arxiv.org/abs/2510.04678"}
+{"arxiv": "2509.15194", "title": "Evolving Language Models without Labels: Majority Drives Selection, Novelty Promotes Variation", "url": "https://arxiv.org/abs/2509.15194"}
+{"arxiv": "2506.03106", "title": "Critique-GRPO: Advancing LLM Reasoning with Natural Language and Numerical Feedback", "url": "https://arxiv.org/abs/2506.03106"}
+{"arxiv": "2508.02833", "title": "TIC-GRPO: Provable and Efficient Optimization for Reinforcement Learning from Human Feedback", "url": "https://arxiv.org/abs/2508.02833"}
+{"arxiv": "2507.08960", "title": "How to Train a Leader: Hierarchical Reasoning in Multi-Agent LLMs", "url": "https://arxiv.org/abs/2507.08960"}
+{"arxiv": "2506.18485", "title": "A Simple \"Motivation\" Can Enhance Reinforcement Finetuning of Large Reasoning Models", "url": "https://arxiv.org/abs/2506.18485"}
+{"arxiv": "2504.02546", "title": "GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning", "url": "https://arxiv.org/abs/2504.02546"}
+{"arxiv": "2507.18071", "title": "Group Sequence Policy Optimization", "url": "https://arxiv.org/abs/2507.18071"}
+{"arxiv": "2503.19612", "title": "RL-finetuning LLMs from on- and off-policy data with a single algorithm", "url": "https://arxiv.org/abs/2503.19612"}
+{"arxiv": "2502.07460", "title": "Logarithmic Regret for Online KL-Regularized Reinforcement Learning", "url": "https://arxiv.org/abs/2502.07460"}
+{"arxiv": "2510.14738", "title": "AutoRubric: Rubric-Based Generative Rewards for Faithful Multimodal Reasoning", "url": "https://arxiv.org/abs/2510.14738"}
+{"arxiv": "2510.11370", "title": "Stabilizing MoE Reinforcement Learning by Aligning Training and Inference Routers", "url": "https://arxiv.org/abs/2510.11370"}
+{"arxiv": "2512.05591", "title": "Entropy Ratio Clipping as a Soft Global Constraint for Stable Reinforcement Learning", "url": "https://arxiv.org/abs/2512.05591"}
+{"arxiv": "2503.14476", "title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale", "url": "https://arxiv.org/abs/2503.14476"}
+{"arxiv": "2512.05962", "title": "Whatever Remains Must Be True: Filtering Drives Reasoning in LLMs, Shaping Diversity", "url": "https://arxiv.org/abs/2512.05962"}
+{"arxiv": "2506.15651", "title": "AutoRule: Reasoning Chain-of-thought Extracted Rule-based Rewards Improve Preference Learning", "url": "https://arxiv.org/abs/2506.15651"}
+{"arxiv": "2502.01456", "title": "Process Reinforcement through Implicit Rewards", "url": "https://arxiv.org/abs/2502.01456"}
+{"arxiv": "2511.23310", "title": "Variance-Aware Baselines and Adaptive Learning Rates for Reinforcement Learning with Verifiable Rewards", "url": "https://arxiv.org/abs/2511.23310"}
+{"arxiv": "2506.05183", "title": "TreeRPO: Tree Relative Policy Optimization", "url": "https://arxiv.org/abs/2506.05183"}
+{"arxiv": "2505.16826", "title": "KTAE: A Model-Free Algorithm to Key-Tokens Advantage Estimation in Mathematical Reasoning", "url": "https://arxiv.org/abs/2505.16826"}
+{"arxiv": "2506.19767", "title": "SRFT: A Single-Stage Method with Supervised and Reinforcement Fine-Tuning for Reasoning", "url": "https://arxiv.org/abs/2506.19767"}
+{"arxiv": "2505.15612", "title": "Learn to Reason Efficiently with Adaptive Length-based Reward Shaping", "url": "https://arxiv.org/abs/2505.15612"}
+{"arxiv": "2505.12432", "title": "Observe-R1: Unlocking Reasoning Abilities of MLLMs with Dynamic Progressive Reinforcement Learning", "url": "https://arxiv.org/abs/2505.12432"}
+{"arxiv": "2505.23585", "title": "On-Policy RL with Optimal Reward Baseline", "url": "https://arxiv.org/abs/2505.23585"}
+{"arxiv": "2505.10978", "title": "Group-in-Group Policy Optimization for LLM Agent Training", "url": "https://arxiv.org/abs/2505.10978"}
+{"arxiv": "2502.06781", "title": "Exploring the Limit of Outcome Reward for Learning Mathematical Reasoning", "url": "https://arxiv.org/abs/2502.06781"}
+{"arxiv": "2512.02556", "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models", "url": "https://arxiv.org/abs/2512.02556"}
+{"arxiv": "2502.15145", "title": "Projection Optimization: A General Framework for Multi-Objective and Multi-Group RLHF", "url": "https://arxiv.org/abs/2502.15145"}
+{"arxiv": "2503.07572", "title": "Optimizing Test-Time Compute via Meta Reinforcement Fine-Tuning", "url": "https://arxiv.org/abs/2503.07572"}
+{"arxiv": "2506.09659", "title": "Intent Factored Generation: Unleashing the Diversity in Your Language Model", "url": "https://arxiv.org/abs/2506.09659"}
+{"arxiv": "2510.24700", "title": "Greedy Sampling Is Provably Efficient for RLHF", "url": "https://arxiv.org/abs/2510.24700"}
+{"arxiv": "2505.17621", "title": "Navigate the Unknown: Enhancing LLM Reasoning with Intrinsic Motivation Guided Exploration", "url": "https://arxiv.org/abs/2505.17621"}
+{"arxiv": "2512.15687", "title": "Can LLMs Guide Their Own Exploration? Gradient-Guided Reinforcement Learning for LLM Reasoning", "url": "https://arxiv.org/abs/2512.15687"}
+{"arxiv": "2501.03262", "title": "REINFORCE++: Stabilizing Critic-Free Policy Optimization with Global Advantage Normalization", "url": "https://arxiv.org/abs/2501.03262"}
+{"arxiv": "2504.05185", "title": "Concise Reasoning via Reinforcement Learning", "url": "https://arxiv.org/abs/2504.05185"}
+{"arxiv": "2508.01174", "title": "RSPO: Risk-Seeking Policy Optimization for Pass@k and Max@k Metrics in Large Language Models", "url": "https://arxiv.org/abs/2508.01174"}
+{"arxiv": "2505.12951", "title": "DGRO: Enhancing LLM Reasoning via Exploration-Exploitation Control and Reward Variance Management", "url": "https://arxiv.org/abs/2505.12951"}
+{"arxiv": "2508.12604", "title": "SSPO: Self-traced Step-wise Preference Optimization for Process Supervision and Reasoning Compression", "url": "https://arxiv.org/abs/2508.12604"}
+{"arxiv": "2501.19266", "title": "Jackpot! Alignment as a Maximal Lottery", "url": "https://arxiv.org/abs/2501.19266"}
+{"arxiv": "2504.08837", "title": "VL-Rethinker: Incentivizing Self-Reflection of Vision-Language Models with Reinforcement Learning", "url": "https://arxiv.org/abs/2504.08837"}
+{"arxiv": "2511.15208", "title": "Reasoning in Diffusion Large Language Models is Concentrated in Dynamic Confusion Zones", "url": "https://arxiv.org/abs/2511.15208"}
+{"arxiv": "2509.15207", "title": "FlowRL: Matching Reward Distributions for LLM Reasoning", "url": "https://arxiv.org/abs/2509.15207"}
+{"arxiv": "2506.13702", "title": "Value-Free Policy Optimization via Reward Partitioning", "url": "https://arxiv.org/abs/2506.13702"}
+{"arxiv": "2502.13723", "title": "Direct Value Optimization: Improving Chain-of-Thought Reasoning in LLMs with Refined Values", "url": "https://arxiv.org/abs/2502.13723"}
+{"arxiv": "2512.02882", "title": "OptPO: Optimal Rollout Allocation for Test-time Policy Optimization", "url": "https://arxiv.org/abs/2512.02882"}
+{"arxiv": "2505.15311", "title": "Trajectory Bellman Residual Minimization: A Simple Value-Based Method for LLM Reasoning", "url": "https://arxiv.org/abs/2505.15311"}
+{"arxiv": "2508.13148", "title": "MDPO: Overcoming the Training-Inference Divide of Masked Diffusion Language Models", "url": "https://arxiv.org/abs/2508.13148"}
+{"arxiv": "2509.19803", "title": "VCRL: Variance-based Curriculum Reinforcement Learning for Large Language Models", "url": "https://arxiv.org/abs/2509.19803"}
+{"arxiv": "2505.13438", "title": "Optimizing Anytime Reasoning via Budget Relative Policy Optimization", "url": "https://arxiv.org/abs/2505.13438"}
+{"arxiv": "2505.17218", "title": "Effective Reinforcement Learning for Reasoning in Language Models", "url": "https://arxiv.org/abs/2505.17218"}
+{"arxiv": "2503.18929", "title": "Trajectory Balance with Asynchrony: Decoupling Exploration and Learning for Fast, Scalable LLM Post-Training", "url": "https://arxiv.org/abs/2503.18929"}
+{"arxiv": "2509.25176", "title": "SIRI: Scaling Iterative Reinforcement Learning with Interleaved Compression", "url": "https://arxiv.org/abs/2509.25176"}
+{"arxiv": "2506.07104", "title": "How Far Are We from Optimal Reasoning Efficiency?", "url": "https://arxiv.org/abs/2506.07104"}
+{"arxiv": "2505.12504", "title": "CPGD: Toward Stable Rule-based Reinforcement Learning for Language Models", "url": "https://arxiv.org/abs/2505.12504"}
+{"arxiv": "2510.10649", "title": "Unlocking Exploration in RLVR: Uncertainty-aware Advantage Shaping for Deeper Reasoning", "url": "https://arxiv.org/abs/2510.10649"}
+{"arxiv": "2506.02553", "title": "Response-Level Rewards Are All You Need for Online Reinforcement Learning in LLMs: A Mathematical Perspective", "url": "https://arxiv.org/abs/2506.02553"}
+{"arxiv": "2502.10325", "title": "Process Reward Models for LLM Agents: Practical Framework and Directions", "url": "https://arxiv.org/abs/2502.10325"}
+{"arxiv": "2510.07242", "title": "Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense", "url": "https://arxiv.org/abs/2510.07242"}
+{"arxiv": "2507.06573", "title": "From Data-Centric to Sample-Centric: Enhancing LLM Reasoning via Progressive Optimization", "url": "https://arxiv.org/abs/2507.06573"}
+{"arxiv": "2505.16552", "title": "Think Silently, Think Fast: Dynamic Latent Compression of LLM Reasoning Chains", "url": "https://arxiv.org/abs/2505.16552"}
+{"arxiv": "2502.05434", "title": "Sample-Efficient Reinforcement Learning from Human Feedback via Information-Directed Sampling", "url": "https://arxiv.org/abs/2502.05434"}
+{"arxiv": "2505.07961", "title": "Making Small Language Models Efficient Reasoners: Intervention, Supervision, Reinforcement", "url": "https://arxiv.org/abs/2505.07961"}
+{"arxiv": "2502.04463", "title": "Training Language Models to Reason Efficiently", "url": "https://arxiv.org/abs/2502.04463"}
+{"arxiv": "2510.08141", "title": "SCOPE-RL: Stable and Quantitative Control of Policy Entropy in RL Post-Training", "url": "https://arxiv.org/abs/2510.08141"}
+{"arxiv": "2505.22660", "title": "Maximizing Confidence Alone Improves Reasoning", "url": "https://arxiv.org/abs/2505.22660"}
+{"arxiv": "2509.21134", "title": "ToMPO: Training LLM Strategic Decision Making from a Multi-Agent Perspective", "url": "https://arxiv.org/abs/2509.21134"}
+{"arxiv": "2502.10762", "title": "Bone Soups: A Seek-and-Soup Model Merging Approach for Controllable Multi-Objective Generation", "url": "https://arxiv.org/abs/2502.10762"}
+{"arxiv": "2510.11062", "title": "Stronger-MAS: Multi-Agent Reinforcement Learning for Collaborative LLMs", "url": "https://arxiv.org/abs/2510.11062"}
+{"arxiv": "2502.12272", "title": "Learning to Reason at the Frontier of Learnability", "url": "https://arxiv.org/abs/2502.12272"}
+{"arxiv": "2510.01161", "title": "Prosperity before Collapse: How Far Can Off-Policy RL Reach with Stale Data on LLMs?", "url": "https://arxiv.org/abs/2510.01161"}
+{"arxiv": "2506.02281", "title": "Angles Don't Lie: Unlocking Training-Efficient RL Through the Model's Own Signals", "url": "https://arxiv.org/abs/2506.02281"}
+{"arxiv": "2503.00735", "title": "LADDER: Self-Improving LLMs Through Recursive Problem Decomposition", "url": "https://arxiv.org/abs/2503.00735"}
+{"arxiv": "2506.01939", "title": "Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning", "url": "https://arxiv.org/abs/2506.01939"}
+{"arxiv": "2510.06557", "title": "The Markovian Thinker: Architecture-Agnostic Linear Scaling of Reasoning", "url": "https://arxiv.org/abs/2510.06557"}
+{"arxiv": "2506.22200", "title": "EFRame: Deeper Reasoning via Exploration-Filter-Replay Reinforcement Learning Framework", "url": "https://arxiv.org/abs/2506.22200"}
+{"arxiv": "2510.05837", "title": "EEPO: Exploration-Enhanced Policy Optimization via Sample-Then-Forget", "url": "https://arxiv.org/abs/2510.05837"}
+{"arxiv": "2502.06773", "title": "On the Emergence of Thinking in LLMs I: Searching for the Right Intuition", "url": "https://arxiv.org/abs/2502.06773"}
+{"arxiv": "2505.07291", "title": "INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning", "url": "https://arxiv.org/abs/2505.07291"}
+{"arxiv": "2510.20187", "title": "Every Question Has Its Own Value: Reinforcement Learning with Explicit Human Values", "url": "https://arxiv.org/abs/2510.20187"}
+{"arxiv": "2511.02280", "title": "SAIL-RL: Guiding MLLMs in When and How to Think via Dual-Reward RL Tuning", "url": "https://arxiv.org/abs/2511.02280"}
+{"arxiv": "2510.07312", "title": "h1: Bootstrapping LLMs to Reason over Longer Horizons via Reinforcement Learning", "url": "https://arxiv.org/abs/2510.07312"}
+{"arxiv": "2505.18822", "title": "AdaCtrl: Towards Adaptive and Controllable Reasoning via Difficulty-Aware Budgeting", "url": "https://arxiv.org/abs/2505.18822"}
+{"arxiv": "2506.01347", "title": "The Surprising Effectiveness of Negative Reinforcement in LLM Reasoning", "url": "https://arxiv.org/abs/2506.01347"}
+{"arxiv": "2508.07616", "title": "ThinkTuning: Instilling Cognitive Reflections without Distillation", "url": "https://arxiv.org/abs/2508.07616"}
+{"arxiv": "2508.18773", "title": "ThinkDial: An Open Recipe for Controlling Reasoning Effort in Large Language Models", "url": "https://arxiv.org/abs/2508.18773"}
+{"arxiv": "2507.15778", "title": "Stabilizing Knowledge, Promoting Reasoning: Dual-Token Constraints for RLVR", "url": "https://arxiv.org/abs/2507.15778"}
+{"arxiv": "2506.00539", "title": "ARIA: Training Language Agents with Intention-Driven Reward Aggregation", "url": "https://arxiv.org/abs/2506.00539"}
+{"arxiv": "2505.22653", "title": "The Climb Carves Wisdom Deeper Than the Summit: On the Noisy Rewards in Learning to Reason", "url": "https://arxiv.org/abs/2505.22653"}
+{"arxiv": "2503.08525", "title": "GTR: Guided Thought Reinforcement Prevents Thought Collapse in RL-based VLM Agent Training", "url": "https://arxiv.org/abs/2503.08525"}
+{"arxiv": "2510.21978", "title": "Beyond Reasoning Gains: Mitigating General-Capability Forgetting in Large Reasoning Models", "url": "https://arxiv.org/abs/2510.21978"}
+{"arxiv": "2504.05520", "title": "Efficient Reinforcement Finetuning via Adaptive Curriculum Learning", "url": "https://arxiv.org/abs/2504.05520"}
+{"arxiv": "2508.10293", "title": "Promoting Efficient Reasoning with Verifiable Stepwise Reward", "url": "https://arxiv.org/abs/2508.10293"}
+{"arxiv": "2505.10446", "title": "Reinforcing the Diffusion Chain of Lateral Thought with Diffusion Language Models", "url": "https://arxiv.org/abs/2505.10446"}
+{"arxiv": "2510.04474", "title": "DRPO: Efficient Reasoning via Decoupled Reward Policy Optimization", "url": "https://arxiv.org/abs/2510.04474"}
+{"arxiv": "2502.18770", "title": "Reward Shaping to Mitigate Reward Hacking in RLHF", "url": "https://arxiv.org/abs/2502.18770"}
+{"arxiv": "2506.08388", "title": "Reinforcement Learning Teachers of Test Time Scaling", "url": "https://arxiv.org/abs/2506.08388"}
+{"arxiv": "2505.12929", "title": "Do Not Let Low-Probability Tokens Over-Dominate in RL for LLMs", "url": "https://arxiv.org/abs/2505.12929"}
+{"arxiv": "2504.18458", "title": "Fast-Slow Thinking GRPO for Large Vision-Language Model Reasoning", "url": "https://arxiv.org/abs/2504.18458"}
+{"arxiv": "2501.13011", "title": "MONA: Myopic Optimization with Non-myopic Approval Can Mitigate Multi-step Reward Hacking", "url": "https://arxiv.org/abs/2501.13011"}
+{"arxiv": "2504.04524", "title": "Trust Region Preference Approximation: A simple and stable reinforcement learning algorithm for LLM reasoning", "url": "https://arxiv.org/abs/2504.04524"}
+{"arxiv": "2510.03669", "title": "Token Hidden Reward: Steering Exploration-Exploitation in Group Relative Deep Reinforcement Learning", "url": "https://arxiv.org/abs/2510.03669"}
+{"arxiv": "2510.09278", "title": "CLARity: Reasoning Consistency Alone Can Teach Reinforced Experts", "url": "https://arxiv.org/abs/2510.09278"}
+{"arxiv": "2511.20347", "title": "Soft Adaptive Policy Optimization", "url": "https://arxiv.org/abs/2511.20347"}
+{"arxiv": "2510.18855", "title": "Every Step Evolves: Scaling Reinforcement Learning for Trillion-Scale Thinking Model", "url": "https://arxiv.org/abs/2510.18855"}
+{"arxiv": "2506.08125", "title": "Not All Tokens Matter: Towards Efficient LLM Reasoning via Token Significance in Reinforcement Learning", "url": "https://arxiv.org/abs/2506.08125"}
+{"arxiv": "2506.04746", "title": "Multi-Layer GRPO: Enhancing Reasoning and Self-Correction in Large Language Models", "url": "https://arxiv.org/abs/2506.04746"}
+{"arxiv": "2503.04697", "title": "L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning", "url": "https://arxiv.org/abs/2503.04697"}
+{"arxiv": "2510.05283", "title": "Beyond Monolithic Rewards: A Hybrid and Multi-Aspect Reward Optimization for MLLM Alignment", "url": "https://arxiv.org/abs/2510.05283"}
+{"arxiv": "2503.19523", "title": "One Framework to Rule Them All: Unifying RL-Based and RL-Free Methods in RLHF", "url": "https://arxiv.org/abs/2503.19523"}
+{"arxiv": "2510.07284", "title": "Online Rubrics Elicitation from Pairwise Comparisons", "url": "https://arxiv.org/abs/2510.07284"}
+{"arxiv": "2502.06772", "title": "ReasonFlux: Hierarchical LLM Reasoning via Scaling Thought Templates", "url": "https://arxiv.org/abs/2502.06772"}
+{"arxiv": "2506.06395", "title": "Confidence Is All You Need: Few-Shot RL Fine-Tuning of Language Models", "url": "https://arxiv.org/abs/2506.06395"}
+{"arxiv": "2503.22230", "title": "Exploring Data Scaling Trends and Effects in Reinforcement Learning from Human Feedback", "url": "https://arxiv.org/abs/2503.22230"}
+{"arxiv": "2505.18298", "title": "Thinking Fast and Right: Balancing Accuracy and Reasoning Length with Adaptive Rewards", "url": "https://arxiv.org/abs/2505.18298"}
+{"arxiv": "2508.07768", "title": "Pareto Multi-Objective Alignment for Language Models", "url": "https://arxiv.org/abs/2508.07768"}
+{"arxiv": "2512.09675", "title": "d-TreeRPO: Towards More Reliable Policy Optimization for Diffusion Language Models", "url": "https://arxiv.org/abs/2512.09675"}
+{"arxiv": "2507.07017", "title": "First Return, Entropy-Eliciting Explore", "url": "https://arxiv.org/abs/2507.07017"}
+{"arxiv": "2506.14758", "title": "Reasoning with Exploration: An Entropy Perspective", "url": "https://arxiv.org/abs/2506.14758"}
+{"arxiv": "2505.16022", "title": "NOVER: Incentive Training for Language Models via Verifier-Free Reinforcement Learning", "url": "https://arxiv.org/abs/2505.16022"}
+{"arxiv": "2509.25827", "title": "Overthinking Reduction with Decoupled Rewards and Curriculum Data Scheduling", "url": "https://arxiv.org/abs/2509.25827"}
+{"arxiv": "2511.06065", "title": "ScRPO: From Errors to Insights", "url": "https://arxiv.org/abs/2511.06065"}
+{"arxiv": "2510.06062", "title": "When Importance Sampling Misallocates Credit: Asymmetric Ratios for Outcome-Supervised RL", "url": "https://arxiv.org/abs/2510.06062"}
+{"arxiv": "2506.13585", "title": "MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention", "url": "https://arxiv.org/abs/2506.13585"}
+{"arxiv": "2501.06248", "title": "Utility-inspired Reward Transformations Improve Reinforcement Learning Training of Language Models", "url": "https://arxiv.org/abs/2501.06248"}
+{"arxiv": "2508.11408", "title": "On-Policy RL Meets Off-Policy Experts: Harmonizing Supervised Fine-Tuning and Reinforcement Learning via Dynamic Weighting", "url": "https://arxiv.org/abs/2508.11408"}
+{"arxiv": "2505.19281", "title": "A Snapshot of Influence: A Local Data Attribution Framework for Online Reinforcement Learning", "url": "https://arxiv.org/abs/2505.19281"}
+{"arxiv": "2503.00539", "title": "Distributionally Robust Reinforcement Learning with Human Feedback", "url": "https://arxiv.org/abs/2503.00539"}
+{"arxiv": "2504.19599", "title": "GVPO: Group Variance Policy Optimization for Large Language Model Post-Training", "url": "https://arxiv.org/abs/2504.19599"}
+{"arxiv": "2507.20673", "title": "Geometric-Mean Policy Optimization", "url": "https://arxiv.org/abs/2507.20673"}
+{"arxiv": "2501.18858", "title": "BRiTE: Bootstrapping Reinforced Thinking Process to Enhance Language Model Reasoning", "url": "https://arxiv.org/abs/2501.18858"}
+{"arxiv": "2510.01833", "title": "Plan Then Action:High-Level Planning Guidance Reinforcement Learning for LLM Reasoning", "url": "https://arxiv.org/abs/2510.01833"}
+{"arxiv": "2509.13232", "title": "Single-stream Policy Optimization", "url": "https://arxiv.org/abs/2509.13232"}
+{"arxiv": "2505.02391", "title": "Optimizing Chain-of-Thought Reasoners via Gradient Variance Minimization in Rejection Sampling and RL", "url": "https://arxiv.org/abs/2505.02391"}
+{"arxiv": "2503.20783", "title": "Understanding R1-Zero-Like Training: A Critical Perspective", "url": "https://arxiv.org/abs/2503.20783"}
+{"arxiv": "2505.24298", "title": "AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning", "url": "https://arxiv.org/abs/2505.24298"}
+{"arxiv": "2506.02718", "title": "End-to-End Optimization of LLM-Driven Multi-Agent Search Systems via Heterogeneous-Group-Based Reinforcement Learning", "url": "https://arxiv.org/abs/2506.02718"}
+{"arxiv": "2504.12216", "title": "d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning", "url": "https://arxiv.org/abs/2504.12216"}
+{"arxiv": "2510.08899", "title": "Pinpointing crucial steps: Attribution-based Credit Assignment for Verifiable Reinforcement Learning", "url": "https://arxiv.org/abs/2510.08899"}
+{"arxiv": "2510.00911", "title": "RiskPO: Risk-based Policy Optimization via Verifiable Reward for LLM Post-Training", "url": "https://arxiv.org/abs/2510.00911"}
+{"arxiv": "2502.13389", "title": "Reasoning with Reinforced Functional Token Tuning", "url": "https://arxiv.org/abs/2502.13389"}
+{"arxiv": "2512.01945", "title": "Agentic Policy Optimization via Instruction-Policy Co-Evolution", "url": "https://arxiv.org/abs/2512.01945"}
+{"arxiv": "2510.22543", "title": "FAPO: Flawed-Aware Policy Optimization for Efficient and Reliable Reasoning", "url": "https://arxiv.org/abs/2510.22543"}
+{"arxiv": "2509.09265", "title": "Harnessing Uncertainty: Entropy-Modulated Policy Gradients for Long-Horizon LLM Agents", "url": "https://arxiv.org/abs/2509.09265"}
+{"arxiv": "2503.19595", "title": "Optimizing Language Models for Inference Time Objectives using Reinforcement Learning", "url": "https://arxiv.org/abs/2503.19595"}
+{"arxiv": "2508.03680", "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning", "url": "https://arxiv.org/abs/2508.03680"}
+{"arxiv": "2509.10396", "title": "Inpainting-Guided Policy Optimization for Diffusion Large Language Models", "url": "https://arxiv.org/abs/2509.10396"}
+{"arxiv": "2505.20686", "title": "Accelerating RL for LLM Reasoning with Optimal Advantage Regression", "url": "https://arxiv.org/abs/2505.20686"}

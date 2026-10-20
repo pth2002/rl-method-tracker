@@ -1,0 +1,51 @@
+{"arxiv": "2501.03262", "category": "included_before_audit", "frameworks": ["areal", "nemo-rl", "openrlhf", "slime", "trl", "verl", "verl_recipe"], "note": null}
+{"arxiv": "2502.00640", "category": "implementation", "frameworks": ["verl", "verl_recipe"], "note": null}
+{"arxiv": "2502.01456", "category": "included_before_audit", "frameworks": ["openrlhf"], "note": null}
+{"arxiv": "2502.06773", "category": "project_list_or_news", "frameworks": ["openrlhf"], "note": null}
+{"arxiv": "2503.14286", "category": "included_before_audit", "frameworks": ["areal", "roll"], "note": null}
+{"arxiv": "2503.14476", "category": "included_before_audit", "frameworks": ["areal", "nemo-rl", "roll", "slime", "trl", "verl", "verl_recipe"], "note": null}
+{"arxiv": "2503.18929", "category": "report_reference", "frameworks": ["areal"], "note": null}
+{"arxiv": "2503.19595", "category": "included_before_audit", "frameworks": ["verl", "verl_recipe"], "note": null}
+{"arxiv": "2503.20783", "category": "included_before_audit", "frameworks": ["areal", "slime", "trl", "verl", "verl_recipe"], "note": null}
+{"arxiv": "2503.22230", "category": "project_list_or_news", "frameworks": ["verl"], "note": null}
+{"arxiv": "2504.02546", "category": "included_before_audit", "frameworks": ["verl"], "note": null}
+{"arxiv": "2504.05118", "category": "implementation", "frameworks": ["areal", "nemo-rl", "verl"], "note": null}
+{"arxiv": "2504.11343", "category": "background_reference", "frameworks": ["roll"], "note": "ROLL documentation of REINFORCE++ cites it as background"}
+{"arxiv": "2504.14945", "category": "project_list_or_news", "frameworks": ["verl"], "note": null}
+{"arxiv": "2504.19599", "category": "included_before_audit", "frameworks": ["verl_recipe"], "note": null}
+{"arxiv": "2504.20073", "category": "implementation", "frameworks": ["roll"], "note": "ROLL's trajectory-wise agentic pipeline (StarPO); the citation sits in ROLL's StarPO documentation, after a first hit in a technical report PDF"}
+{"arxiv": "2505.03335", "category": "project_list_or_news", "frameworks": ["verl"], "note": null}
+{"arxiv": "2505.10978", "category": "included_before_audit", "frameworks": ["roll"], "note": null}
+{"arxiv": "2505.20686", "category": "included_before_audit", "frameworks": ["trl"], "note": null}
+{"arxiv": "2505.22617", "category": "included_before_audit", "frameworks": ["verl", "verl_recipe"], "note": null}
+{"arxiv": "2505.23585", "category": "included_before_audit", "frameworks": ["verl", "verl_recipe"], "note": null}
+{"arxiv": "2505.24864", "category": "project_list_or_news", "frameworks": ["verl"], "note": "listed among community recipes in verl's recipe README"}
+{"arxiv": "2506.01939", "category": "included_before_audit", "frameworks": ["trl"], "note": null}
+{"arxiv": "2506.09477", "category": "implementation", "frameworks": ["nemo-rl"], "note": "NeMo-RL fix of the KL backward pass cites the paper in a code comment (PR #2506); counted as a conditional default"}
+{"arxiv": "2507.06448", "category": "implementation", "frameworks": ["trl"], "note": null}
+{"arxiv": "2507.18071", "category": "included_before_audit", "frameworks": ["areal", "nemo-rl", "openrlhf", "roll", "slime", "trl", "verl", "verl_recipe"], "note": null}
+{"arxiv": "2507.20673", "category": "included_before_audit", "frameworks": ["trl", "verl", "verl_recipe"], "note": null}
+{"arxiv": "2508.09726", "category": "included_before_audit", "frameworks": ["trl"], "note": null}
+{"arxiv": "2509.03493", "category": "implementation", "frameworks": ["areal"], "note": null}
+{"arxiv": "2509.13232", "category": "included_before_audit", "frameworks": ["verl_recipe"], "note": null}
+{"arxiv": "2509.15207", "category": "included_before_audit", "frameworks": ["verl", "verl_recipe"], "note": null}
+{"arxiv": "2510.00977", "category": "configuration_note", "frameworks": ["trl"], "note": "TRL paper index shows the two-rollout setting with existing GRPOConfig options"}
+{"arxiv": "2510.01161", "category": "included_before_audit", "frameworks": ["areal"], "note": null}
+{"arxiv": "2510.01656", "category": "project_list_or_news", "frameworks": ["roll"], "note": null}
+{"arxiv": "2510.11370", "category": "included_before_audit", "frameworks": ["areal", "slime"], "note": null}
+{"arxiv": "2510.11686", "category": "included_before_audit", "frameworks": ["verl_recipe"], "note": null}
+{"arxiv": "2510.13554", "category": "project_list_or_news", "frameworks": ["roll"], "note": null}
+{"arxiv": "2510.15110", "category": "implementation", "frameworks": ["nemo-rl"], "note": null}
+{"arxiv": "2510.22543", "category": "included_before_audit", "frameworks": ["verl", "verl_recipe"], "note": null}
+{"arxiv": "2511.20347", "category": "included_before_audit", "frameworks": ["areal", "trl", "verl"], "note": null}
+{"arxiv": "2512.23075", "category": "implementation", "frameworks": ["verl"], "note": null}
+{"arxiv": "2601.05242", "category": "included_before_audit", "frameworks": ["nemo-rl", "trl", "verl"], "note": null}
+{"arxiv": "2602.02488", "category": "report_reference", "frameworks": ["areal"], "note": null}
+{"arxiv": "2602.04879", "category": "included_before_audit", "frameworks": ["trl", "verl"], "note": null}
+{"arxiv": "2602.05261", "category": "included_before_audit", "frameworks": ["trl"], "note": null}
+{"arxiv": "2602.07078", "category": "included_before_audit", "frameworks": ["verl"], "note": null}
+{"arxiv": "2602.08847", "category": "project_list_or_news", "frameworks": ["verl"], "note": null}
+{"arxiv": "2602.10693", "category": "included_before_audit", "frameworks": ["trl"], "note": null}
+{"arxiv": "2603.17621", "category": "project_list_or_news", "frameworks": ["roll"], "note": null}
+{"arxiv": "2604.16918", "category": "project_list_or_news", "frameworks": ["roll"], "note": null}
+{"arxiv": "2605.24517", "category": "implementation", "frameworks": ["verl_recipe"], "note": null}

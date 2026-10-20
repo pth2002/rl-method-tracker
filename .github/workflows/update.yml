@@ -1,0 +1,42 @@
+# Weekly refresh. Opens a pull request with any change; nothing lands without a human merge.
+name: weekly-update
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml requests
+      - uses: actions/cache@v4
+        with:
+          path: .cache/repos
+          key: framework-clones-${{ github.run_id }}
+          restore-keys: framework-clones-
+      - name: Refresh data
+        id: refresh
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/update.py --fetch --record
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/weekly-update
+          title: "Weekly update: framework history and index"
+          commit-message: "Weekly update of framework history and index"
+          body: |
+            Automated refresh. Review before merging:
+            - `data/generated/unmapped.json` lists new framework options that need a line in `config/token_map.yaml`.
+            - `data/generated/process/uncoded_threads.jsonl` lists new proposal threads to code into `attempts_coded.jsonl`.
+            - Validation ${{ steps.refresh.outcome == 'success' && 'passed' || 'FAILED, see the job log' }}.

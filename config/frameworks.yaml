@@ -1,0 +1,388 @@
+# Where each framework exposes its RL algorithm choices.
+#
+# Surface kinds
+#   values    regex over a few files; every captured token is one option (e.g. registry names)
+#   dirs      every subdirectory of `dir` is one option (e.g. recipes, experimental trainers)
+#   files     every file in `dir` matching `regex` is one option (token = first group)
+#   flags     one named option per entry, present when `literal` (refined by `regex`) appears in `scope`
+#   defaults  the default value of one setting, tracked over time
+#   manual    a listed commit that implements a method in existing code without a new option
+#
+# Tiers (how strong the adoption signal is, strongest first)
+#   default > core > option > experimental > recipe
+#   `core` = a selectable algorithm in the main code path, `option` = a switch that modifies it.
+#
+# Paths list every historical location of a file. A missing path at a commit is skipped.
+# bulk_commit_regex marks commits that publish many changes at once (internal syncs, releases).
+# An option first seen in such a commit has an unknown true start and is treated as censored.
+
+frameworks:
+
+  verl:
+    url: https://github.com/volcengine/verl
+    surfaces:
+      - id: adv_estimator
+        kind: values
+        tier: core
+        patterns:
+          - paths: [verl/trainer/ppo/ray_trainer.py, verl/trainer/ppo/core_algos.py]
+            regex: 'class AdvantageEstimator\(str, Enum\):(.*?)\n(?=\S)'
+            dotall: true
+            split: '=\s*[''"]([a-z_]+)[''"]'
+          - paths: [verl/trainer/ppo/core_algos.py]
+            regex: '@register_adv_est\(\s*[''"]([a-z_]+)[''"]'
+          - paths: [verl/trainer/ppo/ray_trainer.py]
+            regex: 'adv_estimator\s*==\s*[''"]([a-z_]+)[''"]'
+          - paths: [verl/trainer/ppo/ray_trainer.py, verl/trainer/ppo/core_algos.py]
+            regex: 'adv_estimator\s*==\s*AdvantageEstimator\.([A-Z_]+)'
+            normalize: lower
+      - id: policy_loss
+        kind: values
+        tier: core
+        patterns:
+          - paths: [verl/trainer/ppo/core_algos.py]
+            regex: '@register_policy_loss\(\s*[''"]([a-z_]+)[''"]'
+      - id: loss_agg_mode
+        kind: values
+        tier: option
+        patterns:
+          - paths: [verl/trainer/ppo/core_algos.py]
+            regex: 'loss_agg_mode == [''"]([a-z-]+)[''"]'
+      - id: options
+        kind: flags
+        tier: option
+        scope: [verl, recipe]
+        flags:
+          - {token: clip_ratio_high, literal: clip_ratio_high}
+          - {token: clip_ratio_c, literal: clip_ratio_c}
+          - {token: filter_groups, literal: filter_groups}
+          - {token: overlong_buffer, literal: overlong_buffer,
+             link: {path: verl/experimental/reward_loop/reward_manager/dapo.py, literal: 'overlong_buffer_cfg = config.reward',
+                    setting: reward.reward_kwargs.overlong_buffer_cfg}}
+          - {token: norm_adv_by_std_in_grpo, literal: norm_adv_by_std_in_grpo}
+          - {token: tis_imp_ratio_cap, literal: tis_imp_ratio_cap}
+          - {token: rollout_is, literal: rollout_is_threshold}
+          - {token: rollout_rs, literal: rollout_rs}
+          - {token: seq_max_k, literal: seq_max_k}
+          - {token: use_kl_loss, literal: use_kl_loss}
+          - {token: low_var_kl, literal: low_var_kl}
+          - {token: entropy_coeff, literal: entropy_coeff}
+          - {token: enable_rollout_routing_replay, literal: enable_rollout_routing_replay}
+      - id: recipe
+        kind: dirs
+        tier: recipe
+        dir: recipe
+      - id: defaults
+        kind: defaults
+        tier: default
+        defaults:
+          - token: adv_estimator
+            paths: [verl/trainer/config/ppo_trainer.yaml]
+            regex: '\n\s+adv_estimator:\s*([\w-]+)'
+          - token: loss_agg_mode
+            paths: [verl/trainer/config/actor/actor.yaml, verl/trainer/config/ppo_trainer.yaml]
+            regex: '(?:^|\n)\s*loss_agg_mode:\s*"?([\w-]+)'
+          - token: policy_loss_mode
+            paths: [verl/trainer/config/actor/actor.yaml, verl/trainer/config/ppo_trainer.yaml]
+            regex: '\n\s+loss_mode:\s*"?([\w-]+)'
+          - token: clip_ratio_high
+            paths: [verl/trainer/config/actor/actor.yaml, verl/trainer/config/ppo_trainer.yaml]
+            regex: '(?:^|\n)\s*clip_ratio_high:\s*([\w.]+)'
+          - token: norm_adv_by_std_in_grpo
+            paths: [verl/trainer/config/ppo_trainer.yaml]
+            regex: '\n\s+norm_adv_by_std_in_grpo:\s*(\w+)'
+
+  verl_recipe:
+    url: https://github.com/verl-project/verl-recipe
+    surfaces:
+      - id: recipe
+        kind: dirs
+        tier: recipe
+        dir: .
+        ignore: [.github, docs, tests, scripts]
+
+  trl:
+    url: https://github.com/huggingface/trl
+    surfaces:
+      - id: trainer
+        kind: files
+        tier: core
+        dir: trl/trainer
+        regex: '^([a-z0-9_]+)_trainer\.py$'
+      - id: grpo_loss_type
+        kind: values
+        tier: core
+        patterns:
+          - paths: [trl/trainer/grpo_trainer.py]
+            regex: 'loss_type\s*==\s*[''"]([a-z_]+)[''"]'
+          - paths: [trl/trainer/grpo_trainer.py]
+            regex: 'loss_type in \[([^\]]+)\]'
+            split: '[''"]([a-z_]+)[''"]'
+      - id: grpo_options
+        kind: flags
+        tier: option
+        scope: [trl/trainer/grpo_config.py]
+        flags:
+          - {token: epsilon_high, literal: epsilon_high}
+          - {token: delta, literal: 'delta: ', regex: '\n    delta: '}
+          - {token: importance_sampling_level, literal: importance_sampling_level}
+          - {token: scale_rewards, literal: scale_rewards}
+          - {token: mask_truncated_completions, literal: mask_truncated_completions}
+          - {token: top_entropy_quantile, literal: top_entropy_quantile}
+          - {token: vllm_importance_sampling_correction, literal: vllm_importance_sampling_correction}
+          - {token: vllm_importance_sampling_mode, literal: vllm_importance_sampling_mode}
+          - {token: off_policy_mask_threshold, literal: off_policy_mask_threshold}
+          - {token: use_bias_correction_kl, literal: use_bias_correction_kl}
+          - {token: use_adaptive_entropy, literal: use_adaptive_entropy}
+          - {token: multi_objective_aggregation, literal: multi_objective_aggregation}
+          - {token: num_iterations, literal: num_iterations}
+      - id: experimental
+        kind: dirs
+        tier: experimental
+        dir: trl/experimental
+        ignore: [utils, __pycache__]
+      - id: defaults
+        kind: defaults
+        tier: default
+        defaults:
+          - token: loss_type
+            paths: [trl/trainer/grpo_config.py]
+            regex: '\n    loss_type: str = field\(\s*default="(\w+)"'
+          - token: scale_rewards
+            paths: [trl/trainer/grpo_config.py]
+            regex: '\n    scale_rewards: [\w |]+ = field\(\s*default=("?\w+"?)'
+          - token: beta
+            paths: [trl/trainer/grpo_config.py]
+            regex: '\n    beta: float = field\(\s*default=([\d.e-]+)'
+          - token: vllm_importance_sampling_correction
+            paths: [trl/trainer/grpo_config.py]
+            regex: '\n    vllm_importance_sampling_correction: bool = field\(\s*default=(\w+)'
+          - token: mask_truncated_completions
+            paths: [trl/trainer/grpo_config.py]
+            regex: '\n    mask_truncated_completions: bool = field\(\s*default=(\w+)'
+          - token: importance_sampling_level
+            paths: [trl/trainer/grpo_config.py]
+            regex: '\n    importance_sampling_level: str = field\(\s*default="(\w+)"'
+          - token: use_bias_correction_kl
+            paths: [trl/trainer/grpo_config.py]
+            regex: '\n    use_bias_correction_kl: bool = field\(\s*default=(\w+)'
+          - token: epsilon_high
+            paths: [trl/trainer/grpo_config.py]
+            regex: '\n    epsilon_high: [\w |]+ = field\(\s*default=([\w.]+)'
+
+  openrlhf:
+    url: https://github.com/OpenRLHF/OpenRLHF
+    surfaces:
+      - id: adv_estimator
+        kind: values
+        tier: core
+        patterns:
+          - paths: [openrlhf/cli/train_ppo_ray.py, openrlhf/cli/train_ppo.py]
+            regex: 'advantage[._]estimator"[^)]*?choices=\[([^\]]+)\]'
+            dotall: true
+            split: '[''"]([a-z_]+)[''"]'
+      - id: policy_loss_type
+        kind: values
+        tier: core
+        patterns:
+          - paths: [openrlhf/cli/train_ppo_ray.py]
+            regex: 'policy_loss_type"[^)]*?choices=\[([^\]]+)\]'
+            dotall: true
+            split: '[''"]([a-z_]+)[''"]'
+      - id: options
+        kind: flags
+        tier: option
+        scope: [openrlhf]
+        flags:
+          - {token: eps_clip_low_high, literal: eps_clip_low_high}
+          - {token: dual_clip, literal: dual_clip}
+          - {token: dynamic_filtering, literal: dynamic_filtering}
+          - {token: vllm_is_correction, literal: vllm_is_correction}
+          - {token: is_correction, literal: is_correction_mode}
+          - {token: no_std_norm, literal: no_std_norm}
+          - {token: use_kl_loss, literal: use_kl_loss}
+          - {token: loss_agg_mode, literal: loss_agg_mode}
+          - {token: overlong_buffer, literal: overlong_buffer}
+          - {token: is_correction_mask, literal: 'choices=["mask", "clip"]'}
+      - id: defaults
+        kind: defaults
+        tier: default
+        defaults:
+          - token: adv_estimator
+            paths: [openrlhf/cli/train_ppo_ray.py]
+            regex: 'advantage[._]estimator"[^)]*?default="(\w+)"'
+            dotall: true
+
+  nemo-rl:
+    url: https://github.com/NVIDIA-NeMo/RL
+    surfaces:
+      - id: adv_estimator
+        kind: values
+        tier: core
+        patterns:
+          - paths: [nemo_rl/algorithms/advantage_estimator.py]
+            regex: 'class ([A-Za-z]+)AdvantageEstimator\b'
+            normalize: snake
+      - id: options
+        kind: flags
+        tier: option
+        scope: [nemo_rl, nemo_reinforcer]
+        flags:
+          - {token: grpo_train, literal: 'def grpo_train'}
+          - {token: use_leave_one_out_baseline, literal: use_leave_one_out_baseline}
+          - {token: use_cispo, literal: 'use_cispo:'}
+          - {token: seq_mask_tis, literal: seq-mask-tis}
+          - {token: router_replay, literal: 'router_replay:',
+             link: {path: nemo_rl/models/megatron/router_replay.py, literal: 'def router_replay_enabled',
+                    setting: policy.router_replay.enabled}}
+          - {token: ratio_clip_max, literal: ratio_clip_max}
+          - {token: ratio_clip_c, literal: ratio_clip_c}
+          - {token: token_level_loss, literal: token_level_loss}
+          - {token: use_importance_sampling_correction, literal: use_importance_sampling_correction}
+          - {token: truncated_importance_sampling_ratio, literal: truncated_importance_sampling_ratio}
+          - {token: sequence_level_importance_ratios, literal: sequence_level_importance_ratios}
+          - {token: use_dynamic_sampling, literal: use_dynamic_sampling}
+          - {token: overlong_filtering, literal: overlong_filtering}
+          - {token: normalize_rewards, literal: normalize_rewards}
+          - {token: seq_logprob_error_threshold, literal: seq_logprob_error_threshold}
+          - {token: force_on_policy_ratio, literal: force_on_policy_ratio}
+          - {token: on_policy_distillation, literal: on_policy_distillation}
+          - {token: gae_lambda_value, literal: gae_lambda_value}
+          - {token: length_adaptive_alpha, literal: length_adaptive_alpha}
+          - {token: positive_example_nll_weight, literal: positive_example_nll_weight}
+          - {token: stop_properly_penalty_coef, literal: stop_properly_penalty_coef}
+      - id: fixes
+        kind: manual
+        tier: conditional_default
+        entries:
+          - token: kl_score_function_fix
+            sha: 33bce20d783468d2eec75bace5982f3cc2c5bb8d
+            path: nemo_rl/algorithms/loss/loss_functions.py
+            literal: "2506.09477"
+            condition: "KL penalty non-zero (0.01 in the base GRPO configuration)"
+
+  roll:
+    url: https://github.com/alibaba/ROLL
+    bulk_commit_regex: 'publish roll|publish v\d|sync codes|init repo'
+    surfaces:
+      - id: adv_estimator
+        kind: values
+        tier: core
+        patterns:
+          - paths: [roll/configs/base_config.py]
+            regex: 'adv_estimator: Literal\[([^\]]+)\]'
+            split: '[''"]([a-z_]+)[''"]'
+      - id: pg_variant
+        kind: values
+        tier: core
+        patterns:
+          - paths: [roll/pipeline/rlvr/actor_pg_worker.py, roll/pipeline/rlvr/actor_worker.py, roll/pipeline/agentic/agentic_actor_pg_worker.py]
+            regex: 'pg_variant\s*==\s*[''"]([a-z_]+)[''"]'
+      - id: loss_agg_mode
+        kind: values
+        tier: option
+        patterns:
+          - paths: [roll/configs/base_config.py]
+            regex: 'loss_agg_mode: Literal\[([^\]]+)\]'
+            split: '[''"]([a-z-]+)[''"]'
+      - id: options
+        kind: flags
+        tier: option
+        scope: [roll]
+        flags:
+          - {token: pg_clip_high, literal: pg_clip_high}
+          - {token: dual_clip_loss, literal: dual_clip_loss}
+          - {token: norm_std_type, literal: norm_std_type}
+          - {token: train_infer_correction, literal: train_infer_correction}
+          - {token: importance_sampling_seq, literal: 'importance_sampling: Literal'}
+          - {token: difficulty_mask, literal: difficulty_mask}
+          - {token: use_kl_loss, literal: use_kl_loss}
+          - {token: add_token_level_kl, literal: add_token_level_kl}
+          - {token: enable_rollout_routing_replay, literal: enable_rollout_routing_replay,
+             link: {path: roll/configs/worker_config.py, literal: 'router_replay: RouterReplayConfig',
+                    setting: router_replay.mode}}
+          - {token: train_infer_filter, literal: TrainInferFilterConfig}
+      - id: pipelines
+        kind: manual
+        tier: core
+        entries:
+          - token: agentic_starpo
+            sha: 35bea6a23ea255799159bdf6e9737710f40a0a6c
+            path: roll/pipeline/agentic/env_manager/traj_env_manager.py
+            literal: "class TrajEnvManager"
+      - id: defaults
+        kind: defaults
+        tier: default
+        defaults:
+          - token: adv_estimator
+            paths: [roll/configs/base_config.py]
+            regex: 'adv_estimator: Literal\[[^\]]+\] = field\(\s*default="(\w+)"'
+
+  slime:
+    url: https://github.com/THUDM/slime
+    surfaces:
+      - id: adv_estimator
+        kind: values
+        tier: core
+        patterns:
+          - paths: [slime/utils/arguments.py]
+            regex: '"--advantage-estimator",[^)]*?choices=\[([^\]]+)\]'
+            dotall: true
+            split: '[''"]([a-z_+]+)[''"]'
+      - id: options
+        kind: flags
+        tier: option
+        scope: [slime]
+        flags:
+          - {token: eps_clip_high, literal: '--eps-clip-high'}
+          - {token: eps_clip_c, literal: '--eps-clip-c'}
+          - {token: use_tis, literal: '--use-tis'}
+          - {token: use_opsm, literal: '--use-opsm'}
+          - {token: use_routing_replay, literal: '--use-routing-replay'}
+          - {token: use_rollout_routing_replay, literal: '--use-rollout-routing-replay'}
+          - {token: disable_grpo_std_normalization, literal: '--disable-grpo-std-normalization'}
+          - {token: calculate_per_token_loss, literal: '--calculate-per-token-loss'}
+          - {token: dynamic_sampling_filter, literal: '--dynamic-sampling-filter-path'}
+          - {token: use_kl_loss, literal: '--use-kl-loss'}
+      - id: defaults
+        kind: defaults
+        tier: default
+        defaults:
+          - token: adv_estimator
+            paths: [slime/utils/arguments.py]
+            regex: '"--advantage-estimator",[^)]*?default="(\w+)"'
+            dotall: true
+
+  areal:
+    url: https://github.com/inclusionAI/AReaL
+    bulk_commit_regex: 'Merge updates from ant repository'
+    surfaces:
+      - id: options
+        kind: flags
+        tier: option
+        scope: [areal, realhf]
+        flags:
+          - {token: eps_clip_higher, literal: eps_clip_higher}
+          - {token: c_clip, literal: c_clip}
+          - {token: behav_imp_weight_cap, literal: behav_imp_weight_cap}
+          - {token: use_decoupled_loss, literal: use_decoupled_loss}
+          - {token: importance_sampling_level, literal: importance_sampling_level}
+          - {token: use_sapo_loss, literal: use_sapo_loss}
+          - {token: m2_threshold, literal: m2_threshold}
+          - {token: overlong_reward_penalty, literal: overlong_reward_penalty}
+          - {token: mask_no_eos_with_zero, literal: mask_no_eos_with_zero}
+          - {token: dynamic_sampling, literal: dynamic_sampling}
+          - {token: dynamic_bs, literal: 'dynamic_bs: bool'}
+          - {token: use_cispo_loss, literal: use_cispo_loss}
+          - {token: rejection_sampling, literal: RejectionSamplingConfig}
+          - {token: binary_kl, literal: '"binary_kl"'}
+          - {token: enable_router_replay, literal: enable_router_replay}
+      - id: recipe
+        kind: dirs
+        tier: recipe
+        dir: recipe
+      - id: algo_configs
+        kind: files
+        tier: option
+        dir: examples/math
+        regex: '^gsm8k_([a-z0-9_]+)\.yaml$'

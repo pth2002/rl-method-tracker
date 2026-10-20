@@ -1,0 +1,6 @@
+{
+ "2506.18485": {
+  "change_size": null,
+  "reason": "The coder flagged a taxonomy gap: a prompt-only change with no added stage, model or system component. The recorded 'pipeline' is a schema placeholder, so the field is treated as missing."
+ }
+}

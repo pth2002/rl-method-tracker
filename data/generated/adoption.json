@@ -1,0 +1,4209 @@
+[
+  {
+    "id": "ppo",
+    "name": "PPO (clipped surrogate, GAE)",
+    "family": "base",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "1707.06347",
+    "source_title": "Proximal Policy Optimization Algorithms",
+    "source_date": "2017-07-20",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "roll",
+      "slime",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 7,
+    "frameworks_at_head": {
+      "verl": "default",
+      "openrlhf": "default",
+      "nemo-rl": "core",
+      "roll": "default",
+      "slime": "core",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 6,
+    "n_default_at_head": 3,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2022-12-30",
+    "first_lag_days": 1989,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2022-12-30",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "ppo",
+        "commit": "b1279004e7",
+        "pr": 58,
+        "subject": "`accelerate` integration (#58)",
+        "commit_author": "Younes Belkada",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 1989,
+        "at_head": null,
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2024-10-31",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "core",
+        "token": "gae",
+        "commit": "30911f133a",
+        "pr": null,
+        "subject": "[init] feat: upload first open source version of verl",
+        "commit_author": "shengguangming",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 2660,
+        "at_head": "default",
+        "default_since": "2024-10-31"
+      },
+      "openrlhf": {
+        "first_date": "2024-11-10",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "gae",
+        "commit": "6089a8ca3a",
+        "pr": 513,
+        "subject": "Add reinforce algorithm in train_ppo.py and train_ppo_ray.py (#513)",
+        "commit_author": "xiaoxigua",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 2670,
+        "at_head": "default",
+        "default_since": "2024-11-10"
+      },
+      "slime": {
+        "first_date": "2025-09-17",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "ppo",
+        "commit": "4badb749b2",
+        "pr": 342,
+        "subject": "[feat] init support for PPO (#342)",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 2981,
+        "at_head": "core",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-09-26",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "ppo",
+        "commit": "9622a71885",
+        "pr": 392,
+        "subject": "feat: support PPO training with critic models (#392)",
+        "commit_author": "Honghua Dong",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 2990,
+        "at_head": "option",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2025-10-29",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "core",
+        "token": "gae",
+        "commit": "cec5234ac2",
+        "pr": null,
+        "subject": "(feat): sync codes and publish roll flash.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 3023,
+        "at_head": "default",
+        "default_since": "2025-10-29"
+      },
+      "nemo-rl": {
+        "first_date": "2026-06-10",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "generalized",
+        "commit": "857b115226",
+        "pr": 2530,
+        "subject": "feat: PPO with MCore (#2530)",
+        "commit_author": "bg51717",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 3247,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "grpo",
+    "name": "GRPO",
+    "family": "advantage",
+    "symptoms": [
+      "critic_cost"
+    ],
+    "source_status": "ok",
+    "arxiv": "2402.03300",
+    "source_title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+    "source_date": "2024-02-05",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "roll",
+      "slime",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 7,
+    "frameworks_at_head": {
+      "verl": "core",
+      "trl": "core",
+      "openrlhf": "core",
+      "nemo-rl": "core",
+      "roll": "core",
+      "slime": "default",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 7,
+    "n_default_at_head": 1,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-01-20",
+    "first_lag_days": 350,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-01-20",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "grpo",
+        "commit": "0f5ffad26e",
+        "pr": 2565,
+        "subject": "👨‍👨‍👧‍👧 GRPO (#2565)",
+        "commit_author": "Quentin Gallouédec",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 350,
+        "at_head": "core",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-01-23",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "grpo",
+        "commit": "cd52d8b359",
+        "pr": 124,
+        "subject": "[algo] feat: support GRPO algorithm (#124)",
+        "commit_author": "Guangming Sheng",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 353,
+        "at_head": "core",
+        "default_since": null
+      },
+      "openrlhf": {
+        "first_date": "2025-02-20",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "group_norm",
+        "commit": "2c2aca7805",
+        "pr": 764,
+        "subject": "add grpo training (#764)",
+        "commit_author": "richardodliu",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 381,
+        "at_head": "core",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2025-03-20",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "grpo_train",
+        "commit": "b1ba7144b6",
+        "pr": 3,
+        "subject": "feat: reinforcer initial commit (#3)",
+        "commit_author": "Terry Kong",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 409,
+        "at_head": "core",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2025-05-30",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "option",
+        "token": "use_kl_loss",
+        "commit": "35bea6a23e",
+        "pr": null,
+        "subject": "(feat): init repo.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 480,
+        "at_head": "core",
+        "default_since": null
+      },
+      "slime": {
+        "first_date": "2025-06-19",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "core",
+        "token": "grpo",
+        "commit": "e0be9a075c",
+        "pr": null,
+        "subject": "init",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 500,
+        "at_head": "default",
+        "default_since": "2025-06-19"
+      },
+      "areal": {
+        "first_date": "2025-09-09",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "grpo",
+        "commit": "3a08204b82",
+        "pr": 305,
+        "subject": "refactor: group examples according to application (#305)",
+        "commit_author": "Wei Fu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 582,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "rloo",
+    "name": "RLOO",
+    "family": "advantage",
+    "symptoms": [
+      "critic_cost",
+      "high_variance"
+    ],
+    "source_status": "ok",
+    "arxiv": "2402.14740",
+    "source_title": "Back to Basics: Revisiting REINFORCE Style Optimization for Learning from Human Feedback in LLMs",
+    "source_date": "2024-02-22",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 5,
+    "frameworks_at_head": {
+      "verl": "core",
+      "trl": "core",
+      "openrlhf": "core",
+      "nemo-rl": "option",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 5,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2024-05-22",
+    "first_lag_days": 90,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2024-05-22",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "rloo",
+        "commit": "13454d2f4b",
+        "pr": 1540,
+        "subject": "PPO / Reinforce Trainers (#1540)",
+        "commit_author": "Costa Huang",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 90,
+        "at_head": "core",
+        "default_since": null
+      },
+      "openrlhf": {
+        "first_date": "2024-12-07",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "rloo",
+        "commit": "39e0403ffe",
+        "pr": 515,
+        "subject": "Support RLOO (#515)",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 289,
+        "at_head": "core",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-02-22",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "rloo",
+        "commit": "6a820b61fe",
+        "pr": 341,
+        "subject": "algo: Rloo advantage estimator (#341)",
+        "commit_author": "Zefan Wang",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 366,
+        "at_head": "core",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2025-03-20",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_leave_one_out_baseline",
+        "commit": "b1ba7144b6",
+        "pr": 3,
+        "subject": "feat: reinforcer initial commit (#3)",
+        "commit_author": "Terry Kong",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 392,
+        "at_head": "option",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-09-29",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "rloo",
+        "commit": "c361812d6d",
+        "pr": 397,
+        "subject": "feat: support RLOO algorithm using leave_one_out norm and update docs (#397)",
+        "commit_author": "Honghua Dong",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 585,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "remax",
+    "name": "ReMax",
+    "family": "advantage",
+    "symptoms": [
+      "critic_cost"
+    ],
+    "source_status": "ok",
+    "arxiv": "2310.10505",
+    "source_title": "ReMax: A Simple, Effective, and Efficient Reinforcement Learning Method for Aligning Large Language Models",
+    "source_date": "2023-10-16",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-02-10",
+    "first_lag_days": 483,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-02-10",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "remax",
+        "commit": "769b8d042e",
+        "pr": 234,
+        "subject": "Feature/add remax support (#234)",
+        "commit_author": "Ziniu Li",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 483,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "reinforce_pp",
+    "name": "REINFORCE++",
+    "family": "advantage",
+    "symptoms": [
+      "critic_cost",
+      "high_variance"
+    ],
+    "source_status": "ok",
+    "arxiv": "2501.03262",
+    "source_title": "REINFORCE++: Stabilizing Critic-Free Policy Optimization with Global Advantage Normalization",
+    "source_date": "2025-01-04",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "slime",
+      "verl"
+    ],
+    "n_frameworks_ever": 5,
+    "frameworks_at_head": {
+      "verl": "core",
+      "openrlhf": "core",
+      "nemo-rl": "core",
+      "slime": "core",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 5,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2024-11-10",
+    "first_lag_days": -55,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "openrlhf": {
+        "first_date": "2024-11-10",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "reinforce",
+        "commit": "6089a8ca3a",
+        "pr": 513,
+        "subject": "Add reinforce algorithm in train_ppo.py and train_ppo_ray.py (#513)",
+        "commit_author": "xiaoxigua",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": -55,
+        "at_head": "core",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-02-09",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "reinforce_plus_plus",
+        "commit": "bdb50ac333",
+        "pr": 228,
+        "subject": "implement REINFORCE++ algorithm (#228)",
+        "commit_author": "4332001876",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 36,
+        "at_head": "core",
+        "default_since": null
+      },
+      "slime": {
+        "first_date": "2025-07-16",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "reinforce_plus_plus",
+        "commit": "8589f378d6",
+        "pr": null,
+        "subject": "Merge pull request #61 from Chen-GX/feature/reinforce++",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 193,
+        "at_head": "core",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-09-30",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "reinforce_baseline",
+        "commit": "a80d33f05f",
+        "pr": 408,
+        "subject": "support different kl estimator, support reinforce++ and reinforce++-baseline (#408)",
+        "commit_author": "Honghua Dong",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 269,
+        "at_head": "option",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2026-02-07",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "reinforce_plus_plus",
+        "commit": "83742c2ec9",
+        "pr": 1809,
+        "subject": "feat: Implement ProRLv2 recipe (#1809)",
+        "commit_author": "hijkzzz",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 399,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "dual_clip",
+    "name": "Dual-clip PPO",
+    "family": "clipping",
+    "symptoms": [
+      "ratio_outliers"
+    ],
+    "source_status": "ok",
+    "arxiv": "1912.09729",
+    "source_title": "Mastering Complex Control in MOBA Games with Deep Reinforcement Learning",
+    "source_date": "2019-12-20",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "roll",
+      "slime",
+      "verl"
+    ],
+    "n_frameworks_ever": 6,
+    "frameworks_at_head": {
+      "verl": "option",
+      "openrlhf": "option",
+      "nemo-rl": "option",
+      "roll": "option",
+      "slime": "option",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 6,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-04-02",
+    "first_lag_days": 1930,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-04-02",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "clip_ratio_c",
+        "commit": "6272b8ce1d",
+        "pr": 784,
+        "subject": " Implement Dual-Clip PPO Algorithm (#784)",
+        "commit_author": "none0663",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 1930,
+        "at_head": "option",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-04-27",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "option",
+        "token": "c_clip",
+        "commit": "ffc52a1520",
+        "pr": 34,
+        "subject": "Merge updates from ant repository. (#34)",
+        "commit_author": "nuzant",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 1955,
+        "at_head": "option",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2025-05-09",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "ratio_clip_c",
+        "commit": "bc8cb65969",
+        "pr": 311,
+        "subject": "feat: dual-clip in grpo loss (#311)",
+        "commit_author": "ZhiyuLi-Nvidia",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 1967,
+        "at_head": "option",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2025-05-30",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "option",
+        "token": "dual_clip_loss",
+        "commit": "35bea6a23e",
+        "pr": null,
+        "subject": "(feat): init repo.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 1988,
+        "at_head": "option",
+        "default_since": null
+      },
+      "slime": {
+        "first_date": "2025-06-19",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "option",
+        "token": "eps_clip_c",
+        "commit": "e0be9a075c",
+        "pr": null,
+        "subject": "init",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 2008,
+        "at_head": "option",
+        "default_since": null
+      },
+      "openrlhf": {
+        "first_date": "2025-07-10",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "dual_clip",
+        "commit": "2a2a3490fe",
+        "pr": null,
+        "subject": "support dual_clip ppo",
+        "commit_author": "xiaoxigua999",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 2029,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "kl_k3",
+    "name": "k3 (low-variance) KL estimator",
+    "family": "kl",
+    "symptoms": [],
+    "source_status": "non_arxiv",
+    "arxiv": null,
+    "source_title": "Approximating KL Divergence",
+    "source_date": "2020-03-07",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-01-23",
+    "first_lag_days": 1783,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-01-23",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "low_var_kl",
+        "commit": "cd52d8b359",
+        "pr": 124,
+        "subject": "[algo] feat: support GRPO algorithm (#124)",
+        "commit_author": "Guangming Sheng",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": 1783,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "prime",
+    "name": "PRIME (implicit process rewards)",
+    "family": "advantage",
+    "symptoms": [
+      "sparse_reward"
+    ],
+    "source_status": "ok",
+    "arxiv": "2502.01456",
+    "source_title": "Process Reinforcement through Implicit Rewards",
+    "source_date": "2025-02-03",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "recipe"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-03-10",
+    "first_lag_days": 35,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-03-10",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "prime",
+        "commit": "f0e7f9fcbe",
+        "pr": 362,
+        "subject": "recipe: PRIME algorithm (#362)",
+        "commit_author": "Zefan Wang",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 35,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "dapo_clip_higher",
+    "name": "Clip-higher (decoupled clip range)",
+    "family": "clipping",
+    "symptoms": [
+      "entropy_collapse"
+    ],
+    "source_status": "ok",
+    "arxiv": "2503.14476",
+    "source_title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+    "source_date": "2025-03-18",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "roll",
+      "slime",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 7,
+    "frameworks_at_head": {
+      "verl": "option",
+      "trl": "option",
+      "openrlhf": "option",
+      "nemo-rl": "option",
+      "roll": "option",
+      "slime": "option",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 7,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-03-19",
+    "first_lag_days": 1,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-03-19",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "epsilon_high",
+        "commit": "a34987956c",
+        "pr": 3118,
+        "subject": "🎬 Clip higher (#3118)",
+        "commit_author": "Shirin Yamani",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 1,
+        "at_head": "option",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-04-04",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "clip_ratio_high",
+        "commit": "3a27a98647",
+        "pr": 623,
+        "subject": "[recipe] feat: integrate DAPO and provide reproduction script (#623)",
+        "commit_author": "Shawn/Yuxuan Tong",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 17,
+        "at_head": "option",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2025-04-29",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "ratio_clip_max",
+        "commit": "68beb6de64",
+        "pr": 283,
+        "subject": "feat: rename ratio_eps_{min/max} to ratio_clip_{min/max} for clarity (#283)",
+        "commit_author": "Sahil Jain",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 42,
+        "at_head": "option",
+        "default_since": null
+      },
+      "openrlhf": {
+        "first_date": "2025-05-23",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "eps_clip_low_high",
+        "commit": "cc401ffa43",
+        "pr": null,
+        "subject": "Support ppo-clip higher",
+        "commit_author": "xiaoxigua999",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 66,
+        "at_head": "option",
+        "default_since": null
+      },
+      "slime": {
+        "first_date": "2025-06-19",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "option",
+        "token": "eps_clip_high",
+        "commit": "e0be9a075c",
+        "pr": null,
+        "subject": "init",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 93,
+        "at_head": "option",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-09-03",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "eps_clip_higher",
+        "commit": "8ffa75006b",
+        "pr": 285,
+        "subject": "FEAT: Decoupled CLIP ratio (DAPO Trick-I) (#285)",
+        "commit_author": "ZIYI ZENG",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 169,
+        "at_head": "option",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2025-09-25",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "pg_clip_high",
+        "commit": "7b97eef8db",
+        "pr": null,
+        "subject": "(feat): lite_ppo add div_std_type.",
+        "commit_author": "liuzihe.lzh",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 191,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "dapo_dynamic_sampling",
+    "name": "Dynamic sampling (filter zero-variance groups)",
+    "family": "sampling",
+    "symptoms": [
+      "zero_gradient_groups"
+    ],
+    "source_status": "ok",
+    "arxiv": "2503.14476",
+    "source_title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+    "source_date": "2025-03-18",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "roll",
+      "slime",
+      "verl"
+    ],
+    "n_frameworks_ever": 6,
+    "frameworks_at_head": {
+      "verl": "option",
+      "openrlhf": "option",
+      "nemo-rl": "option",
+      "roll": "option",
+      "slime": "option",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 6,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-04-04",
+    "first_lag_days": 17,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-04-04",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "filter_groups",
+        "commit": "3a27a98647",
+        "pr": 623,
+        "subject": "[recipe] feat: integrate DAPO and provide reproduction script (#623)",
+        "commit_author": "Shawn/Yuxuan Tong",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 17,
+        "at_head": "option",
+        "default_since": null
+      },
+      "openrlhf": {
+        "first_date": "2025-05-19",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "dynamic_filtering",
+        "commit": "14fe44c62c",
+        "pr": 1018,
+        "subject": "Support dynamic sampling (#1018)",
+        "commit_author": "xiaoxigua",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 62,
+        "at_head": "option",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2025-05-30",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "option",
+        "token": "difficulty_mask",
+        "commit": "35bea6a23e",
+        "pr": null,
+        "subject": "(feat): init repo.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 73,
+        "at_head": "option",
+        "default_since": null
+      },
+      "slime": {
+        "first_date": "2025-06-19",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "option",
+        "token": "dynamic_sampling_filter",
+        "commit": "e0be9a075c",
+        "pr": null,
+        "subject": "init",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 93,
+        "at_head": "option",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-09-05",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "dynamic_sampling",
+        "commit": "d4a986101e",
+        "pr": 294,
+        "subject": "FEAT: Dynamic_Sampling(DAPO Trick-II) (#294)",
+        "commit_author": "ZIYI ZENG",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 171,
+        "at_head": "option",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2025-10-17",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_dynamic_sampling",
+        "commit": "7bd853af3b",
+        "pr": 602,
+        "subject": "feat: Support DAPO dynamic sampling and reward shaping (#602)",
+        "commit_author": "Dheeraj Peri",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 213,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "dapo_token_loss",
+    "name": "Token-level loss aggregation",
+    "family": "aggregation",
+    "symptoms": [
+      "length_bias"
+    ],
+    "source_status": "ok",
+    "arxiv": "2503.14476",
+    "source_title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+    "source_date": "2025-03-18",
+    "review": false,
+    "frameworks_ever": [
+      "nemo-rl",
+      "roll",
+      "slime",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 5,
+    "frameworks_at_head": {
+      "verl": "recipe",
+      "trl": "default",
+      "nemo-rl": "option",
+      "roll": "option",
+      "slime": "option"
+    },
+    "n_frameworks_at_head": 5,
+    "n_default_at_head": 1,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-04-04",
+    "first_lag_days": 17,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-04-04",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "dapo",
+        "commit": "3a27a98647",
+        "pr": 623,
+        "subject": "[recipe] feat: integrate DAPO and provide reproduction script (#623)",
+        "commit_author": "Shawn/Yuxuan Tong",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 17,
+        "at_head": null,
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2025-05-09",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "token_level_loss",
+        "commit": "af9f6e8610",
+        "pr": 266,
+        "subject": "fix: fix accumulation of loss across microbatches (#266)",
+        "commit_author": "Anna Shors",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 52,
+        "at_head": "option",
+        "default_since": null
+      },
+      "trl": {
+        "first_date": "2025-08-22",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "default",
+        "token": "loss_type",
+        "commit": "2324245cad",
+        "pr": 3938,
+        "subject": "🏌️ DAPO loss type (#3938)",
+        "commit_author": "Quentin Gallouédec",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 157,
+        "at_head": "default",
+        "default_since": "2025-08-22"
+      },
+      "slime": {
+        "first_date": "2025-09-11",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "calculate_per_token_loss",
+        "commit": "d22225f622",
+        "pr": 324,
+        "subject": "[xtuner] add wandb (#324)",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 177,
+        "at_head": "option",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2025-10-29",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "option",
+        "token": "token-mean",
+        "commit": "cec5234ac2",
+        "pr": null,
+        "subject": "(feat): sync codes and publish roll flash.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 225,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "dapo_overlong",
+    "name": "Overlong filtering and soft overlong penalty",
+    "family": "length",
+    "symptoms": [
+      "truncation_noise"
+    ],
+    "source_status": "ok",
+    "arxiv": "2503.14476",
+    "source_title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+    "source_date": "2025-03-18",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 5,
+    "frameworks_at_head": {
+      "verl": "option",
+      "trl": "option",
+      "openrlhf": "option",
+      "nemo-rl": "option",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 5,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-04-04",
+    "first_lag_days": 17,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-04-04",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "overlong_buffer",
+        "commit": "3a27a98647",
+        "pr": 623,
+        "subject": "[recipe] feat: integrate DAPO and provide reproduction script (#623)",
+        "commit_author": "Shawn/Yuxuan Tong",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 17,
+        "at_head": "option",
+        "default_since": null
+      },
+      "trl": {
+        "first_date": "2025-04-08",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "mask_truncated_completions",
+        "commit": "1d7b8c4f70",
+        "pr": 3248,
+        "subject": "☕ Overlong-filtering for GRPO (#3248)",
+        "commit_author": "Shirin Yamani",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 21,
+        "at_head": "option",
+        "default_since": null
+      },
+      "openrlhf": {
+        "first_date": "2025-07-19",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "overlong_buffer",
+        "commit": "728d35d65b",
+        "pr": 1091,
+        "subject": "Support soft overlong punishment from DAPO (#1091)",
+        "commit_author": "Mocax",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 123,
+        "at_head": "option",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2025-09-01",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "overlong_filtering",
+        "commit": "0358a86f62",
+        "pr": 724,
+        "subject": "feat: Overlong filtering for GRPO (#724)",
+        "commit_author": "Matvei Novikov",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 167,
+        "at_head": "option",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-09-10",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "overlong_reward_penalty",
+        "commit": "92a25f4fcb",
+        "pr": 295,
+        "subject": "FEAT: Overlong_Reward_Penalty (DAPO Trick-III) (#295)",
+        "commit_author": "ZIYI ZENG",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 176,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "dapo_no_kl",
+    "name": "Remove the KL penalty for reasoning RL",
+    "family": "kl",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2503.14476",
+    "source_title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+    "source_date": "2025-03-18",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "trl": "default"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 1,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-05-30",
+    "first_lag_days": 73,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-05-30",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "default",
+        "token": "beta",
+        "commit": "7359ddcc6f",
+        "pr": 3516,
+        "subject": "🎀 New default: `beta=0.0` for GRPO (#3516)",
+        "commit_author": "Quentin Gallouédec",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 73,
+        "at_head": "default",
+        "default_since": "2025-05-30"
+      }
+    }
+  },
+  {
+    "id": "dr_grpo",
+    "name": "Dr. GRPO (no length or std normalisation)",
+    "family": "aggregation",
+    "symptoms": [
+      "length_bias"
+    ],
+    "source_status": "ok",
+    "arxiv": "2503.20783",
+    "source_title": "Understanding R1-Zero-Like Training: A Critical Perspective",
+    "source_date": "2025-03-26",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "openrlhf",
+      "roll",
+      "slime",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 6,
+    "frameworks_at_head": {
+      "verl": "option",
+      "trl": "core",
+      "openrlhf": "core",
+      "roll": "option",
+      "slime": "option",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 6,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-03-22",
+    "first_lag_days": -4,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-03-22",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "scale_rewards",
+        "commit": "9b38b0b5ee",
+        "pr": 3135,
+        "subject": "⚖️ Add option not to scale rewards (Dr. GRPO) (#3135)",
+        "commit_author": "Quentin Gallouédec",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": -4,
+        "at_head": "core",
+        "default_since": null
+      },
+      "openrlhf": {
+        "first_date": "2025-03-24",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "dr_grpo",
+        "commit": "6dcfcc3ddc",
+        "pr": null,
+        "subject": "support dr. grpo part 1",
+        "commit_author": "xiaoxigua999",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": -2,
+        "at_head": "core",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-04-20",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "seq-mean-token-sum-norm",
+        "commit": "6d8f2f6ab9",
+        "pr": 990,
+        "subject": "[algo] feat: Add DrGRPO (#990)",
+        "commit_author": "SunJin Kim",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 25,
+        "at_head": "option",
+        "default_since": null
+      },
+      "slime": {
+        "first_date": "2025-06-19",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "option",
+        "token": "disable_grpo_std_normalization",
+        "commit": "e0be9a075c",
+        "pr": null,
+        "subject": "init",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 85,
+        "at_head": "option",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2025-10-29",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "option",
+        "token": "seq-mean-token-sum-norm",
+        "commit": "cec5234ac2",
+        "pr": null,
+        "subject": "(feat): sync codes and publish roll flash.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 217,
+        "at_head": "option",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-12-03",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "drgrpo",
+        "commit": "b160ebe2bb",
+        "pr": 660,
+        "subject": "refactor: apply PPOTrainer and SFTTrainer in example scripts (#660)",
+        "commit_author": "Wei Fu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 252,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "topr",
+    "name": "TOPR (tapered off-policy REINFORCE)",
+    "family": "offpolicy",
+    "symptoms": [
+      "stale_policy"
+    ],
+    "source_status": "ok",
+    "arxiv": "2503.14286",
+    "source_title": "Tapered Off-Policy REINFORCE: Stable and efficient reinforcement learning for LLMs",
+    "source_date": "2025-03-18",
+    "review": false,
+    "frameworks_ever": [
+      "roll"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "roll": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-10-29",
+    "first_lag_days": 225,
+    "first_lag_is_upper_bound": true,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "roll": {
+        "first_date": "2025-10-29",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "core",
+        "token": "topr",
+        "commit": "cec5234ac2",
+        "pr": null,
+        "subject": "(feat): sync codes and publish roll flash.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 225,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "gpg",
+    "name": "GPG",
+    "family": "advantage",
+    "symptoms": [
+      "critic_cost"
+    ],
+    "source_status": "ok",
+    "arxiv": "2504.02546",
+    "source_title": "GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning",
+    "source_date": "2025-04-03",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-07-03",
+    "first_lag_days": 91,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-07-03",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "gpg",
+        "commit": "7db7f32446",
+        "pr": 2057,
+        "subject": "[megatron, fsdp, doc] feat: implement GPG loss. Add GPG advantage estimator implementation. (#2057)",
+        "commit_author": "Loong",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 91,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "intellect2_two_sided_clip",
+    "name": "Two-sided ratio clipping (INTELLECT-2)",
+    "family": "clipping",
+    "symptoms": [
+      "ratio_outliers"
+    ],
+    "source_status": "ok",
+    "arxiv": "2505.07291",
+    "source_title": "INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning",
+    "source_date": "2025-05-12",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "trl": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-05-13",
+    "first_lag_days": 1,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-05-13",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "delta",
+        "commit": "05bc43e960",
+        "pr": 3434,
+        "subject": "feat: Implement Two-Sided Clipping for GRPO Trainer (#3434)",
+        "commit_author": "Sayantan Das",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 1,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "gigpo",
+    "name": "GiGPO (group-in-group credit for agents)",
+    "family": "advantage",
+    "symptoms": [
+      "sparse_reward"
+    ],
+    "source_status": "ok",
+    "arxiv": "2505.10978",
+    "source_title": "Group-in-Group Policy Optimization for LLM Agent Training",
+    "source_date": "2025-05-16",
+    "review": false,
+    "frameworks_ever": [
+      "roll"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "roll": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-10-29",
+    "first_lag_days": 166,
+    "first_lag_is_upper_bound": true,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "roll": {
+        "first_date": "2025-10-29",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "core",
+        "token": "gigpo",
+        "commit": "cec5234ac2",
+        "pr": null,
+        "subject": "(feat): sync codes and publish roll flash.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 166,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "skywork_adaptive_entropy",
+    "name": "Adaptive entropy control (Skywork-OR1)",
+    "family": "entropy",
+    "symptoms": [
+      "entropy_collapse"
+    ],
+    "source_status": "ok",
+    "arxiv": "2505.22312",
+    "source_title": "Skywork Open Reasoner 1 Technical Report",
+    "source_date": "2025-05-28",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "trl": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-07-04",
+    "first_lag_days": 402,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2026-07-04",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_adaptive_entropy",
+        "commit": "34c7f0d857",
+        "pr": 6140,
+        "subject": "Add entropy regularization to GRPO (#6140)",
+        "commit_author": "Albert Villanova del Moral",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 402,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "entropy_cov",
+    "name": "Clip-Cov and KL-Cov",
+    "family": "entropy",
+    "symptoms": [
+      "entropy_collapse"
+    ],
+    "source_status": "ok",
+    "arxiv": "2505.22617",
+    "source_title": "The Entropy Mechanism of Reinforcement Learning for Reasoning Language Models",
+    "source_date": "2025-05-28",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-06-19",
+    "first_lag_days": 22,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-06-19",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "clip_cov",
+        "commit": "39b7250b0a",
+        "pr": 1830,
+        "subject": "[recipe] feat: integrate entropy-mechanism recipe: Clip-Cov and KL-Cov methods (#1830)",
+        "commit_author": "Yuchen Zhang",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 22,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "opo",
+    "name": "OPO (optimal reward baseline)",
+    "family": "advantage",
+    "symptoms": [
+      "high_variance"
+    ],
+    "source_status": "ok",
+    "arxiv": "2505.23585",
+    "source_title": "On-Policy RL with Optimal Reward Baseline",
+    "source_date": "2025-05-29",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-06-02",
+    "first_lag_days": 4,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-06-02",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "opo",
+        "commit": "a4b1bb7fb9",
+        "pr": 1796,
+        "subject": "[algo] OPO: add implementations and descriptions for OPO (On-Policy RL with Optimal Reward Baseline) (#1796)",
+        "commit_author": "Yaru Hao",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 4,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "areal_decoupled",
+    "name": "Decoupled PPO objective (AReaL)",
+    "family": "offpolicy",
+    "symptoms": [
+      "stale_policy"
+    ],
+    "source_status": "ok",
+    "arxiv": "2505.24298",
+    "source_title": "AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning",
+    "source_date": "2025-05-30",
+    "review": false,
+    "frameworks_ever": [
+      "areal"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-05-26",
+    "first_lag_days": -4,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "areal": {
+        "first_date": "2025-05-26",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_decoupled_loss",
+        "commit": "c60d128b14",
+        "pr": 47,
+        "subject": "Support asynchronous RL training, Qwen3, and the latest SGLang (#47)",
+        "commit_author": "Wei Fu",
+        "commit_author_is_paper_author": "author",
+        "lag_days": -4,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "high_entropy_tokens",
+    "name": "Train on high-entropy tokens only",
+    "family": "entropy",
+    "symptoms": [
+      "entropy_collapse"
+    ],
+    "source_status": "ok",
+    "arxiv": "2506.01939",
+    "source_title": "Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning",
+    "source_date": "2025-06-02",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "trl": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-07-19",
+    "first_lag_days": 47,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-07-19",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "top_entropy_quantile",
+        "commit": "116ec493fa",
+        "pr": 3727,
+        "subject": "🏗️ Refactor top-entropy in GRPO (#3727)",
+        "commit_author": "Quentin Gallouédec",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 47,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "cispo",
+    "name": "CISPO",
+    "family": "clipping",
+    "symptoms": [
+      "entropy_collapse"
+    ],
+    "source_status": "ok",
+    "arxiv": "2506.13585",
+    "source_title": "MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention",
+    "source_date": "2025-06-16",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "roll",
+      "slime",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 6,
+    "frameworks_at_head": {
+      "verl": "core",
+      "trl": "core",
+      "nemo-rl": "option",
+      "roll": "core",
+      "slime": "core",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 6,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-10-29",
+    "first_lag_days": 135,
+    "first_lag_is_upper_bound": true,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "roll": {
+        "first_date": "2025-10-29",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "core",
+        "token": "cispo",
+        "commit": "cec5234ac2",
+        "pr": null,
+        "subject": "(feat): sync codes and publish roll flash.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 135,
+        "at_head": "core",
+        "default_since": null
+      },
+      "trl": {
+        "first_date": "2025-11-06",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "cispo",
+        "commit": "642b721ee5",
+        "pr": 4495,
+        "subject": "ScaleRL: Add CISPO Loss (#4495)",
+        "commit_author": "Pramodith Ballapuram",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 143,
+        "at_head": "core",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-12-23",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "cispo",
+        "commit": "b19b749047",
+        "pr": 4508,
+        "subject": "[algo] feat: add cispo (#4508)",
+        "commit_author": "许霖",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 190,
+        "at_head": "core",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2026-06-11",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_cispo",
+        "commit": "34d32bfa59",
+        "pr": 2531,
+        "subject": "feat: Add CISPO loss (#2531)",
+        "commit_author": "pengdurice",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 360,
+        "at_head": "option",
+        "default_since": null
+      },
+      "slime": {
+        "first_date": "2026-06-15",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "cispo",
+        "commit": "a1dddef182",
+        "pr": 2067,
+        "subject": "[algo] Add CISPO advantage estimator (MiniMax-M1) (#2067)",
+        "commit_author": "Maxwill Lin",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 364,
+        "at_head": "core",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2026-06-23",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_cispo_loss",
+        "commit": "d97d3ae595",
+        "pr": 1412,
+        "subject": "feat(ppo): add CISPO loss surrogate (MiniMax-M1) (#1412)",
+        "commit_author": "Maxwill Lin",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 372,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "gspo",
+    "name": "GSPO (sequence-level ratio)",
+    "family": "moe",
+    "symptoms": [
+      "moe_instability",
+      "ratio_outliers"
+    ],
+    "source_status": "ok",
+    "arxiv": "2507.18071",
+    "source_title": "Group Sequence Policy Optimization",
+    "source_date": "2025-07-24",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "roll",
+      "slime",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 7,
+    "frameworks_at_head": {
+      "verl": "core",
+      "trl": "option",
+      "openrlhf": "core",
+      "nemo-rl": "option",
+      "roll": "option",
+      "slime": "core",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 7,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-07-27",
+    "first_lag_days": 3,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-07-27",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "importance_sampling_level",
+        "commit": "03034317d0",
+        "pr": 3775,
+        "subject": "🎞️ GSPO (#3775)",
+        "commit_author": "Quentin Gallouédec",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 3,
+        "at_head": "option",
+        "default_since": null
+      },
+      "openrlhf": {
+        "first_date": "2025-07-30",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "gspo",
+        "commit": "207a011972",
+        "pr": null,
+        "subject": "support gspo: https://github.com/OpenRLHF/OpenRLHF/issues/1095",
+        "commit_author": "xiaoxigua999",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 6,
+        "at_head": "core",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-07-30",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "gspo",
+        "commit": "b75b1f0bf1",
+        "pr": 2775,
+        "subject": "[algo] feat: add GSPO-token policy loss computation function (#2775)",
+        "commit_author": "Qunhong Zeng",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 6,
+        "at_head": "core",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2025-07-31",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "importance_sampling_seq",
+        "commit": "dbcd143c88",
+        "pr": null,
+        "subject": "(feat): Group Sequence Policy.",
+        "commit_author": "weixun.wwx",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 7,
+        "at_head": "option",
+        "default_since": null
+      },
+      "slime": {
+        "first_date": "2025-07-31",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "gspo",
+        "commit": "c7bb60ce4c",
+        "pr": 112,
+        "subject": "[algo] support GSPO (#112)",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 7,
+        "at_head": "core",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2025-08-23",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "sequence_level_importance_ratios",
+        "commit": "add4efb0f9",
+        "pr": 859,
+        "subject": "feat: GSPO (#859)",
+        "commit_author": "pjin-nvidia",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 30,
+        "at_head": "option",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-11-04",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "importance_sampling_level",
+        "commit": "981e3f68fe",
+        "pr": 501,
+        "subject": "feat: implement GSPO (Group-level Sequential Policy Optimization) (#501)",
+        "commit_author": "ZZ",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 103,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "routing_replay",
+    "name": "Routing replay across updates",
+    "family": "moe",
+    "symptoms": [
+      "moe_instability"
+    ],
+    "source_status": "ok",
+    "arxiv": "2507.18071",
+    "source_title": "Group Sequence Policy Optimization",
+    "source_date": "2025-07-24",
+    "review": false,
+    "frameworks_ever": [
+      "slime"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "slime": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-09-26",
+    "first_lag_days": 64,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "slime": {
+        "first_date": "2025-09-26",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_routing_replay",
+        "commit": "5b77a9b2f5",
+        "pr": 387,
+        "subject": "[feat] add --use-routing-replay (#387)",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 64,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "gmpo",
+    "name": "GMPO (geometric-mean objective)",
+    "family": "clipping",
+    "symptoms": [
+      "ratio_outliers"
+    ],
+    "source_status": "ok",
+    "arxiv": "2507.20673",
+    "source_title": "Geometric-Mean Policy Optimization",
+    "source_date": "2025-07-28",
+    "review": false,
+    "frameworks_ever": [
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 2,
+    "frameworks_at_head": {
+      "verl": "core",
+      "trl": "experimental"
+    },
+    "n_frameworks_at_head": 2,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-07-29",
+    "first_lag_days": 1,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-07-29",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "geo_mean",
+        "commit": "977b7d9ae8",
+        "pr": 2795,
+        "subject": "[recipe] feat: @register_policy_loss(\"geo_mean\"); Geometric-Mean Policy Optimization (#2795)",
+        "commit_author": "Liu Yue",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 1,
+        "at_head": "core",
+        "default_since": null
+      },
+      "trl": {
+        "first_date": "2026-06-16",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "experimental",
+        "token": "gmpo",
+        "commit": "c62558ebe9",
+        "pr": 6078,
+        "subject": "Add GMPO (Geometric-Mean Policy Optimization) experimental trainer (#6078)",
+        "commit_author": "Raghul chandramouli",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 323,
+        "at_head": "experimental",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "tis",
+    "name": "Truncated importance sampling for rollout-training mismatch",
+    "family": "offpolicy",
+    "symptoms": [
+      "train_infer_mismatch"
+    ],
+    "source_status": "non_arxiv",
+    "arxiv": null,
+    "source_title": "Your Efficient RL Framework Secretly Brings You Off-Policy RL Training",
+    "source_date": "2025-08",
+    "review": false,
+    "frameworks_ever": [
+      "nemo-rl",
+      "openrlhf",
+      "roll",
+      "slime",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 6,
+    "frameworks_at_head": {
+      "verl": "option",
+      "trl": "conditional_default",
+      "openrlhf": "option",
+      "nemo-rl": "option",
+      "roll": "core",
+      "slime": "option"
+    },
+    "n_frameworks_at_head": 6,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 1,
+    "first_adoption_date": "2025-08-06",
+    "first_lag_days": null,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "openrlhf": {
+        "first_date": "2025-08-06",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "vllm_is_correction",
+        "commit": "756087acdf",
+        "pr": 1098,
+        "subject": "support vllm off policy correction (#1098)",
+        "commit_author": "hijkzzz",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": "option",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-08-26",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "tis_imp_ratio_cap",
+        "commit": "b8dc5377c6",
+        "pr": 2953,
+        "subject": "[BREAKING][vllm, fsdp] feat: add Rollout-Training Mismatch Fix -- Truncated importance sampling (#2953)",
+        "commit_author": "Feng Yao",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": "option",
+        "default_since": null
+      },
+      "slime": {
+        "first_date": "2025-08-28",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_tis",
+        "commit": "e74666b674",
+        "pr": 234,
+        "subject": "[refactor] refactor tis implementation (#234)",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": "option",
+        "default_since": null
+      },
+      "trl": {
+        "first_date": "2025-09-03",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "conditional_default",
+        "token": "vllm_importance_sampling_correction",
+        "commit": "12fc85fd13",
+        "pr": 3867,
+        "subject": "[GRPO] Truncated Importance Sampling to address rollout-training mismatch (#3867)",
+        "commit_author": "LeonEricsson",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": "conditional_default",
+        "default_since": "2025-09-03"
+      },
+      "nemo-rl": {
+        "first_date": "2025-10-21",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "truncated_importance_sampling_ratio",
+        "commit": "f2de4763bd",
+        "pr": 1348,
+        "subject": "feat: support truncated importance sampling (#1348)",
+        "commit_author": "Yuki Huang",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": "option",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2025-10-29",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "core",
+        "token": "tis",
+        "commit": "cec5234ac2",
+        "pr": null,
+        "subject": "(feat): sync codes and publish roll flash.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "mismatch_is",
+    "name": "Untruncated importance weights between rollout and trainer log-probs",
+    "family": "offpolicy",
+    "symptoms": [
+      "train_infer_mismatch"
+    ],
+    "source_status": "non_arxiv",
+    "arxiv": null,
+    "source_title": "NeMo-RL GRPO guide, importance sampling correction",
+    "source_date": null,
+    "review": false,
+    "frameworks_ever": [
+      "nemo-rl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "nemo-rl": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-04-22",
+    "first_lag_days": null,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "nemo-rl": {
+        "first_date": "2025-04-22",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_importance_sampling_correction",
+        "commit": "5c62657fbf",
+        "pr": 174,
+        "subject": "feat: Importance sampling trick (#174)",
+        "commit_author": "Yi-Fu Wu",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "gfpo",
+    "name": "GFPO (group filtered policy optimisation)",
+    "family": "length",
+    "symptoms": [
+      "length_bias"
+    ],
+    "source_status": "ok_by_title",
+    "arxiv": "2508.09726",
+    "source_title": "Sample More to Think Less: Group Filtered Policy Optimization for Concise Reasoning",
+    "source_date": "2025-08-13",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {},
+    "n_frameworks_at_head": 0,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-09-17",
+    "first_lag_days": 35,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-09-17",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "experimental",
+        "token": "gfpo",
+        "commit": "10dc36d610",
+        "pr": 3989,
+        "subject": "🌪️ [GFPO]: implement GFPO in GRPOTrainer (#3989)",
+        "commit_author": "Minhao Chou",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 35,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "flowrl",
+    "name": "FlowRL (reward distribution matching)",
+    "family": "entropy",
+    "symptoms": [
+      "diversity_loss"
+    ],
+    "source_status": "ok",
+    "arxiv": "2509.15207",
+    "source_title": "FlowRL: Matching Reward Distributions for LLM Reasoning",
+    "source_date": "2025-09-18",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "recipe"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-11-06",
+    "first_lag_days": 49,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-11-06",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "flowrl",
+        "commit": "4bf4bd32d0",
+        "pr": 3924,
+        "subject": "[recipe] feat: add FlowRL recipe (#3924)",
+        "commit_author": "Xuekai Zhu",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 49,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "spo",
+    "name": "SPO (single-stream policy optimisation)",
+    "family": "advantage",
+    "symptoms": [
+      "zero_gradient_groups",
+      "high_variance"
+    ],
+    "source_status": "ok",
+    "arxiv": "2509.13232",
+    "source_title": "Single-stream Policy Optimization",
+    "source_date": "2025-09-16",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "recipe"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-11-25",
+    "first_lag_days": 70,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-11-25",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "spo",
+        "commit": "b1ace026bb",
+        "pr": 2,
+        "subject": "feat: add Single-stream Policy Optimization (SPO) algo. (#2)",
+        "commit_author": "Zihan Ding",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 70,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "m2po",
+    "name": "M2PO (second-moment trust region for stale data)",
+    "family": "offpolicy",
+    "symptoms": [
+      "stale_policy"
+    ],
+    "source_status": "ok",
+    "arxiv": "2510.01161",
+    "source_title": "Prosperity before Collapse: How Far Can Off-Policy RL Reach with Stale Data on LLMs?",
+    "source_date": "2025-10-01",
+    "review": false,
+    "frameworks_ever": [
+      "areal"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-10-31",
+    "first_lag_days": 30,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "areal": {
+        "first_date": "2025-10-31",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "m2po",
+        "commit": "c431dd6c41",
+        "pr": 480,
+        "subject": "Implement M2PO algorithm (#480)",
+        "commit_author": "马境远",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 30,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "r3_rollout_routing_replay",
+    "name": "Rollout routing replay (R3)",
+    "family": "moe",
+    "symptoms": [
+      "moe_instability",
+      "train_infer_mismatch"
+    ],
+    "source_status": "ok",
+    "arxiv": "2510.11370",
+    "source_title": "Stabilizing MoE Reinforcement Learning by Aligning Training and Inference Routers",
+    "source_date": "2025-10-13",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "roll",
+      "slime",
+      "verl"
+    ],
+    "n_frameworks_ever": 5,
+    "frameworks_at_head": {
+      "verl": "option",
+      "nemo-rl": "option",
+      "roll": "option",
+      "slime": "option",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 5,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-11-13",
+    "first_lag_days": 31,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "slime": {
+        "first_date": "2025-11-13",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_rollout_routing_replay",
+        "commit": "7551dc60a1",
+        "pr": 715,
+        "subject": "Support rollout routing replay (#715)",
+        "commit_author": "Zilin Zhu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 31,
+        "at_head": "option",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-12-04",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "enable_rollout_routing_replay",
+        "commit": "cb236075db",
+        "pr": 4101,
+        "subject": "[algo] feat: support router replay (#4101)",
+        "commit_author": "litianjian",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 52,
+        "at_head": "option",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2026-06-15",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "router_replay",
+        "commit": "c8a8ef0db8",
+        "pr": 2590,
+        "subject": "feat: add router replay (R3) support (#2590)",
+        "commit_author": "Zeyu Zhou",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 245,
+        "at_head": "option",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2026-06-18",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "option",
+        "token": "enable_rollout_routing_replay",
+        "commit": "7f9d4d3873",
+        "pr": null,
+        "subject": "(feat): publish v0.3.0.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 248,
+        "at_head": "option",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2026-10-15",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "enable_router_replay",
+        "commit": "6cad8710bb",
+        "pr": 1496,
+        "subject": "feat(engine): add native R3 router replay (#1496)",
+        "commit_author": "yulangz",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 367,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "rep_exp",
+    "name": "Representation-based exploration",
+    "family": "entropy",
+    "symptoms": [
+      "diversity_loss"
+    ],
+    "source_status": "ok",
+    "arxiv": "2510.11686",
+    "source_title": "Representation-Based Exploration for Language Models: From Test-Time to Post-Training",
+    "source_date": "2025-10-13",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "recipe"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-01-07",
+    "first_lag_days": 86,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2026-01-07",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "rep_exp",
+        "commit": "51d361c3a5",
+        "pr": 6,
+        "subject": "[recipe, algo] feat: Representation-based Exploration (RepExp) (#6)",
+        "commit_author": "Jens Tuyls",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 86,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "mis",
+    "name": "Masked / rejection importance sampling for rollout-training mismatch",
+    "family": "offpolicy",
+    "symptoms": [
+      "train_infer_mismatch"
+    ],
+    "source_status": "ok",
+    "arxiv": "2510.18855",
+    "source_title": "Every Step Evolves: Scaling Reinforcement Learning for Trillion-Scale Thinking Model",
+    "source_date": "2025-10-21",
+    "review": true,
+    "frameworks_ever": [
+      "areal",
+      "nemo-rl",
+      "openrlhf",
+      "roll",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 6,
+    "frameworks_at_head": {
+      "verl": "option",
+      "trl": "option",
+      "openrlhf": "option",
+      "nemo-rl": "option",
+      "roll": "option",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 6,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-11-07",
+    "first_lag_days": 17,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-11-07",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "rollout_rs",
+        "commit": "418f964ab8",
+        "pr": 3984,
+        "subject": "[BREAKING][algo] feat: Rollout Correction for General Off-Policy Problems (#3984)",
+        "commit_author": "Yingru Li",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 17,
+        "at_head": "option",
+        "default_since": null
+      },
+      "trl": {
+        "first_date": "2025-11-30",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "vllm_importance_sampling_mode",
+        "commit": "eb76389980",
+        "pr": 4530,
+        "subject": "[GRPO] Sequence-level TIS & MIS (#4530)",
+        "commit_author": "LeonEricsson",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 40,
+        "at_head": "option",
+        "default_since": null
+      },
+      "roll": {
+        "first_date": "2026-02-04",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "option",
+        "token": "train_infer_filter",
+        "commit": "3077befc5f",
+        "pr": null,
+        "subject": "(feat): publish roll v0.2.0.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 106,
+        "at_head": "option",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2026-02-13",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "seq_logprob_error_threshold",
+        "commit": "14f9f38448",
+        "pr": 1838,
+        "subject": "feat: Mask sequences with high logprob error (#1838)",
+        "commit_author": "Yi-Fu Wu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 115,
+        "at_head": "option",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2026-04-20",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "rejection_sampling",
+        "commit": "bc9f009885",
+        "pr": 1088,
+        "subject": "feat(api): add unified RejectionSamplingConfig for async training (#1088)",
+        "commit_author": "问问神奇海螺",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 181,
+        "at_head": "option",
+        "default_since": null
+      },
+      "openrlhf": {
+        "first_date": "2026-09-14",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "is_correction_mask",
+        "commit": "e53dcf86ca",
+        "pr": 1339,
+        "subject": "feat(ppo): FlashREINFORCE as configuration — divergence-gated IS correction, seq-mean aggregation, batch-mean estimator (#1339)",
+        "commit_author": "hijkzzz",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 328,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "sapo",
+    "name": "SAPO (soft adaptive gating)",
+    "family": "clipping",
+    "symptoms": [
+      "ratio_outliers"
+    ],
+    "source_status": "ok",
+    "arxiv": "2511.20347",
+    "source_title": "Soft Adaptive Policy Optimization",
+    "source_date": "2025-11-25",
+    "review": false,
+    "frameworks_ever": [
+      "areal",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 3,
+    "frameworks_at_head": {
+      "verl": "core",
+      "trl": "core",
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 3,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-12-03",
+    "first_lag_days": 8,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-12-03",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "sapo",
+        "commit": "560fd3d59c",
+        "pr": 4600,
+        "subject": "[GRPOTrainer]: Add SAPO Loss (#4600)",
+        "commit_author": "Pramodith Ballapuram",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 8,
+        "at_head": "core",
+        "default_since": null
+      },
+      "areal": {
+        "first_date": "2025-12-10",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "sapo",
+        "commit": "cd3d405dc4",
+        "pr": 670,
+        "subject": "feat: implement SAPO (Soft Adaptive Policy Optimization) (#670)",
+        "commit_author": "Bruce-rl-hw",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 15,
+        "at_head": "option",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2025-12-27",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "sapo",
+        "commit": "c14652ed50",
+        "pr": 4345,
+        "subject": "[algo] SAPO algo by Qwen (#4345)",
+        "commit_author": "ABDELAZIZ BOUNHAR",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 32,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "opsm",
+    "name": "Off-policy sequence masking (DeepSeek-V3.2)",
+    "family": "offpolicy",
+    "symptoms": [
+      "stale_policy",
+      "train_infer_mismatch"
+    ],
+    "source_status": "ok",
+    "arxiv": "2512.02556",
+    "source_title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models",
+    "source_date": "2025-12-02",
+    "review": false,
+    "frameworks_ever": [
+      "slime",
+      "trl"
+    ],
+    "n_frameworks_ever": 2,
+    "frameworks_at_head": {
+      "trl": "option",
+      "slime": "option"
+    },
+    "n_frameworks_at_head": 2,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-12-02",
+    "first_lag_days": 0,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "slime": {
+        "first_date": "2025-12-02",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_opsm",
+        "commit": "caa4af2835",
+        "pr": 999,
+        "subject": "[Feature] Add off-policy sequence masking algorithm proposed in DeepSeek v3.2 (#999)",
+        "commit_author": "Chengxing Xie",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 0,
+        "at_head": "option",
+        "default_since": null
+      },
+      "trl": {
+        "first_date": "2026-01-06",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "off_policy_mask_threshold",
+        "commit": "05a40176c6",
+        "pr": 4689,
+        "subject": "feat: DeepSeek V3.2 Off-policy sequence masking (#4689)",
+        "commit_author": "casinca",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 35,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "unbiased_kl",
+    "name": "Importance-weighted unbiased KL gradient (DeepSeek-V3.2)",
+    "family": "kl",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2512.02556",
+    "source_title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models",
+    "source_date": "2025-12-02",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "trl": "conditional_default"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 1,
+    "first_adoption_date": "2025-12-08",
+    "first_lag_days": 6,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-12-08",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "use_bias_correction_kl",
+        "commit": "f7d4985a72",
+        "pr": 4638,
+        "subject": "feat: implement DeepSeek unbiased KL estimator for GRPO (#4638)",
+        "commit_author": "Jose Luis Cantarero",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 6,
+        "at_head": "conditional_default",
+        "default_since": "2026-07-29"
+      }
+    }
+  },
+  {
+    "id": "gdpo",
+    "name": "GDPO (decoupled per-reward normalisation)",
+    "family": "multi_reward",
+    "symptoms": [
+      "multi_reward_collapse"
+    ],
+    "source_status": "ok",
+    "arxiv": "2601.05242",
+    "source_title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
+    "source_date": "2026-01-08",
+    "review": false,
+    "frameworks_ever": [
+      "nemo-rl",
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 3,
+    "frameworks_at_head": {
+      "verl": "core",
+      "trl": "option",
+      "nemo-rl": "core"
+    },
+    "n_frameworks_at_head": 3,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-01-15",
+    "first_lag_days": 7,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 2,
+    "per_framework": {
+      "trl": {
+        "first_date": "2026-01-15",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "multi_objective_aggregation",
+        "commit": "0e0cb5f158",
+        "pr": 4785,
+        "subject": "Add support for GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization (#4785)",
+        "commit_author": "LIU, Shih-Yang",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 7,
+        "at_head": "option",
+        "default_since": null
+      },
+      "nemo-rl": {
+        "first_date": "2026-03-12",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "gdpo",
+        "commit": "d739693232",
+        "pr": 2069,
+        "subject": "feat: support GDPO (New) (#2069)",
+        "commit_author": "LIU, Shih-Yang",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 63,
+        "at_head": "core",
+        "default_since": null
+      },
+      "verl": {
+        "first_date": "2026-03-13",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "gdpo",
+        "commit": "b560d9f421",
+        "pr": 5503,
+        "subject": "[algo] feat: add GDPO (Group reward-Decoupled Normalization Policy Optimization) algorithm (#5503)",
+        "commit_author": "Shengyuan Liu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 64,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "dppo",
+    "name": "DPPO (divergence-based trust region)",
+    "family": "clipping",
+    "symptoms": [
+      "ratio_outliers"
+    ],
+    "source_status": "ok",
+    "arxiv": "2602.04879",
+    "source_title": "Rethinking the Trust Region in LLM Reinforcement Learning",
+    "source_date": "2026-02-04",
+    "review": false,
+    "frameworks_ever": [
+      "trl",
+      "verl"
+    ],
+    "n_frameworks_ever": 2,
+    "frameworks_at_head": {
+      "verl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-02-26",
+    "first_lag_days": 22,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2026-02-26",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "dppo_kl",
+        "commit": "182383bbb5",
+        "pr": 5397,
+        "subject": "[algo] feat: add DPPO with binary TV or binary KL implementation (#5397)",
+        "commit_author": "Qi Penghui",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 22,
+        "at_head": "core",
+        "default_since": null
+      },
+      "trl": {
+        "first_date": "2026-03-19",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "experimental",
+        "token": "dppo",
+        "commit": "8e6e0626eb",
+        "pr": 5117,
+        "subject": "feat(experimental): Divergence Proximal Policy Optimization (#5117)",
+        "commit_author": "LeonEricsson",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 43,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "luspo",
+    "name": "LUSPO (length-unbiased sequence policy optimisation)",
+    "family": "length",
+    "symptoms": [
+      "length_bias"
+    ],
+    "source_status": "ok",
+    "arxiv": "2602.05261",
+    "source_title": "Length-Unbiased Sequence Policy Optimization: Revealing and Controlling Response Length Variation in RLVR",
+    "source_date": "2026-02-05",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "trl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-02-09",
+    "first_lag_days": 4,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2026-02-09",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "luspo",
+        "commit": "ff55949ccc",
+        "pr": 4988,
+        "subject": "Add length-unbiased GRPO loss (LUSPO) (#4988)",
+        "commit_author": "Haseeb Asif",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 4,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "vespo",
+    "name": "VESPO",
+    "family": "offpolicy",
+    "symptoms": [
+      "stale_policy",
+      "ratio_outliers"
+    ],
+    "source_status": "ok",
+    "arxiv": "2602.10693",
+    "source_title": "VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training",
+    "source_date": "2026-02-11",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "trl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-03-13",
+    "first_lag_days": 30,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2026-03-13",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "vespo",
+        "commit": "406d406a18",
+        "pr": 5199,
+        "subject": "feat(`grpo_trainer.py`): Variational Sequence-Level Soft Policy Optimization (VESPO) (#5199)",
+        "commit_author": "casinca",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 30,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "bema_ref",
+    "name": "Bias-corrected EMA reference model",
+    "family": "kl",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2508.00180",
+    "source_title": "EMA Without the Lag: Bias-Corrected Iterate Averaging Schemes",
+    "source_date": "2025-07-31",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "trl": "experimental"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-09-12",
+    "first_lag_days": 43,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-09-12",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "experimental",
+        "token": "bema_for_ref_model",
+        "commit": "d655ce48f8",
+        "pr": 3898,
+        "subject": "🌾 [Experimental] BEMA for ref model (#3898)",
+        "commit_author": "Quentin Gallouédec",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 43,
+        "at_head": "experimental",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "passk_advantage",
+    "name": "Pass@k advantage",
+    "family": "advantage",
+    "symptoms": [
+      "diversity_loss"
+    ],
+    "source_status": "ok",
+    "arxiv": "2503.19595",
+    "source_title": "Optimizing Language Models for Inference Time Objectives using Reinforcement Learning",
+    "source_date": "2025-03-25",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-05-23",
+    "first_lag_days": 59,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-05-23",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "grpo_passk",
+        "commit": "01abd3c77c",
+        "pr": 1621,
+        "subject": "Mert/passatk advantage (#1621)",
+        "commit_author": "Mert Unsal",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 59,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "optimal_token_baseline",
+    "name": "Optimal token baseline with variance proxy",
+    "family": "advantage",
+    "symptoms": [
+      "high_variance"
+    ],
+    "source_status": "ok",
+    "arxiv": "2602.07078",
+    "source_title": "The Optimal Token Baseline: Variance Reduction for Long-Horizon LLM-RL",
+    "source_date": "2026-02-06",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-01-08",
+    "first_lag_days": -29,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "verl": {
+        "first_date": "2026-01-08",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "optimal_token_baseline",
+        "commit": "67a127b4eb",
+        "pr": 4678,
+        "subject": "[algo] feat: add optimal token baseline and variance proxy (#4678)",
+        "commit_author": "jiawei415",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": -29,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "dro",
+    "name": "Direct Reward Optimisation (quadratic log-ratio penalty)",
+    "family": "offpolicy",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2405.19107",
+    "source_title": "Offline Regularised Reinforcement Learning for Large Language Models Alignment",
+    "source_date": "2024-05-29",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-08-04",
+    "first_lag_days": 797,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "verl": {
+        "first_date": "2026-08-04",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "dro",
+        "commit": "ddfbf4ea01",
+        "pr": 7245,
+        "subject": "[algo, cfg, doc] feat: add DRO losses (#7245)",
+        "commit_author": "Wyett",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 797,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "gvpo",
+    "name": "GVPO (group variance policy optimisation)",
+    "family": "advantage",
+    "symptoms": [
+      "high_variance"
+    ],
+    "source_status": "ok_by_title",
+    "arxiv": "2504.19599",
+    "source_title": "GVPO: Group Variance Policy Optimization for Large Language Model Post-Training",
+    "source_date": "2025-04-28",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "recipe"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-01-07",
+    "first_lag_days": 254,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2026-01-07",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "gvpo",
+        "commit": "0c7fd45c19",
+        "pr": 9,
+        "subject": "[recipe, algo] feat: Group Variance Policy Optimization (#9)",
+        "commit_author": "Kaichen Zhang",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 254,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "fapo",
+    "name": "FAPO",
+    "family": "advantage",
+    "symptoms": [],
+    "source_status": "ok_by_title",
+    "arxiv": "2510.22543",
+    "source_title": "FAPO: Flawed-Aware Policy Optimization for Efficient and Reliable Reasoning",
+    "source_date": "2025-10-26",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "recipe"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-10-21",
+    "first_lag_days": -5,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-10-21",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "fapo",
+        "commit": "d55929fd35",
+        "pr": 3679,
+        "subject": "[trainer, worker] feat: more flexible and easy-to-use reward model (#3679)",
+        "commit_author": "Yuyang Ding",
+        "commit_author_is_paper_author": "author",
+        "lag_days": -5,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "a2po",
+    "name": "A2PO (optimal advantage regression)",
+    "family": "advantage",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2505.20686",
+    "source_title": "Accelerating RL for LLM Reasoning with Optimal Advantage Regression",
+    "source_date": "2025-05-27",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "trl": "experimental"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-06-05",
+    "first_lag_days": 374,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2026-06-05",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "experimental",
+        "token": "a2po",
+        "commit": "da3ee53ed2",
+        "pr": 5940,
+        "subject": "Add experimental A2PO trainer (Optimal Advantage Regression) (#5940)",
+        "commit_author": "Raghul chandramouli",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 374,
+        "at_head": "experimental",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "liteppo",
+    "name": "LitePPO (group-mean, batch-std normalisation with token-level loss)",
+    "family": "aggregation",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2508.08221",
+    "source_title": "Part I: Tricks or Traps? A Deep Dive into RL for LLM Reasoning",
+    "source_date": "2025-08-11",
+    "review": false,
+    "frameworks_ever": [
+      "areal"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-12-03",
+    "first_lag_days": 114,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "areal": {
+        "first_date": "2025-12-03",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "liteppo",
+        "commit": "b160ebe2bb",
+        "pr": 660,
+        "subject": "refactor: apply PPOTrainer and SFTTrainer in example scripts (#660)",
+        "commit_author": "Wei Fu",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 114,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "kpop",
+    "name": "KPop (binary-KL token masking for rollout-training mismatch)",
+    "family": "offpolicy",
+    "symptoms": [
+      "train_infer_mismatch"
+    ],
+    "source_status": "non_arxiv",
+    "arxiv": null,
+    "source_title": "KPop",
+    "source_date": null,
+    "review": false,
+    "frameworks_ever": [
+      "areal"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "areal": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-06-15",
+    "first_lag_days": null,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "areal": {
+        "first_date": "2026-06-15",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "kpop",
+        "commit": "13353cc676",
+        "pr": 1405,
+        "subject": "Supporting features for IcePop and KPop (#1405)",
+        "commit_author": "guojiapub",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "trm",
+    "name": "Trust region masking (sequence max divergence)",
+    "family": "clipping",
+    "symptoms": [
+      "train_infer_mismatch",
+      "stale_policy"
+    ],
+    "source_status": "ok",
+    "arxiv": "2512.23075",
+    "source_title": "Trust Region Masking for Long-Horizon LLM Reinforcement Learning",
+    "source_date": "2025-12-28",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-01-14",
+    "first_lag_days": 17,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2026-01-14",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "seq_max_k",
+        "commit": "97eac90487",
+        "pr": 4544,
+        "subject": "[algo, doc] feat: trust region sequence masking - (1) k3 KL avg and (2) veto for max criterion (#4544)",
+        "commit_author": "Yingru Li",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 17,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "vapo",
+    "name": "VAPO (decoupled and length-adaptive GAE, positive-example NLL)",
+    "family": "advantage",
+    "symptoms": [
+      "sparse_reward",
+      "length_bias"
+    ],
+    "source_status": "ok",
+    "arxiv": "2504.05118",
+    "source_title": "VAPO: Efficient and Reliable Reinforcement Learning for Advanced Reasoning Tasks",
+    "source_date": "2025-04-07",
+    "review": false,
+    "frameworks_ever": [
+      "nemo-rl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "nemo-rl": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-06-10",
+    "first_lag_days": 429,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "nemo-rl": {
+        "first_date": "2026-06-10",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "gae_lambda_value",
+        "commit": "857b115226",
+        "pr": 2530,
+        "subject": "feat: PPO with MCore (#2530)",
+        "commit_author": "bg51717",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 429,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "papo",
+    "name": "PAPO (implicit perception loss)",
+    "family": "kl",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2507.06448",
+    "source_title": "Perception-Aware Policy Optimization for Multimodal Reasoning",
+    "source_date": "2025-07-08",
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {},
+    "n_frameworks_at_head": 0,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-10-30",
+    "first_lag_days": 114,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-10-30",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "experimental",
+        "token": "papo",
+        "commit": "06c059bab8",
+        "pr": 4334,
+        "subject": "Add PAPOTrainer for preference-based optimization (#4334)",
+        "commit_author": "SolarWindRider",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 114,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "aent",
+    "name": "AEnt (clamped entropy bonus with adaptive coefficient)",
+    "family": "entropy",
+    "symptoms": [
+      "entropy_collapse"
+    ],
+    "source_status": "ok",
+    "arxiv": "2509.03493",
+    "source_title": "On Entropy Control in LLM-RL Algorithms",
+    "source_date": "2025-09-03",
+    "review": false,
+    "frameworks_ever": [
+      "areal"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {},
+    "n_frameworks_at_head": 0,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-10-16",
+    "first_lag_days": 43,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "areal": {
+        "first_date": "2025-10-16",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "AEnt",
+        "commit": "53f004bf8c",
+        "pr": 403,
+        "subject": "[Feature] Add AEnt support (#403)",
+        "commit_author": "Shen, Han",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 43,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "collabllm",
+    "name": "CollabLLM (multiturn-aware rewards)",
+    "family": "credit",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2502.00640",
+    "source_title": "CollabLLM: From Passive Responders to Active Collaborators",
+    "source_date": "2025-02-02",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "recipe"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-09-25",
+    "first_lag_days": 235,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-09-25",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "collabllm",
+        "commit": "25d78fa913",
+        "pr": 3574,
+        "subject": "[recipe] feat: CollabLLM integration for multiturn training (#3574)",
+        "commit_author": "Shirley Wu",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 235,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "echo",
+    "name": "ECHO (auxiliary world-model loss on observation tokens)",
+    "family": "other",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2605.24517",
+    "source_title": "ECHO: Terminal Agents Learn World Models for Free",
+    "source_date": "2026-05-23",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "recipe"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-09-11",
+    "first_lag_days": 111,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "verl": {
+        "first_date": "2026-09-11",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "echo",
+        "commit": "cd1e637b74",
+        "pr": 142,
+        "subject": "feat(recipe): add ECHO terminal-agent reproduction (#142)",
+        "commit_author": "Kyle Montgomery",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 111,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "dler",
+    "name": "DLER truncation penalty",
+    "family": "length",
+    "symptoms": [
+      "length_bias"
+    ],
+    "source_status": "ok",
+    "arxiv": "2510.15110",
+    "source_title": "DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via Reinforcement Learning",
+    "source_date": "2025-10-16",
+    "review": false,
+    "frameworks_ever": [
+      "nemo-rl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "nemo-rl": "option"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-02-07",
+    "first_lag_days": 114,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "nemo-rl": {
+        "first_date": "2026-02-07",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "option",
+        "token": "stop_properly_penalty_coef",
+        "commit": "83742c2ec9",
+        "pr": 1809,
+        "subject": "feat: Implement ProRLv2 recipe (#1809)",
+        "commit_author": "hijkzzz",
+        "commit_author_is_paper_author": "unknown",
+        "lag_days": 114,
+        "at_head": "option",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "aepo",
+    "name": "AEPO (adaptive exploration policy optimisation)",
+    "family": "sampling",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2508.05731",
+    "source_title": "InfiGUI-G1: Advancing GUI Grounding with Adaptive Exploration Policy Optimization",
+    "source_date": "2025-08-07",
+    "review": false,
+    "frameworks_ever": [
+      "verl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "verl": "recipe"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-08-27",
+    "first_lag_days": 20,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 1,
+    "per_framework": {
+      "verl": {
+        "first_date": "2025-08-27",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "recipe",
+        "token": "infigui-g1",
+        "commit": "1e413344a2",
+        "pr": 3242,
+        "subject": "[recipe] feat: Add InfiGUI-G1 recipe for MLLM GUI grounding (#3242)",
+        "commit_author": "Yuhang Liu",
+        "commit_author_is_paper_author": "author",
+        "lag_days": 20,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "kl_grad_correction",
+    "name": "KL gradient with the score-function term (Tang and Munos)",
+    "family": "kl",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2506.09477",
+    "source_title": "On a few pitfalls in KL divergence gradient estimation for RL",
+    "source_date": "2025-06-11",
+    "review": false,
+    "frameworks_ever": [
+      "nemo-rl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "nemo-rl": "conditional_default"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 1,
+    "first_adoption_date": "2026-06-24",
+    "first_lag_days": 378,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "nemo-rl": {
+        "first_date": "2026-06-24",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "conditional_default",
+        "token": "kl_score_function_fix",
+        "commit": "33bce20d78",
+        "pr": 2506,
+        "subject": "fix: KL backward in GRPO (#2506)",
+        "commit_author": "Sadegh Mahdavi",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 378,
+        "at_head": "conditional_default",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "starpo",
+    "name": "StarPO (trajectory-level optimisation for multi-turn agents, RAGEN)",
+    "family": "other",
+    "symptoms": [],
+    "source_status": "ok",
+    "arxiv": "2504.20073",
+    "source_title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+    "source_date": "2025-04-24",
+    "review": false,
+    "frameworks_ever": [
+      "roll"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "roll": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-05-30",
+    "first_lag_days": 36,
+    "first_lag_is_upper_bound": true,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "roll": {
+        "first_date": "2025-05-30",
+        "left_censored": true,
+        "censor_reason": "root_commit",
+        "tier_first": "core",
+        "token": "agentic_starpo",
+        "commit": "35bea6a23e",
+        "pr": null,
+        "subject": "(feat): init repo.",
+        "commit_author": "xiongshaopan.xsp",
+        "commit_author_is_paper_author": "not_author",
+        "lag_days": 36,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "flash_reinforce",
+    "name": "FlashREINFORCE (single-rollout async RL)",
+    "family": "advantage",
+    "symptoms": [
+      "critic_cost",
+      "stale_policy"
+    ],
+    "source_status": "non_arxiv",
+    "arxiv": null,
+    "source_title": "FlashREINFORCE: Critic-free Single-rollout Asynchronous RL for Agentic Language Models",
+    "source_date": "2026-09-14",
+    "review": false,
+    "frameworks_ever": [
+      "openrlhf"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "openrlhf": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-09-14",
+    "first_lag_days": 0,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "openrlhf": {
+        "first_date": "2026-09-14",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "core",
+        "token": "flash_reinforce",
+        "commit": "e53dcf86ca",
+        "pr": 1339,
+        "subject": "feat(ppo): FlashREINFORCE as configuration — divergence-gated IS correction, seq-mean aggregation, batch-mean estimator (#1339)",
+        "commit_author": "hijkzzz",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": 0,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "sao",
+    "name": "SAO (direct double-sided importance sampling, ROLL)",
+    "family": "offpolicy",
+    "symptoms": [
+      "train_infer_mismatch"
+    ],
+    "source_status": "non_arxiv",
+    "arxiv": null,
+    "source_title": "ROLL pg_variant sao",
+    "source_date": null,
+    "review": false,
+    "frameworks_ever": [
+      "roll"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {
+      "roll": "core"
+    },
+    "n_frameworks_at_head": 1,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2026-09-29",
+    "first_lag_days": null,
+    "first_lag_is_upper_bound": true,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "roll": {
+        "first_date": "2026-09-29",
+        "left_censored": true,
+        "censor_reason": "bulk_release",
+        "tier_first": "core",
+        "token": "sao",
+        "commit": "581046abce",
+        "pr": null,
+        "subject": "(feat): publish v0.4.0.",
+        "commit_author": "gaow0007",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": "core",
+        "default_since": null
+      }
+    }
+  },
+  {
+    "id": "grpo_replay_buffer",
+    "name": "GRPO with replay buffer",
+    "family": "sampling",
+    "symptoms": [
+      "zero_gradient_groups"
+    ],
+    "source_status": "non_arxiv",
+    "arxiv": null,
+    "source_title": "TRL GRPO With Replay Buffer",
+    "source_date": null,
+    "review": false,
+    "frameworks_ever": [
+      "trl"
+    ],
+    "n_frameworks_ever": 1,
+    "frameworks_at_head": {},
+    "n_frameworks_at_head": 0,
+    "n_default_at_head": 0,
+    "n_conditional_default_at_head": 0,
+    "first_adoption_date": "2025-09-24",
+    "first_lag_days": null,
+    "first_lag_is_upper_bound": false,
+    "n_self_contributed": 0,
+    "per_framework": {
+      "trl": {
+        "first_date": "2025-09-24",
+        "left_censored": false,
+        "censor_reason": null,
+        "tier_first": "experimental",
+        "token": "grpo_with_replay_buffer",
+        "commit": "d1e24df031",
+        "pr": 4060,
+        "subject": "[GRPO]: Sample from a Replay Buffer To Substitute Groups with 0 std. (#4060)",
+        "commit_author": "Pramodith Ballapuram",
+        "commit_author_is_paper_author": "no_paper",
+        "lag_days": null,
+        "at_head": null,
+        "default_since": null
+      }
+    }
+  }
+]

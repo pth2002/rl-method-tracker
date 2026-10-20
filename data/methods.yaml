@@ -1,0 +1,377 @@
+# Curated catalog of RL post-training methods tracked across frameworks.
+#
+# Scope: online RL for language models (policy-gradient family). Preference optimisation,
+# distillation, SFT, systems features and task recipes are recorded in token_map.yaml as
+# out-of-scope families, not here.
+#
+# source.arxiv is checked by collectors/papers.py against arXiv (title, authors, first version
+# date). Entries without an arXiv id give `title` so the script can search for it; entries
+# whose only public source is a blog give `url` and `date` by hand.
+# `review: true` marks entries whose source attribution still needs a human check.
+#
+# Families: base, advantage, clipping, aggregation, sampling, length, offpolicy, moe, entropy, kl, multi_reward
+
+# ---- Baselines (pre-2025 or the starting point) ----
+- id: ppo
+  name: PPO (clipped surrogate, GAE)
+  source: {arxiv: "1707.06347"}
+  family: base
+  symptoms: []
+- id: grpo
+  name: GRPO
+  source: {arxiv: "2402.03300"}
+  family: advantage
+  symptoms: [critic_cost]
+- id: rloo
+  name: RLOO
+  source: {arxiv: "2402.14740"}
+  family: advantage
+  symptoms: [critic_cost, high_variance]
+- id: remax
+  name: ReMax
+  source: {arxiv: "2310.10505"}
+  family: advantage
+  symptoms: [critic_cost]
+- id: reinforce_pp
+  name: REINFORCE++
+  source: {arxiv: "2501.03262"}
+  family: advantage
+  symptoms: [critic_cost, high_variance]
+- id: dual_clip
+  name: Dual-clip PPO
+  source: {arxiv: "1912.09729"}
+  family: clipping
+  symptoms: [ratio_outliers]
+- id: kl_k3
+  name: k3 (low-variance) KL estimator
+  source: {url: "http://joschu.net/blog/kl-approx.html", date: "2020-03-07", title: "Approximating KL Divergence"}
+  family: kl
+  symptoms: []
+- id: prime
+  name: PRIME (implicit process rewards)
+  source: {arxiv: "2502.01456"}
+  family: advantage
+  symptoms: [sparse_reward]
+
+# ---- DAPO, tracked per component because frameworks adopt them separately ----
+- id: dapo_clip_higher
+  name: Clip-higher (decoupled clip range)
+  source: {arxiv: "2503.14476"}
+  family: clipping
+  symptoms: [entropy_collapse]
+- id: dapo_dynamic_sampling
+  name: Dynamic sampling (filter zero-variance groups)
+  source: {arxiv: "2503.14476"}
+  family: sampling
+  symptoms: [zero_gradient_groups]
+- id: dapo_token_loss
+  name: Token-level loss aggregation
+  source: {arxiv: "2503.14476"}
+  family: aggregation
+  symptoms: [length_bias]
+- id: dapo_overlong
+  name: Overlong filtering and soft overlong penalty
+  source: {arxiv: "2503.14476"}
+  family: length
+  symptoms: [truncation_noise]
+- id: dapo_no_kl
+  name: Remove the KL penalty for reasoning RL
+  source: {arxiv: "2503.14476"}
+  family: kl
+  symptoms: []
+  note: Also argued by Open-Reasoner-Zero and Dr. GRPO.
+
+# ---- 2025 onward ----
+- id: dr_grpo
+  name: Dr. GRPO (no length or std normalisation)
+  source: {arxiv: "2503.20783"}
+  family: aggregation
+  symptoms: [length_bias]
+- id: topr
+  name: TOPR (tapered off-policy REINFORCE)
+  source: {arxiv: "2503.14286"}
+  family: offpolicy
+  symptoms: [stale_policy]
+- id: gpg
+  name: GPG
+  source: {arxiv: "2504.02546"}
+  family: advantage
+  symptoms: [critic_cost]
+- id: intellect2_two_sided_clip
+  name: Two-sided ratio clipping (INTELLECT-2)
+  source: {arxiv: "2505.07291"}
+  family: clipping
+  symptoms: [ratio_outliers]
+- id: gigpo
+  name: GiGPO (group-in-group credit for agents)
+  source: {arxiv: "2505.10978"}
+  family: advantage
+  symptoms: [sparse_reward]
+- id: skywork_adaptive_entropy
+  name: Adaptive entropy control (Skywork-OR1)
+  source: {arxiv: "2505.22312"}
+  family: entropy
+  symptoms: [entropy_collapse]
+- id: entropy_cov
+  name: Clip-Cov and KL-Cov
+  source: {arxiv: "2505.22617"}
+  family: entropy
+  symptoms: [entropy_collapse]
+- id: opo
+  name: OPO (optimal reward baseline)
+  source: {arxiv: "2505.23585"}
+  family: advantage
+  symptoms: [high_variance]
+- id: areal_decoupled
+  name: Decoupled PPO objective (AReaL)
+  source: {arxiv: "2505.24298"}
+  family: offpolicy
+  symptoms: [stale_policy]
+- id: high_entropy_tokens
+  name: Train on high-entropy tokens only
+  source: {arxiv: "2506.01939"}
+  family: entropy
+  symptoms: [entropy_collapse]
+- id: cispo
+  name: CISPO
+  source: {arxiv: "2506.13585"}
+  family: clipping
+  symptoms: [entropy_collapse]
+- id: gspo
+  name: GSPO (sequence-level ratio)
+  source: {arxiv: "2507.18071"}
+  family: moe
+  symptoms: [moe_instability, ratio_outliers]
+- id: routing_replay
+  name: Routing replay across updates
+  source: {arxiv: "2507.18071"}
+  family: moe
+  symptoms: [moe_instability]
+  note: Described in the GSPO paper as the workaround GRPO needs on MoE models.
+- id: gmpo
+  name: GMPO (geometric-mean objective)
+  source: {arxiv: "2507.20673"}
+  family: clipping
+  symptoms: [ratio_outliers]
+- id: tis
+  name: Truncated importance sampling for rollout-training mismatch
+  source: {url: "https://fengyao.notion.site/off-policy-rl", date: "2025-08", title: "Your Efficient RL Framework Secretly Brings You Off-Policy RL Training"}
+  family: offpolicy
+  symptoms: [train_infer_mismatch]
+  note: Blog post dated August 2025 by the papers that cite it (e.g. 2509.24203); the exact day is unknown, so no lag is computed. Truncated IS itself is older (TRL cites 1606.02647).
+- id: mismatch_is
+  name: Untruncated importance weights between rollout and trainer log-probs
+  source: {url: "https://github.com/NVIDIA-NeMo/RL/blob/main/docs/guides/grpo.md", title: "NeMo-RL GRPO guide, importance sampling correction"}
+  family: offpolicy
+  symptoms: [train_infer_mismatch]
+  note: Framework-native in NeMo-RL (docs/guides/grpo.md), no paper. Kept apart from TIS, which truncates the weights.
+- id: gfpo
+  name: GFPO (group filtered policy optimisation)
+  source: {title: "Sample More to Think Less: Group Filtered Policy Optimization for Concise Reasoning"}
+  family: length
+  symptoms: [length_bias]
+- id: flowrl
+  name: FlowRL (reward distribution matching)
+  source: {arxiv: "2509.15207"}
+  family: entropy
+  symptoms: [diversity_loss]
+- id: spo
+  name: SPO (single-stream policy optimisation)
+  source: {arxiv: "2509.13232"}
+  family: advantage
+  symptoms: [zero_gradient_groups, high_variance]
+- id: m2po
+  name: M2PO (second-moment trust region for stale data)
+  source: {arxiv: "2510.01161"}
+  family: offpolicy
+  symptoms: [stale_policy]
+- id: r3_rollout_routing_replay
+  name: Rollout routing replay (R3)
+  source: {arxiv: "2510.11370"}
+  family: moe
+  symptoms: [moe_instability, train_infer_mismatch]
+- id: rep_exp
+  name: Representation-based exploration
+  source: {arxiv: "2510.11686"}
+  family: entropy
+  symptoms: [diversity_loss]
+- id: mis
+  name: Masked / rejection importance sampling for rollout-training mismatch
+  source: {arxiv: "2510.18855"}
+  family: offpolicy
+  symptoms: [train_infer_mismatch]
+  review: true
+  note: TRL cites IcePop (2510.18855). verl's rollout rejection sampling cites its implementer's blog "When Speed Kills Stability" (Sept 2025) and arXiv 2512.23075. Attribution across these near-simultaneous sources stays open.
+- id: sapo
+  name: SAPO (soft adaptive gating)
+  source: {arxiv: "2511.20347"}
+  family: clipping
+  symptoms: [ratio_outliers]
+- id: opsm
+  name: Off-policy sequence masking (DeepSeek-V3.2)
+  source: {arxiv: "2512.02556"}
+  family: offpolicy
+  symptoms: [stale_policy, train_infer_mismatch]
+- id: unbiased_kl
+  name: Importance-weighted unbiased KL gradient (DeepSeek-V3.2)
+  source: {arxiv: "2512.02556"}
+  family: kl
+  symptoms: []
+- id: gdpo
+  name: GDPO (decoupled per-reward normalisation)
+  source: {arxiv: "2601.05242"}
+  family: multi_reward
+  symptoms: [multi_reward_collapse]
+- id: dppo
+  name: DPPO (divergence-based trust region)
+  source: {arxiv: "2602.04879"}
+  family: clipping
+  symptoms: [ratio_outliers]
+- id: luspo
+  name: LUSPO (length-unbiased sequence policy optimisation)
+  source: {arxiv: "2602.05261"}
+  family: length
+  symptoms: [length_bias]
+- id: vespo
+  name: VESPO
+  source: {arxiv: "2602.10693"}
+  family: offpolicy
+  symptoms: [stale_policy, ratio_outliers]
+- id: bema_ref
+  name: Bias-corrected EMA reference model
+  source: {arxiv: "2508.00180"}
+  family: kl
+  symptoms: []
+
+# ---- Sources resolved from framework code and docs (10-18) ----
+- id: passk_advantage
+  name: Pass@k advantage
+  source: {arxiv: "2503.19595"}
+  family: advantage
+  symptoms: [diversity_loss]
+  note: verl's implementation says "Implemented as described in https://arxiv.org/abs/2503.19595".
+- id: optimal_token_baseline
+  name: Optimal token baseline with variance proxy
+  source: {arxiv: "2602.07078"}
+  family: advantage
+  symptoms: [high_variance]
+  note: Cited in verl docs/algo/otb.md. The code landed in verl before the arXiv version.
+- id: dro
+  name: Direct Reward Optimisation (quadratic log-ratio penalty)
+  source: {arxiv: "2405.19107"}
+  family: offpolicy
+  symptoms: []
+  note: verl docs/algo/dro.md gives no citation; attributed by name and objective to DRO.
+- id: gvpo
+  name: GVPO (group variance policy optimisation)
+  source: {title: "GVPO: Group Variance Policy Optimization for Large Language Model Post-Training"}
+  family: advantage
+  symptoms: [high_variance]
+- id: fapo
+  name: FAPO
+  source: {title: "FAPO: Flawed-Aware Policy Optimization for Efficient and Reliable Reasoning"}
+  family: advantage
+  symptoms: []
+- id: a2po
+  name: A2PO (optimal advantage regression)
+  source: {arxiv: "2505.20686"}
+  family: advantage
+  symptoms: []
+  note: TRL experimental trainer added in PR #5940, listed in TRL's paper index.
+
+- id: liteppo
+  name: LitePPO (group-mean, batch-std normalisation with token-level loss)
+  source: {arxiv: "2508.08221"}
+  family: aggregation
+  symptoms: []
+  note: The two-technique combination proposed in "Tricks or Traps"; AReaL ships it as an algorithm config.
+- id: kpop
+  name: KPop (binary-KL token masking for rollout-training mismatch)
+  source: {url: "https://ringtech.notion.site/kpop", title: "KPop"}
+  family: offpolicy
+  symptoms: [train_infer_mismatch]
+  note: Blog post from the Ring team cited by AReaL's docs; no arXiv version and no verifiable date, so no lag is computed.
+
+# ---- Added by the citation audit (framework files cite the paper next to its implementation) ----
+- id: trm
+  name: Trust region masking (sequence max divergence)
+  source: {arxiv: "2512.23075"}
+  family: clipping
+  symptoms: [train_infer_mismatch, stale_policy]
+  note: verl rollout_rs values seq_max_k2 and seq_max_k3, added by a paper author in PR #4544; verl's rollout correction docs cite the paper.
+- id: vapo
+  name: VAPO (decoupled and length-adaptive GAE, positive-example NLL)
+  source: {arxiv: "2504.05118"}
+  family: advantage
+  symptoms: [sparse_reward, length_bias]
+  note: NeMo-RL options gae_lambda_value, gae_lambda_policy, length_adaptive_alpha and positive_example_nll_weight; the PPO guide cites the paper.
+- id: papo
+  name: PAPO (implicit perception loss)
+  source: {arxiv: "2507.06448"}
+  family: kl
+  symptoms: []
+  note: TRL experimental trainer added in PR #4334 and removed in PR #6235; listed in TRL's paper index.
+- id: aent
+  name: AEnt (clamped entropy bonus with adaptive coefficient)
+  source: {arxiv: "2509.03493"}
+  family: entropy
+  symptoms: [entropy_collapse]
+  note: AReaL recipe/AEnt, removed in a refactor on 2026-02-04.
+- id: collabllm
+  name: CollabLLM (multiturn-aware rewards)
+  source: {arxiv: "2502.00640"}
+  family: credit
+  symptoms: []
+  note: verl recipe and docs/algo/collabllm.md; the recipe later moved to verl-recipe.
+- id: echo
+  name: ECHO (auxiliary world-model loss on observation tokens)
+  source: {arxiv: "2605.24517"}
+  family: other
+  symptoms: []
+  note: verl-recipe echo/, which ports the official implementation.
+- id: dler
+  name: DLER truncation penalty
+  source: {arxiv: "2510.15110"}
+  family: length
+  symptoms: [length_bias]
+  note: NeMo-RL stop_properly_penalty_coef, added with the ProRLv2 recipe; the ProRLv2 guide cites DLER for this penalty.
+- id: aepo
+  name: AEPO (adaptive exploration policy optimisation)
+  source: {arxiv: "2508.05731"}
+  family: sampling
+  symptoms: []
+  note: verl recipe infigui-g1. The paper's main contribution is a GUI grounding model, so it is listed with the included papers outside the general rule.
+
+- id: kl_grad_correction
+  name: KL gradient with the score-function term (Tang and Munos)
+  source: {arxiv: "2506.09477"}
+  family: kl
+  symptoms: []
+  note: NeMo-RL fix of the KL backward pass (PR #2506) keeps the gradient through the sampling probability and cites the paper in the code. It applies whenever the KL penalty is non-zero, as in the base GRPO configuration. An earlier implementation behind a switch (PR #524) was withdrawn in 2025.
+
+- id: starpo
+  name: StarPO (trajectory-level optimisation for multi-turn agents, RAGEN)
+  source: {arxiv: "2504.20073"}
+  family: other
+  symptoms: []
+  note: ROLL's trajectory-wise agentic pipeline, present since its first public commit; ROLL's documentation names it StarPO and cites the RAGEN paper.
+
+# ---- Framework-native: introduced in a framework with no separate paper ----
+- id: flash_reinforce
+  name: FlashREINFORCE (single-rollout async RL)
+  source: {url: "https://github.com/OpenRLHF/OpenRLHF", date: "2026-09-14", title: "FlashREINFORCE: Critic-free Single-rollout Asynchronous RL for Agentic Language Models"}
+  family: advantage
+  symptoms: [critic_cost, stale_policy]
+  note: Introduced by the OpenRLHF maintainers; the README links a write-up without an arXiv id.
+- id: sao
+  name: SAO (direct double-sided importance sampling, ROLL)
+  source: {url: "https://github.com/alibaba/ROLL/blob/main/roll/pipeline/agentic/agentic_actor_pg_worker.py", title: "ROLL pg_variant sao"}
+  family: offpolicy
+  symptoms: [train_infer_mismatch]
+  note: ROLL-native; the code comment describes it as direct double-sided importance sampling against rollout log-probs.
+- id: grpo_replay_buffer
+  name: GRPO with replay buffer
+  source: {url: "https://github.com/huggingface/trl/blob/main/docs/source/experimental.md", title: "TRL GRPO With Replay Buffer"}
+  family: sampling
+  symptoms: [zero_gradient_groups]
+  note: TRL-native; replaces zero-variance groups with stored high-reward groups.

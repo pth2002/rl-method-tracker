@@ -1,0 +1,11 @@
+# The company that maintains each framework, matched against the affiliations on a paper's first page.
+# A paper whose affiliations match a pattern comes from that framework's organisation. Matching is at the
+# level of the company, so Qwen and AMAP count as Alibaba. OpenRLHF is maintained by an independent
+# community and matches no paper.
+verl: {organisation: ByteDance, pattern: "bytedance"}
+trl: {organisation: Hugging Face, pattern: "hugging ?face"}
+openrlhf: {organisation: null, pattern: null}
+nemo-rl: {organisation: NVIDIA, pattern: "nvidia"}
+roll: {organisation: Alibaba, pattern: "alibaba|qwen|taobao|tongyi|amap|aliyun"}
+slime: {organisation: Zhipu AI, pattern: "zhipu|z\\.ai|thudm"}
+areal: {organisation: Ant Group, pattern: "ant group|ant research|antgroup|inclusion ?ai|ling team"}

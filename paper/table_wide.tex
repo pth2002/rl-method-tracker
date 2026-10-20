@@ -1,0 +1,19 @@
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.7cm} l l >{\raggedright\arraybackslash}p{1.7cm} r >{\raggedright\arraybackslash}X}
+\toprule
+Method & Source & First public & Frameworks & Days & Failure it addresses \\
+\midrule
+Clip-higher & \citep{arxiv250314476} & 2025-03-18 & 7 & 1 & entropy collapse \\
+GSPO & \citep{arxiv250718071} & 2025-07-24 & 7 & 3 & MoE instability, extreme ratios \\
+Dynamic sampling & \citep{arxiv250314476} & 2025-03-18 & 6 & 17 & groups without signal \\
+Dr. GRPO & \citep{arxiv250320783} & 2025-03-26 & 6 & -4 & length bias \\
+CISPO & \citep{arxiv250613585} & 2025-06-16 & 6 & $\le$135 & entropy collapse \\
+Truncated importance sampling (TIS) & \citep{yao2025tis} & 2025-08 & 6 & -- & rollout-training mismatch \\
+Masked importance sampling (MIS) & \citep{arxiv251018855} & 2025-10-21 & 6 & 17 & rollout-training mismatch \\
+REINFORCE++ & \citep{arxiv250103262} & 2025-01-04 & 5 & -55 & value-model cost, gradient variance \\
+Token-level loss aggregation & \citep{arxiv250314476} & 2025-03-18 & 5 & 17 & length bias \\
+Overlong filtering and penalty & \citep{arxiv250314476} & 2025-03-18 & 5 & 17 & truncation noise \\
+Rollout routing replay & \citep{arxiv251011370} & 2025-10-13 & 5 & 31 & MoE instability, rollout-training mismatch \\
+SAPO & \citep{arxiv251120347} & 2025-11-25 & 3 & 8 & extreme ratios \\
+GDPO & \citep{arxiv260105242} & 2026-01-08 & 3 & 7 & multi-reward collapse \\
+\bottomrule
+\end{tabularx}

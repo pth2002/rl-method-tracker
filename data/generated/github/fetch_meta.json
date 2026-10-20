@@ -1,0 +1,36 @@
+{
+ "repos": {
+  "verl": {
+   "repo": "verl-project/verl",
+   "fetched_at": "2026-10-19 01:03:50"
+  },
+  "verl_recipe": {
+   "repo": "verl-project/verl-recipe",
+   "fetched_at": "2026-10-19 01:13:40"
+  },
+  "trl": {
+   "repo": "huggingface/trl",
+   "fetched_at": "2026-10-19 01:12:13"
+  },
+  "openrlhf": {
+   "repo": "OpenRLHF/OpenRLHF",
+   "fetched_at": "2026-10-19 01:13:36"
+  },
+  "nemo-rl": {
+   "repo": "NVIDIA-NeMo/RL",
+   "fetched_at": "2026-10-19 01:13:24"
+  },
+  "roll": {
+   "repo": "alibaba/ROLL",
+   "fetched_at": "2026-10-19 00:52:34"
+  },
+  "slime": {
+   "repo": "THUDM/slime",
+   "fetched_at": "2026-10-19 01:13:27"
+  },
+  "areal": {
+   "repo": "areal-project/AReaL",
+   "fetched_at": "2026-10-19 01:13:33"
+  }
+ }
+}

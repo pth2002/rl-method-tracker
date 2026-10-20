@@ -1,0 +1,20 @@
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}l l l ccccccccccccc@{}}
+\toprule
+Report & Size & Framework stated & \rotatebox{90}{Clip-higher} & \rotatebox{90}{GSPO} & \rotatebox{90}{Dyn. sampling} & \rotatebox{90}{Dr. GRPO} & \rotatebox{90}{CISPO} & \rotatebox{90}{TIS} & \rotatebox{90}{MIS} & \rotatebox{90}{R++} & \rotatebox{90}{Token loss} & \rotatebox{90}{Overlong} & \rotatebox{90}{R3} & \rotatebox{90}{SAPO} & \rotatebox{90}{GDPO} \\
+\midrule
+DeepSeek-R1~\citep{arxiv250112948} & 671B MoE & in-house &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+Llama-Nemotron~\citep{arxiv250500949} & 253B dense & NeMo-Aligner &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+MiniMax-M1~\citep{arxiv250613585} & 456B MoE & not stated & T &  & \checkmark &  & S &  &  &  & \checkmark & \checkmark &  &  &  \\
+Kimi K2~\citep{arxiv250720534} & 1T MoE & in-house &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+gpt-oss~\citep{arxiv250810925} & 117B MoE & in-house &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+GLM-4.5~\citep{arxiv250806471} & 355B MoE & slime &  &  & \checkmark &  &  &  &  &  & \checkmark &  &  &  &  \\
+LongCat-Flash-Thinking~\citep{arxiv250918883} & 560B MoE & DORA (in-house) & \checkmark &  & V & \checkmark &  &  &  &  & \checkmark & V &  &  &  \\
+Ring-1T~\citep{arxiv251018855} & 1T MoE & AReaL &  &  &  &  &  & T & S &  &  &  &  &  &  \\
+DeepSeek-V3.2~\citep{arxiv251202556} & 671B MoE & in-house &  &  &  &  &  &  &  &  &  &  & V &  &  \\
+LongCat-Flash-Thinking-2601~\citep{arxiv260116725} & 560B MoE & DORA (in-house) &  & \checkmark &  &  &  &  &  &  &  &  &  &  &  \\
+MiniMax-M2~\citep{arxiv260526494} & 230B MoE & in-house &  &  &  &  & \checkmark &  &  &  &  &  &  &  &  \\
+Nemotron 3 Ultra~\citep{arxiv260615007} & 550B MoE & NeMo-RL &  &  &  &  &  &  & \checkmark &  &  &  &  &  &  \\
+Ling and Ring 2.6~\citep{arxiv260615079} & 1T MoE & AReaL &  &  &  &  &  &  & V &  &  &  &  &  &  \\
+\bottomrule
+\end{tabular}

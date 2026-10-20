@@ -1,0 +1,372 @@
+# framework -> surface -> token -> method id (or a list of ids) from data/methods.yaml.
+# Tokens outside the scope get "~<family>" so they are recorded but excluded from analysis:
+#   ~preexisting  behaviour the framework already had before the option got a name
+#   ~config       plumbing, not an algorithm
+#   ~preference ~distillation ~sft ~reward_model ~systems ~application ~diffusion ~multimodal
+# New tokens show up in data/generated/unmapped.json until they are added here.
+
+verl:
+  adv_estimator:
+    gae: ppo
+    grpo: grpo
+    grpo_vectorized: grpo
+    rloo: rloo
+    rloo_vectorized: rloo
+    remax: remax
+    reinforce_plus_plus: reinforce_pp
+    reinforce_plus_plus_baseline: reinforce_pp
+    opo: opo
+    grpo_passk: passk_advantage
+    gpg: gpg
+    optimal_token_baseline: optimal_token_baseline
+    tir_optimal_token_baseline: optimal_token_baseline
+    gdpo: gdpo
+  policy_loss:
+    vanilla: ppo
+    dppo_tv: dppo
+    dppo_kl: dppo
+    gspo: gspo
+    sapo: sapo
+    gpg: gpg
+    clip_cov: entropy_cov
+    kl_cov: entropy_cov
+    geo_mean: gmpo
+    dro: dro
+    cispo: cispo
+    bypass_mode: ~config
+    rollout_correction: ~config
+  loss_agg_mode:
+    token-mean: ~preexisting
+    token-sum: ~config
+    seq-mean-token-mean: grpo
+    seq-mean-token-sum: ~config
+    seq-mean-token-sum-norm: dr_grpo
+  options:
+    clip_ratio_high: dapo_clip_higher
+    clip_ratio_c: dual_clip
+    filter_groups: dapo_dynamic_sampling
+    overlong_buffer: dapo_overlong
+    norm_adv_by_std_in_grpo: dr_grpo
+    tis_imp_ratio_cap: tis
+    rollout_is: tis
+    rollout_rs: mis
+    seq_max_k: trm
+    use_kl_loss: grpo
+    low_var_kl: kl_k3
+    enable_rollout_routing_replay: r3_rollout_routing_replay
+    entropy_coeff: ~preexisting
+  recipe: &verl_recipes
+    dapo: [dapo_clip_higher, dapo_dynamic_sampling, dapo_token_loss, dapo_overlong]
+    drgrpo: dr_grpo
+    entropy: entropy_cov
+    gspo: gspo
+    prime: prime
+    flowrl: flowrl
+    fapo: fapo
+    gvpo: gvpo
+    rep_exp: rep_exp
+    spo: spo
+    spin: ~preference
+    sppo: ~preference
+    gkd: ~distillation
+    dance_grpo: ~diffusion
+    collabllm: collabllm
+    deepeyes: ~application
+    retool: ~application
+    infigui-g1: aepo
+    open_math_reasoning: ~application
+    char_count: ~application
+    r1: ~application
+    minicpmo: ~multimodal
+    vla: ~application
+    langgraph_agent: ~application
+    swe_agent: ~application
+    nemo_gym: ~application
+    atropos: ~application
+    genrm_remote: ~reward_model
+    echo: echo
+    tmax: ~application
+    fully_async_policy: ~systems
+    one_step_off_policy: ~systems
+    specRL: ~systems
+    transfer_queue: ~systems
+    async_flow: ~systems
+    partial_rollout: ~systems
+    low_precision: ~systems
+    qat: ~systems
+    fault_recover: ~systems
+    dynamo: ~systems
+    reward_queue: ~systems
+    verl_tinker: ~systems
+    flash_rl_ascend: ~systems
+    grpo_mindspeed_mm: ~systems
+    r1_ascend: ~systems
+    recipe: ~config
+
+verl_recipe:
+  recipe: *verl_recipes
+
+trl:
+  trainer:
+    grpo: grpo
+    rloo: rloo
+    ppo: ppo
+    ppov2: ppo
+    base: ~config
+    online_dpo: ~preference
+    nash_md: ~preference
+    xpo: ~preference
+    dpo: ~preference
+    cpo: ~preference
+    orpo: ~preference
+    kto: ~preference
+    bco: ~preference
+    gkd: ~distillation
+    distillation: ~distillation
+    sft: ~sft
+    iterative_sft: ~sft
+    reward: ~reward_model
+    prm: ~reward_model
+    alignprop: ~diffusion
+    ddpo: ~diffusion
+  grpo_loss_type:
+    grpo: grpo
+    bnpo: ~preexisting
+    dr_grpo: dr_grpo
+    dapo: dapo_token_loss
+    cispo: cispo
+    sapo: sapo
+    luspo: luspo
+    vespo: vespo
+  grpo_options:
+    epsilon_high: dapo_clip_higher
+    delta: intellect2_two_sided_clip
+    importance_sampling_level: gspo
+    scale_rewards: dr_grpo
+    mask_truncated_completions: dapo_overlong
+    top_entropy_quantile: high_entropy_tokens
+    vllm_importance_sampling_correction: tis
+    vllm_importance_sampling_mode: mis
+    off_policy_mask_threshold: opsm
+    use_bias_correction_kl: unbiased_kl
+    use_adaptive_entropy: skywork_adaptive_entropy
+    multi_objective_aggregation: gdpo
+    num_iterations: grpo
+  experimental:
+    gmpo: gmpo
+    gspo_token: gspo
+    dppo: dppo
+    ppo: ppo
+    gfpo: gfpo
+    a2po: a2po
+    grpo_with_replay_buffer: grpo_replay_buffer
+    bema_for_ref_model: bema_ref
+    papo: papo
+    tpo: ~preference
+    cpo: ~preference
+    orpo: ~preference
+    kto: ~preference
+    bco: ~preference
+    nash_md: ~preference
+    xpo: ~preference
+    online_dpo: ~preference
+    gkd: ~distillation
+    gold: ~distillation
+    minillm: ~distillation
+    iw_opd: ~distillation
+    distillation: ~distillation
+    async_distillation: ~distillation
+    server_distillation: ~distillation
+    self_distillation: ~distillation
+    sdft: ~distillation
+    sdpo: ~distillation
+    ssd: ~distillation
+    prm: ~reward_model
+    judges: ~reward_model
+    openreward: ~reward_model
+    async_grpo: ~systems
+    harbor: ~application
+    openenv: ~application
+
+openrlhf:
+  adv_estimator:
+    gae: ppo
+    reinforce: reinforce_pp
+    reinforce_baseline: reinforce_pp
+    rloo: rloo
+    group_norm: grpo
+    dr_grpo: dr_grpo
+    flash_reinforce: flash_reinforce
+  policy_loss_type:
+    ppo: ppo
+    gspo: gspo
+  options:
+    eps_clip_low_high: dapo_clip_higher
+    dual_clip: dual_clip
+    dynamic_filtering: dapo_dynamic_sampling
+    vllm_is_correction: tis
+    is_correction: tis
+    no_std_norm: dr_grpo
+    use_kl_loss: grpo
+    loss_agg_mode: ~preexisting
+    overlong_buffer: dapo_overlong
+    is_correction_mask: mis
+
+nemo-rl:
+  adv_estimator:
+    grpo: grpo
+    gdpo: gdpo
+    reinforce_plus_plus: reinforce_pp
+    generalized: ppo
+    raw_reward: ~config
+    opd: ~distillation
+  options:
+    grpo_train: grpo
+    use_leave_one_out_baseline: rloo
+    ratio_clip_max: dapo_clip_higher
+    ratio_clip_c: dual_clip
+    token_level_loss: dapo_token_loss
+    use_importance_sampling_correction: mismatch_is
+    truncated_importance_sampling_ratio: tis
+    sequence_level_importance_ratios: gspo
+    use_dynamic_sampling: dapo_dynamic_sampling
+    overlong_filtering: dapo_overlong
+    normalize_rewards: ~preexisting
+    seq_logprob_error_threshold: mis
+    force_on_policy_ratio: ~config
+    on_policy_distillation: ~distillation
+    use_cispo: cispo
+    seq_mask_tis: mis
+    router_replay: r3_rollout_routing_replay
+    gae_lambda_value: vapo
+    length_adaptive_alpha: vapo
+    positive_example_nll_weight: vapo
+    stop_properly_penalty_coef: dler
+  fixes:
+    kl_score_function_fix: kl_grad_correction
+
+roll:
+  pipelines:
+    agentic_starpo: starpo
+  adv_estimator:
+    gae: ppo
+    grpo: grpo
+    reinforce: ~preexisting
+    gigpo: gigpo
+    step_reinforce: ~application
+    agentic_reinforce: ~application
+    skip_obs_gae: ~application
+    flowgrpo: ~diffusion
+    diffnft: ~diffusion
+  pg_variant:
+    vanilla: ppo
+    ppo: ppo
+    tis: tis
+    topr: topr
+    cispo: cispo
+    sao: sao
+    kimi: ~config
+  loss_agg_mode:
+    token-mean: dapo_token_loss
+    seq-mean-token-mean: grpo
+    seq-mean-token-sum: ~config
+    seq-mean-token-sum-norm: dr_grpo
+  options:
+    pg_clip_high: dapo_clip_higher
+    dual_clip_loss: dual_clip
+    norm_std_type: ~config
+    train_infer_correction: tis
+    importance_sampling_seq: gspo
+    difficulty_mask: dapo_dynamic_sampling
+    use_kl_loss: grpo
+    add_token_level_kl: ~preexisting
+    enable_rollout_routing_replay: r3_rollout_routing_replay
+    train_infer_filter: mis
+
+slime:
+  adv_estimator:
+    grpo: grpo
+    gspo: gspo
+    cispo: cispo
+    reinforce_plus_plus: reinforce_pp
+    reinforce_plus_plus_baseline: reinforce_pp
+    ppo: ppo
+    on_policy_distillation: ~distillation
+  options:
+    eps_clip_high: dapo_clip_higher
+    eps_clip_c: dual_clip
+    use_tis: tis
+    use_opsm: opsm
+    use_routing_replay: routing_replay
+    use_rollout_routing_replay: r3_rollout_routing_replay
+    disable_grpo_std_normalization: dr_grpo
+    calculate_per_token_loss: dapo_token_loss
+    dynamic_sampling_filter: dapo_dynamic_sampling
+    use_kl_loss: grpo
+
+areal:
+  options:
+    eps_clip_higher: dapo_clip_higher
+    c_clip: dual_clip
+    behav_imp_weight_cap: areal_decoupled
+    use_decoupled_loss: areal_decoupled
+    importance_sampling_level: gspo
+    use_sapo_loss: sapo
+    m2_threshold: m2po
+    overlong_reward_penalty: dapo_overlong
+    mask_no_eos_with_zero: ~preexisting
+    dynamic_sampling: dapo_dynamic_sampling
+    dynamic_bs: dapo_dynamic_sampling
+    use_cispo_loss: cispo
+    rejection_sampling: mis
+    binary_kl: kpop
+    enable_router_replay: r3_rollout_routing_replay
+  recipe:
+    AEnt: aent
+  algo_configs:
+    ppo: ppo
+    ppo_megatron: ppo
+    grpo: grpo
+    grpo_awex_colocate: grpo
+    grpo_cpu: grpo
+    grpo_lora: grpo
+    grpo_megatron: grpo
+    grpo_megatron_fp8: grpo
+    grpo_megatron_lora: grpo
+    grpo_megatron_lora_moe: grpo
+    grpo_npu: grpo
+    drgrpo: dr_grpo
+    liteppo: liteppo
+    rloo: rloo
+    reinforce: ~preexisting
+    reinforce_baseline: reinforce_pp
+    gspo: gspo
+    dapo_dynamic_bs: [dapo_dynamic_sampling, dapo_clip_higher]
+    sapo: sapo
+    icepop: mis
+    kpop: kpop
+    m2po: m2po
+    sft: ~sft
+    sft_archon_fp8: ~sft
+    sft_megatron: ~sft
+
+# Default values that switch a method on.
+# framework -> default token -> value -> method id, or {method, condition} when the default only
+# takes effect after another setting is changed from its own default (a conditional default).
+_defaults:
+  verl:
+    adv_estimator: {gae: ppo, grpo: grpo}
+    policy_loss_mode: {vanilla: ppo}
+  trl:
+    loss_type: {grpo: grpo, dr_grpo: dr_grpo, dapo: dapo_token_loss}
+    vllm_importance_sampling_correction: {"True": {method: tis, condition: "use_vllm=True (default False)"}}
+    mask_truncated_completions: {"True": dapo_overlong}
+    importance_sampling_level: {sequence: gspo}
+    use_bias_correction_kl: {"True": {method: unbiased_kl, condition: "beta != 0 (default 0)"}}
+    beta: {"0.0": dapo_no_kl}
+  openrlhf:
+    adv_estimator: {gae: ppo, group_norm: grpo}
+  slime:
+    adv_estimator: {grpo: grpo}
+  roll:
+    adv_estimator: {gae: ppo, grpo: grpo}
