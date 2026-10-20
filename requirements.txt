@@ -1,0 +1,6 @@
+# Python 3.12. Versions are those the report was built and reproduced with.
+PyYAML==6.0.3
+requests==2.33.1
+matplotlib==3.9.2
+# Only for tools/style_check.py, which checks the wording of the compiled report.
+PyMuPDF==1.27.2

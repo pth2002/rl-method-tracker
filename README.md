@@ -120,7 +120,32 @@ issues, pull requests and discussions of every framework.
   evidence for its code, and compact pull request facts (`data/generated/github/pr_facts.jsonl`)
   without bodies, comments or review texts.
 
+## Install
+
+The scripts need Python 3.12 and four packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+Reproducing the report's numbers, tables and figures needs nothing else. Compiling the PDF also needs
+`pdflatex` and `bibtex` from a TeX distribution such as TeX Live, MiKTeX or TinyTeX, and the style
+file ships in `paper/`. Refreshing the tracker also needs `git`, and the record of proposals needs a
+GitHub token, taken from `GH_TOKEN` or from the GitHub CLI after `gh auth login`.
+
 ## Two commands
+
+Reproduce the technical report from its frozen inputs (fetches nothing):
+
+```bash
+python tools/reproduce_report.py --pdf
+```
+
+The command first checks the inputs against `data/release/inputs.sha256` and stops if they differ.
+The weekly refresh changes those inputs, so on a later commit the report is reproduced from the tag
+of its version. For version 1, run `git checkout v1.0` after installing the packages; the release
+[v1.0](https://github.com/pth2002/rl-method-tracker/releases/tag/v1.0) and its
+[Zenodo archive](https://doi.org/10.5281/zenodo.23495744) hold the same files.
 
 Refresh the tracker (moves the framework snapshot forward):
 
@@ -133,13 +158,18 @@ and the tables, and runs `tools/validate.py`. Any option the parser detects with
 in `data/generated/unmapped.json` with the arXiv ids cited in the commit that introduced it, and
 validation fails until someone maps it. Options a framework exposes outside the parsed places are not
 caught by this rule, so the parse is also checked against each framework's algorithm documentation.
-The weekly GitHub Action runs the same command and opens a pull request for human review.
+Adding `--record` also refreshes the public record of proposals through the GitHub API, which takes a
+few hours, and lists new proposal threads in `data/generated/process/uncoded_threads.jsonl`.
 
-Reproduce the technical report from its frozen inputs (fetches nothing):
+## How the tracker is kept up to date
 
-```bash
-python tools/reproduce_report.py --pdf
-```
+Every Monday a GitHub Action runs `python tools/update.py --fetch --record` and opens a pull request
+with the changes. Nothing reaches `main` without a person merging it. Before merging, the reviewer maps
+any new option in `unmapped.json` to a method in `config/token_map.yaml`, adding the method to
+`data/methods.yaml` when it is new, codes any new proposal in `uncoded_threads.jsonl`, and checks that
+validation passed. The arXiv pool and its labels cover January 2025 to June 2026 and are not
+refreshed weekly. A new report version extends them, and each version gets its own tag, release and
+Zenodo DOI.
 
 ## Layout
 
