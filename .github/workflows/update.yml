@@ -44,7 +44,7 @@ jobs:
           fi
 
       - if: steps.pending.outputs.number == ''
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           persist-credentials: false
       - if: steps.pending.outputs.number == ''
