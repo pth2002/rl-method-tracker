@@ -103,7 +103,7 @@ jobs:
       - name: Open the pull request
         id: pr
         if: steps.pending.outputs.number == ''
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ github.token }}
           branch: auto/weekly-update
