@@ -30,6 +30,7 @@
       rl-method-tracker
     </a>
     <nav aria-label="Sections">
+      <a href="#lookup">Search</a>
       <a href="#failures">Failures</a>
       <a href="#landings">Landings</a>
       <a href="#frameworks">Frameworks</a>
@@ -66,6 +67,24 @@
       <button class="btn" type="button" id="show-included" aria-expanded="false" aria-controls="included">List the included papers</button>
     </div>
     <div class="included" id="included" hidden></div>
+  </div>
+</section>
+
+<section class="sec lookup" id="lookup" aria-labelledby="h-lookup">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-lookup">Look up a method or a paper</h2>
+      <p>Search by method name, paper title, arXiv id or the setting a framework uses, such as <code>clip_ratio_high</code>. Every method and paper has its own link to share.</p>
+    </div>
+    <div class="search" role="search">
+      <label class="visually-hidden" for="q">Search methods and papers</label>
+      <input id="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="GSPO, 2507.18071, entropy, clip_ratio_high ..."
+             role="combobox" aria-expanded="false" aria-controls="q-results" aria-autocomplete="list">
+      <kbd class="search-key" aria-hidden="true">/</kbd>
+      <ul class="results" id="q-results" role="listbox" aria-label="Results" hidden></ul>
+      <p class="search-note" id="q-note" aria-live="polite"></p>
+    </div>
   </div>
 </section>
 
@@ -152,6 +171,13 @@ python tools/reproduce_report.py --pdf</code></pre>
   </div>
 </section>
 </main>
+
+<dialog class="detail" id="detail" aria-labelledby="detail-title">
+  <div class="detail-inner">
+    <button class="detail-close" type="button" id="detail-close" aria-label="Close">&times;</button>
+    <div id="detail-body"></div>
+  </div>
+</dialog>
 
 <footer class="foot">
   <div class="wrap">

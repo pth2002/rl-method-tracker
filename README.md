@@ -35,6 +35,11 @@ them through training frameworks, so a method that a framework includes is one c
 away for its users. This repository traces seven frameworks through their commit histories and
 records when each method landed on a main branch and how each framework offers it today.
 
+**Is a method in your framework?** [Search the project page](https://pth2002.github.io/rl-method-tracker/#lookup) by method, paper title, arXiv
+id or setting name. Every method has a page with its setting, first landing and pull request in each
+framework, for example [GSPO](https://pth2002.github.io/rl-method-tracker/#method-gspo), [Dr. GRPO](https://pth2002.github.io/rl-method-tracker/#method-dr_grpo) and
+[CISPO](https://pth2002.github.io/rl-method-tracker/#method-cispo).
+
 | **6,939** | **1,598** | **37** | **7** |
 |:-:|:-:|:-:|:-:|
 | arXiv papers screened | propose a general RL training method | reached a framework | frameworks traced |
@@ -61,20 +66,20 @@ test whether a method helps.
 <!-- failures:start -->
 | Training failure | Methods | Most widely included |
 |---|--:|---|
-| [Value model cost](https://pth2002.github.io/rl-method-tracker/#failure-critic_cost) | 6 | GRPO, RLOO, REINFORCE++ |
-| [High-variance policy gradient](https://pth2002.github.io/rl-method-tracker/#failure-high_variance) | 6 | RLOO, REINFORCE++, GVPO |
-| [Entropy collapse](https://pth2002.github.io/rl-method-tracker/#failure-entropy_collapse) | 6 | Clip-higher, CISPO, Adaptive entropy control |
-| [Response-length bias](https://pth2002.github.io/rl-method-tracker/#failure-length_bias) | 6 | Dr. GRPO, Token-level loss aggregation, VAPO |
-| [Groups with no learning signal](https://pth2002.github.io/rl-method-tracker/#failure-zero_gradient_groups) | 2 | Dynamic sampling, SPO |
-| [Truncation noise](https://pth2002.github.io/rl-method-tracker/#failure-truncation_noise) | 1 | Overlong filtering and soft overlong penalty |
-| [Training-inference probability mismatch](https://pth2002.github.io/rl-method-tracker/#failure-train_infer_mismatch) | 8 | Truncated importance sampling, Masked / rejection importance sampling, Rollout routing replay |
-| [MoE routing instability](https://pth2002.github.io/rl-method-tracker/#failure-moe_instability) | 3 | GSPO, Rollout routing replay, Routing replay across updates |
-| [Extreme importance ratios](https://pth2002.github.io/rl-method-tracker/#failure-ratio_outliers) | 7 | GSPO, Dual-clip PPO, SAPO |
-| [Stale or off-policy data](https://pth2002.github.io/rl-method-tracker/#failure-stale_policy) | 7 | Off-policy sequence masking, TOPR, Decoupled PPO objective |
-| [Multi-reward signal collapse](https://pth2002.github.io/rl-method-tracker/#failure-multi_reward_collapse) | 1 | GDPO |
-| [Loss of solution diversity](https://pth2002.github.io/rl-method-tracker/#failure-diversity_loss) | 3 | Pass@k advantage, FlowRL, Representation-based exploration |
-| [Sparse outcome reward](https://pth2002.github.io/rl-method-tracker/#failure-sparse_reward) | 3 | PRIME, VAPO, GiGPO |
-| [Baselines and general components](https://pth2002.github.io/rl-method-tracker/#failure-baselines) | 15 | PPO, k3, Direct Reward Optimisation |
+| [Value model cost](https://pth2002.github.io/rl-method-tracker/#failure-critic_cost) | 6 | [GRPO](https://pth2002.github.io/rl-method-tracker/#method-grpo), [RLOO](https://pth2002.github.io/rl-method-tracker/#method-rloo), [REINFORCE++](https://pth2002.github.io/rl-method-tracker/#method-reinforce_pp) |
+| [High-variance policy gradient](https://pth2002.github.io/rl-method-tracker/#failure-high_variance) | 6 | [RLOO](https://pth2002.github.io/rl-method-tracker/#method-rloo), [REINFORCE++](https://pth2002.github.io/rl-method-tracker/#method-reinforce_pp), [GVPO](https://pth2002.github.io/rl-method-tracker/#method-gvpo) |
+| [Entropy collapse](https://pth2002.github.io/rl-method-tracker/#failure-entropy_collapse) | 6 | [Clip-higher](https://pth2002.github.io/rl-method-tracker/#method-dapo_clip_higher), [CISPO](https://pth2002.github.io/rl-method-tracker/#method-cispo), [Adaptive entropy control](https://pth2002.github.io/rl-method-tracker/#method-skywork_adaptive_entropy) |
+| [Response-length bias](https://pth2002.github.io/rl-method-tracker/#failure-length_bias) | 6 | [Dr. GRPO](https://pth2002.github.io/rl-method-tracker/#method-dr_grpo), [Token-level loss aggregation](https://pth2002.github.io/rl-method-tracker/#method-dapo_token_loss), [VAPO](https://pth2002.github.io/rl-method-tracker/#method-vapo) |
+| [Groups with no learning signal](https://pth2002.github.io/rl-method-tracker/#failure-zero_gradient_groups) | 2 | [Dynamic sampling](https://pth2002.github.io/rl-method-tracker/#method-dapo_dynamic_sampling), [SPO](https://pth2002.github.io/rl-method-tracker/#method-spo) |
+| [Truncation noise](https://pth2002.github.io/rl-method-tracker/#failure-truncation_noise) | 1 | [Overlong filtering and soft overlong penalty](https://pth2002.github.io/rl-method-tracker/#method-dapo_overlong) |
+| [Training-inference probability mismatch](https://pth2002.github.io/rl-method-tracker/#failure-train_infer_mismatch) | 8 | [Truncated importance sampling](https://pth2002.github.io/rl-method-tracker/#method-tis), [Masked / rejection importance sampling](https://pth2002.github.io/rl-method-tracker/#method-mis), [Rollout routing replay](https://pth2002.github.io/rl-method-tracker/#method-r3_rollout_routing_replay) |
+| [MoE routing instability](https://pth2002.github.io/rl-method-tracker/#failure-moe_instability) | 3 | [GSPO](https://pth2002.github.io/rl-method-tracker/#method-gspo), [Rollout routing replay](https://pth2002.github.io/rl-method-tracker/#method-r3_rollout_routing_replay), [Routing replay across updates](https://pth2002.github.io/rl-method-tracker/#method-routing_replay) |
+| [Extreme importance ratios](https://pth2002.github.io/rl-method-tracker/#failure-ratio_outliers) | 7 | [GSPO](https://pth2002.github.io/rl-method-tracker/#method-gspo), [Dual-clip PPO](https://pth2002.github.io/rl-method-tracker/#method-dual_clip), [SAPO](https://pth2002.github.io/rl-method-tracker/#method-sapo) |
+| [Stale or off-policy data](https://pth2002.github.io/rl-method-tracker/#failure-stale_policy) | 7 | [Off-policy sequence masking](https://pth2002.github.io/rl-method-tracker/#method-opsm), [TOPR](https://pth2002.github.io/rl-method-tracker/#method-topr), [Decoupled PPO objective](https://pth2002.github.io/rl-method-tracker/#method-areal_decoupled) |
+| [Multi-reward signal collapse](https://pth2002.github.io/rl-method-tracker/#failure-multi_reward_collapse) | 1 | [GDPO](https://pth2002.github.io/rl-method-tracker/#method-gdpo) |
+| [Loss of solution diversity](https://pth2002.github.io/rl-method-tracker/#failure-diversity_loss) | 3 | [Pass@k advantage](https://pth2002.github.io/rl-method-tracker/#method-passk_advantage), [FlowRL](https://pth2002.github.io/rl-method-tracker/#method-flowrl), [Representation-based exploration](https://pth2002.github.io/rl-method-tracker/#method-rep_exp) |
+| [Sparse outcome reward](https://pth2002.github.io/rl-method-tracker/#failure-sparse_reward) | 3 | [PRIME](https://pth2002.github.io/rl-method-tracker/#method-prime), [VAPO](https://pth2002.github.io/rl-method-tracker/#method-vapo), [GiGPO](https://pth2002.github.io/rl-method-tracker/#method-gigpo) |
+| [Baselines and general components](https://pth2002.github.io/rl-method-tracker/#failure-baselines) | 15 | [PPO](https://pth2002.github.io/rl-method-tracker/#method-ppo), [k3](https://pth2002.github.io/rl-method-tracker/#method-kl_k3), [Direct Reward Optimisation](https://pth2002.github.io/rl-method-tracker/#method-dro) |
 <!-- failures:end -->
 
 ## Latest landings
@@ -85,11 +90,11 @@ rewrites this list.
 <!-- landings:start -->
 | Date | Method | Framework | Change |
 |---|---|---|---|
-| 2026-10-15 | Rollout routing replay | AReaL | [PR #1496](https://github.com/inclusionAI/AReaL/pull/1496) |
-| 2026-09-14 | Masked / rejection importance sampling for rollout-training mismatch | OpenRLHF | [PR #1339](https://github.com/OpenRLHF/OpenRLHF/pull/1339) |
-| 2026-09-14 | FlashREINFORCE | OpenRLHF | [PR #1339](https://github.com/OpenRLHF/OpenRLHF/pull/1339) |
-| 2026-09-11 | ECHO | verl recipes | [PR #142](https://github.com/verl-project/verl-recipe/pull/142) |
-| 2026-08-04 | Direct Reward Optimisation | verl | [PR #7245](https://github.com/volcengine/verl/pull/7245) |
+| 2026-10-15 | [Rollout routing replay](https://pth2002.github.io/rl-method-tracker/#method-r3_rollout_routing_replay) | AReaL | [PR #1496](https://github.com/inclusionAI/AReaL/pull/1496) |
+| 2026-09-14 | [Masked / rejection importance sampling for rollout-training mismatch](https://pth2002.github.io/rl-method-tracker/#method-mis) | OpenRLHF | [PR #1339](https://github.com/OpenRLHF/OpenRLHF/pull/1339) |
+| 2026-09-14 | [FlashREINFORCE](https://pth2002.github.io/rl-method-tracker/#method-flash_reinforce) | OpenRLHF | [PR #1339](https://github.com/OpenRLHF/OpenRLHF/pull/1339) |
+| 2026-09-11 | [ECHO](https://pth2002.github.io/rl-method-tracker/#method-echo) | verl recipes | [PR #142](https://github.com/verl-project/verl-recipe/pull/142) |
+| 2026-08-04 | [Direct Reward Optimisation](https://pth2002.github.io/rl-method-tracker/#method-dro) | verl | [PR #7245](https://github.com/volcengine/verl/pull/7245) |
 
 Framework histories as of 2026-10-21. The [project page](https://pth2002.github.io/rl-method-tracker/#landings) lists the latest ten.
 <!-- landings:end -->

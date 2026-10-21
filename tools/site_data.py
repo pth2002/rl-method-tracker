@@ -33,7 +33,7 @@ def failures_table(groups: list[dict], methods: dict) -> list[str]:
     rows = ["| Training failure | Methods | Most widely included |", "|---|--:|---|"]
     for g in groups:
         # the row already names the failure, so a name that repeats it drops that part
-        top = [methods[m]["name"].split(" (")[0].removesuffix(" for rollout-training mismatch")
+        top = [f"[{methods[m]['name'].split(' (')[0].removesuffix(' for rollout-training mismatch')}]({PAGE}#method-{m})"
                for m in g["methods"][:3]]
         rows.append(f"| [{g['name']}]({PAGE}#failure-{g['id']}) | {len(g['methods'])} | {', '.join(top)} |")
     return rows
@@ -44,7 +44,8 @@ def landings_table(landings: list[dict], snapshot: str) -> list[str]:
     for x in landings[:5]:
         pr = x["url"].rsplit("/pull/", 1)
         ref = f"PR #{pr[1]}" if len(pr) == 2 else "commit " + x["url"].rsplit("/", 1)[1][:7]
-        rows.append(f"| {x['date']} | {x['method']} | {x['fw']} | [{ref}]({x['url']}) |")
+        name = f"[{x['method']}]({PAGE}#method-{x['id']})" if x.get("id") else x["method"]
+        rows.append(f"| {x['date']} | {name} | {x['fw']} | [{ref}]({x['url']}) |")
     rows += ["", f"Framework histories as of {snapshot}. The [project page]({PAGE}#landings) lists the latest ten."]
     return rows
 
@@ -77,7 +78,8 @@ def main() -> None:
     label = dict(FRAMEWORKS)
 
     # every general method paper, in order of its arXiv identifier: [arxiv, month, title, included,
-    # frameworks at the snapshot, method names, [framework, date] of removals from frameworks it left]
+    # frameworks at the snapshot, method names, [framework, date] of removals from frameworks it left,
+    # ids of its methods on the project page]
     order = [k for k, _ in FRAMEWORKS]
     gone = {}
     for fw, prof in profiles.items():
@@ -91,9 +93,20 @@ def main() -> None:
         left = sorted({(f, d) for m in ms for f, d in gone.get(m, []) if f not in now}, key=lambda x: order.index(x[0]))
         names = [by_id[m]["name"].split(" (")[0] for m in ms]
         papers.append([r["arxiv"], r["month"], titles.get(r["arxiv"], ""), int(bool(r["adopted"])),
-                       [label[f] for f in now], names, [[label[f], d] for f, d in left]])
+                       [label[f] for f in now], names, [[label[f], d] for f, d in left], ms])
 
-    # methods with the setting that selects them in each framework, and removals
+    # adoption.json files verl-recipe landings under verl, so their commits are matched to the recipe history
+    recipe = {e["sha"][:10] for e in jl(GEN / "framework_events.jsonl") if e["framework"] == "verl_recipe"}
+
+    def landing(fw: str, v: dict) -> dict:
+        """Where and when a method first landed in a framework, for the method page and the log."""
+        in_recipe = fw == "verl" and (v.get("commit") or "")[:10] in recipe
+        repo = head["verl_recipe" if in_recipe else fw]["url"]
+        url = f"{repo}/pull/{v['pr']}" if v.get("pr") else f"{repo}/commit/{v['commit']}"
+        return {"landed": v["first_date"], "ref": url, "days": v["lag_days"], "censored": bool(v["left_censored"]),
+                "byAuthors": v.get("commit_author_is_paper_author") == "author", "recipe": in_recipe}
+
+    # methods with the setting that selects them in each framework, where and when they landed, and removals
     removed = {(x["method"], fw): x["date"] for fw, p in profiles.items() for x in p["removed"]}
     methods = {}
     for r in adoption:
@@ -107,11 +120,14 @@ def main() -> None:
                              "url": first.get("url")}
             elif (r["id"], fw) in removed:
                 cells[fw] = {"tier": "removed", "date": removed[(r["id"], fw)]}
+            if fw in cells and fw in r["per_framework"]:
+                cells[fw].update(landing(fw, r["per_framework"][fw]))
         if not cells:
             continue
         src = f"https://arxiv.org/abs/{r['arxiv']}" if r.get("arxiv") else None
-        methods[r["id"]] = {"name": r["name"], "arxiv": r.get("arxiv"), "src": src,
-                            "date": r["source_date"], "n": r["n_frameworks_at_head"], "cells": cells}
+        methods[r["id"]] = {"name": r["name"], "arxiv": r.get("arxiv"), "src": src, "title": r.get("source_title"),
+                            "date": r["source_date"], "n": r["n_frameworks_at_head"],
+                            "symptoms": r["symptoms"] or [], "cells": cells}
 
     groups = []
     for s in symptoms:
@@ -126,18 +142,15 @@ def main() -> None:
                    "methods": rest})
 
     # the most recent landings, newest first
-    # adoption.json files verl-recipe landings under verl, so their commits are matched to the recipe history
-    recipe = {e["sha"][:10] for e in jl(GEN / "framework_events.jsonl") if e["framework"] == "verl_recipe"}
     landings = []
     for r in adoption:
         for fw, v in r["per_framework"].items():
             if v["left_censored"]:
                 continue
-            in_recipe = fw == "verl" and (v.get("commit") or "")[:10] in recipe
-            repo = head["verl_recipe" if in_recipe else fw]["url"]
-            url = f"{repo}/pull/{v['pr']}" if v.get("pr") else f"{repo}/commit/{v['commit']}"
-            landings.append({"date": v["first_date"], "method": r["name"].split(" (")[0],
-                             "fw": "verl recipes" if in_recipe else label[fw], "days": v["lag_days"], "url": url})
+            x = landing(fw, v)
+            landings.append({"date": x["landed"], "method": r["name"].split(" (")[0],
+                             "id": r["id"] if r["id"] in methods else None,
+                             "fw": "verl recipes" if x["recipe"] else label[fw], "days": x["days"], "url": x["ref"]})
     landings.sort(key=lambda x: x["date"], reverse=True)
 
     ledger = []
