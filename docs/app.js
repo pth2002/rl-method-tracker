@@ -435,11 +435,16 @@
         "<td data-h=\"First landed\">" + (c.landed ? (c.censored ? "by " : "") + esc(c.landed) : "") + "</td>" +
         "<td data-h=\"After the source\">" + esc(lagText(c)) + "</td><td data-h=\"Change\">" + change + "</td></tr>";
     }).join("");
+    var when = "";
+    if (first && firstCell.days != null) {
+      var d = firstCell.days;
+      when = firstCell.censored ? ", at most " + fmt(d) + " days after the source"
+        : d === 0 ? ", the same day as the source"
+        : d < 0 ? ", " + fmt(-d) + " days before the source"
+        : ", " + fmt(d) + " days after the source";
+    }
     var summary = "<strong>In " + m.n + " of " + FWK.length + " frameworks.</strong>" + (first
-      ? " First landing: " + esc(FWN[FWK.indexOf(first[1])]) + " on " + esc(first[0]) +
-        (firstCell.censored ? ", at most " : ", ") + esc(lagText(firstCell).replace("at most ", "")) +
-        (firstCell.days != null && firstCell.days >= 0 ? " after the source." : ".")
-      : "");
+      ? " First landing: " + esc(FWN[FWK.indexOf(first[1])]) + " on " + esc(first[0]) + when + "." : "");
     var src = m.title ? "<a href=\"" + esc(m.src || "#") + "\">" + esc(m.title) + "</a>" : "";
     return "<p class=\"d-eyebrow\">Method</p><h2 id=\"detail-title\">" + esc(nm[0]) + "</h2>" +
       (nm[1] ? "<p class=\"d-desc\">" + esc(nm[1]) + "</p>" : "") +
