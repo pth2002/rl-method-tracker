@@ -13,7 +13,7 @@
 <p align="center">
   <a href="https://pth2002.github.io/rl-method-tracker/"><b>Project page</b></a>
   &nbsp;&middot;&nbsp;
-  <a href="paper/main.pdf"><b>Technical report</b></a>
+  <a href="https://arxiv.org/abs/2610.28027"><b>Technical report</b></a>
   &nbsp;&middot;&nbsp;
   <a href="INDEX.md"><b>Methods by failure</b></a>
   &nbsp;&middot;&nbsp;
@@ -23,6 +23,7 @@
 </p>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2610.28027"><img alt="arXiv 2610.28027" src="https://img.shields.io/badge/arXiv-2610.28027-128A43?labelColor=16181D"></a>
   <a href="https://doi.org/10.5281/zenodo.23495743"><img alt="DOI 10.5281/zenodo.23495743" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23495743-128A43?labelColor=16181D"></a>
   <a href="LICENSE"><img alt="Code under MIT" src="https://img.shields.io/badge/code-MIT-128A43?labelColor=16181D"></a>
   <a href="LICENSE-DATA"><img alt="Data under CC BY 4.0" src="https://img.shields.io/badge/data-CC%20BY%204.0-128A43?labelColor=16181D"></a>
@@ -38,8 +39,8 @@ records when each method landed on a main branch and how each framework offers i
 |:-:|:-:|:-:|:-:|
 | arXiv papers screened | propose a general RL training method | reached a framework | frameworks traced |
 
-The counts come from the technical report *From RL Papers to Framework Code: Inclusion and Review in
-Seven Open-Source Training Frameworks*, version 1, for papers from January 2025 to June 2026. The
+The counts come from the technical report [*From RL Papers to Framework Code: Inclusion and Review in
+Seven Open-Source Training Frameworks*](https://arxiv.org/abs/2610.28027), version 1, for papers from January 2025 to June 2026. The
 frameworks are [verl](https://github.com/volcengine/verl) with
 [verl-recipe](https://github.com/verl-project/verl-recipe), [TRL](https://github.com/huggingface/trl),
 [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF), [NeMo-RL](https://github.com/NVIDIA-NeMo/RL),
@@ -101,7 +102,7 @@ Framework histories as of 2026-10-17. The [project page](https://pth2002.github.
 - **Study inclusion.** [`data/generated/adoption.csv`](data/generated/adoption.csv) has one row per
   method with source date, first landing per framework, lag in days, tier today and how the
   introducing commit's author relates to the paper's author list. The
-  [technical report](paper/main.pdf) analyses it together with the public record of proposals.
+  [technical report](https://arxiv.org/abs/2610.28027) analyses it together with the public record of proposals.
 - **Correct a record.** Open an issue with the
   [correction template](https://github.com/pth2002/rl-method-tracker/issues/new/choose) and link the
   evidence.
@@ -303,20 +304,22 @@ docs/                    the project page (GitHub Pages), its data and the READM
 ## Cite
 
 ```bibtex
-@techreport{pan2026rlframeworks,
-  title       = {From {RL} Papers to Framework Code: Inclusion and Review in Seven
-                 Open-Source Training Frameworks},
-  author      = {Pan, Taiheng},
-  institution = {The University of Melbourne},
-  year        = {2026},
-  note        = {Technical report, version 1},
-  doi         = {10.5281/zenodo.23495743},
-  url         = {https://github.com/pth2002/rl-method-tracker}
+@misc{pan2026rlframeworks,
+  title         = {From {RL} Papers to Framework Code: Inclusion and Review in Seven
+                   Open-Source Training Frameworks},
+  author        = {Pan, Taiheng},
+  year          = {2026},
+  eprint        = {2610.28027},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  doi           = {10.48550/arXiv.2610.28027},
+  url           = {https://arxiv.org/abs/2610.28027}
 }
 ```
 
-[CITATION.cff](CITATION.cff) also fills GitHub's "Cite this repository" button. The archived release
-has the DOI [10.5281/zenodo.23495743](https://doi.org/10.5281/zenodo.23495743), which always resolves
+The report is [arXiv:2610.28027](https://arxiv.org/abs/2610.28027), and its source and PDF are also in [`paper/`](paper/main.pdf).
+[CITATION.cff](CITATION.cff) also fills GitHub's "Cite this repository" button. The archived release of
+the code and data has the DOI [10.5281/zenodo.23495743](https://doi.org/10.5281/zenodo.23495743), which always resolves
 to the latest version. Version 1.0, the release behind the report, is
 [10.5281/zenodo.23495744](https://doi.org/10.5281/zenodo.23495744).
 

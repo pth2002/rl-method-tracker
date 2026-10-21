@@ -29,5 +29,11 @@ preferred-citation:
   month: 10
   institution:
     name: The University of Melbourne
-  url: "https://github.com/pth2002/rl-method-tracker"
+  doi: 10.48550/arXiv.2610.28027
+  url: "https://arxiv.org/abs/2610.28027"
+  repository-code: "https://github.com/pth2002/rl-method-tracker"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.28027"
+      description: arXiv identifier of the report.
   notes: "Technical report, version 1, 20 October 2026."
