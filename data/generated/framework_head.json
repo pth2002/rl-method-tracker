@@ -218,7 +218,7 @@
   },
   "nemo-rl": {
     "url": "https://github.com/NVIDIA-NeMo/RL",
-    "head_sha": "a7a4483547fcb20a746419c47cb9dd536b347f29",
+    "head_sha": "62d6d3f020c9be76e7b62abf11fb51f5ee1bbe73",
     "head_date": "2026-10-21",
     "surfaces": {
       "adv_estimator": [
