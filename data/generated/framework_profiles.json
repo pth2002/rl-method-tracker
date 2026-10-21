@@ -3,7 +3,7 @@
  "core_sizes": {
   "verl": {
    "core_authors": 40,
-   "all_authors": 751
+   "all_authors": 754
   },
   "trl": {
    "core_authors": 2,
@@ -15,11 +15,11 @@
   },
   "nemo-rl": {
    "core_authors": 11,
-   "all_authors": 178
+   "all_authors": 179
   },
   "roll": {
    "core_authors": 5,
-   "all_authors": 88
+   "all_authors": 89
   },
   "slime": {
    "core_authors": 2,
@@ -27,7 +27,7 @@
   },
   "areal": {
    "core_authors": 4,
-   "all_authors": 121
+   "all_authors": 123
   },
   "verl_recipe": {
    "core_authors": 13,

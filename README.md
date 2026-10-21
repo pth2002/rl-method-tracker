@@ -91,7 +91,7 @@ rewrites this list.
 | 2026-09-11 | ECHO | verl recipes | [PR #142](https://github.com/verl-project/verl-recipe/pull/142) |
 | 2026-08-04 | Direct Reward Optimisation | verl | [PR #7245](https://github.com/volcengine/verl/pull/7245) |
 
-Framework histories as of 2026-10-17. The [project page](https://pth2002.github.io/rl-method-tracker/#landings) lists the latest ten.
+Framework histories as of 2026-10-21. The [project page](https://pth2002.github.io/rl-method-tracker/#landings) lists the latest ten.
 <!-- landings:end -->
 
 ## What else is here

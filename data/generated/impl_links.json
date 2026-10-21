@@ -7,7 +7,7 @@
     "setting": null,
     "path": "trl/experimental/a2po",
     "line": null,
-    "url": "https://github.com/huggingface/trl/tree/6d6901c5e3963108076131ac4979d344566b13a2/trl/experimental/a2po"
+    "url": "https://github.com/huggingface/trl/tree/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/experimental/a2po"
    }
   ]
  },
@@ -31,7 +31,7 @@
     "setting": "use_decoupled_loss",
     "path": "areal/api/cli_args.py",
     "line": 2115,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L2115"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L2115"
    }
   ]
  },
@@ -43,7 +43,7 @@
     "setting": null,
     "path": "trl/experimental/bema_for_ref_model",
     "line": null,
-    "url": "https://github.com/huggingface/trl/tree/6d6901c5e3963108076131ac4979d344566b13a2/trl/experimental/bema_for_ref_model"
+    "url": "https://github.com/huggingface/trl/tree/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/experimental/bema_for_ref_model"
    }
   ]
  },
@@ -55,7 +55,7 @@
     "setting": "cispo",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 2047,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L2047"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L2047"
    }
   ],
   "trl": [
@@ -64,8 +64,8 @@
     "tier": "core",
     "setting": "cispo",
     "path": "trl/trainer/grpo_trainer.py",
-    "line": 928,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_trainer.py#L928"
+    "line": 954,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_trainer.py#L954"
    }
   ],
   "nemo-rl": [
@@ -75,7 +75,7 @@
     "setting": "use_cispo",
     "path": "nemo_rl/algorithms/loss/clipped_pg.py",
     "line": 133,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/loss/clipped_pg.py#L133"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/loss/clipped_pg.py#L133"
    }
   ],
   "roll": [
@@ -85,7 +85,7 @@
     "setting": "cispo",
     "path": "roll/pipeline/agentic/agentic_actor_pg_worker.py",
     "line": 95,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/pipeline/agentic/agentic_actor_pg_worker.py#L95"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/pipeline/agentic/agentic_actor_pg_worker.py#L95"
    }
   ],
   "slime": [
@@ -95,7 +95,7 @@
     "setting": "cispo",
     "path": "slime/utils/arguments.py",
     "line": 1069,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1069"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1069"
    }
   ],
   "areal": [
@@ -105,7 +105,7 @@
     "setting": "use_cispo_loss",
     "path": "areal/api/cli_args.py",
     "line": 2076,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L2076"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L2076"
    }
   ]
  },
@@ -129,7 +129,7 @@
     "setting": "clip_ratio_high",
     "path": "verl/workers/config/actor.py",
     "line": 159,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/workers/config/actor.py#L159"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/workers/config/actor.py#L159"
    },
    {
     "token": "dapo",
@@ -146,8 +146,8 @@
     "tier": "option",
     "setting": "epsilon_high",
     "path": "trl/trainer/grpo_config.py",
-    "line": 705,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L705"
+    "line": 704,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L704"
    }
   ],
   "openrlhf": [
@@ -167,7 +167,7 @@
     "setting": "ratio_clip_max",
     "path": "nemo_rl/algorithms/loss/clipped_pg.py",
     "line": 128,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/loss/clipped_pg.py#L128"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/loss/clipped_pg.py#L128"
    }
   ],
   "roll": [
@@ -177,7 +177,7 @@
     "setting": "pg_clip_high",
     "path": "roll/configs/base_config.py",
     "line": 570,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L570"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L570"
    }
   ],
   "slime": [
@@ -187,7 +187,7 @@
     "setting": "--eps-clip-high",
     "path": "slime/utils/arguments.py",
     "line": 1023,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1023"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1023"
    }
   ],
   "areal": [
@@ -197,7 +197,7 @@
     "setting": "eps_clip_higher",
     "path": "areal/api/cli_args.py",
     "line": 1946,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L1946"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L1946"
    },
    {
     "token": "dapo_dynamic_bs",
@@ -205,7 +205,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_dapo_dynamic_bs.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_dapo_dynamic_bs.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_dapo_dynamic_bs.yaml"
    }
   ]
  },
@@ -216,8 +216,8 @@
     "tier": "option",
     "setting": "filter_groups",
     "path": "verl/trainer/config/algorithm.py",
-    "line": 741,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/config/algorithm.py#L741"
+    "line": 743,
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/config/algorithm.py#L743"
    },
    {
     "token": "dapo",
@@ -244,8 +244,8 @@
     "tier": "option",
     "setting": "use_dynamic_sampling",
     "path": "nemo_rl/algorithms/grpo.py",
-    "line": 384,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/grpo.py#L384"
+    "line": 386,
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/grpo.py#L386"
    }
   ],
   "roll": [
@@ -255,7 +255,7 @@
     "setting": "difficulty_mask",
     "path": "roll/pipeline/rlvr/rlvr_config.py",
     "line": 149,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/pipeline/rlvr/rlvr_config.py#L149"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/pipeline/rlvr/rlvr_config.py#L149"
    }
   ],
   "slime": [
@@ -265,7 +265,7 @@
     "setting": "--dynamic-sampling-filter-path",
     "path": "slime/utils/arguments.py",
     "line": 493,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L493"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L493"
    }
   ],
   "areal": [
@@ -275,7 +275,7 @@
     "setting": "dynamic_bs",
     "path": "areal/api/cli_args.py",
     "line": 4256,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L4256"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L4256"
    },
    {
     "token": "dapo_dynamic_bs",
@@ -283,7 +283,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_dapo_dynamic_bs.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_dapo_dynamic_bs.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_dapo_dynamic_bs.yaml"
    }
   ]
  },
@@ -294,8 +294,8 @@
     "tier": "default",
     "setting": "beta=0.0",
     "path": "trl/trainer/grpo_config.py",
-    "line": 681,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L681"
+    "line": 680,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L680"
    }
   ]
  },
@@ -307,7 +307,7 @@
     "setting": "reward.reward_kwargs.overlong_buffer_cfg",
     "path": "verl/experimental/reward_loop/reward_manager/dapo.py",
     "line": 33,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/experimental/reward_loop/reward_manager/dapo.py#L33"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/experimental/reward_loop/reward_manager/dapo.py#L33"
    },
    {
     "token": "dapo",
@@ -324,8 +324,8 @@
     "tier": "option",
     "setting": "mask_truncated_completions",
     "path": "trl/trainer/grpo_config.py",
-    "line": 836,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L836"
+    "line": 835,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L835"
    }
   ],
   "openrlhf": [
@@ -344,8 +344,8 @@
     "tier": "option",
     "setting": "overlong_filtering",
     "path": "nemo_rl/algorithms/grpo.py",
-    "line": 381,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/grpo.py#L381"
+    "line": 383,
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/grpo.py#L383"
    }
   ],
   "areal": [
@@ -355,7 +355,7 @@
     "setting": "overlong_reward_penalty",
     "path": "areal/api/cli_args.py",
     "line": 1974,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L1974"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L1974"
    }
   ]
  },
@@ -376,16 +376,16 @@
     "tier": "core",
     "setting": "dapo",
     "path": "trl/trainer/grpo_trainer.py",
-    "line": 928,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_trainer.py#L928"
+    "line": 954,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_trainer.py#L954"
    },
    {
     "token": "loss_type=dapo",
     "tier": "default",
     "setting": "loss_type=dapo",
     "path": "trl/trainer/grpo_config.py",
-    "line": 801,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L801"
+    "line": 800,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L800"
    }
   ],
   "nemo-rl": [
@@ -395,7 +395,7 @@
     "setting": "token_level_loss",
     "path": "nemo_rl/algorithms/loss/clipped_pg.py",
     "line": 134,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/loss/clipped_pg.py#L134"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/loss/clipped_pg.py#L134"
    }
   ],
   "roll": [
@@ -405,7 +405,7 @@
     "setting": "token-mean",
     "path": "roll/configs/base_config.py",
     "line": 622,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L622"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L622"
    }
   ],
   "slime": [
@@ -415,7 +415,7 @@
     "setting": "--calculate-per-token-loss",
     "path": "slime/utils/arguments.py",
     "line": 1002,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1002"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1002"
    }
   ]
  },
@@ -427,7 +427,7 @@
     "setting": "stop_properly_penalty_coef",
     "path": "nemo_rl/algorithms/reward_functions.py",
     "line": 47,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/reward_functions.py#L47"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/reward_functions.py#L47"
    }
   ]
  },
@@ -439,7 +439,7 @@
     "setting": "dppo_kl",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1460,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1460"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1460"
    },
    {
     "token": "dppo_tv",
@@ -447,7 +447,7 @@
     "setting": "dppo_tv",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1379,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1379"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1379"
    }
   ]
  },
@@ -459,15 +459,15 @@
     "setting": "seq-mean-token-sum-norm",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1163,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1163"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1163"
    },
    {
     "token": "norm_adv_by_std_in_grpo",
     "tier": "option",
     "setting": "norm_adv_by_std_in_grpo",
     "path": "verl/trainer/config/algorithm.py",
-    "line": 735,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/config/algorithm.py#L735"
+    "line": 737,
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/config/algorithm.py#L737"
    }
   ],
   "trl": [
@@ -476,16 +476,16 @@
     "tier": "core",
     "setting": "dr_grpo",
     "path": "trl/trainer/grpo_trainer.py",
-    "line": 928,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_trainer.py#L928"
+    "line": 954,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_trainer.py#L954"
    },
    {
     "token": "scale_rewards",
     "tier": "option",
     "setting": "scale_rewards",
     "path": "trl/trainer/grpo_config.py",
-    "line": 789,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L789"
+    "line": 788,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L788"
    }
   ],
   "openrlhf": [
@@ -513,7 +513,7 @@
     "setting": "seq-mean-token-sum-norm",
     "path": "roll/configs/base_config.py",
     "line": 622,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L622"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L622"
    }
   ],
   "slime": [
@@ -523,7 +523,7 @@
     "setting": "--disable-grpo-std-normalization",
     "path": "slime/utils/arguments.py",
     "line": 1129,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1129"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1129"
    }
   ],
   "areal": [
@@ -533,7 +533,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_drgrpo.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_drgrpo.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_drgrpo.yaml"
    }
   ]
  },
@@ -545,7 +545,7 @@
     "setting": "dro",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 2014,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L2014"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L2014"
    }
   ]
  },
@@ -557,7 +557,7 @@
     "setting": "clip_ratio_c",
     "path": "verl/workers/config/actor.py",
     "line": 162,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/workers/config/actor.py#L162"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/workers/config/actor.py#L162"
    }
   ],
   "openrlhf": [
@@ -577,7 +577,7 @@
     "setting": "ratio_clip_c",
     "path": "nemo_rl/algorithms/loss/clipped_pg.py",
     "line": 129,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/loss/clipped_pg.py#L129"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/loss/clipped_pg.py#L129"
    }
   ],
   "roll": [
@@ -587,7 +587,7 @@
     "setting": "dual_clip_loss",
     "path": "roll/configs/base_config.py",
     "line": 625,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L625"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L625"
    }
   ],
   "slime": [
@@ -597,7 +597,7 @@
     "setting": "--eps-clip-c",
     "path": "slime/utils/arguments.py",
     "line": 1025,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1025"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1025"
    }
   ],
   "areal": [
@@ -607,7 +607,7 @@
     "setting": "c_clip",
     "path": "areal/api/cli_args.py",
     "line": 1952,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L1952"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L1952"
    }
   ]
  },
@@ -631,7 +631,7 @@
     "setting": "clip_cov",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1743,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1743"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1743"
    },
    {
     "token": "kl_cov",
@@ -639,7 +639,7 @@
     "setting": "kl_cov",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1848,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1848"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1848"
    },
    {
     "token": "entropy",
@@ -695,7 +695,7 @@
     "setting": "gdpo",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 110,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L110"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L110"
    }
   ],
   "trl": [
@@ -704,8 +704,8 @@
     "tier": "option",
     "setting": "multi_objective_aggregation",
     "path": "trl/trainer/grpo_config.py",
-    "line": 777,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L777"
+    "line": 776,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L776"
    }
   ],
   "nemo-rl": [
@@ -715,7 +715,7 @@
     "setting": "gdpo",
     "path": "nemo_rl/algorithms/advantage_estimator.py",
     "line": 56,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/advantage_estimator.py#L56"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py#L56"
    }
   ]
  },
@@ -727,7 +727,7 @@
     "setting": "gigpo",
     "path": "roll/configs/base_config.py",
     "line": 598,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L598"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L598"
    }
   ]
  },
@@ -739,7 +739,7 @@
     "setting": "geo_mean",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1928,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1928"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1928"
    }
   ],
   "trl": [
@@ -749,7 +749,7 @@
     "setting": null,
     "path": "trl/experimental/gmpo",
     "line": null,
-    "url": "https://github.com/huggingface/trl/tree/6d6901c5e3963108076131ac4979d344566b13a2/trl/experimental/gmpo"
+    "url": "https://github.com/huggingface/trl/tree/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/experimental/gmpo"
    }
   ]
  },
@@ -761,7 +761,7 @@
     "setting": "gpg",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 105,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L105"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L105"
    }
   ]
  },
@@ -773,7 +773,7 @@
     "setting": "grpo",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 98,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L98"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L98"
    },
    {
     "token": "grpo_vectorized",
@@ -781,7 +781,7 @@
     "setting": "grpo_vectorized",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 107,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L107"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L107"
    },
    {
     "token": "seq-mean-token-mean",
@@ -789,7 +789,7 @@
     "setting": "seq-mean-token-mean",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1194,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1194"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1194"
    },
    {
     "token": "use_kl_loss",
@@ -797,7 +797,7 @@
     "setting": "use_kl_loss",
     "path": "verl/workers/config/actor.py",
     "line": 170,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/workers/config/actor.py#L170"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/workers/config/actor.py#L170"
    }
   ],
   "trl": [
@@ -807,23 +807,23 @@
     "setting": null,
     "path": "trl/trainer/grpo_trainer.py",
     "line": null,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_trainer.py"
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_trainer.py"
    },
    {
     "token": "grpo",
     "tier": "core",
     "setting": "grpo",
     "path": "trl/trainer/grpo_trainer.py",
-    "line": 288,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_trainer.py#L288"
+    "line": 289,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_trainer.py#L289"
    },
    {
     "token": "num_iterations",
     "tier": "option",
     "setting": "num_iterations",
     "path": "trl/trainer/grpo_config.py",
-    "line": 689,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L689"
+    "line": 688,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L688"
    }
   ],
   "openrlhf": [
@@ -843,15 +843,15 @@
     "setting": "grpo",
     "path": "nemo_rl/algorithms/advantage_estimator.py",
     "line": 56,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/advantage_estimator.py#L56"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py#L56"
    },
    {
     "token": "grpo_train",
     "tier": "option",
     "setting": null,
     "path": "nemo_rl/algorithms/grpo.py",
-    "line": 4404,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/grpo.py#L4404"
+    "line": 4478,
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/grpo.py#L4478"
    }
   ],
   "roll": [
@@ -861,7 +861,7 @@
     "setting": "grpo",
     "path": "roll/configs/base_config.py",
     "line": 598,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L598"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L598"
    },
    {
     "token": "seq-mean-token-mean",
@@ -869,7 +869,7 @@
     "setting": "seq-mean-token-mean",
     "path": "roll/configs/base_config.py",
     "line": 622,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L622"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L622"
    },
    {
     "token": "use_kl_loss",
@@ -877,7 +877,7 @@
     "setting": "use_kl_loss",
     "path": "roll/configs/base_config.py",
     "line": 619,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L619"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L619"
    }
   ],
   "slime": [
@@ -887,7 +887,7 @@
     "setting": "grpo",
     "path": "slime/utils/arguments.py",
     "line": 1067,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1067"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1067"
    },
    {
     "token": "use_kl_loss",
@@ -895,7 +895,7 @@
     "setting": "--use-kl-loss",
     "path": "slime/utils/arguments.py",
     "line": 1104,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1104"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1104"
    }
   ],
   "areal": [
@@ -905,7 +905,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_grpo.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_grpo.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_grpo.yaml"
    },
    {
     "token": "grpo_awex_colocate",
@@ -913,7 +913,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_grpo_awex_colocate.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_grpo_awex_colocate.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_grpo_awex_colocate.yaml"
    },
    {
     "token": "grpo_cpu",
@@ -921,7 +921,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_grpo_cpu.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_grpo_cpu.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_grpo_cpu.yaml"
    },
    {
     "token": "grpo_lora",
@@ -929,7 +929,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_grpo_lora.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_grpo_lora.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_grpo_lora.yaml"
    },
    {
     "token": "grpo_megatron",
@@ -937,7 +937,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_grpo_megatron.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_grpo_megatron.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_grpo_megatron.yaml"
    },
    {
     "token": "grpo_megatron_fp8",
@@ -945,7 +945,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_grpo_megatron_fp8.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_grpo_megatron_fp8.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_grpo_megatron_fp8.yaml"
    },
    {
     "token": "grpo_megatron_lora",
@@ -953,7 +953,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_grpo_megatron_lora.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_grpo_megatron_lora.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_grpo_megatron_lora.yaml"
    },
    {
     "token": "grpo_megatron_lora_moe",
@@ -961,7 +961,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_grpo_megatron_lora_moe.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_grpo_megatron_lora_moe.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_grpo_megatron_lora_moe.yaml"
    },
    {
     "token": "grpo_npu",
@@ -969,7 +969,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_grpo_npu.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_grpo_npu.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_grpo_npu.yaml"
    }
   ]
  },
@@ -981,7 +981,7 @@
     "setting": "gspo",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1545,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1545"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1545"
    }
   ],
   "trl": [
@@ -990,8 +990,8 @@
     "tier": "option",
     "setting": "importance_sampling_level",
     "path": "trl/trainer/grpo_config.py",
-    "line": 760,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L760"
+    "line": 759,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L759"
    }
   ],
   "openrlhf": [
@@ -1011,7 +1011,7 @@
     "setting": "sequence_level_importance_ratios",
     "path": "nemo_rl/algorithms/loss/clipped_pg.py",
     "line": 132,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/loss/clipped_pg.py#L132"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/loss/clipped_pg.py#L132"
    }
   ],
   "roll": [
@@ -1021,7 +1021,7 @@
     "setting": "importance_sampling",
     "path": "roll/pipeline/rlvr/rlvr_config.py",
     "line": 141,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/pipeline/rlvr/rlvr_config.py#L141"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/pipeline/rlvr/rlvr_config.py#L141"
    }
   ],
   "slime": [
@@ -1031,7 +1031,7 @@
     "setting": "gspo",
     "path": "slime/utils/arguments.py",
     "line": 1068,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1068"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1068"
    }
   ],
   "areal": [
@@ -1041,7 +1041,7 @@
     "setting": "importance_sampling_level",
     "path": "areal/api/cli_args.py",
     "line": 2129,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L2129"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L2129"
    },
    {
     "token": "gspo",
@@ -1049,7 +1049,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_gspo.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_gspo.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_gspo.yaml"
    }
   ]
  },
@@ -1072,8 +1072,8 @@
     "tier": "option",
     "setting": "top_entropy_quantile",
     "path": "trl/trainer/grpo_config.py",
-    "line": 866,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L866"
+    "line": 865,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L865"
    }
   ]
  },
@@ -1084,8 +1084,8 @@
     "tier": "option",
     "setting": "delta",
     "path": "trl/trainer/grpo_config.py",
-    "line": 697,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L697"
+    "line": 696,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L696"
    }
   ]
  },
@@ -1096,8 +1096,8 @@
     "tier": "conditional_default",
     "setting": null,
     "path": "nemo_rl/algorithms/loss/loss_functions.py",
-    "line": 708,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/loss/loss_functions.py#L708"
+    "line": 800,
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/loss/loss_functions.py#L800"
    }
   ]
  },
@@ -1108,8 +1108,8 @@
     "tier": "option",
     "setting": "low_var_kl",
     "path": "verl/trainer/config/algorithm.py",
-    "line": 709,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/config/algorithm.py#L709"
+    "line": 711,
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/config/algorithm.py#L711"
    }
   ]
  },
@@ -1121,7 +1121,7 @@
     "setting": "binary_kl",
     "path": "areal/api/cli_args.py",
     "line": 1743,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L1743"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L1743"
    },
    {
     "token": "kpop",
@@ -1129,7 +1129,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_kpop.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_kpop.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_kpop.yaml"
    }
   ]
  },
@@ -1141,7 +1141,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_liteppo.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_liteppo.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_liteppo.yaml"
    }
   ]
  },
@@ -1152,8 +1152,8 @@
     "tier": "core",
     "setting": "luspo",
     "path": "trl/trainer/grpo_trainer.py",
-    "line": 916,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_trainer.py#L916"
+    "line": 942,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_trainer.py#L942"
    }
   ]
  },
@@ -1165,7 +1165,7 @@
     "setting": "m2_threshold",
     "path": "areal/api/cli_args.py",
     "line": 1959,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L1959"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L1959"
    },
    {
     "token": "m2po",
@@ -1173,7 +1173,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_m2po.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_m2po.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_m2po.yaml"
    }
   ]
  },
@@ -1184,8 +1184,8 @@
     "tier": "option",
     "setting": "rollout_rs",
     "path": "verl/trainer/config/algorithm.py",
-    "line": 196,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/config/algorithm.py#L196"
+    "line": 198,
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/config/algorithm.py#L198"
    }
   ],
   "trl": [
@@ -1194,8 +1194,8 @@
     "tier": "option",
     "setting": "vllm_importance_sampling_mode",
     "path": "trl/trainer/grpo_config.py",
-    "line": 934,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L934"
+    "line": 933,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L933"
    }
   ],
   "openrlhf": [
@@ -1214,16 +1214,16 @@
     "tier": "option",
     "setting": "seq_logprob_error_threshold",
     "path": "nemo_rl/algorithms/grpo.py",
-    "line": 397,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/grpo.py#L397"
+    "line": 399,
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/grpo.py#L399"
    },
    {
     "token": "seq_mask_tis",
     "tier": "option",
     "setting": "seq-mask-tis",
     "path": "nemo_rl/algorithms/loss/loss_functions.py",
-    "line": 423,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/loss/loss_functions.py#L423"
+    "line": 456,
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/loss/loss_functions.py#L456"
    }
   ],
   "roll": [
@@ -1233,7 +1233,7 @@
     "setting": null,
     "path": "roll/configs/base_config.py",
     "line": 495,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L495"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L495"
    }
   ],
   "areal": [
@@ -1243,7 +1243,7 @@
     "setting": null,
     "path": "areal/api/cli_args.py",
     "line": 1683,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L1683"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L1683"
    },
    {
     "token": "icepop",
@@ -1251,7 +1251,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_icepop.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_icepop.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_icepop.yaml"
    }
   ]
  },
@@ -1263,7 +1263,7 @@
     "setting": "use_importance_sampling_correction",
     "path": "nemo_rl/algorithms/advantage_estimator.py",
     "line": 672,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/advantage_estimator.py#L672"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py#L672"
    }
   ]
  },
@@ -1275,7 +1275,7 @@
     "setting": "opo",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 103,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L103"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L103"
    }
   ]
  },
@@ -1286,8 +1286,8 @@
     "tier": "option",
     "setting": "off_policy_mask_threshold",
     "path": "trl/trainer/grpo_config.py",
-    "line": 963,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L963"
+    "line": 962,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L962"
    }
   ],
   "slime": [
@@ -1297,7 +1297,7 @@
     "setting": "--use-opsm",
     "path": "slime/utils/arguments.py",
     "line": 1236,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1236"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1236"
    }
   ]
  },
@@ -1309,7 +1309,7 @@
     "setting": "optimal_token_baseline",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 108,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L108"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L108"
    },
    {
     "token": "tir_optimal_token_baseline",
@@ -1317,7 +1317,7 @@
     "setting": "tir_optimal_token_baseline",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 109,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L109"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L109"
    }
   ]
  },
@@ -1329,7 +1329,7 @@
     "setting": "grpo_passk",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 104,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L104"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L104"
    }
   ]
  },
@@ -1341,7 +1341,7 @@
     "setting": "gae",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 97,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L97"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L97"
    },
    {
     "token": "vanilla",
@@ -1349,7 +1349,7 @@
     "setting": "vanilla",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1285,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1285"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1285"
    },
    {
     "token": "adv_estimator=gae",
@@ -1357,7 +1357,7 @@
     "setting": "adv_estimator=gae",
     "path": "verl/trainer/config/ppo_trainer.yaml",
     "line": 78,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/config/ppo_trainer.yaml#L78"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/config/ppo_trainer.yaml#L78"
    }
   ],
   "openrlhf": [
@@ -1385,7 +1385,7 @@
     "setting": null,
     "path": "nemo_rl/algorithms/advantage_estimator.py",
     "line": 363,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/advantage_estimator.py#L363"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py#L363"
    }
   ],
   "roll": [
@@ -1395,7 +1395,7 @@
     "setting": "gae",
     "path": "roll/configs/base_config.py",
     "line": 599,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L599"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L599"
    },
    {
     "token": "ppo",
@@ -1403,7 +1403,7 @@
     "setting": "ppo",
     "path": "roll/pipeline/agentic/agentic_actor_pg_worker.py",
     "line": 87,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/pipeline/agentic/agentic_actor_pg_worker.py#L87"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/pipeline/agentic/agentic_actor_pg_worker.py#L87"
    },
    {
     "token": "vanilla",
@@ -1411,7 +1411,7 @@
     "setting": "vanilla",
     "path": "roll/pipeline/agentic/agentic_actor_pg_worker.py",
     "line": 66,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/pipeline/agentic/agentic_actor_pg_worker.py#L66"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/pipeline/agentic/agentic_actor_pg_worker.py#L66"
    },
    {
     "token": "adv_estimator=gae",
@@ -1419,7 +1419,7 @@
     "setting": "adv_estimator=gae",
     "path": "roll/configs/base_config.py",
     "line": 598,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L598"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L598"
    }
   ],
   "slime": [
@@ -1429,7 +1429,7 @@
     "setting": "ppo",
     "path": "slime/utils/arguments.py",
     "line": 1072,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1072"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1072"
    }
   ],
   "areal": [
@@ -1439,7 +1439,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_ppo.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_ppo.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_ppo.yaml"
    },
    {
     "token": "ppo_megatron",
@@ -1447,7 +1447,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_ppo_megatron.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_ppo_megatron.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_ppo_megatron.yaml"
    }
   ]
  },
@@ -1470,8 +1470,8 @@
     "tier": "option",
     "setting": "enable_rollout_routing_replay",
     "path": "verl/workers/config/rollout.py",
-    "line": 272,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/workers/config/rollout.py#L272"
+    "line": 305,
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/workers/config/rollout.py#L305"
    }
   ],
   "nemo-rl": [
@@ -1481,7 +1481,7 @@
     "setting": "policy.router_replay.enabled",
     "path": "nemo_rl/models/megatron/router_replay.py",
     "line": 40,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/models/megatron/router_replay.py#L40"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/models/megatron/router_replay.py#L40"
    }
   ],
   "roll": [
@@ -1491,7 +1491,7 @@
     "setting": "router_replay.mode",
     "path": "roll/configs/worker_config.py",
     "line": 248,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/worker_config.py#L248"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/worker_config.py#L248"
    }
   ],
   "slime": [
@@ -1501,7 +1501,7 @@
     "setting": "--use-rollout-routing-replay",
     "path": "slime/utils/arguments.py",
     "line": 1224,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1224"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1224"
    }
   ],
   "areal": [
@@ -1511,7 +1511,7 @@
     "setting": "enable_router_replay",
     "path": "areal/api/cli_args.py",
     "line": 1062,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L1062"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L1062"
    }
   ]
  },
@@ -1523,7 +1523,7 @@
     "setting": "reinforce_plus_plus",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 99,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L99"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L99"
    },
    {
     "token": "reinforce_plus_plus_baseline",
@@ -1531,7 +1531,7 @@
     "setting": "reinforce_plus_plus_baseline",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 100,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L100"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L100"
    }
   ],
   "openrlhf": [
@@ -1559,7 +1559,7 @@
     "setting": "reinforce_plus_plus",
     "path": "nemo_rl/algorithms/advantage_estimator.py",
     "line": 56,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/advantage_estimator.py#L56"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py#L56"
    }
   ],
   "slime": [
@@ -1569,7 +1569,7 @@
     "setting": "reinforce_plus_plus",
     "path": "slime/utils/arguments.py",
     "line": 1070,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1070"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1070"
    },
    {
     "token": "reinforce_plus_plus_baseline",
@@ -1577,7 +1577,7 @@
     "setting": "reinforce_plus_plus_baseline",
     "path": "slime/utils/arguments.py",
     "line": 1071,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1071"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1071"
    }
   ],
   "areal": [
@@ -1587,7 +1587,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_reinforce_baseline.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_reinforce_baseline.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_reinforce_baseline.yaml"
    }
   ]
  },
@@ -1599,7 +1599,7 @@
     "setting": "remax",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 101,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L101"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L101"
    }
   ]
  },
@@ -1623,7 +1623,7 @@
     "setting": "rloo",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 102,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L102"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L102"
    },
    {
     "token": "rloo_vectorized",
@@ -1631,7 +1631,7 @@
     "setting": "rloo_vectorized",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 106,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L106"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L106"
    }
   ],
   "trl": [
@@ -1641,7 +1641,7 @@
     "setting": null,
     "path": "trl/trainer/rloo_trainer.py",
     "line": null,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/rloo_trainer.py"
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/rloo_trainer.py"
    }
   ],
   "openrlhf": [
@@ -1661,7 +1661,7 @@
     "setting": "use_leave_one_out_baseline",
     "path": "nemo_rl/algorithms/advantage_estimator.py",
     "line": 59,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/advantage_estimator.py#L59"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py#L59"
    }
   ],
   "areal": [
@@ -1671,7 +1671,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_rloo.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_rloo.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_rloo.yaml"
    }
   ]
  },
@@ -1683,7 +1683,7 @@
     "setting": "--use-routing-replay",
     "path": "slime/utils/arguments.py",
     "line": 1218,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1218"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1218"
    }
   ]
  },
@@ -1695,7 +1695,7 @@
     "setting": "sao",
     "path": "roll/pipeline/agentic/agentic_actor_pg_worker.py",
     "line": 68,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/pipeline/agentic/agentic_actor_pg_worker.py#L68"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/pipeline/agentic/agentic_actor_pg_worker.py#L68"
    }
   ]
  },
@@ -1707,7 +1707,7 @@
     "setting": "sapo",
     "path": "verl/trainer/ppo/core_algos.py",
     "line": 1622,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/core_algos.py#L1622"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/core_algos.py#L1622"
    }
   ],
   "trl": [
@@ -1716,8 +1716,8 @@
     "tier": "core",
     "setting": "sapo",
     "path": "trl/trainer/grpo_trainer.py",
-    "line": 3121,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_trainer.py#L3121"
+    "line": 3147,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_trainer.py#L3147"
    }
   ],
   "areal": [
@@ -1727,7 +1727,7 @@
     "setting": "use_sapo_loss",
     "path": "areal/api/cli_args.py",
     "line": 2062,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/areal/api/cli_args.py#L2062"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/areal/api/cli_args.py#L2062"
    },
    {
     "token": "sapo",
@@ -1735,7 +1735,7 @@
     "setting": null,
     "path": "examples/math/gsm8k_sapo.yaml",
     "line": null,
-    "url": "https://github.com/inclusionAI/AReaL/blob/bb13e3bdb9a865608eafa017a70a790124c3d3bb/examples/math/gsm8k_sapo.yaml"
+    "url": "https://github.com/inclusionAI/AReaL/blob/18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6/examples/math/gsm8k_sapo.yaml"
    }
   ]
  },
@@ -1746,8 +1746,8 @@
     "tier": "option",
     "setting": "use_adaptive_entropy",
     "path": "trl/trainer/grpo_config.py",
-    "line": 886,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L886"
+    "line": 885,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L885"
    }
   ]
  },
@@ -1771,7 +1771,7 @@
     "setting": null,
     "path": "roll/pipeline/agentic/env_manager/traj_env_manager.py",
     "line": 31,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/pipeline/agentic/env_manager/traj_env_manager.py#L31"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/pipeline/agentic/env_manager/traj_env_manager.py#L31"
    }
   ]
  },
@@ -1782,8 +1782,8 @@
     "tier": "option",
     "setting": "rollout_is_threshold",
     "path": "verl/trainer/config/algorithm.py",
-    "line": 194,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/config/algorithm.py#L194"
+    "line": 196,
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/config/algorithm.py#L196"
    }
   ],
   "trl": [
@@ -1792,16 +1792,16 @@
     "tier": "option",
     "setting": "vllm_importance_sampling_correction",
     "path": "trl/trainer/grpo_config.py",
-    "line": 925,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L925"
+    "line": 924,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L924"
    },
    {
     "token": "vllm_importance_sampling_correction=True",
     "tier": "conditional_default",
     "setting": "vllm_importance_sampling_correction=True",
     "path": "trl/trainer/grpo_config.py",
-    "line": 925,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L925"
+    "line": 924,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L924"
    }
   ],
   "openrlhf": [
@@ -1821,7 +1821,7 @@
     "setting": "truncated_importance_sampling_ratio",
     "path": "nemo_rl/algorithms/advantage_estimator.py",
     "line": 675,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/advantage_estimator.py#L675"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py#L675"
    }
   ],
   "roll": [
@@ -1831,7 +1831,7 @@
     "setting": "tis",
     "path": "roll/pipeline/agentic/agentic_actor_pg_worker.py",
     "line": 90,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/pipeline/agentic/agentic_actor_pg_worker.py#L90"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/pipeline/agentic/agentic_actor_pg_worker.py#L90"
    },
    {
     "token": "train_infer_correction",
@@ -1839,7 +1839,7 @@
     "setting": "train_infer_correction",
     "path": "roll/configs/base_config.py",
     "line": 632,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/configs/base_config.py#L632"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/configs/base_config.py#L632"
    }
   ],
   "slime": [
@@ -1849,7 +1849,7 @@
     "setting": "--use-tis",
     "path": "slime/utils/arguments.py",
     "line": 1184,
-    "url": "https://github.com/THUDM/slime/blob/859938dcb2b0791dbae9084a4d9ae91a4f38f3b7/slime/utils/arguments.py#L1184"
+    "url": "https://github.com/THUDM/slime/blob/a4202e0595467d9374d9a68d45a34f45c3f8d230/slime/utils/arguments.py#L1184"
    }
   ]
  },
@@ -1861,7 +1861,7 @@
     "setting": "topr",
     "path": "roll/pipeline/agentic/agentic_actor_pg_worker.py",
     "line": 93,
-    "url": "https://github.com/alibaba/ROLL/blob/d96d0cce56ec42c78c7b61e111b596a3a3a008a8/roll/pipeline/agentic/agentic_actor_pg_worker.py#L93"
+    "url": "https://github.com/alibaba/ROLL/blob/d3506ea9e280ae720fb74df9f82db6efac1c72d5/roll/pipeline/agentic/agentic_actor_pg_worker.py#L93"
    }
   ]
  },
@@ -1873,7 +1873,7 @@
     "setting": "seq_max_k",
     "path": "verl/trainer/ppo/rollout_corr_helper.py",
     "line": 87,
-    "url": "https://github.com/volcengine/verl/blob/18cfb74852a053a27dcf301d3318a093be81b628/verl/trainer/ppo/rollout_corr_helper.py#L87"
+    "url": "https://github.com/volcengine/verl/blob/cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3/verl/trainer/ppo/rollout_corr_helper.py#L87"
    }
   ]
  },
@@ -1884,16 +1884,16 @@
     "tier": "option",
     "setting": "use_bias_correction_kl",
     "path": "trl/trainer/grpo_config.py",
-    "line": 972,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L972"
+    "line": 971,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L971"
    },
    {
     "token": "use_bias_correction_kl=True",
     "tier": "conditional_default",
     "setting": "use_bias_correction_kl=True",
     "path": "trl/trainer/grpo_config.py",
-    "line": 972,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_config.py#L972"
+    "line": 971,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_config.py#L971"
    }
   ]
  },
@@ -1905,7 +1905,7 @@
     "setting": "gae_lambda_value",
     "path": "nemo_rl/algorithms/advantage_estimator.py",
     "line": 81,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/advantage_estimator.py#L81"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py#L81"
    },
    {
     "token": "length_adaptive_alpha",
@@ -1913,15 +1913,15 @@
     "setting": "length_adaptive_alpha",
     "path": "nemo_rl/algorithms/advantage_estimator.py",
     "line": 84,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/advantage_estimator.py#L84"
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py#L84"
    },
    {
     "token": "positive_example_nll_weight",
     "tier": "option",
     "setting": "positive_example_nll_weight",
     "path": "nemo_rl/algorithms/loss/loss_functions.py",
-    "line": 229,
-    "url": "https://github.com/NVIDIA-NeMo/RL/blob/83385307ab71b044c7a77d5802c9f2ff0909e002/nemo_rl/algorithms/loss/loss_functions.py#L229"
+    "line": 246,
+    "url": "https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/loss/loss_functions.py#L246"
    }
   ]
  },
@@ -1932,8 +1932,8 @@
     "tier": "core",
     "setting": "vespo",
     "path": "trl/trainer/grpo_trainer.py",
-    "line": 922,
-    "url": "https://github.com/huggingface/trl/blob/6d6901c5e3963108076131ac4979d344566b13a2/trl/trainer/grpo_trainer.py#L922"
+    "line": 948,
+    "url": "https://github.com/huggingface/trl/blob/44bc5acab1abcb71614e470b9be99a9f0300b400/trl/trainer/grpo_trainer.py#L948"
    }
   ]
  }

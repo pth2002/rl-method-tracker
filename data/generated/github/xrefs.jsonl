@@ -317,8 +317,6 @@
 {"framework": "verl", "pr": 7983, "issue": 7975}
 {"framework": "verl", "pr": 7987, "issue": 7978}
 {"framework": "verl", "pr": 7987, "issue": 7136}
-{"framework": "verl", "pr": 8001, "issue": 7950}
-{"framework": "verl", "pr": 8003, "issue": 8000}
 {"framework": "verl", "pr": 8015, "issue": 8011}
 {"framework": "verl", "pr": 8022, "issue": 8021}
 {"framework": "verl", "pr": 8029, "issue": 8028}
@@ -344,6 +342,9 @@
 {"framework": "verl", "pr": 8230, "issue": 8229}
 {"framework": "verl", "pr": 8253, "issue": 7769}
 {"framework": "verl", "pr": 8262, "issue": 8216}
+{"framework": "verl", "pr": 8277, "issue": 7472}
+{"framework": "verl", "pr": 8293, "issue": 8236}
+{"framework": "verl", "pr": 8303, "issue": 8214}
 {"framework": "verl_recipe", "pr": 83, "issue": 5737}
 {"framework": "verl_recipe", "pr": 140, "issue": 139}
 {"framework": "verl_recipe", "pr": 159, "issue": 151}
@@ -1378,6 +1379,20 @@
 {"framework": "trl", "pr": 7777, "issue": 7776}
 {"framework": "trl", "pr": 7784, "issue": 7623}
 {"framework": "trl", "pr": 7785, "issue": 7513}
+{"framework": "trl", "pr": 7789, "issue": 7480}
+{"framework": "trl", "pr": 7793, "issue": 7766}
+{"framework": "trl", "pr": 7796, "issue": 7795}
+{"framework": "trl", "pr": 7797, "issue": 7714}
+{"framework": "trl", "pr": 7803, "issue": 7802}
+{"framework": "trl", "pr": 7807, "issue": 7709}
+{"framework": "trl", "pr": 7807, "issue": 5662}
+{"framework": "trl", "pr": 7810, "issue": 7809}
+{"framework": "trl", "pr": 7813, "issue": 7812}
+{"framework": "trl", "pr": 7815, "issue": 7814}
+{"framework": "trl", "pr": 7817, "issue": 7816}
+{"framework": "trl", "pr": 7820, "issue": 7819}
+{"framework": "trl", "pr": 7842, "issue": 7822}
+{"framework": "trl", "pr": 7842, "issue": 7822}
 {"framework": "openrlhf", "pr": 623, "issue": 622}
 {"framework": "openrlhf", "pr": 648, "issue": 645}
 {"framework": "openrlhf", "pr": 704, "issue": 492}
@@ -1685,6 +1700,7 @@
 {"framework": "nemo-rl", "pr": 4729, "issue": 4707}
 {"framework": "nemo-rl", "pr": 4751, "issue": 4565}
 {"framework": "nemo-rl", "pr": 4755, "issue": 4754}
+{"framework": "nemo-rl", "pr": 4779, "issue": 4768}
 {"framework": "roll", "pr": 313, "issue": 5}
 {"framework": "roll", "pr": 353, "issue": 337}
 {"framework": "roll", "pr": 396, "issue": 395}

@@ -1,8 +1,8 @@
 {
   "verl": {
     "url": "https://github.com/volcengine/verl",
-    "head_sha": "18cfb74852a053a27dcf301d3318a093be81b628",
-    "head_date": "2026-10-16",
+    "head_sha": "cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3",
+    "head_date": "2026-10-20",
     "surfaces": {
       "adv_estimator": [
         "gae",
@@ -112,8 +112,8 @@
   },
   "trl": {
     "url": "https://github.com/huggingface/trl",
-    "head_sha": "6d6901c5e3963108076131ac4979d344566b13a2",
-    "head_date": "2026-10-16",
+    "head_sha": "44bc5acab1abcb71614e470b9be99a9f0300b400",
+    "head_date": "2026-10-20",
     "surfaces": {
       "trainer": [
         "base",
@@ -218,8 +218,8 @@
   },
   "nemo-rl": {
     "url": "https://github.com/NVIDIA-NeMo/RL",
-    "head_sha": "83385307ab71b044c7a77d5802c9f2ff0909e002",
-    "head_date": "2026-10-17",
+    "head_sha": "a7a4483547fcb20a746419c47cb9dd536b347f29",
+    "head_date": "2026-10-21",
     "surfaces": {
       "adv_estimator": [
         "gdpo",
@@ -259,8 +259,8 @@
   },
   "roll": {
     "url": "https://github.com/alibaba/ROLL",
-    "head_sha": "d96d0cce56ec42c78c7b61e111b596a3a3a008a8",
-    "head_date": "2026-10-13",
+    "head_sha": "d3506ea9e280ae720fb74df9f82db6efac1c72d5",
+    "head_date": "2026-10-19",
     "surfaces": {
       "adv_estimator": [
         "agentic_reinforce",
@@ -309,8 +309,8 @@
   },
   "slime": {
     "url": "https://github.com/THUDM/slime",
-    "head_sha": "859938dcb2b0791dbae9084a4d9ae91a4f38f3b7",
-    "head_date": "2026-10-17",
+    "head_sha": "a4202e0595467d9374d9a68d45a34f45c3f8d230",
+    "head_date": "2026-10-19",
     "surfaces": {
       "adv_estimator": [
         "cispo",
@@ -339,8 +339,8 @@
   },
   "areal": {
     "url": "https://github.com/inclusionAI/AReaL",
-    "head_sha": "bb13e3bdb9a865608eafa017a70a790124c3d3bb",
-    "head_date": "2026-10-16",
+    "head_sha": "18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6",
+    "head_date": "2026-10-21",
     "surfaces": {
       "options": [
         "binary_kl",
