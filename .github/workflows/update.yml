@@ -18,7 +18,6 @@ permissions:
   contents: write
   pull-requests: write
   issues: write
-  pages: write
 
 concurrency:
   group: weekly-update
@@ -120,8 +119,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh pr merge "${{ steps.pr.outputs.pull-request-number }}" --repo "$REPO" --squash --delete-branch
-          # a merge made with this token may not start a Pages build by itself
-          gh api -X POST "repos/$REPO/pages/builds" > /dev/null
 
       - name: Flag a refresh that needs review
         if: steps.pr.outputs.pull-request-number != '' && steps.summary.outputs.clean != 'true'
