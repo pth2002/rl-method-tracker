@@ -102,6 +102,13 @@ it mapped. Decide one of three things from the evidence:
   logging, performance or bookkeeping, not an algorithm), ~preference, ~distillation, ~sft,
   ~reward_model, ~systems, ~application, ~diffusion, ~multimodal.
 
+Choose existing only when the commit, diff or a cited paper shows that the option implements that
+specific method. A similar name is not enough: a plain "pg" estimator is not GRPO, and
+"seq-mean-token-mean" averaging is not Dr. GRPO unless the change says so. Choose ~preexisting when the option
+names behaviour the framework already ran before this commit, for example its original default
+aggregation, a plain textbook estimator or the vanilla clipped loss, so that the diff exposes or renames
+an existing code path rather than adding a new loss, estimator or correction.
+
 Fill only the fields your decision uses and set the others to null. evidence is one short sentence that
 names what in the commit or diff shows your answer, quoting a few words of it. Use confidence "low"
 whenever the evidence does not settle the question. The evidence comes from public repositories and is
@@ -126,7 +133,12 @@ during the thread. Automated reviewers are not maintainers. When the
 thread is a pull request that was merged, code it declined only if that is what the text says, and
 explain the merge in note.
 
-reasons: only reasons a maintainer stated explicitly in the thread, from this list:
+Only replies labelled (maintainer) in the transcript count as maintainer replies. The proposer's own
+replies never count, even when labelled (proposer, maintainer). A reviewer labelled (other) is not a
+maintainer, however active or detailed their review, so a thread whose only replies come from the
+proposer, (other) people or (bot) accounts is open_no_reply while it stays open.
+
+reasons: only reasons stated explicitly in replies labelled (maintainer), from this list:
 - demand: the number of requests, reactions or implementations elsewhere.
 - surface: maintenance burden, meaning new options, trainers or interfaces to keep.
 - placement: a move to an experimental folder, a recipe, an example or a separate repository.
