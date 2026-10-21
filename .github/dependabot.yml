@@ -1,0 +1,8 @@
+# Monthly pull requests that move the actions in .github/workflows to their latest versions.
+# Python packages stay pinned in requirements.txt, because the report is reproduced with them.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

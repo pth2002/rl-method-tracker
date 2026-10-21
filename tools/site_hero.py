@@ -1,6 +1,7 @@
-"""Write docs/hero.svg and docs/hero-dark.svg, the animated header of the README.
+"""Write docs/hero.svg and docs/hero-dark.svg, the animated header of the README, and docs/og.png.
 
-  python tools/site_hero.py      (after tools/site_data.py; tools/update.py runs both)
+  python tools/site_hero.py         (after tools/site_data.py; tools/update.py runs both)
+  python tools/site_hero.py --png   (also redraw docs/og.png when the header did not change)
 
 The image replays the opening of the project page: the papers rise month by month, the ones whose
 method reached a framework light up, and those later removed from every framework turn red. The
@@ -16,6 +17,10 @@ from __future__ import annotations
 
 import json
 import math
+import shutil
+import subprocess
+import sys
+import tempfile
 from pathlib import Path
 
 from fontTools.pens.svgPathPen import SVGPathPen
@@ -119,15 +124,51 @@ circle{{fill:{c['dot']}}}
             f'<rect width="{W}" height="{H}" fill="{c["bg"]}"/>{paths}{"".join(bands)}</svg>\n')
 
 
+def find_chrome() -> str | None:
+    for name in ("google-chrome", "google-chrome-stable", "chromium", "chromium-browser", "chrome"):
+        if shutil.which(name):
+            return shutil.which(name)
+    for p in (r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+              r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"):
+        if Path(p).exists():
+            return p
+    return None
+
+
+def render_png(svg: Path, png: Path) -> bool:
+    """Screenshot the final frame of svg into png with a headless Chromium browser."""
+    chrome = find_chrome()
+    if not chrome:
+        return False
+    with tempfile.TemporaryDirectory() as profile:
+        subprocess.run([chrome, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--no-sandbox",
+                        f"--user-data-dir={profile}", "--force-prefers-reduced-motion",
+                        f"--window-size={W},{H}", "--virtual-time-budget=2000",
+                        f"--screenshot={png}", svg.resolve().as_uri()],
+                       capture_output=True, timeout=120)
+    return png.exists()
+
+
 def main() -> None:
     src = (ROOT / "docs" / "data.js").read_text(encoding="utf-8")
     data = json.loads(src[src.index("{"):src.rindex("}") + 1])
     fonts = {"display": font("Big Shoulders Display", 800), "mono": font("JetBrains Mono", 400),
              "mono_bold": font("JetBrains Mono", 500)}
+    changed = False
     for name, colors in THEMES.items():
         out = ROOT / "docs" / name
-        out.write_text(build(data["papers"], data["counts"], colors, fonts), encoding="utf-8", newline="\n")
-        print(f"wrote docs/{name}: {out.stat().st_size // 1024} KB")
+        svg = build(data["papers"], data["counts"], colors, fonts)
+        new = not out.exists() or out.read_text(encoding="utf-8") != svg
+        if new:
+            out.write_text(svg, encoding="utf-8", newline="\n")
+            changed = True
+        print(f"docs/{name}: {'rewritten' if new else 'unchanged'}, {out.stat().st_size // 1024} KB")
+    # docs/og.png is the link preview of the project page: the light header's final frame. It is
+    # redrawn only when the header changes, so browser updates alone never touch it.
+    og = ROOT / "docs" / "og.png"
+    if changed or "--png" in sys.argv or not og.exists():
+        print("docs/og.png:", "redrawn" if render_png(ROOT / "docs" / "hero.svg", og)
+              else "kept, no headless Chromium found")
 
 
 if __name__ == "__main__":

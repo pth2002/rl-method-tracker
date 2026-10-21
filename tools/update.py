@@ -3,17 +3,20 @@ rebuild the tables, the index, the project page data and the README header, then
 
   python tools/update.py            # use cached clones
   python tools/update.py --fetch    # pull the latest commits first (what CI runs)
-  python tools/update.py --fetch --record
+  python tools/update.py --fetch --record --snapshot YYYY-MM-DD
                                     # also refresh the public record of proposals (GitHub API, slow)
 
 With --record, threads that propose a non-included general method and are not yet coded are listed
 in data/generated/process/uncoded_threads.jsonl for a person to code.
+Without --snapshot the analysis retains the report v1 date; weekly runs pass their UTC collection date.
 """
 from __future__ import annotations
 
+import argparse
 import subprocess
 import sys
 from pathlib import Path
+from process_rules import V1_SNAPSHOT, snapshot_date
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,25 +27,42 @@ def run(*args: str) -> None:
 
 
 def main() -> int:
-    fetch = ["--fetch"] if "--fetch" in sys.argv else []
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--fetch", action="store_true")
+    parser.add_argument("--record", action="store_true")
+    parser.add_argument("--snapshot", type=snapshot_date, default=V1_SNAPSHOT)
+    args = parser.parse_args()
+    fetch = ["--fetch"] if args.fetch else []
     run("collectors/frameworks.py", *fetch)
     run("collectors/papers.py")
-    run("tools/impl_links.py")
-    run("tools/summary.py")
-    if "--record" in sys.argv:
-        run("tools/adoption_rate.py")
+    rebuild_adoption()
+    if args.record:
         run("collectors/code_citations.py")
         run("collectors/github_threads.py", "--refresh")
         run("collectors/github_index.py")
         run("collectors/github_mergers.py")
         run("collectors/github_prs.py")
-        run("tools/process_analysis.py", "--build-facts")
-        list_uncoded()
-    run("tools/frameworks_doc.py")
-    run("tools/framework_profiles.py")
-    run("tools/site_data.py")
-    run("tools/site_hero.py")
-    return subprocess.run([sys.executable, "tools/validate.py"], cwd=ROOT).returncode
+        rebuild_process(args.snapshot)
+    rebuild_pages()
+    # 3 means the refresh finished and validation found problems; a crash exits with 1
+    return 3 if subprocess.run([sys.executable, "tools/validate.py"], cwd=ROOT).returncode else 0
+
+
+def rebuild_adoption() -> None:
+    """Shared by a refresh and by draft mappings, before selecting proposal threads."""
+    run("tools/impl_links.py")
+    run("tools/summary.py")
+    run("tools/adoption_rate.py")
+
+
+def rebuild_process(snapshot: str) -> None:
+    run("tools/process_analysis.py", "--build-facts", "--snapshot", snapshot)
+    list_uncoded()
+
+
+def rebuild_pages() -> None:
+    for script in ("frameworks_doc", "framework_profiles", "site_data", "site_hero"):
+        run(f"tools/{script}.py")
 
 
 def list_uncoded() -> None:
@@ -59,9 +79,13 @@ def list_uncoded() -> None:
                 and (m["framework"], m["number"]) not in known):
             new[(m["framework"], m["number"])] = m
     out = gen / "process" / "uncoded_threads.jsonl"
+    blocked = {(u["framework"], u["number"]): u["draft_blocked"] for u in jl(out) if u.get("draft_blocked")}
     with out.open("w", encoding="utf-8") as f:
         for m in new.values():
-            f.write(json.dumps({k: m[k] for k in ("arxiv", "framework", "kind", "number", "date", "url")}) + "\n")
+            row = {k: m[k] for k in ("arxiv", "framework", "kind", "number", "date", "url")}
+            if (m["framework"], m["number"]) in blocked:
+                row["draft_blocked"] = blocked[(m["framework"], m["number"])]
+            f.write(json.dumps(row) + "\n")
     print(f"{len(new)} uncoded proposal threads -> {out.relative_to(ROOT)}")
 
 

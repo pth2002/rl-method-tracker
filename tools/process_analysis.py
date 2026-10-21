@@ -12,6 +12,7 @@ Writes data/generated/process/summary.json and landings.jsonl, and prints the ma
 
   python tools/process_analysis.py                  # from the files above
   python tools/process_analysis.py --build-facts    # first rebuild pr_facts and attempt_replies from the download cache
+  python tools/process_analysis.py --snapshot YYYY-MM-DD  # explicit date for a weekly collection
 
 Units
   paper         a general method from the pool
@@ -28,6 +29,7 @@ Definitions
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import statistics
@@ -35,6 +37,8 @@ import sys
 from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
+import yaml
+from process_rules import BOT, V1_SNAPSHOT, build_prior_merger, snapshot_date
 
 ROOT = Path(__file__).resolve().parents[1]
 GEN = ROOT / "data" / "generated"
@@ -42,9 +46,7 @@ OUT = GEN / "process"
 sys.path.insert(0, str(ROOT / "collectors"))
 from github_threads import CACHE, REPOS  # noqa: E402
 
-BOT = re.compile(r"\[bot\]$|^(copilot|gemini-code-assist|coderabbitai|CLAassistant|HuggingFaceDocBuilderDev|"
-                 r"github-actions|copy-pr-bot|cursor)", re.I)
-SNAPSHOT = "2026-10-18"
+SNAPSHOT = V1_SNAPSHOT  # default remains the report v1 reproduction date
 DEP_FILES = re.compile(r"(^|/)(requirements[^/]*\.txt|setup\.py|setup\.cfg|pyproject\.toml|environment\.ya?ml|uv\.lock)$")
 FACTS = GEN / "github" / "pr_facts.jsonl"
 REPLIES = OUT / "attempt_replies.jsonl"
@@ -168,7 +170,7 @@ def core_lines(repo: str, det: dict) -> int:
 REVIEW_FIELDS = ["design", "completeness", "evidence", "placement", "surface", "demand", "covered", "priority"]
 
 
-def review_comparison(attempts: list[dict]) -> dict:
+def review_comparison(attempts: list[dict], snapshot: str = SNAPSHOT) -> dict:
     """Same-field coding of merged landing pull requests and of proposals for non-included methods.
 
     A concern is an explicit objection raised by someone other than the proposer at any point in the
@@ -181,6 +183,8 @@ def review_comparison(attempts: list[dict]) -> dict:
     # a reason a maintainer stated is a concern someone raised, so the two codings must nest
     raised = {r["thread_id"]: set(r["concerns_raised"]) for r in others}
     for a in attempts:
+        if f"{a['framework']}#{a['number']}" not in raised:
+            continue  # new weekly records are outside the fixed paired-review sample
         extra = set(a["reasons"]) - raised.get(f"{a['framework']}#{a['number']}", set())
         if extra:
             raise SystemExit(f"{a['framework']}#{a['number']}: stated reasons {sorted(extra)} missing from concerns_raised")
@@ -189,17 +193,14 @@ def review_comparison(attempts: list[dict]) -> dict:
               "request": [r for r in others if kind.get(r["thread_id"]) == "request"]}
     facts = {(r["framework"], r["number"]): r for r in jl(FACTS)}
     threads = {(t["framework"], t["number"]): t for t in jl(GEN / "github" / "threads.jsonl")}
-    first_merge: dict[tuple[str, str], str] = {}
-    for p in jl(GEN / "github" / "merged_prs.jsonl"):
-        if p["merged_by"] and p["merged"]:
-            k = (p["framework"], p["merged_by"])
-            first_merge[k] = min(first_merge.get(k, "9"), p["merged"])
+    prior_merger = build_prior_merger(jl(GEN / "github" / "merged_prs.jsonl"))
 
     def thread_end(fw: str, n: int) -> str:
         f = facts.get((fw, n))
         if f:
-            return f.get("merged_at") or f.get("closed_at") or SNAPSHOT + "T23:59:59Z"
-        return (threads.get((fw, n), {}).get("closed") or SNAPSHOT) + "T23:59:59Z"
+            return f.get("merged_at") or f.get("closed_at") or snapshot + "T23:59:59Z"
+        closed = threads.get((fw, n), {}).get("closed") or snapshot
+        return closed if "T" in closed else closed + "T23:59:59Z"
 
     def stats(rows: list[dict]) -> dict:
         out = {"n": len(rows),
@@ -220,7 +221,7 @@ def review_comparison(attempts: list[dict]) -> dict:
         for r in with_c:
             fw, n = r["thread_id"].split("#")
             end = thread_end(fw, int(n))
-            pm += any(first_merge.get((fw, u), "9") < end for u in r["raised_by"])
+            pm += any(prior_merger(fw, u, end) for u in r["raised_by"])
         out["concern_by_prior_merger"] = pm
         return out
 
@@ -234,7 +235,7 @@ def review_comparison(attempts: list[dict]) -> dict:
 
 
 # ---------------------------------------------------------------- analysis
-def main() -> None:
+def main(snapshot: str = SNAPSHOT) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     pool = {r["arxiv"]: r for r in jl(GEN / "pool_adoption.jsonl")}
     strict = {a for a, r in pool.items() if r["strict_general"]}
@@ -245,17 +246,7 @@ def main() -> None:
     attempts = jl(OUT / "attempts_coded.jsonl")
     replies = {(r["framework"], r["number"]): r for r in jl(REPLIES)}
 
-    # prior mergers, by full UTC timestamp
-    first_merge: dict[tuple[str, str], str] = {}
-    for p in jl(GEN / "github" / "merged_prs.jsonl"):
-        if p["merged_by"] and p["merged"]:
-            k = (p["framework"], p["merged_by"])
-            if k not in first_merge or p["merged"] < first_merge[k]:
-                first_merge[k] = p["merged"]
-
-    def prior_merger(fw: str, login: str | None, when: str) -> bool:
-        t = first_merge.get((fw, login)) if login else None
-        return t is not None and t < when
+    prior_merger = build_prior_merger(jl(GEN / "github" / "merged_prs.jsonl"))
 
     # ---- funnel over the strict general denominator
     rec = defaultdict(list)
@@ -302,7 +293,7 @@ def main() -> None:
     # ---- proposal threads: outcomes, stated reasons, and who replied
     for a in attempts:
         r = replies.get((a["framework"], a["number"]), {"proposer": None, "replies": []})
-        others = [x for x in r["replies"] if x["user"] != r["proposer"] and x["at"][:10] <= SNAPSHOT]
+        others = [x for x in r["replies"] if x["user"] != r["proposer"] and x["at"][:10] <= snapshot]
         a["any_human_reply"] = bool(others)
         a["prior_merger_reply"] = any(prior_merger(a["framework"], x["user"], x["at"]) for x in others)
     pr_outcomes = Counter(x["outcome"] for x in attempts if x["type"] == "pr")
@@ -312,11 +303,9 @@ def main() -> None:
 
     # ---- landings of recent methods and the pull requests behind them
     repo_of = {e["sha"][:10]: e["framework"] for e in jl(GEN / "framework_events.jsonl")}
-    methods_src = {}
-    for chunk in (ROOT / "data" / "methods.yaml").read_text(encoding="utf-8").split("\n- id: ")[1:]:
-        m = re.search(r'arxiv:\s*"([\d.]+)"', chunk)
-        if m:
-            methods_src[chunk.split("\n", 1)[0].strip()] = m.group(1)
+    methods_src = {m["id"]: m["source"]["arxiv"]
+                   for m in yaml.safe_load((ROOT / "data" / "methods.yaml").read_text(encoding="utf-8"))
+                   if m.get("source", {}).get("arxiv")}
     cc = {}
     for f in ("cc_v1_filled.jsonl", "cc_v1_audit_added.jsonl"):
         for g in jl(GEN / "casecontrol" / f):
@@ -381,7 +370,7 @@ def main() -> None:
         det = pr_detail(x["framework"], x["number"])
         if det:
             p = det["pull"]
-            end = (p.get("closed_at") or SNAPSHOT)[:10]
+            end = (p.get("closed_at") or snapshot)[:10]
             att_fp.append({**x, **footprint(det), "core_lines": core_lines(x["framework"], det),
                            "age_days": days(p["created_at"], end), "is_open": p.get("state") == "open"})
 
@@ -436,7 +425,7 @@ def main() -> None:
             "attempts_stale": sum(x["outcome"] in ("stale_cleanup", "closed_inactive") for x in xs),
             "attempts_withdrawn": sum(x["outcome"] in ("withdrawn", "closed_no_comment") for x in xs),
         }
-    summary["review"] = review_comparison(attempts)
+    summary["review"] = review_comparison(attempts, snapshot)
     (OUT / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False), encoding="utf-8")
     print(json.dumps({k: v for k, v in summary.items() if k != "by_framework"}, indent=1, ensure_ascii=False))
     for fw, v in summary["by_framework"].items():
@@ -444,6 +433,11 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    if "--build-facts" in sys.argv:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--build-facts", action="store_true")
+    parser.add_argument("--snapshot", type=snapshot_date, default=SNAPSHOT,
+                        help="analysis date; defaults to report v1, weekly runs must pass their collection date")
+    args = parser.parse_args()
+    if args.build_facts:
         build_facts()
-    main()
+    main(args.snapshot)

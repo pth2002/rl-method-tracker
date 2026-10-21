@@ -1,4 +1,12 @@
-# Weekly refresh. Opens a pull request with any change; nothing lands without a human merge.
+# Weekly refresh. Automatic merging is off until WEEKLY_AUTO_MERGE is explicitly set to true.
+#
+# Clean means the refresh finished, validation passed, every framework option has a mapping, no new
+# proposal thread waits for a code and nothing was drafted (tools/weekly_summary.py decides and writes
+# the pull request body). With an LLM_API_KEY secret, tools/draft_reviews.py first drafts the
+# missing mappings and codes into the pull request for a person to confirm. A refresh that needs a
+# person keeps its pull request open, labelled "needs review" and assigned to the owner, and later
+# runs wait until it is merged or closed, so edits made on its branch survive. A failed run opens
+# an issue, including a failure after its pull request was opened.
 name: weekly-update
 
 on:
@@ -9,34 +17,128 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
+  pages: write
+
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    # GH_TOKEN and LLM_API_KEY are given only to the steps that call GitHub or the model, so that
+    # installing packages and other steps never see them
+    env:
+      REPO: ${{ github.repository }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Wait for a pending review
+        id: pending
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh pr list --repo "$REPO" --head auto/weekly-update --state open --json number --jq '.[0].number // empty')
+          if [ -n "$n" ]; then
+            echo "Pull request #$n still needs review, so this run makes no changes."
+            echo "number=$n" >> "$GITHUB_OUTPUT"
+          fi
+
+      - if: steps.pending.outputs.number == ''
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - if: steps.pending.outputs.number == ''
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt
-      - uses: actions/cache@v4
+      - if: steps.pending.outputs.number == ''
+        run: pip install -r requirements.txt
+      - name: Offline regression checks
+        if: steps.pending.outputs.number == ''
+        run: python -m unittest discover -s tests -q
+      - if: steps.pending.outputs.number == ''
+        uses: actions/cache@v4
         with:
           path: .cache/repos
           key: framework-clones-${{ github.run_id }}
           restore-keys: framework-clones-
+
+      - name: Set the collection date
+        id: collection
+        if: steps.pending.outputs.number == ''
+        run: echo "snapshot=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
       - name: Refresh data
         id: refresh
+        if: steps.pending.outputs.number == ''
+        # exit code 0: clean, 3: validation found problems, anything else: the refresh crashed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          python tools/update.py --fetch --record --snapshot "${{ steps.collection.outputs.snapshot }}"
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Draft judgments with a language model
+        id: draft
+        # does nothing until the repository has an LLM_API_KEY secret; LLM_BASE_URL and LLM_MODEL are
+        # optional repository variables for the endpoint and language model
+        if: steps.refresh.outputs.rc == '0' || steps.refresh.outputs.rc == '3'
         continue-on-error: true
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python tools/update.py --fetch --record
-      - uses: peter-evans/create-pull-request@v6
+          GH_TOKEN: ${{ github.token }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        run: python tools/draft_reviews.py --snapshot "${{ steps.collection.outputs.snapshot }}"
+
+      - name: Summarise the changes
+        id: summary
+        if: steps.pending.outputs.number == ''
+        run: >-
+          python tools/weekly_summary.py --refresh-rc "${{ steps.refresh.outputs.rc }}"
+          --auto-merge-enabled "${{ vars.WEEKLY_AUTO_MERGE }}"
+          --draft-outcome "${{ steps.draft.outcome }}" --out "${{ runner.temp }}/summary.md"
+
+      - name: Open the pull request
+        id: pr
+        if: steps.pending.outputs.number == ''
+        uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ github.token }}
           branch: auto/weekly-update
+          delete-branch: true
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           title: "Weekly update: framework history and index"
           commit-message: "Weekly update of framework history and index"
-          body: |
-            Automated refresh. Review before merging:
-            - `data/generated/unmapped.json` lists new framework options that need a line in `config/token_map.yaml`.
-            - `data/generated/process/uncoded_threads.jsonl` lists new proposal threads to code into `attempts_coded.jsonl`.
-            - Validation ${{ steps.refresh.outcome == 'success' && 'passed' || 'FAILED, see the job log' }}.
+          body-path: ${{ runner.temp }}/summary.md
+
+      - name: Merge a clean refresh
+        if: steps.pr.outputs.pull-request-number != '' && steps.summary.outputs.clean == 'true' && vars.WEEKLY_AUTO_MERGE == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr merge "${{ steps.pr.outputs.pull-request-number }}" --repo "$REPO" --squash --delete-branch
+          # a merge made with this token may not start a Pages build by itself
+          gh api -X POST "repos/$REPO/pages/builds" > /dev/null
+
+      - name: Flag a refresh that needs review
+        if: steps.pr.outputs.pull-request-number != '' && steps.summary.outputs.clean != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create "needs review" --repo "$REPO" --color C4322B --description "Weekly update that needs a person" --force
+          gh pr edit "${{ steps.pr.outputs.pull-request-number }}" --repo "$REPO" --add-label "needs review" --add-assignee "${{ github.repository_owner }}"
+
+      - name: Report a failed run
+        if: >-
+          always() && steps.pending.outputs.number == '' &&
+          (failure() || steps.draft.outcome == 'failure' ||
+          (steps.refresh.outputs.rc != '0' && steps.refresh.outputs.rc != '3'))
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "$REPO" --assignee "${{ github.repository_owner }}" \
+            --title "Weekly update failed on $(date -u +%F)" \
+            --body "The weekly update failed. Pull request number (if created): ${{ steps.pr.outputs.pull-request-number }}. Check partial data, review labels, merge and Pages status before continuing. Log: ${{ github.server_url }}/$REPO/actions/runs/${{ github.run_id }}"

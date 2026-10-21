@@ -138,8 +138,35 @@ from `GH_TOKEN` or from the GitHub CLI after `gh auth login`.
 
 Every Monday a GitHub Action pulls each framework, re-traces its history and opens a pull request
 with the changes. The pull request also redraws the header image and rewrites the project page data
-and the two tables above. Nothing reaches `main` without a person merging it. The arXiv pool and its
-labels are fixed for each report version.
+and the two tables above. Its description lists the new landings, the methods that left a framework
+and anything that needs a person. Automatic merging is disabled by default. After the first real run
+has been reviewed, set the repository variable `WEEKLY_AUTO_MERGE` to `true` to let updates merge when
+validation passes and nothing needs judgment. Otherwise the pull request stays open for review.
+Later runs wait for any open pull request on `auto/weekly-update`, regardless of its labels, until it
+is merged or closed. The arXiv pool and its labels are fixed for each report version.
+
+Two kinds of record need judgment: a new framework option that no mapping covers, and a new public
+proposal for a method that no framework includes. When the repository has an `LLM_API_KEY`
+secret, `tools/draft_reviews.py` asks a language model to draft both from the commit or thread they concern,
+under the same rules as the report's coding. The drafts go into the pull request with their evidence,
+and drafted proposal codes carry `"coder": "draft"`. Such a pull request never merges itself, so a
+person confirms every draft. The language model is reached through an OpenAI-compatible endpoint;
+the repository variables `LLM_BASE_URL` and `LLM_MODEL` override its endpoint and model.
+Each weekly run considers at most 12 items across both kinds, with at most two model requests per item.
+Incomplete or oversized threads stay in the manual queue. Draft writes are journaled before files
+change, so a failed run also lists pending writes for inspection.
+Mapping insertion checks that every other mapping stays unchanged. Edits to shared YAML anchors that
+would also change another framework are left for a person.
+The manual workflow `draft-selftest` is a smoke test: eight coded threads and six options, including
+two with their source papers' catalog entries hidden to exercise adding a new method. It changes no
+project data. Its agreement counts do not establish coding accuracy or enable automatic merging.
+
+Weekly runs pass one UTC collection date with `--snapshot YYYY-MM-DD` to both `tools/update.py` and
+`tools/draft_reviews.py`. Direct runs of `tools/process_analysis.py` default to `2026-10-18` for report
+v1 reproduction; `--snapshot` selects another analysis date explicitly. Reproduce v1 using its frozen
+input data as well as its date.
+Run `python -m unittest discover -s tests -v` for the offline regression suite. Both workflows run
+these checks before collecting data or requesting drafts.
 
 <details>
 <summary><b>How inclusion is measured</b></summary>
@@ -244,10 +271,12 @@ algorithm documentation. Adding `--record` also refreshes the public record of p
 GitHub API, which takes a few hours, and lists new proposal threads in
 `data/generated/process/uncoded_threads.jsonl`.
 
-Before merging the weekly pull request, the reviewer maps any new option in `unmapped.json` to a
-method in `config/token_map.yaml`, adding the method to `data/methods.yaml` when it is new, codes any
-new proposal in `uncoded_threads.jsonl`, and checks that validation passed. A new report version
-extends the arXiv pool and its labels, and each version gets its own tag, release and Zenodo DOI.
+A weekly pull request stays open when a person has to map a new option in `unmapped.json` to a method
+in `config/token_map.yaml`, adding the method to `data/methods.yaml` when it is new, code a new
+proposal in `uncoded_threads.jsonl`, or fix a failed validation. `tools/weekly_summary.py` writes
+these items as a checklist into the pull request. A new
+report version extends the arXiv pool and its labels, and each version gets its own tag, release and
+Zenodo DOI.
 
 </details>
 

@@ -1,0 +1,39 @@
+# Manual smoke test of language-model drafting. It redrafts eight proposal threads and six options,
+# including methods hidden from the catalog to exercise new-method drafts. It writes no project data.
+# It puts the comparison in the run summary. Run it after
+# setting the LLM_API_KEY secret or changing LLM_MODEL, from the Actions tab or with
+#   gh workflow run draft-selftest
+name: draft-selftest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Offline regression checks
+        run: python -m unittest discover -s tests -q
+      # the framework clones from the last weekly run, so option drafts can read their diffs
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cache/repos
+          key: framework-clones-none
+          restore-keys: framework-clones-
+      - name: Redraft coded records
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        run: python tools/draft_reviews.py --selftest
