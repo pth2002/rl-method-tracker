@@ -35,9 +35,12 @@ def pool_ids() -> set[str]:
 
 
 def scan(fw: str, ids: set[str]) -> list[dict]:
+    # --no-textconv keeps binary files such as PDFs out of the scan on every platform. Git for Windows
+    # converts PDFs to text by default, so without it a local run and the weekly run disagree.
     repo = REPOS / fw
     cmd = ["git", "-C", str(repo), "log", "--first-parent", "--diff-merges=first-parent", "--reverse",
-           "-p", "--unified=0", "--no-color", "--no-ext-diff", "--format=@@COMMIT%x09%H%x09%cs%x09%an%x09%s", "HEAD"]
+           "-p", "--unified=0", "--no-color", "--no-ext-diff", "--no-textconv",
+           "--format=@@COMMIT%x09%H%x09%cs%x09%an%x09%s", "HEAD"]
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, encoding="utf-8", errors="replace")
     first: dict[tuple[str, str], dict] = {}
     sha = date = author = subject = path = None
