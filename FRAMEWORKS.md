@@ -141,15 +141,15 @@ Public proposals for methods that no framework included:
 
 ## NeMo-RL
 
-Repository: https://github.com/NVIDIA-NeMo/RL (snapshot `a7a4483547`, 2026-10-21)
+Repository: https://github.com/NVIDIA-NeMo/RL (snapshot `62d6d3f020`, 2026-10-21)
 
-Contribution rules: [CONTRIBUTING.md](https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/AGENTS.md)
+Contribution rules: [CONTRIBUTING.md](https://github.com/NVIDIA-NeMo/RL/blob/62d6d3f020c9be76e7b62abf11fb51f5ee1bbe73/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/NVIDIA-NeMo/RL/blob/62d6d3f020c9be76e7b62abf11fb51f5ee1bbe73/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/NVIDIA-NeMo/RL/blob/62d6d3f020c9be76e7b62abf11fb51f5ee1bbe73/AGENTS.md)
 
 Where RL algorithms live:
 
-- advantage estimators (core): [`nemo_rl/algorithms/advantage_estimator.py`](https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/advantage_estimator.py)
-- configuration switches (option): [`nemo_rl`](https://github.com/NVIDIA-NeMo/RL/tree/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl)
-- listed code changes (conditional default): [`nemo_rl/algorithms/loss/loss_functions.py`](https://github.com/NVIDIA-NeMo/RL/blob/a7a4483547fcb20a746419c47cb9dd536b347f29/nemo_rl/algorithms/loss/loss_functions.py)
+- advantage estimators (core): [`nemo_rl/algorithms/advantage_estimator.py`](https://github.com/NVIDIA-NeMo/RL/blob/62d6d3f020c9be76e7b62abf11fb51f5ee1bbe73/nemo_rl/algorithms/advantage_estimator.py)
+- configuration switches (option): [`nemo_rl`](https://github.com/NVIDIA-NeMo/RL/tree/62d6d3f020c9be76e7b62abf11fb51f5ee1bbe73/nemo_rl)
+- listed code changes (conditional default): [`nemo_rl/algorithms/loss/loss_functions.py`](https://github.com/NVIDIA-NeMo/RL/blob/62d6d3f020c9be76e7b62abf11fb51f5ee1bbe73/nemo_rl/algorithms/loss/loss_functions.py)
 
 How recent methods came in: 13 pull requests brought methods with a source from 2025 or later into NeMo-RL. Prior mergers opened 2 of them, and the median time from opening to merge was 17 days.
 

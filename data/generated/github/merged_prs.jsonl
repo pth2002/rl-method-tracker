@@ -8882,6 +8882,7 @@
 {"framework": "nemo-rl", "number": 3279, "merged": "2026-07-18T06:26:12Z", "author": "svcnvidia-nemo-ci", "merged_by": "chtruong814"}
 {"framework": "nemo-rl", "number": 3280, "merged": "2026-07-30T21:59:08Z", "author": "terrykong", "merged_by": "terrykong"}
 {"framework": "nemo-rl", "number": 3281, "merged": "2026-08-29T06:55:32Z", "author": "seonjinn", "merged_by": "terrykong"}
+{"framework": "nemo-rl", "number": 3286, "merged": "2026-10-21T06:32:16Z", "author": "avenkateshha", "merged_by": "yuki-97"}
 {"framework": "nemo-rl", "number": 3290, "merged": "2026-08-05T09:11:50Z", "author": "aroshanghias-nvd", "merged_by": "yfw"}
 {"framework": "nemo-rl", "number": 3291, "merged": "2026-07-20T20:58:16Z", "author": "kajalj22", "merged_by": "terrykong"}
 {"framework": "nemo-rl", "number": 3292, "merged": "2026-07-30T05:45:41Z", "author": "zyzhou5", "merged_by": "terrykong"}
@@ -9467,6 +9468,7 @@
 {"framework": "nemo-rl", "number": 4745, "merged": "2026-10-16T18:15:08Z", "author": "zyzhou5", "merged_by": "terrykong"}
 {"framework": "nemo-rl", "number": 4746, "merged": "2026-10-20T17:45:23Z", "author": "ZhiyuLi-Nvidia", "merged_by": "terrykong"}
 {"framework": "nemo-rl", "number": 4750, "merged": "2026-10-20T23:05:39Z", "author": "smahdavi4", "merged_by": "terrykong"}
+{"framework": "nemo-rl", "number": 4752, "merged": "2026-10-21T06:01:30Z", "author": "cspades", "merged_by": "terrykong"}
 {"framework": "nemo-rl", "number": 4753, "merged": "2026-10-19T19:59:58Z", "author": "zyzhou5", "merged_by": "terrykong"}
 {"framework": "nemo-rl", "number": 4756, "merged": "2026-10-17T07:00:23Z", "author": "joyang-nv", "merged_by": "yuki-97"}
 {"framework": "nemo-rl", "number": 4757, "merged": "2026-10-16T17:37:38Z", "author": "scsudhakaran", "merged_by": "scsudhakaran"}
