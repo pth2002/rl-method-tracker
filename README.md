@@ -25,6 +25,7 @@
 <p align="center">
   <a href="https://arxiv.org/abs/2610.28027"><img alt="arXiv 2610.28027" src="https://img.shields.io/badge/arXiv-2610.28027-128A43?labelColor=16181D"></a>
   <a href="https://doi.org/10.5281/zenodo.23495743"><img alt="DOI 10.5281/zenodo.23495743" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23495743-128A43?labelColor=16181D"></a>
+  <a href="https://huggingface.co/datasets/Purdy0228/rl-method-tracker"><img alt="Dataset on Hugging Face" src="https://img.shields.io/badge/dataset-Hugging%20Face-128A43?labelColor=16181D"></a>
   <a href="LICENSE"><img alt="Code under MIT" src="https://img.shields.io/badge/code-MIT-128A43?labelColor=16181D"></a>
   <a href="LICENSE-DATA"><img alt="Data under CC BY 4.0" src="https://img.shields.io/badge/data-CC%20BY%204.0-128A43?labelColor=16181D"></a>
   <a href=".github/workflows/update.yml"><img alt="Frameworks updated weekly" src="https://img.shields.io/badge/frameworks-updated%20weekly-128A43?labelColor=16181D"></a>
@@ -108,6 +109,10 @@ Framework histories as of 2026-10-21. The [project page](https://pth2002.github.
   method with source date, first landing per framework, lag in days, tier today and how the
   introducing commit's author relates to the paper's author list. The
   [technical report](https://arxiv.org/abs/2610.28027) analyses it together with the public record of proposals.
+- **Load the data in Python.** The v1.0 tables are on
+  [Hugging Face](https://huggingface.co/datasets/Purdy0228/rl-method-tracker) as four subsets
+  (`papers`, `methods`, `landings`, `proposals`), for example
+  `load_dataset("Purdy0228/rl-method-tracker", "papers")`.
 - **Correct a record.** Open an issue with the
   [correction template](https://github.com/pth2002/rl-method-tracker/issues/new/choose) and link the
   evidence.
