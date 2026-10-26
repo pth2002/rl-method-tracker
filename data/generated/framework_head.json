@@ -1,8 +1,8 @@
 {
   "verl": {
     "url": "https://github.com/volcengine/verl",
-    "head_sha": "cd58f550fb1c4f5a3fe29da38e6f0002ec462fd3",
-    "head_date": "2026-10-20",
+    "head_sha": "0bd668c1aa7b63c5f174f7dcb1c5de12e0c74a0b",
+    "head_date": "2026-10-26",
     "surfaces": {
       "adv_estimator": [
         "gae",
@@ -112,8 +112,8 @@
   },
   "trl": {
     "url": "https://github.com/huggingface/trl",
-    "head_sha": "44bc5acab1abcb71614e470b9be99a9f0300b400",
-    "head_date": "2026-10-20",
+    "head_sha": "c6eac19f63be27498f2a7c8108d1e8a4dffde23f",
+    "head_date": "2026-10-25",
     "surfaces": {
       "trainer": [
         "base",
@@ -218,8 +218,8 @@
   },
   "nemo-rl": {
     "url": "https://github.com/NVIDIA-NeMo/RL",
-    "head_sha": "62d6d3f020c9be76e7b62abf11fb51f5ee1bbe73",
-    "head_date": "2026-10-21",
+    "head_sha": "3cde4587d6a80b44c6dce1187e17a5da40362c4f",
+    "head_date": "2026-10-25",
     "surfaces": {
       "adv_estimator": [
         "gdpo",
@@ -309,8 +309,8 @@
   },
   "slime": {
     "url": "https://github.com/THUDM/slime",
-    "head_sha": "a4202e0595467d9374d9a68d45a34f45c3f8d230",
-    "head_date": "2026-10-19",
+    "head_sha": "18868a79b0b083a093798a94ed0f8cb4f71b9c14",
+    "head_date": "2026-10-22",
     "surfaces": {
       "adv_estimator": [
         "cispo",
@@ -339,8 +339,8 @@
   },
   "areal": {
     "url": "https://github.com/inclusionAI/AReaL",
-    "head_sha": "18f5271f3bf4b78b2a82cf453bbaf75ee0bf8eb6",
-    "head_date": "2026-10-21",
+    "head_sha": "30311bae50929a8aa3bd139a44793dec65709d85",
+    "head_date": "2026-10-26",
     "surfaces": {
       "options": [
         "binary_kl",
