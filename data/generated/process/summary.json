@@ -1,24 +1,24 @@
 {
  "n_strict": 1598,
  "funnel": {
-  "cited_only": 21,
+  "cited_only": 22,
   "implementation_pr": 25,
   "included": 37,
-  "no_record": 1500,
+  "no_record": 1499,
   "request_only": 15
  },
  "name_audit": {
-  "no_record": 1500,
+  "no_record": 1499,
   "searchable": 726,
   "candidates": 23,
   "refers": 13,
   "proposal_pr": 6,
   "request": 2,
   "cited": 5,
-  "no_record_after": 1487,
-  "no_record_extrapolated": 1473
+  "no_record_after": 1486,
+  "no_record_extrapolated": 1472
  },
- "n_threads": 27123,
+ "n_threads": 27372,
  "attempt_threads": 48,
  "attempt_papers": 40,
  "attempt_prs": 28,
@@ -92,7 +92,7 @@
  "attempt_core_n": 27,
  "attempt_median_core_lines": 162,
  "open_attempt_prs": 17,
- "open_attempt_median_age": 199,
+ "open_attempt_median_age": 204,
  "open_attempt_over_180": 9,
  "by_framework": {
   "verl": {
