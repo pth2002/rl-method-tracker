@@ -44,6 +44,10 @@ LISTINGS = [
     ("review_comments", "pulls/comments", {"sort": "created", "direction": "asc"}),
 ]
 
+# Network failures worth another try: a dropped connection, a body cut off mid-stream, a timeout.
+TRANSIENT = (requests.exceptions.ConnectionError, requests.exceptions.ChunkedEncodingError,
+             requests.exceptions.Timeout)
+
 DISCUSSIONS_Q = """
 query($owner:String!, $name:String!, $after:String) {
   repository(owner:$owner, name:$name) {
@@ -79,6 +83,15 @@ class Client:
                                "Accept": "application/vnd.github+json",
                                "X-GitHub-Api-Version": "2022-11-28"})
 
+    def _send(self, method: str, url: str, **kwargs) -> requests.Response | None:
+        """One request. A dropped connection or a timeout returns None so the caller retries."""
+        try:
+            return self.s.request(method, url, timeout=90, **kwargs)
+        except TRANSIENT as e:
+            print(f"  network error ({type(e).__name__}), retrying in 30s", flush=True)
+            time.sleep(30)
+            return None
+
     def _wait(self, r: requests.Response) -> bool:
         """Sleep through primary or secondary rate limits. Returns True if the call should be retried."""
         if r.status_code in (403, 429):
@@ -100,8 +113,8 @@ class Client:
 
     def get(self, url: str, params: dict | None = None) -> requests.Response:
         for _ in range(8):
-            r = self.s.get(url, params=params, timeout=90)
-            if self._wait(r):
+            r = self._send("GET", url, params=params)
+            if r is None or self._wait(r):
                 continue
             r.raise_for_status()
             rem = r.headers.get("X-RateLimit-Remaining")
@@ -114,8 +127,8 @@ class Client:
 
     def graphql(self, query: str, variables: dict) -> dict:
         for _ in range(8):
-            r = self.s.post("https://api.github.com/graphql", json={"query": query, "variables": variables}, timeout=90)
-            if self._wait(r):
+            r = self._send("POST", "https://api.github.com/graphql", json={"query": query, "variables": variables})
+            if r is None or self._wait(r):
                 continue
             r.raise_for_status()
             data = r.json()

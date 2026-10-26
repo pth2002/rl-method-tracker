@@ -50,10 +50,21 @@ def parse_entries(xml_text: str) -> list[dict]:
 
 
 def fetch(params: dict) -> list[dict]:
-    r = requests.get(API, params=params, headers=HEADERS, timeout=60)
-    r.raise_for_status()
-    time.sleep(3)
-    return parse_entries(r.text)
+    """Query the arXiv API, retrying dropped connections, timeouts, 429 and 5xx answers."""
+    for attempt in range(5):
+        try:
+            r = requests.get(API, params=params, headers=HEADERS, timeout=60)
+        except (requests.exceptions.ConnectionError, requests.exceptions.ChunkedEncodingError,
+                requests.exceptions.Timeout) as e:
+            print(f"  network error ({type(e).__name__}), retrying", flush=True)
+        else:
+            if r.status_code != 429 and r.status_code < 500:
+                r.raise_for_status()
+                time.sleep(3)
+                return parse_entries(r.text)
+            print(f"  arXiv answered {r.status_code}, retrying", flush=True)
+        time.sleep(30 * (attempt + 1))
+    raise RuntimeError("giving up on the arXiv API")
 
 
 def main() -> None:
