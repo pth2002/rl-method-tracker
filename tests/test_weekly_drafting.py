@@ -236,6 +236,21 @@ class FixtureTests(unittest.TestCase):
         self.assertEqual(ask.call_count, 2)
         self.assertEqual(len(json.loads(self.journal.path.read_text())), 1)
 
+    def test_citation_without_proposal_goes_to_the_reference_list(self):
+        self.populate(threads=1)
+        code = draft.ThreadCode(method="Example", proposer_says=None, outcome="reference", reasons=[],
+                                quote=None, confidence="low",
+                                note="The pull request fixes numerical precision and cites the paper's appendix.")
+        with patch.object(draft, "ask", return_value=code):
+            with patch.object(draft.Threads, "prompt", return_value=("complete thread", "pull")):
+                drafts = draft.draft_threads(False, journal=self.journal)
+        self.assertEqual(draft.jl(self.gen / "process/attempts_coded.jsonl"), [])
+        self.assertEqual(draft.jl(self.gen / "process/threads_reference_only.jsonl"), [
+            {"framework": "trl", "kind": "pr", "number": 0, "arxiv": "2501.00002", "category": "reference",
+             "coder": "draft"}])
+        self.assertEqual(drafts[0]["draft"], "reference only, not a proposal")
+        self.assertEqual(draft.jl(self.gen / "process/uncoded_threads.jsonl"), [])
+
     def test_incomplete_thread_stays_pending_and_makes_no_model_call(self):
         self.populate(threads=1)
         with patch.object(draft.Threads, "prompt", side_effect=draft.IncompleteThread("unread pages")):

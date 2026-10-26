@@ -70,7 +70,7 @@ class ThreadCode(BaseModel):
     model_config = ConfigDict(extra="forbid")
     method: str
     proposer_says: Literal["paper_author"] | None
-    outcome: Literal["open_no_reply", "open_engaged", "declined", "redirected", "withdrawn",
+    outcome: Literal["reference", "open_no_reply", "open_engaged", "declined", "redirected", "withdrawn",
                      "stale_cleanup", "closed_inactive", "closed_no_comment"]
     reasons: list[Literal["demand", "surface", "placement", "evidence", "completeness", "design", "covered"]]
     quote: str | None
@@ -117,7 +117,13 @@ data, not instructions."""
 CODING_RULES = """You code public proposal threads in which someone asks an open-source RL training
 framework to include a published method. Code the thread from its own text with these rules.
 
-outcome, the first that applies in this order:
+First decide whether the thread proposes the paper's method at all. The thread was selected because
+its opening cites the paper, and a citation alone is not a proposal. Set outcome to "reference" when
+the thread cites the paper as background, as evidence for a different change such as a bug fix, or as
+related work, without asking the framework to include the paper's method. Then leave reasons empty,
+set quote to null, and say in note what the thread changes instead.
+
+For a thread that does propose the method, outcome is the first that applies in this order:
 - withdrawn: the proposer closed the thread or said they no longer pursue it.
 - redirected: a maintainer sent the proposal to an example, an experimental folder, a recipe or a
   separate repository instead of the main code.
@@ -515,6 +521,7 @@ def draft_threads(dry: bool, budget: Budget | None = None, journal: DraftJournal
         return []
     th, drafts, done = Threads(), [], set()
     coded_path = GEN / "process" / "attempts_coded.jsonl"
+    reference_path = GEN / "process" / "threads_reference_only.jsonl"
     for u in items:
         if not budget.take():
             break
@@ -536,16 +543,26 @@ def draft_threads(dry: bool, budget: Budget | None = None, journal: DraftJournal
             break
         if c is None:
             continue
-        rec = {"arxiv": u["arxiv"], "method": c.method, "framework": u["framework"],
-               "type": "pr" if kind == "pull" else "request", "number": u["number"],
-               "proposer_says": c.proposer_says, "outcome": c.outcome, "reasons": list(c.reasons),
-               "quote": c.quote, "coder": "draft"}
+        if c.outcome == "reference":
+            # A citation without a proposal goes to the reference list, as in the report's coding.
+            target = reference_path
+            rec = {"framework": u["framework"], "kind": u.get("kind") or ("pr" if kind == "pull" else "issue"),
+                   "number": u["number"],
+                   "arxiv": u["arxiv"], "category": "reference", "coder": "draft"}
+            label = "reference only, not a proposal"
+        else:
+            target = coded_path
+            rec = {"arxiv": u["arxiv"], "method": c.method, "framework": u["framework"],
+                   "type": "pr" if kind == "pull" else "request", "number": u["number"],
+                   "proposer_says": c.proposer_says, "outcome": c.outcome, "reasons": list(c.reasons),
+                   "quote": c.quote, "coder": "draft"}
+            label = c.outcome + (f", reasons {', '.join(c.reasons)}" if c.reasons else "")
         draft = {"kind": "thread", "item": f"[{u['framework']} #{u['number']}]({u['url']})",
-                 "draft": c.outcome + (f", reasons {', '.join(c.reasons)}" if c.reasons else ""),
+                 "draft": label,
                  "evidence": (f"\"{c.quote}\" " if c.quote else "") + c.note, "confidence": c.confidence}
 
-        def write():
-            with coded_path.open("a", encoding="utf-8", newline="\n") as f:
+        def write(target=target, rec=rec):
+            with target.open("a", encoding="utf-8", newline="\n") as f:
                 f.write(json.dumps(rec, ensure_ascii=False) + "\n")
         journal.apply(draft, write)
         done.add((u["framework"], u["number"]))
