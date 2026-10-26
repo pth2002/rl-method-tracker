@@ -106,7 +106,6 @@ Public proposals for methods that no framework included:
 | GRPO-LEAD | [PR #6222](https://github.com/huggingface/trl/pull/6222) | withdrawn by proposer | none stated |
 | AGPO | [PR #6368](https://github.com/huggingface/trl/pull/6368) | redirected | surface, placement, evidence, covered |
 | SNR-Aware Filtering | [PR #7242](https://github.com/huggingface/trl/pull/7242) | open, no reply from a prior merger | none stated |
-| Entropy-Preserving Reinforcement Learning | [PR #7882](https://github.com/huggingface/trl/pull/7882) | open, under discussion | evidence |
 
 ## OpenRLHF
 

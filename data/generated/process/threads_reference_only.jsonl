@@ -26,3 +26,4 @@
 {"framework": "verl", "kind": "pr", "number": 2312, "arxiv": "2505.03335", "category": "reference"}
 {"framework": "verl", "kind": "pr", "number": 5124, "arxiv": "2509.22601", "category": "reference"}
 {"framework": "verl", "kind": "pr", "number": 5601, "arxiv": "2512.04220", "category": "sibling"}
+{"framework": "trl", "kind": "pr", "number": 7882, "arxiv": "2603.11682", "category": "reference"}
