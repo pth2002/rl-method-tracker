@@ -3,11 +3,11 @@
  "core_sizes": {
   "verl": {
    "core_authors": 40,
-   "all_authors": 754
+   "all_authors": 756
   },
   "trl": {
    "core_authors": 2,
-   "all_authors": 545
+   "all_authors": 547
   },
   "openrlhf": {
    "core_authors": 2,
@@ -15,7 +15,7 @@
   },
   "nemo-rl": {
    "core_authors": 11,
-   "all_authors": 179
+   "all_authors": 181
   },
   "roll": {
    "core_authors": 5,
@@ -27,7 +27,7 @@
   },
   "areal": {
    "core_authors": 4,
-   "all_authors": 123
+   "all_authors": 125
   },
   "verl_recipe": {
    "core_authors": 13,
