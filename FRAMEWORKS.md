@@ -9,16 +9,16 @@ for maintainers and misses reviewers without merge rights.
 
 ## verl
 
-Repository: https://github.com/volcengine/verl (snapshot `0bd668c1aa`, 2026-10-26)
+Repository: https://github.com/volcengine/verl (snapshot `6879e1ab07`, 2026-11-02)
 
-Contribution rules: [CONTRIBUTING.md](https://github.com/volcengine/verl/blob/0bd668c1aa7b63c5f174f7dcb1c5de12e0c74a0b/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/volcengine/verl/blob/0bd668c1aa7b63c5f174f7dcb1c5de12e0c74a0b/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/volcengine/verl/blob/0bd668c1aa7b63c5f174f7dcb1c5de12e0c74a0b/AGENTS.md)
+Contribution rules: [CONTRIBUTING.md](https://github.com/volcengine/verl/blob/6879e1ab07b9cfd0b4b27c31ca4e7afcad1466b3/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/volcengine/verl/blob/6879e1ab07b9cfd0b4b27c31ca4e7afcad1466b3/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/volcengine/verl/blob/6879e1ab07b9cfd0b4b27c31ca4e7afcad1466b3/AGENTS.md)
 
 Where RL algorithms live:
 
-- advantage estimators (core): [`verl/trainer/ppo/core_algos.py`](https://github.com/volcengine/verl/blob/0bd668c1aa7b63c5f174f7dcb1c5de12e0c74a0b/verl/trainer/ppo/core_algos.py), [`verl/trainer/ppo/ray_trainer.py`](https://github.com/volcengine/verl/blob/0bd668c1aa7b63c5f174f7dcb1c5de12e0c74a0b/verl/trainer/ppo/ray_trainer.py)
-- policy losses (core): [`verl/trainer/ppo/core_algos.py`](https://github.com/volcengine/verl/blob/0bd668c1aa7b63c5f174f7dcb1c5de12e0c74a0b/verl/trainer/ppo/core_algos.py)
-- loss aggregation (option): [`verl/trainer/ppo/core_algos.py`](https://github.com/volcengine/verl/blob/0bd668c1aa7b63c5f174f7dcb1c5de12e0c74a0b/verl/trainer/ppo/core_algos.py)
-- configuration switches (option): [`verl`](https://github.com/volcengine/verl/tree/0bd668c1aa7b63c5f174f7dcb1c5de12e0c74a0b/verl), [`recipe`](https://github.com/verl-project/verl-recipe/tree/e7f889574b8301cc0f0fc1d57c6d67f31ffeb689) (submodule)
+- advantage estimators (core): [`verl/trainer/ppo/core_algos.py`](https://github.com/volcengine/verl/blob/6879e1ab07b9cfd0b4b27c31ca4e7afcad1466b3/verl/trainer/ppo/core_algos.py), [`verl/trainer/ppo/ray_trainer.py`](https://github.com/volcengine/verl/blob/6879e1ab07b9cfd0b4b27c31ca4e7afcad1466b3/verl/trainer/ppo/ray_trainer.py)
+- policy losses (core): [`verl/trainer/ppo/core_algos.py`](https://github.com/volcengine/verl/blob/6879e1ab07b9cfd0b4b27c31ca4e7afcad1466b3/verl/trainer/ppo/core_algos.py)
+- loss aggregation (option): [`verl/trainer/ppo/core_algos.py`](https://github.com/volcengine/verl/blob/6879e1ab07b9cfd0b4b27c31ca4e7afcad1466b3/verl/trainer/ppo/core_algos.py)
+- configuration switches (option): [`verl`](https://github.com/volcengine/verl/tree/6879e1ab07b9cfd0b4b27c31ca4e7afcad1466b3/verl), [`recipe`](https://github.com/verl-project/verl-recipe/tree/e7f889574b8301cc0f0fc1d57c6d67f31ffeb689) (submodule)
 - recipes (recipe): [`recipe`](https://github.com/verl-project/verl-recipe/tree/e7f889574b8301cc0f0fc1d57c6d67f31ffeb689) (submodule)
 - verl-recipe recipes (recipe): [repository root](https://github.com/verl-project/verl-recipe/tree/81d782765e6ddcd3d0371d64acee3a1d5645ef73)
 
@@ -61,16 +61,16 @@ Public proposals for methods that no framework included:
 
 ## TRL
 
-Repository: https://github.com/huggingface/trl (snapshot `c6eac19f63`, 2026-10-25)
+Repository: https://github.com/huggingface/trl (snapshot `3a3b6c1464`, 2026-11-02)
 
-Contribution rules: [CONTRIBUTING.md](https://github.com/huggingface/trl/blob/c6eac19f63be27498f2a7c8108d1e8a4dffde23f/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/huggingface/trl/blob/c6eac19f63be27498f2a7c8108d1e8a4dffde23f/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/huggingface/trl/blob/c6eac19f63be27498f2a7c8108d1e8a4dffde23f/AGENTS.md)
+Contribution rules: [CONTRIBUTING.md](https://github.com/huggingface/trl/blob/3a3b6c1464498364f69c01ad698b0a6a3990f534/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/huggingface/trl/blob/3a3b6c1464498364f69c01ad698b0a6a3990f534/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/huggingface/trl/blob/3a3b6c1464498364f69c01ad698b0a6a3990f534/AGENTS.md)
 
 Where RL algorithms live:
 
-- trainers (core): [`trl/trainer`](https://github.com/huggingface/trl/tree/c6eac19f63be27498f2a7c8108d1e8a4dffde23f/trl/trainer)
-- GRPO loss types (core): [`trl/trainer/grpo_trainer.py`](https://github.com/huggingface/trl/blob/c6eac19f63be27498f2a7c8108d1e8a4dffde23f/trl/trainer/grpo_trainer.py)
-- GRPO switches (option): [`trl/trainer/grpo_config.py`](https://github.com/huggingface/trl/blob/c6eac19f63be27498f2a7c8108d1e8a4dffde23f/trl/trainer/grpo_config.py)
-- experimental trainers (experimental): [`trl/experimental`](https://github.com/huggingface/trl/tree/c6eac19f63be27498f2a7c8108d1e8a4dffde23f/trl/experimental)
+- trainers (core): [`trl/trainer`](https://github.com/huggingface/trl/tree/3a3b6c1464498364f69c01ad698b0a6a3990f534/trl/trainer)
+- GRPO loss types (core): [`trl/trainer/grpo_trainer.py`](https://github.com/huggingface/trl/blob/3a3b6c1464498364f69c01ad698b0a6a3990f534/trl/trainer/grpo_trainer.py)
+- GRPO switches (option): [`trl/trainer/grpo_config.py`](https://github.com/huggingface/trl/blob/3a3b6c1464498364f69c01ad698b0a6a3990f534/trl/trainer/grpo_config.py)
+- experimental trainers (experimental): [`trl/experimental`](https://github.com/huggingface/trl/tree/3a3b6c1464498364f69c01ad698b0a6a3990f534/trl/experimental)
 
 How recent methods came in: 23 pull requests brought methods with a source from 2025 or later into TRL. Prior mergers opened 13 of them, and the median time from opening to merge was 5 days.
 
@@ -141,15 +141,15 @@ Public proposals for methods that no framework included:
 
 ## NeMo-RL
 
-Repository: https://github.com/NVIDIA-NeMo/RL (snapshot `3cde4587d6`, 2026-10-25)
+Repository: https://github.com/NVIDIA-NeMo/RL (snapshot `6e68b17911`, 2026-10-31)
 
-Contribution rules: [CONTRIBUTING.md](https://github.com/NVIDIA-NeMo/RL/blob/3cde4587d6a80b44c6dce1187e17a5da40362c4f/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/NVIDIA-NeMo/RL/blob/3cde4587d6a80b44c6dce1187e17a5da40362c4f/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/NVIDIA-NeMo/RL/blob/3cde4587d6a80b44c6dce1187e17a5da40362c4f/AGENTS.md)
+Contribution rules: [CONTRIBUTING.md](https://github.com/NVIDIA-NeMo/RL/blob/6e68b17911b83becacc0c0afaf4be15c43c17873/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/NVIDIA-NeMo/RL/blob/6e68b17911b83becacc0c0afaf4be15c43c17873/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/NVIDIA-NeMo/RL/blob/6e68b17911b83becacc0c0afaf4be15c43c17873/AGENTS.md)
 
 Where RL algorithms live:
 
-- advantage estimators (core): [`nemo_rl/algorithms/advantage_estimator.py`](https://github.com/NVIDIA-NeMo/RL/blob/3cde4587d6a80b44c6dce1187e17a5da40362c4f/nemo_rl/algorithms/advantage_estimator.py)
-- configuration switches (option): [`nemo_rl`](https://github.com/NVIDIA-NeMo/RL/tree/3cde4587d6a80b44c6dce1187e17a5da40362c4f/nemo_rl)
-- listed code changes (conditional default): [`nemo_rl/algorithms/loss/loss_functions.py`](https://github.com/NVIDIA-NeMo/RL/blob/3cde4587d6a80b44c6dce1187e17a5da40362c4f/nemo_rl/algorithms/loss/loss_functions.py)
+- advantage estimators (core): [`nemo_rl/algorithms/advantage_estimator.py`](https://github.com/NVIDIA-NeMo/RL/blob/6e68b17911b83becacc0c0afaf4be15c43c17873/nemo_rl/algorithms/advantage_estimator.py)
+- configuration switches (option): [`nemo_rl`](https://github.com/NVIDIA-NeMo/RL/tree/6e68b17911b83becacc0c0afaf4be15c43c17873/nemo_rl)
+- listed code changes (conditional default): [`nemo_rl/algorithms/loss/loss_functions.py`](https://github.com/NVIDIA-NeMo/RL/blob/6e68b17911b83becacc0c0afaf4be15c43c17873/nemo_rl/algorithms/loss/loss_functions.py)
 
 How recent methods came in: 13 pull requests brought methods with a source from 2025 or later into NeMo-RL. Prior mergers opened 2 of them, and the median time from opening to merge was 17 days.
 
@@ -188,14 +188,14 @@ How recent methods came in: 0 pull requests brought methods with a source from 2
 
 ## slime
 
-Repository: https://github.com/THUDM/slime (snapshot `18868a79b0`, 2026-10-22)
+Repository: https://github.com/THUDM/slime (snapshot `540ea919e4`, 2026-10-27)
 
-Contribution rules: [CONTRIBUTING.md](https://github.com/THUDM/slime/blob/18868a79b0b083a093798a94ed0f8cb4f71b9c14/CONTRIBUTING.md)
+Contribution rules: [CONTRIBUTING.md](https://github.com/THUDM/slime/blob/540ea919e45b8b929198abce008a103be9cfc779/CONTRIBUTING.md)
 
 Where RL algorithms live:
 
-- advantage estimators (core): [`slime/utils/arguments.py`](https://github.com/THUDM/slime/blob/18868a79b0b083a093798a94ed0f8cb4f71b9c14/slime/utils/arguments.py)
-- configuration switches (option): [`slime`](https://github.com/THUDM/slime/tree/18868a79b0b083a093798a94ed0f8cb4f71b9c14/slime)
+- advantage estimators (core): [`slime/utils/arguments.py`](https://github.com/THUDM/slime/blob/540ea919e45b8b929198abce008a103be9cfc779/slime/utils/arguments.py)
+- configuration switches (option): [`slime`](https://github.com/THUDM/slime/tree/540ea919e45b8b929198abce008a103be9cfc779/slime)
 
 How recent methods came in: 7 pull requests brought methods with a source from 2025 or later into slime. Prior mergers opened 6 of them, and the median time from opening to merge was 0 days.
 
@@ -220,14 +220,14 @@ Public proposals for methods that no framework included:
 
 ## AReaL
 
-Repository: https://github.com/inclusionAI/AReaL (snapshot `30311bae50`, 2026-10-26)
+Repository: https://github.com/inclusionAI/AReaL (snapshot `d25f2929b2`, 2026-10-30)
 
-Contribution rules: [CONTRIBUTING.md](https://github.com/inclusionAI/AReaL/blob/30311bae50929a8aa3bd139a44793dec65709d85/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/inclusionAI/AReaL/blob/30311bae50929a8aa3bd139a44793dec65709d85/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/inclusionAI/AReaL/blob/30311bae50929a8aa3bd139a44793dec65709d85/AGENTS.md)
+Contribution rules: [CONTRIBUTING.md](https://github.com/inclusionAI/AReaL/blob/d25f2929b2a1e962e9d366717fbf872ab46a4997/CONTRIBUTING.md), [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/inclusionAI/AReaL/blob/d25f2929b2a1e962e9d366717fbf872ab46a4997/.github/PULL_REQUEST_TEMPLATE.md), [AGENTS.md](https://github.com/inclusionAI/AReaL/blob/d25f2929b2a1e962e9d366717fbf872ab46a4997/AGENTS.md)
 
 Where RL algorithms live:
 
-- configuration switches (option): [`areal`](https://github.com/inclusionAI/AReaL/tree/30311bae50929a8aa3bd139a44793dec65709d85/areal)
-- algorithm configurations (option): [`examples/math`](https://github.com/inclusionAI/AReaL/tree/30311bae50929a8aa3bd139a44793dec65709d85/examples/math)
+- configuration switches (option): [`areal`](https://github.com/inclusionAI/AReaL/tree/d25f2929b2a1e962e9d366717fbf872ab46a4997/areal)
+- algorithm configurations (option): [`examples/math`](https://github.com/inclusionAI/AReaL/tree/d25f2929b2a1e962e9d366717fbf872ab46a4997/examples/math)
 
 How recent methods came in: 13 pull requests brought methods with a source from 2025 or later into AReaL. Prior mergers opened 3 of them, and the median time from opening to merge was 6 days.
 
