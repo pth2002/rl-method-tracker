@@ -2,12 +2,12 @@
  "core_definition": "smallest set of commit authors covering half of the main-branch commits made before the landing",
  "core_sizes": {
   "verl": {
-   "core_authors": 40,
-   "all_authors": 756
+   "core_authors": 41,
+   "all_authors": 762
   },
   "trl": {
    "core_authors": 2,
-   "all_authors": 547
+   "all_authors": 548
   },
   "openrlhf": {
    "core_authors": 2,
@@ -15,7 +15,7 @@
   },
   "nemo-rl": {
    "core_authors": 11,
-   "all_authors": 181
+   "all_authors": 184
   },
   "roll": {
    "core_authors": 5,
@@ -23,11 +23,11 @@
   },
   "slime": {
    "core_authors": 2,
-   "all_authors": 178
+   "all_authors": 179
   },
   "areal": {
    "core_authors": 4,
-   "all_authors": 125
+   "all_authors": 129
   },
   "verl_recipe": {
    "core_authors": 13,

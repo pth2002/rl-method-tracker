@@ -18,7 +18,7 @@
   "no_record_after": 1486,
   "no_record_extrapolated": 1472
  },
- "n_threads": 27372,
+ "n_threads": 27804,
  "attempt_threads": 48,
  "attempt_papers": 40,
  "attempt_prs": 28,
@@ -60,8 +60,8 @@
   "surface": 11
  },
  "no_merger_reply": 17,
- "no_merger_reply_any_human": 1,
- "attempts_any_human_reply": 29,
+ "no_merger_reply_any_human": 2,
+ "attempts_any_human_reply": 30,
  "landings_exact": 101,
  "landing_events_with_pr": 94,
  "landing_prior_request": 22,
@@ -92,7 +92,7 @@
  "attempt_core_n": 27,
  "attempt_median_core_lines": 162,
  "open_attempt_prs": 17,
- "open_attempt_median_age": 204,
+ "open_attempt_median_age": 211,
  "open_attempt_over_180": 9,
  "by_framework": {
   "verl": {
