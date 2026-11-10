@@ -58,7 +58,7 @@ Public proposals for methods that no framework included:
 | CPPO | [PR #6731](https://github.com/volcengine/verl/pull/6731) | open, under discussion | none stated |
 | CoDaPO | [PR #7497](https://github.com/volcengine/verl/pull/7497) | open, no reply from a prior merger | none stated |
 | SNR-Aware Filtering | [PR #7894](https://github.com/volcengine/verl/pull/7894) | open, under discussion | none stated |
-| topk_rb | [issue #8536](https://github.com/volcengine/verl/issues/8536) | open, no reply from a prior merger | none stated |
+| Rao-Blackwellized KL | [issue #8536](https://github.com/volcengine/verl/issues/8536) | open, no reply from a prior merger | none stated |
 
 ## TRL
 
