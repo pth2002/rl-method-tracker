@@ -1,8 +1,8 @@
 {
   "verl": {
     "url": "https://github.com/volcengine/verl",
-    "head_sha": "6879e1ab07b9cfd0b4b27c31ca4e7afcad1466b3",
-    "head_date": "2026-11-02",
+    "head_sha": "a911bca25d6adb26f5bef2dc57e7ba62e99b7ade",
+    "head_date": "2026-11-09",
     "surfaces": {
       "adv_estimator": [
         "gae",
@@ -68,8 +68,8 @@
   },
   "verl_recipe": {
     "url": "https://github.com/verl-project/verl-recipe",
-    "head_sha": "81d782765e6ddcd3d0371d64acee3a1d5645ef73",
-    "head_date": "2026-10-13",
+    "head_sha": "0a9360bb366d8bd71e26fb86da1acf077da9e6d9",
+    "head_date": "2026-11-04",
     "surfaces": {
       "recipe": [
         "async_flow",
@@ -112,8 +112,8 @@
   },
   "trl": {
     "url": "https://github.com/huggingface/trl",
-    "head_sha": "3a3b6c1464498364f69c01ad698b0a6a3990f534",
-    "head_date": "2026-11-02",
+    "head_sha": "6bac3b565cb08788744e2e26842e5fdf5351ddcb",
+    "head_date": "2026-11-09",
     "surfaces": {
       "trainer": [
         "base",
@@ -184,8 +184,8 @@
   },
   "openrlhf": {
     "url": "https://github.com/OpenRLHF/OpenRLHF",
-    "head_sha": "dc2a7ad326f619fc5a47737ea47d1920ce2c0b53",
-    "head_date": "2026-09-17",
+    "head_sha": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+    "head_date": "2026-11-03",
     "surfaces": {
       "adv_estimator": [
         "dr_grpo",
@@ -217,8 +217,8 @@
   },
   "nemo-rl": {
     "url": "https://github.com/NVIDIA-NeMo/RL",
-    "head_sha": "6e68b17911b83becacc0c0afaf4be15c43c17873",
-    "head_date": "2026-10-31",
+    "head_sha": "61bc275da39d4a3d8b87368cfba7ef333ea61bea",
+    "head_date": "2026-11-08",
     "surfaces": {
       "adv_estimator": [
         "gdpo",
@@ -258,8 +258,8 @@
   },
   "roll": {
     "url": "https://github.com/alibaba/ROLL",
-    "head_sha": "d3506ea9e280ae720fb74df9f82db6efac1c72d5",
-    "head_date": "2026-10-19",
+    "head_sha": "7c0ded3d621ad4f45fb4d6675914de5eae8918eb",
+    "head_date": "2026-11-03",
     "surfaces": {
       "adv_estimator": [
         "agentic_reinforce",
@@ -308,8 +308,8 @@
   },
   "slime": {
     "url": "https://github.com/THUDM/slime",
-    "head_sha": "540ea919e45b8b929198abce008a103be9cfc779",
-    "head_date": "2026-10-27",
+    "head_sha": "79aa41a884ab0bf65222c94418f6357d3c31192b",
+    "head_date": "2026-11-06",
     "surfaces": {
       "adv_estimator": [
         "cispo",
@@ -338,8 +338,8 @@
   },
   "areal": {
     "url": "https://github.com/inclusionAI/AReaL",
-    "head_sha": "d25f2929b2a1e962e9d366717fbf872ab46a4997",
-    "head_date": "2026-10-30",
+    "head_sha": "285a1c3bf2145906c5e9d33ba459f781cbb3e089",
+    "head_date": "2026-11-09",
     "surfaces": {
       "options": [
         "binary_kl",
