@@ -1,31 +1,4 @@
 {
-  "tokens": {
-    "verl_recipe": {
-      "recipe": [
-        "separation",
-        "tpr"
-      ]
-    }
-  },
-  "suggestions": {
-    "verl_recipe/recipe/separation": {
-      "first_seen": "2026-11-16",
-      "commit": "acc239fc97",
-      "subject": "[recipe] refactor: migrate fully async and one-step-off trainers from verl (#171)",
-      "arxiv_in_commit": [
-        "2505.24298",
-        "2506.10910",
-        "2507.01663",
-        "2504.15930"
-      ]
-    },
-    "verl_recipe/recipe/tpr": {
-      "first_seen": "2026-11-11",
-      "commit": "98de2b9b33",
-      "subject": "feat(tpr): add Tree Prefix Reuse training recipe (#165)",
-      "arxiv_in_commit": [
-        "2509.18521"
-      ]
-    }
-  }
+  "tokens": {},
+  "suggestions": {}
 }

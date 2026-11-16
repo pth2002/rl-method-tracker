@@ -101,6 +101,8 @@ verl:
     flash_rl_ascend: ~systems
     grpo_mindspeed_mm: ~systems
     r1_ascend: ~systems
+    separation: ~systems
+    tpr: ~systems
     recipe: ~config
 
 verl_recipe:
@@ -129,7 +131,7 @@ trl:
     prm: ~reward_model
     alignprop: ~diffusion
     ddpo: ~diffusion
-    "async_grpo": "grpo"
+    async_grpo: ~systems
   grpo_loss_type:
     grpo: grpo
     bnpo: ~preexisting

@@ -802,14 +802,6 @@
   ],
   "trl": [
    {
-    "token": "async_grpo",
-    "tier": "core",
-    "setting": null,
-    "path": "trl/trainer/async_grpo_trainer.py",
-    "line": null,
-    "url": "https://github.com/huggingface/trl/blob/b700de831f799e4c2c8d91fec101e09a00a415e5/trl/trainer/async_grpo_trainer.py"
-   },
-   {
     "token": "grpo",
     "tier": "core",
     "setting": null,
