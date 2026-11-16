@@ -82,6 +82,22 @@ class MappingTests(unittest.TestCase):
             with self.subTest(text=text), self.assertRaises(ValueError):
                 draft.add_token(text, "trl", "loss_type", "new", "grpo")
 
+    def test_shared_table_changes_every_alias_only_when_requested(self):
+        text = "verl:\n  recipe: &recipes\n    old: ~systems\nverl_recipe:\n  recipe: *recipes\n"
+        self.assertEqual(draft.shared_with(text, "verl_recipe", "recipe"), [("verl", "recipe")])
+        with self.assertRaises(ValueError):
+            draft.add_token(text, "verl_recipe", "recipe", "new", "~systems")
+        result = yaml.safe_load(draft.add_token(text, "verl_recipe", "recipe", "new", "~systems", shared=True))
+        self.assertEqual(result["verl"]["recipe"], {"old": "~systems", "new": "~systems"})
+        self.assertEqual(result["verl_recipe"]["recipe"], {"old": "~systems", "new": "~systems"})
+
+    def test_mapping_elsewhere_in_the_same_framework_is_found(self):
+        text = "trl:\n  trainer: {grpo: grpo}\n  experimental: {async_x: ~systems}\nother:\n  x: {async_x: grpo}\n"
+        self.assertEqual(draft.mapped_elsewhere(text, "trl", "trainer", "async_x"), ("experimental", "~systems"))
+        self.assertIsNone(draft.mapped_elsewhere(text, "trl", "trainer", "unseen"))
+        conflict = "trl:\n  trainer: {}\n  a: {t: grpo}\n  b: {t: ~systems}\n"
+        self.assertIsNone(draft.mapped_elsewhere(conflict, "trl", "trainer", "t"))
+
 
 class ResponseTests(unittest.TestCase):
     def test_bad_envelopes_retry_once(self):
@@ -235,6 +251,45 @@ class FixtureTests(unittest.TestCase):
             self.assertEqual(draft.draft_threads(False, journal=self.journal), [])
         self.assertEqual(ask.call_count, 2)
         self.assertEqual(len(json.loads(self.journal.path.read_text())), 1)
+
+    def test_new_option_in_a_shared_table_is_drafted_and_reported(self):
+        self.write("config/token_map.yaml",
+                   "verl:\n  recipe: &recipes\n    old: ~systems\nverl_recipe:\n  recipe: *recipes\n")
+        self.write("data/generated/unmapped.json", json.dumps({"tokens": {"verl_recipe": {"recipe": ["new_one"]}}}))
+        systems = mapping(decision="out_of_scope", method_id=None, scope_tag="~systems")
+        with patch.object(draft, "ask", return_value=systems), \
+                patch.object(draft.Catalog, "prompt", return_value="option evidence"):
+            drafts = draft.draft_options(False, journal=self.journal)
+        result = yaml.safe_load((self.root / "config/token_map.yaml").read_text(encoding="utf-8"))
+        self.assertEqual(result["verl"]["recipe"]["new_one"], "~systems")
+        self.assertEqual(result["verl_recipe"]["recipe"]["new_one"], "~systems")
+        self.assertIn("also applies to verl/recipe", drafts[0]["evidence"])
+
+    def test_option_mapped_in_another_surface_is_reused_without_the_model(self):
+        self.write("config/token_map.yaml",
+                   "trl:\n  trainer:\n    grpo: grpo\n  experimental:\n    async_x: ~systems\n")
+        self.write("data/generated/unmapped.json", json.dumps({"tokens": {"trl": {"trainer": ["async_x"]}}}))
+        with patch.object(draft, "ask") as ask:
+            drafts = draft.draft_options(False, journal=self.journal)
+        ask.assert_not_called()
+        result = yaml.safe_load((self.root / "config/token_map.yaml").read_text(encoding="utf-8"))
+        self.assertEqual(result["trl"]["trainer"]["async_x"], "~systems")
+        self.assertEqual(drafts[0]["draft"], "`~systems`")
+        self.assertIn("trl/experimental", drafts[0]["evidence"])
+
+    def test_proposal_keeps_the_method_name_confirmed_for_the_same_paper(self):
+        self.populate(threads=1)
+        self.write("data/generated/process/attempts_coded.jsonl", json.dumps(dict(
+            arxiv="2501.00002", method="Foo", framework="verl", type="request", number=9, proposer_says=None,
+            outcome="open_no_reply", reasons=[], quote=None)) + "\n")
+        code = draft.ThreadCode(method="foo_config_key", proposer_says=None, outcome="open_no_reply", reasons=[],
+                                quote=None, confidence="high", note="No maintainer replied.")
+        with patch.object(draft, "ask", return_value=code), \
+                patch.object(draft.Threads, "prompt", return_value=("complete thread", "pull")):
+            drafts = draft.draft_threads(False, journal=self.journal)
+        written = draft.jl(self.gen / "process/attempts_coded.jsonl")[-1]
+        self.assertEqual(written["method"], "Foo")
+        self.assertIn("taken from an earlier code", drafts[0]["evidence"])
 
     def test_citation_without_proposal_goes_to_the_reference_list(self):
         self.populate(threads=1)
