@@ -3,11 +3,11 @@
  "core_sizes": {
   "verl": {
    "core_authors": 41,
-   "all_authors": 765
+   "all_authors": 766
   },
   "trl": {
    "core_authors": 2,
-   "all_authors": 548
+   "all_authors": 553
   },
   "openrlhf": {
    "core_authors": 2,
@@ -27,11 +27,11 @@
   },
   "areal": {
    "core_authors": 4,
-   "all_authors": 131
+   "all_authors": 135
   },
   "verl_recipe": {
    "core_authors": 13,
-   "all_authors": 49
+   "all_authors": 51
   }
  },
  "frameworks": {

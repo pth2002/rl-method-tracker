@@ -129,6 +129,7 @@ trl:
     prm: ~reward_model
     alignprop: ~diffusion
     ddpo: ~diffusion
+    "async_grpo": "grpo"
   grpo_loss_type:
     grpo: grpo
     bnpo: ~preexisting
