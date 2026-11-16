@@ -27,3 +27,5 @@
 {"framework": "verl", "kind": "pr", "number": 5124, "arxiv": "2509.22601", "category": "reference"}
 {"framework": "verl", "kind": "pr", "number": 5601, "arxiv": "2512.04220", "category": "sibling"}
 {"framework": "trl", "kind": "pr", "number": 7882, "arxiv": "2603.11682", "category": "reference"}
+{"framework": "verl", "kind": "pr", "number": 8652, "arxiv": "2509.02479", "category": "reference", "coder": "draft"}
+{"framework": "areal", "kind": "pr", "number": 1942, "arxiv": "2506.06632", "category": "reference", "coder": "draft"}
