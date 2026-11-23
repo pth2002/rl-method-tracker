@@ -1,8 +1,8 @@
 {
   "verl": {
     "url": "https://github.com/volcengine/verl",
-    "head_sha": "622cd6c12b2796a3b541fe50babebf8aa3076799",
-    "head_date": "2026-11-16",
+    "head_sha": "7b6c9cc0e19de780ca52c0c35d5157348955a3dc",
+    "head_date": "2026-11-23",
     "surfaces": {
       "adv_estimator": [
         "gae",
@@ -68,8 +68,8 @@
   },
   "verl_recipe": {
     "url": "https://github.com/verl-project/verl-recipe",
-    "head_sha": "acc239fc978bf001e1957b7148b36e69df63cc19",
-    "head_date": "2026-11-16",
+    "head_sha": "654568c9497d28c9b712fa9477f2791cb885c9ea",
+    "head_date": "2026-11-23",
     "surfaces": {
       "recipe": [
         "async_flow",
@@ -79,6 +79,7 @@
         "dance_grpo",
         "dapo",
         "deepeyes",
+        "deepswe_tpu",
         "dynamo",
         "echo",
         "entropy",
@@ -115,8 +116,8 @@
   },
   "trl": {
     "url": "https://github.com/huggingface/trl",
-    "head_sha": "b700de831f799e4c2c8d91fec101e09a00a415e5",
-    "head_date": "2026-11-16",
+    "head_sha": "56e48a8933f0ecb56a50947f41b94455154bfa75",
+    "head_date": "2026-11-23",
     "surfaces": {
       "trainer": [
         "async_grpo",
@@ -221,8 +222,8 @@
   },
   "nemo-rl": {
     "url": "https://github.com/NVIDIA-NeMo/RL",
-    "head_sha": "99ae93a03a63bd37aab44d802a61a8f58cd833ed",
-    "head_date": "2026-11-16",
+    "head_sha": "da067f1331683b136022ab39172673fc05702dfe",
+    "head_date": "2026-11-22",
     "surfaces": {
       "adv_estimator": [
         "gdpo",
@@ -342,8 +343,8 @@
   },
   "areal": {
     "url": "https://github.com/inclusionAI/AReaL",
-    "head_sha": "7fb167a30e04c9cda1c4dcd6eb88276a2c3d935e",
-    "head_date": "2026-11-16",
+    "head_sha": "f8c706b0bec865aafbbee67f59af507316f29965",
+    "head_date": "2026-11-23",
     "surfaces": {
       "options": [
         "binary_kl",
