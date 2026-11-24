@@ -105,6 +105,7 @@ verl:
     tpr: ~systems
     recipe: ~config
 
+    "deepswe_tpu": "~application"
 verl_recipe:
   recipe: *verl_recipes
 
